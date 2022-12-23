@@ -13,7 +13,7 @@ namespace Parser
         {
             TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
 
-            int[] fieldWidths = { 6, 24, 5 };
+            int[] fieldWidths = { 6, 0, 2, 0 };
             parser.SetFieldWidths(fieldWidths);
             parser.IgnoreBlankLines = false;
             parser.TrimWhiteSpace = false;
@@ -21,8 +21,11 @@ namespace Parser
             long m_linenumber = parser.LineNumber;
             parser.Read();
             //parser.ReadLine();
+           
             TextFields m_thermo =  parser.ReadFields();
             string mstr = m_thermo.ToString();
+            parser.Read();
+            TextFields m_name = parser.ReadFields();
 
             Console.WriteLine(  "Hello world");
             Console.Read();
