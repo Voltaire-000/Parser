@@ -19,7 +19,12 @@ namespace Parser
 
             string m_line1 = streamReader.ReadLine();
             // we are at start of file
+            streamWriter.WriteLine("{");
+            //streamWriter.Write("\t");
+            //streamWriter.Write("\"");
             m_thermoField = JsonStart(m_line1, m_thermo, m_thermoField, streamReader);
+            streamWriter.Write(m_thermoField);
+            //streamWriter.Write("\"");
 
             string m_nextLine = streamReader.ReadLine();
             char separator = ' ';
@@ -51,12 +56,11 @@ namespace Parser
 
             Console.WriteLine(" Thermo file to json");
 
-            streamWriter.WriteLine("{");
-            //streamWriter.Write("\t");
-            //streamWriter.Write("\"");
+            
+
             //streamWriter.Write(m_thermo);
-            streamWriter.Write(m_thermoField);
-            //streamWriter.Write("\"");
+            
+            
             streamWriter.Write(":");
             streamWriter.WriteLine(" [");
             streamWriter.WriteLine("\t\t{");
@@ -74,11 +78,8 @@ namespace Parser
                 string m_thermoLine = streamReader.ReadLine();
                 m_thermo = m_thermoLine.Substring(0, 6);
                 m_thermoField = "\t\"" + m_thermo.ToString() + "\"";
-
-                
             }
             return m_thermoField;
-            //throw new NotImplementedException();
         }
     }
 }
