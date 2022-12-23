@@ -1,3 +1,5 @@
 {
 	"thermo": [
-		"name": "Ag",
+		{
+			"name": "Ag",
+			"description": 

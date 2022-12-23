@@ -43,7 +43,8 @@ namespace Parser
             parser.SetFieldWidths(2);
             TextFields m_name = parser.ReadFields();
             string mm_name = "\"" + m_name.ToString() + "\"" + ",";
-            string nameField = "\t\t\"" + "name" + "\"" + ":" + " ";
+            string nameField = "\t\t\t\"" + "name" + "\"" + ":" + " ";
+            string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
             
             parser.SetFieldWidths(24);
             TextFields m_descr = parser.ReadFields();
@@ -57,8 +58,10 @@ namespace Parser
             streamWriter.Write("\"");
             streamWriter.Write(":");
             streamWriter.WriteLine(" [");
+            streamWriter.WriteLine("\t\t{");
             streamWriter.Write(nameField);
             streamWriter.Write(mm_name);
+            streamWriter.Write(descriptionField);
             streamWriter.Close();
             Console.Read();
         }
