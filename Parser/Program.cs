@@ -12,11 +12,12 @@ namespace Parser
     {
         static void Main(string[] args)
         {
-            
-            string path = "..\\..\\mJson.json";
-            FileMode fileMode = FileMode.CreateNew;
+             
+            StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
+            //string path = "..\\..\\mJson.json";
+            //FileMode fileMode = FileMode.CreateNew;
 
-            FileStream fs = new FileStream(path, fileMode);
+            //FileStream fs = new FileStream(path, fileMode);
             //fs.
             //TextWriter textWriter;
             //textWriter.
@@ -41,12 +42,24 @@ namespace Parser
             TextFields m_description = delimitedFieldParser.ReadFields();
             parser.SetFieldWidths(2);
             TextFields m_name = parser.ReadFields();
+            string mm_name = "\"" + m_name.ToString() + "\"" + ",";
+            string nameField = "\t\t\"" + "name" + "\"" + ":" + " ";
             
             parser.SetFieldWidths(24);
             TextFields m_descr = parser.ReadFields();
 
             Console.WriteLine(  m_thermo);
-           
+
+            streamWriter.WriteLine("{");
+            streamWriter.Write("\t");
+            streamWriter.Write("\"");
+            streamWriter.Write(m_thermo);
+            streamWriter.Write("\"");
+            streamWriter.Write(":");
+            streamWriter.WriteLine(" [");
+            streamWriter.Write(nameField);
+            streamWriter.Write(mm_name);
+            streamWriter.Close();
             Console.Read();
         }
     }
