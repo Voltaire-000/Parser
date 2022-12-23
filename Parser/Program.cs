@@ -13,11 +13,10 @@ namespace Parser
         static void Main(string[] args)
         {
             string m_thermo = "";
-            string thermo = "thermo";
-            string m_thermoFieldName = "";
-            string nameFieldName = "";
-            string descriptionFieldName = "";
-            string t_intervalsFieldName = "";
+            string m_thermoFieldName = "thermo";
+            string nameFieldName = "name";
+            string descriptionFieldName = "description";
+            string t_intervalsFieldName = "T intervals";
 
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
@@ -25,12 +24,11 @@ namespace Parser
             string m_line1 = streamReader.ReadLine();
             // we are at start of file
             streamWriter.WriteLine("{");
-            //streamWriter.Write("\t");
-            //streamWriter.Write("\"");
-            m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
-            streamWriter.Write(m_thermoFieldName);
-            //streamWriter.Write("\"");
 
+            m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
+
+            
+ 
             string m_nextLine = streamReader.ReadLine();
             char separator = ' ';
             string[] m_line = m_nextLine.Split(separator);
@@ -41,8 +39,8 @@ namespace Parser
             m_nextLine = streamReader.ReadLine();
             string t_intervals = m_nextLine.Substring(0, 2);
 
-            thermo = addQuotesAndSemicolon(thermo);
-            Console.WriteLine(thermo);
+            //thermo = addQuotesAndSemicolon(thermo);
+            //Console.WriteLine(thermo);
 
             string optionalId = m_nextLine.Substring(3, 9);
             Console.WriteLine(m_line[0]);
@@ -60,8 +58,8 @@ namespace Parser
             //TextFields m_description = delimitedFieldParser.ReadFields();
             parser.SetFieldWidths(2);
             TextFields m_name = parser.ReadFields();
-            //string mm_name = "\"" + m_name.ToString() + "\"" + ",";
-            string nameField = "\t\t\t\"" + "name" + "\"" + ":" + " ";
+
+            nameFieldName = addQuotesAndSemicolon(nameFieldName);
             string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
             string t_intervalField  = "\n\t\t\t\"" + "t_intervals"  + "\"" + ":" + "";
             
@@ -70,14 +68,10 @@ namespace Parser
 
             Console.WriteLine(" Thermo file to json");
 
-            
-
-            //streamWriter.Write(m_thermo);
-            
-            
-            streamWriter.Write(":");
-            streamWriter.WriteLine(" [");
+            streamWriter.Write(m_thermoFieldName);
+            streamWriter.WriteLine("[");
             streamWriter.WriteLine("\t\t{");
+
             streamWriter.Write(nameFieldName);
             streamWriter.Write(compoundName);
             streamWriter.Write(descriptionFieldName);
@@ -90,7 +84,7 @@ namespace Parser
 
         private static string addQuotesAndSemicolon(string fieldName)
         {
-            fieldName = "\t\"" + fieldName + "\"" + ":" + " ";
+            fieldName = "\t\"" + fieldName + "\"" + ":" + "";
             return fieldName;
         }
 
@@ -100,7 +94,8 @@ namespace Parser
             {
                 string m_thermoLine = streamReader.ReadLine();
                 m_thermo = m_thermoLine.Substring(0, 6);
-                m_thermoField = "\t\"" + m_thermo.ToString() + "\"";
+                //m_thermoField = "\t\"" + m_thermo.ToString() + "\"";
+                m_thermoField = addQuotesAndSemicolon(m_thermoField);
             }
             return m_thermoField;
         }
