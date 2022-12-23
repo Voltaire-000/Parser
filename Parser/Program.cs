@@ -12,29 +12,29 @@ namespace Parser
     {
         static void Main(string[] args)
         {
-             
+            string m_thermo = "";
+            string m_thermoField = "";
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
-            //string path = "..\\..\\mJson.json";
-            //FileMode fileMode = FileMode.CreateNew;
+            StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
 
-            //FileStream fs = new FileStream(path, fileMode);
-            //fs.
-            //TextWriter textWriter;
-            //textWriter.
+            string m_line1 = streamReader.ReadLine();
+            // we are at start of file
+            if (m_line1 == "")
+            {
+                string m_thermoLine = streamReader.ReadLine();
+                m_thermo = m_thermoLine.Substring(0, 6);
+                m_thermoField = "\t\"" + m_thermo.ToString() + "\"";
+            }
+            string m_nextLine = streamReader.ReadLine();
+            m_nextLine.TakeWhile(char.IsLetterOrDigit);
+
+
+
             TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
             TextFileParsers.DelimitedFieldParser delimitedFieldParser = new DelimitedFieldParser("..\\..\\thermo.inp");
 
-            //int[] fieldWidths = { 6, 0, 2, 0 };
-            //parser.SetFieldWidths(fieldWidths);
-            //parser.IgnoreBlankLines = false;
-            //parser.TrimWhiteSpace = false;
-            //int[] m_width = parser.GetFieldWidths();
-            //long m_linenumber = parser.LineNumber;
-            //parser.Read();
-            //parser.ReadLine();
             parser.SkipLine();
             parser.SetFieldWidths(6);
-            TextFields m_thermo = parser.ReadFields();
 
             delimitedFieldParser.SetDelimiters(' ');
             delimitedFieldParser.SkipLines(2);
@@ -49,13 +49,14 @@ namespace Parser
             parser.SetFieldWidths(24);
             TextFields m_descr = parser.ReadFields();
 
-            Console.WriteLine(  m_thermo);
+            Console.WriteLine(" Thermo file to json");
 
             streamWriter.WriteLine("{");
-            streamWriter.Write("\t");
-            streamWriter.Write("\"");
-            streamWriter.Write(m_thermo);
-            streamWriter.Write("\"");
+            //streamWriter.Write("\t");
+            //streamWriter.Write("\"");
+            //streamWriter.Write(m_thermo);
+            streamWriter.Write(m_thermoField);
+            //streamWriter.Write("\"");
             streamWriter.Write(":");
             streamWriter.WriteLine(" [");
             streamWriter.WriteLine("\t\t{");
