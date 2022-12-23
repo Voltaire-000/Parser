@@ -26,9 +26,13 @@ namespace Parser
                 m_thermoField = "\t\"" + m_thermo.ToString() + "\"";
             }
             string m_nextLine = streamReader.ReadLine();
-            m_nextLine.TakeWhile(char.IsLetterOrDigit);
-
-
+            char separator = ' ';
+            string[] m_line = m_nextLine.Split(separator);
+            string compoundName = m_line[0];
+            int startDescription = compoundName.Length;
+            string m_description = m_nextLine.Substring(startDescription);
+            Console.WriteLine(m_line[0]);
+            
 
             TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
             TextFileParsers.DelimitedFieldParser delimitedFieldParser = new DelimitedFieldParser("..\\..\\thermo.inp");
@@ -39,7 +43,7 @@ namespace Parser
             delimitedFieldParser.SetDelimiters(' ');
             delimitedFieldParser.SkipLines(2);
             delimitedFieldParser.SqueezeDelimiters = true;
-            TextFields m_description = delimitedFieldParser.ReadFields();
+            //TextFields m_description = delimitedFieldParser.ReadFields();
             parser.SetFieldWidths(2);
             TextFields m_name = parser.ReadFields();
             string mm_name = "\"" + m_name.ToString() + "\"" + ",";
