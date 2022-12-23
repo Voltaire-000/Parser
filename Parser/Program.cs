@@ -15,7 +15,7 @@ namespace Parser
             string path = "..\\..\\mJson.json";
             FileMode fileMode = FileMode.CreateNew;
 
-            //FileStream fs = new FileStream(path, fileMode);
+            FileStream fs = new FileStream(path, fileMode);
             //fs.
             //TextWriter textWriter;
             //textWriter.
