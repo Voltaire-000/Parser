@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,13 @@ namespace Parser
     {
         static void Main(string[] args)
         {
+            string path = "..\\..\\mJson.json";
+            FileMode fileMode = FileMode.CreateNew;
+
+            //FileStream fs = new FileStream(path, fileMode);
+            //fs.
+            //TextWriter textWriter;
+            //textWriter.
             TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
             TextFileParsers.DelimitedFieldParser delimitedFieldParser = new DelimitedFieldParser("..\\..\\thermo.inp");
 
