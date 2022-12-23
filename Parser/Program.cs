@@ -12,6 +12,7 @@ namespace Parser
     {
         static void Main(string[] args)
         {
+            
             string path = "..\\..\\mJson.json";
             FileMode fileMode = FileMode.CreateNew;
 
@@ -45,6 +46,7 @@ namespace Parser
             TextFields m_descr = parser.ReadFields();
 
             Console.WriteLine(  m_thermo);
+           
             Console.Read();
         }
     }
