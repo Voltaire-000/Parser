@@ -1,6 +1,5 @@
 {
 	"thermo": [
 		{
-			"name": "Ag",
-			"description": "             Hf:Cox,1989. Moore,1971. Gordon,1999.                         ",
+"Ag","             Hf:Cox,1989. Moore,1971. Gordon,1999.                         ",
 			"t_intervals": 3

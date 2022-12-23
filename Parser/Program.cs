@@ -13,7 +13,12 @@ namespace Parser
         static void Main(string[] args)
         {
             string m_thermo = "";
-            string m_thermoField = "";
+            string thermo = "thermo";
+            string m_thermoFieldName = "";
+            string nameFieldName = "";
+            string descriptionFieldName = "";
+            string t_intervalsFieldName = "";
+
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
 
@@ -22,8 +27,8 @@ namespace Parser
             streamWriter.WriteLine("{");
             //streamWriter.Write("\t");
             //streamWriter.Write("\"");
-            m_thermoField = JsonStart(m_line1, m_thermo, m_thermoField, streamReader);
-            streamWriter.Write(m_thermoField);
+            m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
+            streamWriter.Write(m_thermoFieldName);
             //streamWriter.Write("\"");
 
             string m_nextLine = streamReader.ReadLine();
@@ -36,7 +41,8 @@ namespace Parser
             m_nextLine = streamReader.ReadLine();
             string t_intervals = m_nextLine.Substring(0, 2);
 
-            string mzz = addQuotes(t_intervals);
+            thermo = addQuotesAndSemicolon(thermo);
+            Console.WriteLine(thermo);
 
             string optionalId = m_nextLine.Substring(3, 9);
             Console.WriteLine(m_line[0]);
@@ -72,9 +78,9 @@ namespace Parser
             streamWriter.Write(":");
             streamWriter.WriteLine(" [");
             streamWriter.WriteLine("\t\t{");
-            streamWriter.Write(nameField);
+            streamWriter.Write(nameFieldName);
             streamWriter.Write(compoundName);
-            streamWriter.Write(descriptionField);
+            streamWriter.Write(descriptionFieldName);
             streamWriter.Write(m_description);
             streamWriter.Write(t_intervalField);
             streamWriter.Write(t_intervals);
@@ -82,10 +88,9 @@ namespace Parser
             Console.Read();
         }
 
-        private static string addQuotes(string fieldName)
+        private static string addQuotesAndSemicolon(string fieldName)
         {
-            StringBuilder sb = new StringBuilder();
-            fieldName =  sb.Insert(0, "\"").ToString();
+            fieldName = "\t\"" + fieldName + "\"" + ":" + " ";
             return fieldName;
         }
 
