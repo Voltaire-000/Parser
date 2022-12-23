@@ -14,7 +14,7 @@ namespace Parser
         {
             string m_thermo = "";
             string m_thermoFieldName = "thermo";
-            string nameFieldName = "name";
+            string compoundFieldName = "name";
             string descriptionFieldName = "description";
             string t_intervalsFieldName = "T intervals";
 
@@ -24,11 +24,8 @@ namespace Parser
             string m_line1 = streamReader.ReadLine();
             // we are at start of file
             streamWriter.WriteLine("{");
-
             m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
 
-            
- 
             string m_nextLine = streamReader.ReadLine();
             char separator = ' ';
             string[] m_line = m_nextLine.Split(separator);
@@ -38,9 +35,6 @@ namespace Parser
             m_description = "\"" + m_description + "\"" + ",";
             m_nextLine = streamReader.ReadLine();
             string t_intervals = m_nextLine.Substring(0, 2);
-
-            //thermo = addQuotesAndSemicolon(thermo);
-            //Console.WriteLine(thermo);
 
             string optionalId = m_nextLine.Substring(3, 9);
             Console.WriteLine(m_line[0]);
@@ -59,9 +53,12 @@ namespace Parser
             parser.SetFieldWidths(2);
             TextFields m_name = parser.ReadFields();
 
-            nameFieldName = addQuotesAndSemicolon(nameFieldName);
-            string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
-            string t_intervalField  = "\n\t\t\t\"" + "t_intervals"  + "\"" + ":" + "";
+            compoundFieldName = addQuotesAndSemicolon(compoundFieldName);
+            descriptionFieldName = addQuotesAndSemicolon(descriptionFieldName);
+            t_intervalsFieldName = addQuotesAndSemicolon(t_intervalsFieldName);
+
+            //string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
+            //string t_intervalField  = "\n\t\t\t\"" + "t_intervals"  + "\"" + ":" + "";
             
             parser.SetFieldWidths(24);
             TextFields m_descr = parser.ReadFields();
@@ -72,11 +69,18 @@ namespace Parser
             streamWriter.WriteLine("[");
             streamWriter.WriteLine("\t\t{");
 
-            streamWriter.Write(nameFieldName);
+            streamWriter.Write("\t\t");
+            streamWriter.Write(compoundFieldName);
             streamWriter.Write(compoundName);
+            streamWriter.WriteLine();
+
+            streamWriter.Write("\t\t");
             streamWriter.Write(descriptionFieldName);
             streamWriter.Write(m_description);
-            streamWriter.Write(t_intervalField);
+            streamWriter.WriteLine();
+
+            streamWriter.Write("\t\t");
+            streamWriter.Write(t_intervalsFieldName);
             streamWriter.Write(t_intervals);
             streamWriter.Close();
             Console.Read();
