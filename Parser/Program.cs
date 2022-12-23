@@ -35,7 +35,9 @@ namespace Parser
             m_description = "\"" + m_description + "\"" + ",";
             m_nextLine = streamReader.ReadLine();
             string t_intervals = m_nextLine.Substring(0, 2);
+
             string mzz = addQuotes(t_intervals);
+
             string optionalId = m_nextLine.Substring(3, 9);
             Console.WriteLine(m_line[0]);
             
@@ -80,11 +82,11 @@ namespace Parser
             Console.Read();
         }
 
-        private static string addQuotes(string t_intervals)
+        private static string addQuotes(string fieldName)
         {
             StringBuilder sb = new StringBuilder();
-            t_intervals =  sb.Insert(0, "\"").ToString();
-            return t_intervals;
+            fieldName =  sb.Insert(0, "\"").ToString();
+            return fieldName;
         }
 
         private static string JsonStart(string m_line1, string m_thermo,string m_thermoField, StreamReader streamReader)
