@@ -19,12 +19,8 @@ namespace Parser
 
             string m_line1 = streamReader.ReadLine();
             // we are at start of file
-            if (m_line1 == "")
-            {
-                string m_thermoLine = streamReader.ReadLine();
-                m_thermo = m_thermoLine.Substring(0, 6);
-                m_thermoField = "\t\"" + m_thermo.ToString() + "\"";
-            }
+            m_thermoField = JsonStart(m_line1, m_thermo, m_thermoField, streamReader);
+
             string m_nextLine = streamReader.ReadLine();
             char separator = ' ';
             string[] m_line = m_nextLine.Split(separator);
@@ -69,6 +65,20 @@ namespace Parser
             streamWriter.Write(descriptionField);
             streamWriter.Close();
             Console.Read();
+        }
+
+        private static string JsonStart(string m_line1, string m_thermo,string m_thermoField, StreamReader streamReader)
+        {
+            if (m_line1 == "")
+            {
+                string m_thermoLine = streamReader.ReadLine();
+                m_thermo = m_thermoLine.Substring(0, 6);
+                m_thermoField = "\t\"" + m_thermo.ToString() + "\"";
+
+                
+            }
+            return m_thermoField;
+            //throw new NotImplementedException();
         }
     }
 }
