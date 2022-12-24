@@ -21,6 +21,7 @@ namespace Parser
             string m_tIntervalsFieldName = "t_intervals";
             string m_optionalIdFieldName = "id_code";
             string m_chemformulaFieldName = "chemicalFormula";
+            string m_speciesTypeFieldName = "gaseous";
 
             int count = 0;
             int m_peek = 0;
@@ -119,7 +120,6 @@ namespace Parser
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
                     m_chemformulaFieldName = addQuotesAndSemicolon(m_chemformulaFieldName);
-
                     streamWriter.Write(m_chemformulaFieldName + "[");
                     string[] formulaLine = chemFormula.Split(separator);
                     int formulaLineLength = 0;
@@ -149,6 +149,23 @@ namespace Parser
                         }
                         
                     }
+
+                    //  Gaseous species, true or false
+                    string speciesType = m_currentLine.Substring(41, 1);
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_speciesTypeFieldName = addQuotesAndSemicolon(m_speciesTypeFieldName);
+                    streamWriter.Write(m_speciesTypeFieldName);
+                    if (speciesType == "0")
+                    {
+                        streamWriter.Write(" false" + ",");
+                    }
+                    else
+                    {
+                        streamWriter.Write(" true" + ",");
+                    }
+
+                    //  molecular weight
 
                 }
                 
