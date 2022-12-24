@@ -122,16 +122,32 @@ namespace Parser
 
                     streamWriter.Write(m_chemformulaFieldName + "[");
                     string[] formulaLine = chemFormula.Split(separator);
+                    int formulaLineLength = 0;
+                    int itemCount = 0;
                     foreach (var item in formulaLine)
                     {
+                        itemCount = itemCount + 1;
+                        formulaLineLength = formulaLine.Length;
+                        int m_itemLength = item.Count();
                         // skip over spaces
-                        if (item != "")
+                        if (item == "")
                         {
-                            // add the quotes
-                            string m_item = item.ToString();
+                            continue;
+                        }
+                        // add the quotes
+                        string m_item = item.ToString();
+                        
+                        if (itemCount <= 18)
+                        {
                             m_item = addQuotesAndComma(m_item);
                             streamWriter.Write(m_item);
                         }
+                        else if(itemCount >=19)
+                        {
+                            m_item= addQuotes(m_item);
+                            streamWriter.Write(m_item + "]" + ",");
+                        }
+                        
                     }
 
                 }
