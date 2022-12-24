@@ -17,7 +17,7 @@ namespace Parser
             string m_thermo = "";
             string m_thermoFieldName = "thermo";
             string m_reactantFieldName = "reactant";
-            string descriptionFieldName = "description";
+            string m_descriptionFieldName = "description";
             string t_intervalsFieldName = "T intervals";
             int count = 0;
             int m_peek = 0;
@@ -73,11 +73,20 @@ namespace Parser
                     //string m_nextLine = streamReader.ReadLine();
                     char separator = ' ';
                     string[] m_line = m_currentLine.Split(separator);
-                    string reactant = "\"" + m_line[0] + "\"" + ",";
+                    
                     m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
+                    string reactant = "\"" + m_line[0] + "\"" + ",";
+
+                    int startdescription = reactant.Length;
+                    string m_description = m_currentLine.Substring(startdescription);
+                    m_description = addQuotesAndSemicolon(m_description);
+                    m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
                     streamWriter.Write("\t\t");
                     streamWriter.Write(m_reactantFieldName);
                     streamWriter.Write(reactant);
+                    streamWriter.WriteLine();
+                    streamWriter.Write(m_descriptionFieldName);
+                    streamWriter.Write(m_description);
                     streamWriter.WriteLine();
                 }
                 m_currentLine = streamReader.ReadLine();
@@ -125,7 +134,7 @@ namespace Parser
             TextFields m_name = parser.ReadFields();
 
             m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
-            descriptionFieldName = addQuotesAndSemicolon(descriptionFieldName);
+            m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
             t_intervalsFieldName = addQuotesAndSemicolon(t_intervalsFieldName);
 
             //string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
@@ -137,7 +146,7 @@ namespace Parser
             Console.WriteLine(" Thermo file to json");
 
             streamWriter.Write("\t\t");
-            streamWriter.Write(descriptionFieldName);
+            streamWriter.Write(m_descriptionFieldName);
             //streamWriter.Write(m_description);
             streamWriter.WriteLine();
 
