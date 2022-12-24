@@ -18,7 +18,9 @@ namespace Parser
             string m_thermoFieldName = "thermo";
             string m_reactantFieldName = "reactant";
             string m_descriptionFieldName = "description";
-            string m_tIntervalsFieldName = "T intervals";
+            string m_tIntervalsFieldName = "t_intervals";
+            string m_optionalIdFieldName = "id_code";
+
             int count = 0;
             int m_peek = 0;
             string m_char = "";
@@ -85,23 +87,31 @@ namespace Parser
                     m_description = addQuotesAndComma(m_description);
                     
                     streamWriter.Write("\t\t");
-                    streamWriter.Write(m_reactantFieldName);
-                    streamWriter.Write(reactant);
+                    streamWriter.Write(m_reactantFieldName + reactant);
+                    //streamWriter.Write(reactant);
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
-                    streamWriter.Write(m_descriptionFieldName);
-                    streamWriter.Write(m_description);
+                    streamWriter.Write(m_descriptionFieldName + m_description);
+                    //streamWriter.Write(m_description);
                     streamWriter.WriteLine();
 
                     //  T intervals line 
                     m_currentLine = streamReader.ReadLine();
+                    string t_intervals = m_currentLine.Substring(0, 2);
                     m_tIntervalsFieldName = addQuotesAndSemicolon(m_tIntervalsFieldName);
                     streamWriter.Write("\t\t");
-                    streamWriter.Write(m_tIntervalsFieldName);
-                    string t_intervals = m_currentLine.Substring(0, 2);
-                    streamWriter.Write(t_intervals);
+                    streamWriter.Write(m_tIntervalsFieldName + t_intervals);
+                    //streamWriter.Write(t_intervals);
                     streamWriter.Write(",");
-                    
+
+                    //  optional id continued from T intervals line
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_optionalIdFieldName = addQuotesAndSemicolon(m_optionalIdFieldName);
+                    string optionalId = m_currentLine.Substring(3, 9);
+                    optionalId= addQuotesAndComma(optionalId);
+                    streamWriter.Write(m_optionalIdFieldName+ optionalId);
+
 
                 }
                 
