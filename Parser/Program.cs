@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace Parser
             string t_intervalsFieldName = "T intervals";
             int count = 0;
             int m_peek = 0;
+            string m_char = "";
+            UnicodeCategory unicodeCategory;
 
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
@@ -30,10 +33,12 @@ namespace Parser
                 streamReader.ReadLine();
 
                 m_peek = streamReader.Peek();
-                string m_char = char.ConvertFromUtf32(m_peek);
-                if (true)
+                m_char = char.ConvertFromUtf32(m_peek);
+                unicodeCategory =  Char.GetUnicodeCategory(m_char, 0);
+                if (unicodeCategory == UnicodeCategory.LowercaseLetter)
                 {
-
+                    // this is thermo line
+                    Console.WriteLine("Thermo line");
                 }
 
                 Console.WriteLine(count);
