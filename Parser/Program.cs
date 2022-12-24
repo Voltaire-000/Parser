@@ -79,12 +79,14 @@ namespace Parser
 
                     int startdescription = reactant.Length;
                     string m_description = m_currentLine.Substring(startdescription);
-                    m_description = addQuotesAndSemicolon(m_description);
                     m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
+                    m_description = addQuotesAndComma(m_description);
+                    
                     streamWriter.Write("\t\t");
                     streamWriter.Write(m_reactantFieldName);
                     streamWriter.Write(reactant);
                     streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
                     streamWriter.Write(m_descriptionFieldName);
                     streamWriter.Write(m_description);
                     streamWriter.WriteLine();
@@ -110,56 +112,62 @@ namespace Parser
             }
 
 
-            //int startDescription = compoundName.Length;
-            //string m_description = m_nextLine.Substring(startDescription);
-            //m_description = "\"" + m_description + "\"" + ",";
-            //m_nextLine = streamReader.ReadLine();
-            //string t_intervals = m_nextLine.Substring(0, 2);
+            ////int startDescription = compoundName.Length;
+            ////string m_description = m_nextLine.Substring(startDescription);
+            ////m_description = "\"" + m_description + "\"" + ",";
+            ////m_nextLine = streamReader.ReadLine();
+            ////string t_intervals = m_nextLine.Substring(0, 2);
 
-            //string optionalId = m_nextLine.Substring(3, 9);
-            //Console.WriteLine(m_line[0]);
+            ////string optionalId = m_nextLine.Substring(3, 9);
+            ////Console.WriteLine(m_line[0]);
 
 
-            TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
-            TextFileParsers.DelimitedFieldParser delimitedFieldParser = new DelimitedFieldParser("..\\..\\thermo.inp");
+            //TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
+            //TextFileParsers.DelimitedFieldParser delimitedFieldParser = new DelimitedFieldParser("..\\..\\thermo.inp");
 
-            parser.SkipLine();
-            parser.SetFieldWidths(6);
+            //parser.SkipLine();
+            //parser.SetFieldWidths(6);
 
-            delimitedFieldParser.SetDelimiters(' ');
-            delimitedFieldParser.SkipLines(2);
-            delimitedFieldParser.SqueezeDelimiters = true;
-            //TextFields m_description = delimitedFieldParser.ReadFields();
-            parser.SetFieldWidths(2);
-            TextFields m_name = parser.ReadFields();
+            //delimitedFieldParser.SetDelimiters(' ');
+            //delimitedFieldParser.SkipLines(2);
+            //delimitedFieldParser.SqueezeDelimiters = true;
+            ////TextFields m_description = delimitedFieldParser.ReadFields();
+            //parser.SetFieldWidths(2);
+            //TextFields m_name = parser.ReadFields();
 
-            m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
-            m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
-            t_intervalsFieldName = addQuotesAndSemicolon(t_intervalsFieldName);
+            //m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
+            //m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
+            //t_intervalsFieldName = addQuotesAndSemicolon(t_intervalsFieldName);
 
-            //string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
-            //string t_intervalField  = "\n\t\t\t\"" + "t_intervals"  + "\"" + ":" + "";
+            ////string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
+            ////string t_intervalField  = "\n\t\t\t\"" + "t_intervals"  + "\"" + ":" + "";
 
-            parser.SetFieldWidths(24);
-            TextFields m_descr = parser.ReadFields();
+            //parser.SetFieldWidths(24);
+            //TextFields m_descr = parser.ReadFields();
 
-            Console.WriteLine(" Thermo file to json");
+            //Console.WriteLine(" Thermo file to json");
 
-            streamWriter.Write("\t\t");
-            streamWriter.Write(m_descriptionFieldName);
-            //streamWriter.Write(m_description);
-            streamWriter.WriteLine();
+            //streamWriter.Write("\t\t");
+            //streamWriter.Write(m_descriptionFieldName);
+            ////streamWriter.Write(m_description);
+            //streamWriter.WriteLine();
 
-            streamWriter.Write("\t\t");
-            streamWriter.Write(t_intervalsFieldName);
-            //streamWriter.Write(t_intervals);
-            streamWriter.Close();
-            Console.Read();
+            //streamWriter.Write("\t\t");
+            //streamWriter.Write(t_intervalsFieldName);
+            ////streamWriter.Write(t_intervals);
+            //streamWriter.Close();
+            //Console.Read();
         }
 
         private static string addQuotesAndSemicolon(string fieldName)
         {
             fieldName = "\t\"" + fieldName + "\"" + ":" + "";
+            return fieldName;
+        }
+
+        private static string addQuotesAndComma(string fieldName)
+        {
+            fieldName = "\t\"" + fieldName + "\"" + ",";
             return fieldName;
         }
 
