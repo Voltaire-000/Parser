@@ -22,6 +22,8 @@ namespace Parser
             string m_optionalIdFieldName = "id_code";
             string m_chemformulaFieldName = "chemicalFormula";
             string m_speciesTypeFieldName = "gaseous";
+            string m_molecularWeightFieldName = "molecularWeight";
+            string m_heatOfFormationFieldName = "heatOfFormation";
 
             int count = 0;
             int m_peek = 0;
@@ -166,6 +168,21 @@ namespace Parser
                     }
 
                     //  molecular weight
+                    string molecularWeight = m_currentLine.Substring(54, 11);
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_molecularWeightFieldName = addQuotesAndSemicolon(m_molecularWeightFieldName);
+                    streamWriter.Write(m_molecularWeightFieldName);
+                    streamWriter.Write( " " + molecularWeight + ",");
+
+                    //  heat of formation
+                    string heatOfFormation = m_currentLine.Substring(65, 15);
+                    heatOfFormation = heatOfFormation.Trim();
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_heatOfFormationFieldName = addQuotesAndSemicolon(m_heatOfFormationFieldName);
+                    streamWriter.Write(m_heatOfFormationFieldName);
+                    streamWriter.Write(" " + heatOfFormation + ",");
 
                 }
                 
