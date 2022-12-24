@@ -24,6 +24,7 @@ namespace Parser
             string m_char = "";
             UnicodeCategory unicodeCategory;
             bool openBracketPrinted = false;
+            string m_nextLine = "";
 
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
@@ -38,7 +39,7 @@ namespace Parser
                     openBracketPrinted= true;
                 }
 
-                streamReader.ReadLine();
+                m_nextLine = streamReader.ReadLine();
 
                 m_peek = streamReader.Peek();
                 if (m_peek != -1)
@@ -60,13 +61,13 @@ namespace Parser
                     if (unicodeCategory == UnicodeCategory.UppercaseLetter)
                     {
                         //  this is a reactant field start of line. print reactant name to file
-                        string m_nextLine = streamReader.ReadLine();
+                        //string m_nextLine = streamReader.ReadLine();
                         char separator = ' ';
                         string[] m_line = m_nextLine.Split(separator);
-                        string compoundName = "\"" + m_line[0] + "\"" + ",";
+                        string reactant = "\"" + m_line[0] + "\"" + ",";
                         streamWriter.Write("\t\t");
                         streamWriter.Write(reactantFieldName);
-                        streamWriter.Write(compoundName);
+                        streamWriter.Write(reactant);
                         streamWriter.WriteLine();
                     }
                 }
