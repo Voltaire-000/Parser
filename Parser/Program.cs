@@ -52,7 +52,6 @@ namespace Parser
                 }
                 Char m_firstChar = m_currentLine.First();
 
-
                 unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
 
                 if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_firstChar == 't')
@@ -126,18 +125,14 @@ namespace Parser
                     foreach (var item in formulaLine)
                     {
                         // skip over spaces
-                        if (!item.StartsWith(""))
+                        if (item != "")
                         {
                             // add the quotes
-
+                            string m_item = item.ToString();
+                            m_item = addQuotesAndComma(m_item);
+                            streamWriter.Write(m_item);
                         }
                     }
-                    string symbol = formulaLine[0];
-                    int symbolLength = symbol.Length;
-                    symbol = addQuotesAndComma(symbol);
-
-                    streamWriter.Write(symbol);
-
 
                 }
                 
