@@ -20,7 +20,7 @@ namespace Parser
             string m_descriptionFieldName = "description";
             string m_tIntervalsFieldName = "t_intervals";
             string m_optionalIdFieldName = "id_code";
-            string m_chemformulaFieldName = "chemFormula";
+            string m_chemformulaFieldName = "chemicalFormula";
 
             int count = 0;
             int m_peek = 0;
@@ -121,16 +121,22 @@ namespace Parser
                     streamWriter.Write("\t\t");
                     m_chemformulaFieldName = addQuotesAndSemicolon(m_chemformulaFieldName);
 
-                    //IQueryable<string> query = chemCharArray.TakeWhile(symbol => String.Compare(Char.IsLetterOrDigit, symbol, true) !=0);
-                    //chemFormula.IndexOf(Char.IsSeparator();
-                    foreach (var item in chemCharArray)
-                    {
-
-                        char charItem = item;
-                        bool m_true = char.IsSeparator(charItem);
-                    }
                     streamWriter.Write(m_chemformulaFieldName + "[");
-                    //chemFormula.
+                    string[] formulaLine = chemFormula.Split(separator);
+                    foreach (var item in formulaLine)
+                    {
+                        // skip over spaces
+                        if (!item.StartsWith(""))
+                        {
+                            // add the quotes
+
+                        }
+                    }
+                    string symbol = formulaLine[0];
+                    int symbolLength = symbol.Length;
+                    symbol = addQuotesAndComma(symbol);
+
+                    streamWriter.Write(symbol);
 
 
                 }
@@ -212,6 +218,11 @@ namespace Parser
         private static string addQuotesAndComma(string fieldName)
         {
             fieldName = "\t\"" + fieldName.Trim() + "\"" + ",";
+            return fieldName;
+        }
+        private static string addQuotes(string fieldName)
+        {
+            fieldName = "\"" + fieldName + "\"";
             return fieldName;
         }
 
