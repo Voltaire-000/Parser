@@ -16,53 +16,80 @@ namespace Parser
         {
             string m_thermo = "";
             string m_thermoFieldName = "thermo";
-            string compoundFieldName = "name";
+            string reactantFieldName = "reactant";
             string descriptionFieldName = "description";
             string t_intervalsFieldName = "T intervals";
             int count = 0;
             int m_peek = 0;
             string m_char = "";
             UnicodeCategory unicodeCategory;
+            bool openBracketPrinted = false;
 
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
 
             while (!streamReader.EndOfStream)
             {
+                //  print open bracket
+                if (!openBracketPrinted)
+                {
+                    // we are at start of file
+                    streamWriter.WriteLine("{");
+                    openBracketPrinted= true;
+                }
 
                 streamReader.ReadLine();
 
                 m_peek = streamReader.Peek();
-                m_char = char.ConvertFromUtf32(m_peek);
-                unicodeCategory =  Char.GetUnicodeCategory(m_char, 0);
-                if (unicodeCategory == UnicodeCategory.LowercaseLetter)
+                if (m_peek != -1)
                 {
-                    // this is thermo line
-                    Console.WriteLine("Thermo line");
+                    m_char = char.ConvertFromUtf32(m_peek);
+                    unicodeCategory =  Char.GetUnicodeCategory(m_char, 0);
+                    if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_char == "t")
+                    {
+                        // this is thermo line
+                        Console.WriteLine("Thermo line");
+                        string m_line1 = streamReader.ReadLine();
+                        m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
+                        m_thermoFieldName = addQuotesAndSemicolon(m_thermoFieldName);
+                        streamWriter.Write(m_thermoFieldName);
+                        streamWriter.WriteLine("[");
+                        streamWriter.WriteLine("\t\t{");
+                    }
+
+                    if (unicodeCategory == UnicodeCategory.UppercaseLetter)
+                    {
+                        //  this is a reactant field start of line. print reactant name to file
+                        string m_nextLine = streamReader.ReadLine();
+                        char separator = ' ';
+                        string[] m_line = m_nextLine.Split(separator);
+                        string compoundName = "\"" + m_line[0] + "\"" + ",";
+                        streamWriter.Write("\t\t");
+                        streamWriter.Write(reactantFieldName);
+                        streamWriter.Write(compoundName);
+                        streamWriter.WriteLine();
+                    }
+                }
+                else
+                {
+                    //  we are at end of file. close the streamWriter
+                    streamWriter.Close();
                 }
 
-                Console.WriteLine(count);
-                count = count +1;
+                //Console.WriteLine(count);
+                //count = count +1;
 
             }
 
-            string m_line1 = streamReader.ReadLine();
-            // we are at start of file
-            streamWriter.WriteLine("{");
-            m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
 
-            string m_nextLine = streamReader.ReadLine();
-            char separator = ' ';
-            string[] m_line = m_nextLine.Split(separator);
-            string compoundName = "\"" + m_line[0] + "\"" + ",";
-            int startDescription = compoundName.Length;
-            string m_description = m_nextLine.Substring(startDescription);
-            m_description = "\"" + m_description + "\"" + ",";
-            m_nextLine = streamReader.ReadLine();
-            string t_intervals = m_nextLine.Substring(0, 2);
+            //int startDescription = compoundName.Length;
+            //string m_description = m_nextLine.Substring(startDescription);
+            //m_description = "\"" + m_description + "\"" + ",";
+            //m_nextLine = streamReader.ReadLine();
+            //string t_intervals = m_nextLine.Substring(0, 2);
 
-            string optionalId = m_nextLine.Substring(3, 9);
-            Console.WriteLine(m_line[0]);
+            //string optionalId = m_nextLine.Substring(3, 9);
+            //Console.WriteLine(m_line[0]);
             
 
             TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
@@ -78,7 +105,7 @@ namespace Parser
             parser.SetFieldWidths(2);
             TextFields m_name = parser.ReadFields();
 
-            compoundFieldName = addQuotesAndSemicolon(compoundFieldName);
+            reactantFieldName = addQuotesAndSemicolon(reactantFieldName);
             descriptionFieldName = addQuotesAndSemicolon(descriptionFieldName);
             t_intervalsFieldName = addQuotesAndSemicolon(t_intervalsFieldName);
 
@@ -90,23 +117,14 @@ namespace Parser
 
             Console.WriteLine(" Thermo file to json");
 
-            streamWriter.Write(m_thermoFieldName);
-            streamWriter.WriteLine("[");
-            streamWriter.WriteLine("\t\t{");
-
-            streamWriter.Write("\t\t");
-            streamWriter.Write(compoundFieldName);
-            streamWriter.Write(compoundName);
-            streamWriter.WriteLine();
-
             streamWriter.Write("\t\t");
             streamWriter.Write(descriptionFieldName);
-            streamWriter.Write(m_description);
+            //streamWriter.Write(m_description);
             streamWriter.WriteLine();
 
             streamWriter.Write("\t\t");
             streamWriter.Write(t_intervalsFieldName);
-            streamWriter.Write(t_intervals);
+            //streamWriter.Write(t_intervals);
             streamWriter.Close();
             Console.Read();
         }
