@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,28 @@ namespace Parser
             string compoundFieldName = "name";
             string descriptionFieldName = "description";
             string t_intervalsFieldName = "T intervals";
+            int count = 0;
+            int m_peek = 0;
 
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
+
+            while (!streamReader.EndOfStream)
+            {
+
+                streamReader.ReadLine();
+
+                m_peek = streamReader.Peek();
+                string m_char = char.ConvertFromUtf32(m_peek);
+                if (true)
+                {
+
+                }
+
+                Console.WriteLine(count);
+                count = count +1;
+
+            }
 
             string m_line1 = streamReader.ReadLine();
             // we are at start of file
