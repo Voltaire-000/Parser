@@ -115,12 +115,21 @@ namespace Parser
 
                     //  chemical formula
                     string chemFormula = m_currentLine.Substring(9, 41);
+                    chemFormula = chemFormula.Trim();
+                    char[] chemCharArray = chemFormula.ToCharArray();
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
                     m_chemformulaFieldName = addQuotesAndSemicolon(m_chemformulaFieldName);
 
+                    IQueryable<char> value = chemFormula.TakeWhile<char>( ' ');
+                    //chemFormula.IndexOf(Char.IsSeparator();
+                    foreach (var item in chemCharArray)
+                    {
+
+                        string charString = item.ToString();
+                    }
                     streamWriter.Write(m_chemformulaFieldName + "[");
-                    chemFormula.
+                    //chemFormula.
 
 
                 }
