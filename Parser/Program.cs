@@ -121,12 +121,13 @@ namespace Parser
                     streamWriter.Write("\t\t");
                     m_chemformulaFieldName = addQuotesAndSemicolon(m_chemformulaFieldName);
 
-                    IQueryable<char> value = chemFormula.TakeWhile<char>( ' ');
+                    //IQueryable<string> query = chemCharArray.TakeWhile(symbol => String.Compare(Char.IsLetterOrDigit, symbol, true) !=0);
                     //chemFormula.IndexOf(Char.IsSeparator();
                     foreach (var item in chemCharArray)
                     {
 
-                        string charString = item.ToString();
+                        char charItem = item;
+                        bool m_true = char.IsSeparator(charItem);
                     }
                     streamWriter.Write(m_chemformulaFieldName + "[");
                     //chemFormula.
