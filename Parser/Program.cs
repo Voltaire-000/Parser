@@ -20,6 +20,7 @@ namespace Parser
             string m_descriptionFieldName = "description";
             string m_tIntervalsFieldName = "t_intervals";
             string m_optionalIdFieldName = "id_code";
+            string m_chemformulaFieldName = "chemFormula";
 
             int count = 0;
             int m_peek = 0;
@@ -108,9 +109,18 @@ namespace Parser
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
                     m_optionalIdFieldName = addQuotesAndSemicolon(m_optionalIdFieldName);
-                    string optionalId = m_currentLine.Substring(3, 9);
+                    string optionalId = m_currentLine.Substring(3, 7);
                     optionalId= addQuotesAndComma(optionalId);
                     streamWriter.Write(m_optionalIdFieldName+ optionalId);
+
+                    //  chemical formula
+                    string chemFormula = m_currentLine.Substring(9, 41);
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_chemformulaFieldName = addQuotesAndSemicolon(m_chemformulaFieldName);
+
+                    streamWriter.Write(m_chemformulaFieldName + "[");
+                    chemFormula.
 
 
                 }
