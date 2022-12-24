@@ -36,7 +36,7 @@ namespace Parser
                 {
                     // we are at start of file
                     streamWriter.WriteLine("{");
-                    openBracketPrinted= true;
+                    openBracketPrinted = true;
                 }
 
                 m_nextLine = streamReader.ReadLine();
@@ -52,35 +52,31 @@ namespace Parser
 
                 unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
 
-                if (unicodeCategory == UnicodeCategory.LowercaseLetter)
+                if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_firstChar == 't')
                 {
-                    //m_char = char.ConvertFromUtf32(m_peek);
-                    //unicodeCategory =  Char.GetUnicodeCategory(m_char, 0);
-                    if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_firstChar == 't')
-                    {
-                        // this is thermo line
-                        Console.WriteLine("Thermo line");
-                        string m_line1 = streamReader.ReadLine();
-                        m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
-                        m_thermoFieldName = addQuotesAndSemicolon(m_thermoFieldName);
-                        streamWriter.Write(m_thermoFieldName);
-                        streamWriter.WriteLine("[");
-                        streamWriter.WriteLine("\t\t{");
-                    }
-
-                    if (unicodeCategory == UnicodeCategory.UppercaseLetter)
-                    {
-                        //  this is a reactant field start of line. print reactant name to file
-                        //string m_nextLine = streamReader.ReadLine();
-                        char separator = ' ';
-                        string[] m_line = m_nextLine.Split(separator);
-                        string reactant = "\"" + m_line[0] + "\"" + ",";
-                        streamWriter.Write("\t\t");
-                        streamWriter.Write(reactantFieldName);
-                        streamWriter.Write(reactant);
-                        streamWriter.WriteLine();
-                    }
+                    // this is thermo line
+                    Console.WriteLine("Thermo line");
+                    string m_line1 = streamReader.ReadLine();
+                    m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
+                    m_thermoFieldName = addQuotesAndSemicolon(m_thermoFieldName);
+                    streamWriter.Write(m_thermoFieldName);
+                    streamWriter.WriteLine("[");
+                    streamWriter.WriteLine("\t\t{");
                 }
+
+                if (unicodeCategory == UnicodeCategory.UppercaseLetter)
+                {
+                    //  this is a reactant field start of line. print reactant name to file
+                    //string m_nextLine = streamReader.ReadLine();
+                    char separator = ' ';
+                    string[] m_line = m_nextLine.Split(separator);
+                    string reactant = "\"" + m_line[0] + "\"" + ",";
+                    streamWriter.Write("\t\t");
+                    streamWriter.Write(reactantFieldName);
+                    streamWriter.Write(reactant);
+                    streamWriter.WriteLine();
+                }
+
                 else
                 {
                     //  we are at end of file. close the streamWriter
@@ -101,7 +97,7 @@ namespace Parser
 
             //string optionalId = m_nextLine.Substring(3, 9);
             //Console.WriteLine(m_line[0]);
-            
+
 
             TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
             TextFileParsers.DelimitedFieldParser delimitedFieldParser = new DelimitedFieldParser("..\\..\\thermo.inp");
@@ -122,7 +118,7 @@ namespace Parser
 
             //string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
             //string t_intervalField  = "\n\t\t\t\"" + "t_intervals"  + "\"" + ":" + "";
-            
+
             parser.SetFieldWidths(24);
             TextFields m_descr = parser.ReadFields();
 
@@ -146,7 +142,7 @@ namespace Parser
             return fieldName;
         }
 
-        private static string JsonStart(string m_line1, string m_thermo,string m_thermoField, StreamReader streamReader)
+        private static string JsonStart(string m_line1, string m_thermo, string m_thermoField, StreamReader streamReader)
         {
             if (m_line1 == "")
             {
