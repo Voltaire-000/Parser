@@ -16,7 +16,7 @@ namespace Parser
         {
             string m_thermo = "";
             string m_thermoFieldName = "thermo";
-            string reactantFieldName = "reactant";
+            string m_reactantFieldName = "reactant";
             string descriptionFieldName = "description";
             string t_intervalsFieldName = "T intervals";
             int count = 0;
@@ -24,7 +24,7 @@ namespace Parser
             string m_char = "";
             UnicodeCategory unicodeCategory;
             bool openBracketPrinted = false;
-            string m_nextLine = "";
+            string m_currentLine = "";
 
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
@@ -39,15 +39,15 @@ namespace Parser
                     openBracketPrinted = true;
                 }
 
-                m_nextLine = streamReader.ReadLine();
+                m_currentLine = streamReader.ReadLine();
 
                 //m_peek = streamReader.Peek();
                 //m_peek != -1
-                if (m_nextLine == "")
+                if (m_currentLine == "")
                 {
-                    m_nextLine = streamReader.ReadLine();
+                    m_currentLine = streamReader.ReadLine();
                 }
-                Char m_firstChar = m_nextLine.First();
+                Char m_firstChar = m_currentLine.First();
 
 
                 unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
@@ -56,25 +56,37 @@ namespace Parser
                 {
                     // this is thermo line
                     Console.WriteLine("Thermo line");
-                    string m_line1 = streamReader.ReadLine();
-                    m_thermoFieldName = JsonStart(m_line1, m_thermo, m_thermoFieldName, streamReader);
+                    m_thermoFieldName = JsonStart(m_currentLine, m_thermo, m_thermoFieldName, streamReader);
                     m_thermoFieldName = addQuotesAndSemicolon(m_thermoFieldName);
                     streamWriter.Write(m_thermoFieldName);
                     streamWriter.WriteLine("[");
                     streamWriter.WriteLine("\t\t{");
                 }
 
+                m_currentLine = streamReader.ReadLine();
+                m_firstChar = m_currentLine.First();
+                unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
+
                 if (unicodeCategory == UnicodeCategory.UppercaseLetter)
                 {
                     //  this is a reactant field start of line. print reactant name to file
                     //string m_nextLine = streamReader.ReadLine();
                     char separator = ' ';
-                    string[] m_line = m_nextLine.Split(separator);
+                    string[] m_line = m_currentLine.Split(separator);
                     string reactant = "\"" + m_line[0] + "\"" + ",";
+                    m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
                     streamWriter.Write("\t\t");
-                    streamWriter.Write(reactantFieldName);
+                    streamWriter.Write(m_reactantFieldName);
                     streamWriter.Write(reactant);
                     streamWriter.WriteLine();
+                }
+                m_currentLine = streamReader.ReadLine();
+                m_firstChar = m_currentLine.First();
+                unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
+
+                if (unicodeCategory == UnicodeCategory.SpaceSeparator)
+                {
+                    // print optional name field
                 }
 
                 else
@@ -112,7 +124,7 @@ namespace Parser
             parser.SetFieldWidths(2);
             TextFields m_name = parser.ReadFields();
 
-            reactantFieldName = addQuotesAndSemicolon(reactantFieldName);
+            m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
             descriptionFieldName = addQuotesAndSemicolon(descriptionFieldName);
             t_intervalsFieldName = addQuotesAndSemicolon(t_intervalsFieldName);
 
