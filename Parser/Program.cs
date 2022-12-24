@@ -43,14 +43,20 @@ namespace Parser
 
                 //m_peek = streamReader.Peek();
                 //m_peek != -1
-                Char[] zz_char = (char[])m_nextLine.Cast<char>();
-                unicodeCategory = Char.GetUnicodeCategory(zz_char[0]);
+                if (m_nextLine == "")
+                {
+                    m_nextLine = streamReader.ReadLine();
+                }
+                Char m_firstChar = m_nextLine.First();
+
+
+                unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
 
                 if (unicodeCategory == UnicodeCategory.LowercaseLetter)
                 {
                     //m_char = char.ConvertFromUtf32(m_peek);
                     //unicodeCategory =  Char.GetUnicodeCategory(m_char, 0);
-                    if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_char == "t")
+                    if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_firstChar == 't')
                     {
                         // this is thermo line
                         Console.WriteLine("Thermo line");
