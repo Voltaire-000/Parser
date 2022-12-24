@@ -41,11 +41,15 @@ namespace Parser
 
                 m_nextLine = streamReader.ReadLine();
 
-                m_peek = streamReader.Peek();
-                if (m_peek != -1)
+                //m_peek = streamReader.Peek();
+                //m_peek != -1
+                Char[] zz_char = (char[])m_nextLine.Cast<char>();
+                unicodeCategory = Char.GetUnicodeCategory(zz_char[0]);
+
+                if (unicodeCategory == UnicodeCategory.LowercaseLetter)
                 {
-                    m_char = char.ConvertFromUtf32(m_peek);
-                    unicodeCategory =  Char.GetUnicodeCategory(m_char, 0);
+                    //m_char = char.ConvertFromUtf32(m_peek);
+                    //unicodeCategory =  Char.GetUnicodeCategory(m_char, 0);
                     if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_char == "t")
                     {
                         // this is thermo line
