@@ -2,4 +2,5 @@
 	"thermo":[
 		{
 			"reactant":"Ag",
-			"description":	"             Hf:Cox,1989. Moore,1971. Gordon,1999.                         ",
+			"description":	"Hf:Cox,1989. Moore,1971. Gordon,1999.",
+			"T intervals": 3,

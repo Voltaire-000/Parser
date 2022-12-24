@@ -18,7 +18,7 @@ namespace Parser
             string m_thermoFieldName = "thermo";
             string m_reactantFieldName = "reactant";
             string m_descriptionFieldName = "description";
-            string t_intervalsFieldName = "T intervals";
+            string m_tIntervalsFieldName = "T intervals";
             int count = 0;
             int m_peek = 0;
             string m_char = "";
@@ -74,9 +74,11 @@ namespace Parser
                     char separator = ' ';
                     string[] m_line = m_currentLine.Split(separator);
                     
+                    //  reactant line
                     m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
                     string reactant = "\"" + m_line[0] + "\"" + ",";
 
+                    //  description line
                     int startdescription = reactant.Length;
                     string m_description = m_currentLine.Substring(startdescription);
                     m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
@@ -90,14 +92,26 @@ namespace Parser
                     streamWriter.Write(m_descriptionFieldName);
                     streamWriter.Write(m_description);
                     streamWriter.WriteLine();
+
+                    //  T intervals line 
+                    m_currentLine = streamReader.ReadLine();
+                    m_tIntervalsFieldName = addQuotesAndSemicolon(m_tIntervalsFieldName);
+                    streamWriter.Write("\t\t");
+                    streamWriter.Write(m_tIntervalsFieldName);
+                    string t_intervals = m_currentLine.Substring(0, 2);
+                    streamWriter.Write(t_intervals);
+                    streamWriter.Write(",");
+                    
+
                 }
-                m_currentLine = streamReader.ReadLine();
+                
                 m_firstChar = m_currentLine.First();
                 unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
 
                 if (unicodeCategory == UnicodeCategory.SpaceSeparator)
                 {
-                    // print optional name field
+                    // print T Intervals
+
                 }
 
                 else
@@ -167,7 +181,7 @@ namespace Parser
 
         private static string addQuotesAndComma(string fieldName)
         {
-            fieldName = "\t\"" + fieldName + "\"" + ",";
+            fieldName = "\t\"" + fieldName.Trim() + "\"" + ",";
             return fieldName;
         }
 
