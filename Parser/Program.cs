@@ -24,6 +24,7 @@ namespace Parser
             string m_speciesTypeFieldName = "gaseous";
             string m_molecularWeightFieldName = "molecularWeight";
             string m_heatOfFormationFieldName = "heatOfFormation";
+            string m_temperatureRangeFieldName = "temperatureRange";
 
             int count = 0;
             int m_peek = 0;
@@ -83,7 +84,7 @@ namespace Parser
                     m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
                     string reactant = "\"" + m_line[0] + "\"" + ",";
 
-                    //  description line
+                    //  description line comments
                     int startdescription = reactant.Length;
                     string m_description = m_currentLine.Substring(startdescription);
                     m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
@@ -98,6 +99,7 @@ namespace Parser
                     //streamWriter.Write(m_description);
                     streamWriter.WriteLine();
 
+                    //  new record line
                     //  T intervals line 
                     m_currentLine = streamReader.ReadLine();
                     string t_intervals = m_currentLine.Substring(0, 2);
@@ -139,12 +141,12 @@ namespace Parser
                         // add the quotes
                         string m_item = item.ToString();
                         
-                        if (itemCount <= 18)
+                        if (itemCount <= formulaLineLength-1)
                         {
                             m_item = addQuotesAndComma(m_item);
                             streamWriter.Write(m_item);
                         }
-                        else if(itemCount >=19)
+                        else if(itemCount >=formulaLineLength)
                         {
                             m_item= addQuotes(m_item);
                             streamWriter.Write(m_item + "]" + ",");
@@ -183,6 +185,44 @@ namespace Parser
                     m_heatOfFormationFieldName = addQuotesAndSemicolon(m_heatOfFormationFieldName);
                     streamWriter.Write(m_heatOfFormationFieldName);
                     streamWriter.Write(" " + heatOfFormation + ",");
+                    //  end record line
+
+                    //  new record line = temp range, column 2-21
+                    m_currentLine = streamReader.ReadLine();
+                    string temp_range = m_currentLine.Substring(0, 22);
+                    temp_range = temp_range.Trim();
+                    char[] tempRangeCharArray = temp_range.ToCharArray();
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_temperatureRangeFieldName = addQuotesAndSemicolon(m_temperatureRangeFieldName);
+                    streamWriter.Write(m_temperatureRangeFieldName + "[");
+                    string[] tempRangeLine = temp_range.Split(separator);
+                    int tempRangeCount = 0;
+                    int tempRangeLineLength = 0;
+                    foreach (var tempItem in tempRangeLine)
+                    {
+                        tempRangeCount = tempRangeCount + 1;
+                        tempRangeLineLength = tempRangeLine.Length;
+                        if (tempItem == "")
+                        {
+                            continue;
+                        }
+                        // add the quotes
+                        string m_temp = tempItem.ToString();
+                        if (tempRangeCount <= tempRangeLineLength - 1)
+                        {
+                            //m_temp = addQuotesAndComma(m_temp);
+                            streamWriter.Write(m_temp + ",");
+                        }
+                        else if (tempRangeCount >= tempRangeLineLength)
+                        {
+                            //m_temp  = addQuotesAndComma(m_temp);
+                            streamWriter.Write(m_temp + "]" + ",");
+                        }
+
+                    }
+                    
+
 
                 }
                 
