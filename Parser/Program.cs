@@ -28,6 +28,7 @@ namespace Parser
             string m_coefficientNumberFieldName = "numberOfCoefficients";
             string m_tExponentsFiledName = "tExponents";
             string m_HlineJmolFieldName = "H^(298.15)-H^(0) J/mol";
+            string m_CoefficientsFieldName = "coefficients";
 
             int count = 0;
             int m_peek = 0;
@@ -270,11 +271,20 @@ namespace Parser
                     m_HlineJmolFieldName = addQuotesAndSemicolon(m_HlineJmolFieldName);
                     streamWriter.Write(m_HlineJmolFieldName);
                     streamWriter.Write(" " + m_Hline + ",");
-
                     //  end record line
 
-                    //  new record line 
+                    //  new record line, line of Coefficients 1-80 ( first 5 coefficients), put all on 1 line
+                    m_currentLine = streamReader.ReadLine();
+                    string mLineContinue = streamReader.ReadLine();
+                    //  concant the lines m_current and mLineContinue
+                    string concantLine = m_currentLine + mLineContinue;
+                    string coefficientSubstring = concantLine.Substring(0, 128);
+                    string[] coefficientLine = coefficientSubstring.Split(separator);
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
 
+
+                    //  integration constants
 
 
                 }
