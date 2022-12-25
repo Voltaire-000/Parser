@@ -338,7 +338,9 @@ namespace Parser
                     //  repeat tempRange and coefficients for each temp interval, t_intervals
                     //  convert string to integer
                     string t_intIntervals = t_intervals;
-                    int m_intervalNum = std::stoi(t_intIntervals);
+                    int intTempintervals;
+                    int.TryParse(t_intIntervals, out intTempintervals);
+
                     
 
 
