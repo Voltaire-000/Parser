@@ -126,30 +126,35 @@ namespace Parser
                     m_chemformulaFieldName = addQuotesAndSemicolon(m_chemformulaFieldName);
                     streamWriter.Write(m_chemformulaFieldName + "[");
                     string[] formulaLine = chemFormula.Split(separator);
-                    int formulaLineLength = 0;
+                    int formulaLineLength = formulaLine.Length;
                     int itemCount = 0;
+                    string m_item = "";
                     foreach (var item in formulaLine)
                     {
                         itemCount = itemCount + 1;
-                        formulaLineLength = formulaLine.Length;
                         int m_itemLength = item.Count();
                         // skip over spaces
                         if (item == "")
                         {
                             continue;
                         }
-                        // add the quotes
-                        string m_item = item.ToString();
-                        
-                        if (itemCount <= formulaLineLength-1)
+                        // add the quotes to formula name
+                        if (itemCount < 2)
                         {
+                            m_item = item.ToString();
                             m_item = addQuotesAndComma(m_item);
                             streamWriter.Write(m_item);
                         }
+
+                        if (itemCount >= 2 && itemCount < formulaLineLength)
+                        {
+                            //m_item = addQuotesAndComma(m_item);
+                            streamWriter.Write(formulaLine[itemCount - 1] + ",");
+                        }
                         else if(itemCount >=formulaLineLength)
                         {
-                            m_item= addQuotes(m_item);
-                            streamWriter.Write(m_item + "]" + ",");
+                            //m_item= addQuotes(m_item);
+                            streamWriter.Write(formulaLine[itemCount -1] + "]" + ",");
                         }
                         
                     }
