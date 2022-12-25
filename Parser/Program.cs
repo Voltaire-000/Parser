@@ -382,9 +382,7 @@ namespace Parser
             writer.WriteLine();
             writer.Write("\t\t");
             writer.Write(fieldName + "[");
-            string[] separator = {"+", "-", " " };
-            StringSplitOptions options;
-            options= StringSplitOptions.None;
+            char separator = ' ';
             line = reader.ReadLine();
             string mLineContinue = reader.ReadLine();
             //  concant the lines m_current and mLineContinue
@@ -399,6 +397,7 @@ namespace Parser
             int fifthE = coefficientSubstring.IndexOf('e', forthE);
             int sixthE = coefficientSubstring.IndexOf('e', fifthE);
             int seventhE = coefficientSubstring.IndexOf('e', sixthE);
+            int eighthE = coefficientSubstring.IndexOf('e', seventhE);
 
             string firstCoef = coefficientSubstring.Substring(0, firstE + 4);
             string secondCoef = coefficientSubstring.Substring(secondE+ 4, firstE + 4);
@@ -407,13 +406,17 @@ namespace Parser
             string fifthCoef = coefficientSubstring.Substring(fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
             string sixthCoef = coefficientSubstring.Substring(sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
             string seventhCoef = coefficientSubstring.Substring(seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+            string eighthCoef = coefficientSubstring.Substring(eighthE + 4 + seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
 
-            string[] coefficientLine = coefficientSubstring.Split(separator, options);
-            string[] m_coefficientLine = coefficientSubstring.Split(separator, options);
+            string CoefConcant = firstCoef + " " + secondCoef + " " + thirdCoef + " " + forthCoef + " " + fifthCoef + " " + sixthCoef + " " + seventhCoef + " " + eighthCoef;
+            CoefConcant = CoefConcant.Trim();
+
             int m_coefficientCount = 0;
-            int m_coefficientLineLength = m_coefficientLine.Length;
+            
+            string[] coefficientLine = CoefConcant.Split(separator);
+            int m_coefficientLineLength = coefficientLine.Length;
             int spaceSkip = 0;
-            foreach (var coefficient in m_coefficientLine)
+            foreach (var coefficient in coefficientLine)
             {
                 m_coefficientCount = m_coefficientCount + 1;
                 if (coefficient == "")
@@ -421,15 +424,15 @@ namespace Parser
                     spaceSkip = spaceSkip + 1;
                     continue;
                 }
-                if (m_coefficientCount <= spaceSkip)
+                if (m_coefficientCount <= m_coefficientLineLength -1)
                 {
                     //writer.Write(coefficient.Remove(11, 4) + ", ");
                     writer.Write(coefficient + ", ");
                 }
-                else if (m_coefficientCount > spaceSkip - 1)
+                else if (m_coefficientCount >= m_coefficientLineLength)
                 {
                     //writer.Write(coefficient.Remove(11, 4) + "]" + ", ");
-                    writer.Write(coefficient + ", ");
+                    writer.Write(coefficient + "]" + ", ");
                 }
             }
 
