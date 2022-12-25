@@ -340,6 +340,10 @@ namespace Parser
                     string t_intIntervals = t_intervals;
                     int intTempintervals;
                     int.TryParse(t_intIntervals, out intTempintervals);
+                    for (int i = 0; i < intTempintervals; i++)
+                    {
+                        // repeat lines use function method
+                    }
 
                     
 
