@@ -10,3 +10,4 @@
 			"molecularWeight": 107.8682000,
 			"heatOfFormation": 284900.000,
 			"temperatureRange":[200.000,1000.000],
+			"numberOfCoefficients":7,

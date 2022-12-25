@@ -25,6 +25,7 @@ namespace Parser
             string m_molecularWeightFieldName = "molecularWeight";
             string m_heatOfFormationFieldName = "heatOfFormation";
             string m_temperatureRangeFieldName = "temperatureRange";
+            string m_coefficientNumberFieldName = "numberOfCoefficients";
 
             int count = 0;
             int m_peek = 0;
@@ -192,7 +193,7 @@ namespace Parser
                     streamWriter.Write(" " + heatOfFormation + ",");
                     //  end record line
 
-                    //  new record line = temp range, column 2-21
+                    //  new record line = temp range =column 2-21, number of coefficients = 23, T exponents = 24-63, H^ = 66-80
                     m_currentLine = streamReader.ReadLine();
                     string temp_range = m_currentLine.Substring(0, 22);
                     temp_range = temp_range.Trim();
@@ -226,7 +227,19 @@ namespace Parser
                         }
 
                     }
-                    
+                    // number of Coefficients column 23
+                    string m_coeff = m_currentLine.Substring(22, 1);
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_coefficientNumberFieldName = addQuotesAndSemicolon(m_coefficientNumberFieldName);
+                    streamWriter.Write(m_coefficientNumberFieldName);
+                    streamWriter.Write(m_coeff + ",");
+
+
+                    //  end record line
+
+                    //  new record line 
+
 
 
                 }
