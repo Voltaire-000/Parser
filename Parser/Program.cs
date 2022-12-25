@@ -27,6 +27,7 @@ namespace Parser
             string m_temperatureRangeFieldName = "temperatureRange";
             string m_coefficientNumberFieldName = "numberOfCoefficients";
             string m_tExponentsFiledName = "tExponents";
+            string m_HlineJmolFieldName = "H^(298.15)-H^(0) J/mol";
 
             int count = 0;
             int m_peek = 0;
@@ -261,7 +262,14 @@ namespace Parser
                         
                     }
 
-                    //  H line
+                    //  H line column 66-80
+                    string m_Hline = m_currentLine.Substring(66, 14);
+                    m_Hline = m_Hline.Trim();
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_HlineJmolFieldName = addQuotesAndSemicolon(m_HlineJmolFieldName);
+                    streamWriter.Write(m_HlineJmolFieldName);
+                    streamWriter.Write(" " + m_Hline + ",");
 
                     //  end record line
 

@@ -12,3 +12,4 @@
 			"temperatureRange":[200.000,1000.000],
 			"numberOfCoefficients":7,
 			"tExponents":[-2.0,-1.0,0.0,1.0,2.0,3.0,4.0,0.0],
+			"H^(298.15)-H^(0) J/mol": 6197.428,
