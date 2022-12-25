@@ -391,7 +391,23 @@ namespace Parser
             string concantLine = line + mLineContinue;
             concantLine = concantLine.Replace('D', 'e');
             string coefficientSubstring = concantLine.Substring(0, 128);
-            int xf = coefficientSubstring.IndexOf('e');
+
+            int firstE = coefficientSubstring.IndexOf('e');
+            int secondE = coefficientSubstring.IndexOf('e', firstE);
+            int thirdE = coefficientSubstring.IndexOf('e', secondE);
+            int forthE = coefficientSubstring.IndexOf('e', thirdE);
+            int fifthE = coefficientSubstring.IndexOf('e', forthE);
+            int sixthE = coefficientSubstring.IndexOf('e', fifthE);
+            int seventhE = coefficientSubstring.IndexOf('e', sixthE);
+
+            string firstCoef = coefficientSubstring.Substring(0, firstE + 4);
+            string secondCoef = coefficientSubstring.Substring(secondE+ 4, firstE + 4);
+            string thirdCoef = coefficientSubstring.Substring(thirdE + 4 + secondE + 4, firstE + 4);
+            string forthCoef = coefficientSubstring.Substring(forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+            string fifthCoef = coefficientSubstring.Substring(fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+            string sixthCoef = coefficientSubstring.Substring(sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+            string seventhCoef = coefficientSubstring.Substring(seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+
             string[] coefficientLine = coefficientSubstring.Split(separator, options);
             string[] m_coefficientLine = coefficientSubstring.Split(separator, options);
             int m_coefficientCount = 0;
