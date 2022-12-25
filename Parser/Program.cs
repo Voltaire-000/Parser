@@ -307,6 +307,8 @@ namespace Parser
                             streamWriter.Write(coefficient.Remove(11,4) + "]" + ", ");
                         }
                     }
+
+
                     //  integration constants
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
@@ -344,7 +346,7 @@ namespace Parser
                     printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
                     printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
                     printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
-                    printCoefficientsArray(streamWriter, m_currentLine, m_CoefficientsFieldName);
+                    printCoefficientsArray(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName);
 
                     //AreWeAtNewRecord();
 
@@ -374,9 +376,41 @@ namespace Parser
 
         }
 
-        private static void printCoefficientsArray(StreamWriter writer, string line, string fieldName)
+        private static void printCoefficientsArray(StreamWriter writer,StreamReader reader, string line, string fieldName)
         {
-            throw new NotImplementedException();
+            // new record line
+            writer.WriteLine();
+            writer.Write("\t\t");
+            writer.Write(fieldName + "[");
+            char separator = ' ';
+            line = reader.ReadLine();
+            string mLineContinue = reader.ReadLine();
+            //  concant the lines m_current and mLineContinue
+            string concantLine = line + mLineContinue;
+            string coefficientSubstring = concantLine.Substring(0, 128);
+            string[] coefficientLine = coefficientSubstring.Split(separator);
+            string[] m_coefficientLine = coefficientSubstring.Split(separator);
+            int m_coefficientCount = 0;
+            int m_coefficientLineLength = m_coefficientLine.Length;
+            int spaceSkip = 0;
+            foreach (var coefficient in m_coefficientLine)
+            {
+                m_coefficientCount = m_coefficientCount + 1;
+                if (coefficient == "")
+                {
+                    spaceSkip = spaceSkip + 1;
+                    continue;
+                }
+                if (m_coefficientCount <= spaceSkip)
+                {
+                    writer.Write(coefficient.Remove(11, 4) + ", ");
+                }
+                else if (m_coefficientCount > spaceSkip - 1)
+                {
+                    writer.Write(coefficient.Remove(11, 4) + "]" + ", ");
+                }
+            }
+
         }
 
         private static void printH_line(StreamWriter writer, string line, string fieldName)
