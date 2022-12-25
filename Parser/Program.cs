@@ -25,10 +25,11 @@ namespace Parser
             string m_molecularWeightFieldName = "molecularWeight";
             string m_heatOfFormationFieldName = "heatOfFormation";
             string m_temperatureRangeFieldName = "temperatureRange";
-            string m_coefficientNumberFieldName = "numberOfCoefficients";
+            string m_numberOfcoefficientsFieldName = "numberOfCoefficients";
             string m_tExponentsFiledName = "tExponents";
             string m_HlineJmolFieldName = "H^(298.15)-H^(0) J/mol";
             string m_CoefficientsFieldName = "coefficients";
+            string m_integrationConstantsFieldName = "integrationConstants";
 
             int count = 0;
             int m_peek = 0;
@@ -233,8 +234,8 @@ namespace Parser
                     string m_coeff = m_currentLine.Substring(22, 1);
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
-                    m_coefficientNumberFieldName = addQuotesAndSemicolon(m_coefficientNumberFieldName);
-                    streamWriter.Write(m_coefficientNumberFieldName);
+                    m_numberOfcoefficientsFieldName = addQuotesAndSemicolon(m_numberOfcoefficientsFieldName);
+                    streamWriter.Write(m_numberOfcoefficientsFieldName);
                     streamWriter.Write(m_coeff + ",");
                     //  T exponents line column 24-63,  38spaces
                     string m_tExponents = m_currentLine.Substring(23, 40);
@@ -244,12 +245,14 @@ namespace Parser
                     streamWriter.Write(m_tExponentsFiledName + "[");
                     string[] tExponentLine = m_tExponents.Split(separator);
                     int tExponentCount = 0;
+                    int spaceSkip = 0;
                     int tExpLineLength = tExponentLine.Length;
                     foreach (var exponent in tExponentLine)
                     {
                         tExponentCount = tExponentCount + 1;
                         if (exponent == "")
                         {
+                            spaceSkip = spaceSkip + 1;
                             continue;
                         }
                         if (tExponentCount <= tExpLineLength -1)
@@ -282,9 +285,33 @@ namespace Parser
                     string[] coefficientLine = coefficientSubstring.Split(separator);
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
-
-
+                    m_CoefficientsFieldName = addQuotesAndSemicolon(m_CoefficientsFieldName);
+                    streamWriter.Write(m_CoefficientsFieldName + "[");
+                    string[] m_coefficientLine = coefficientSubstring.Split(separator);
+                    int m_coefficientCount = 0;
+                    int m_coefficientLineLength = m_coefficientLine.Length;
+                    foreach (var coefficient in m_coefficientLine)
+                    {
+                        m_coefficientCount = m_coefficientCount + 1;
+                        if (coefficient == "")
+                        {
+                            continue;
+                        }
+                        if (m_coefficientCount <= spaceSkip)
+                        {
+                            streamWriter.Write(coefficient.Remove(11,4) + ", ");
+                        }
+                        else if (m_coefficientCount > spaceSkip -1)
+                        {
+                            streamWriter.Write(coefficient.Remove(11,4) + "]" + ", ");
+                        }
+                    }
                     //  integration constants
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    string m_integrationSubstring = concantLine.Substring(129, 31);
+
+                    //  repeat tempRange and coefficients for each temp interval
 
 
                 }
