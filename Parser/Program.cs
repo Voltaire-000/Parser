@@ -309,7 +309,31 @@ namespace Parser
                     //  integration constants
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
+                    m_integrationConstantsFieldName = addQuotesAndSemicolon(m_integrationConstantsFieldName);
+                    streamWriter.Write(m_integrationConstantsFieldName + "[");
                     string m_integrationSubstring = concantLine.Substring(129, 31);
+                    string[] integrationLine = m_integrationSubstring.Split(separator);
+                    int integrationCount = 0;
+                    int integrationLineLength = integrationLine.Length;
+                    spaceSkip= 0;
+                    foreach (var integrationConstant in integrationLine)
+                    {
+                        integrationCount = integrationCount + 1;
+                        if (integrationConstant == "")
+                        {
+                            spaceSkip = spaceSkip + 1;
+                            continue;
+                        }
+                        if (integrationCount <= spaceSkip)
+                        {
+                            streamWriter.Write(integrationConstant.Remove(11, 4) + ", ");
+                        }
+                        else if (integrationCount > spaceSkip -1)
+                        {
+                            streamWriter.Write(integrationConstant.Remove(11, 4) + "]" + ", ");
+                        }
+                    }
+
 
                     //  repeat tempRange and coefficients for each temp interval
 
