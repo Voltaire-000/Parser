@@ -201,7 +201,6 @@ namespace Parser
                     m_currentLine = streamReader.ReadLine();
                     string temp_range = m_currentLine.Substring(0, 22);
                     temp_range = temp_range.Trim();
-                    //char[] tempRangeCharArray = temp_range.ToCharArray();
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
                     m_temperatureRangeFieldName = addQuotesAndSemicolon(m_temperatureRangeFieldName);
@@ -230,6 +229,7 @@ namespace Parser
                         }
 
                     }
+
                     // number of Coefficients column 23
                     string m_coeff = m_currentLine.Substring(22, 1);
                     streamWriter.WriteLine();
@@ -237,6 +237,7 @@ namespace Parser
                     m_numberOfcoefficientsFieldName = addQuotesAndSemicolon(m_numberOfcoefficientsFieldName);
                     streamWriter.Write(m_numberOfcoefficientsFieldName);
                     streamWriter.Write(m_coeff + ",");
+
                     //  T exponents line column 24-63,  38spaces
                     string m_tExponents = m_currentLine.Substring(23, 40);
                     streamWriter.WriteLine();
@@ -334,18 +335,18 @@ namespace Parser
                         }
                     }
 
+                    //  read new line, print temp interval, and next 2 lines
+                    m_currentLine = streamReader.ReadLine();
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    //  start with temperature range
+                    printTemperatureRange(m_currentLine, m_temperatureRangeFieldName, streamWriter);
+                    printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
+                    printTexponentsArray(streamWriter, m_tExponentsFiledName);
 
-                    //  repeat tempRange and coefficients for each temp interval, t_intervals
-                    //  convert string to integer
-                    string t_intIntervals = t_intervals;
-                    int intTempintervals;
-                    int.TryParse(t_intIntervals, out intTempintervals);
-                    for (int i = 0; i < intTempintervals; i++)
-                    {
-                        // repeat lines use function method
-                    }
 
-                    
+                    //AreWeAtNewRecord();
+
 
 
                 }
@@ -370,52 +371,57 @@ namespace Parser
 
             }
 
+        }
 
-            ////int startDescription = compoundName.Length;
-            ////string m_description = m_nextLine.Substring(startDescription);
-            ////m_description = "\"" + m_description + "\"" + ",";
-            ////m_nextLine = streamReader.ReadLine();
-            ////string t_intervals = m_nextLine.Substring(0, 2);
+        private static void printTexponentsArray(StreamWriter writer, string fieldName)
+        {
+            writer.WriteLine();
+            writer.Write("\t\t");
+            writer.Write(fieldName);
+        }
 
-            ////string optionalId = m_nextLine.Substring(3, 9);
-            ////Console.WriteLine(m_line[0]);
+        private static void printNumberOfCoefficients(StreamWriter writer, string line, string fieldName)
+        {
+            writer.WriteLine();
+            writer.Write("\t\t");
+            // number of Coefficients column 23
+            string m_coeff = line.Substring(22, 1);
+            writer.Write(fieldName);
+            writer.Write(m_coeff + ",");
 
+        }
 
-            //TextFileParsers.FixedWidthFieldParser parser = new TextFileParsers.FixedWidthFieldParser("..\\..\\thermo.inp");
-            //TextFileParsers.DelimitedFieldParser delimitedFieldParser = new DelimitedFieldParser("..\\..\\thermo.inp");
+        private static void printTemperatureRange(string line, string fieldName, StreamWriter writer)
+        {
+            char separator = ' ';
+            string temp_range = line.Substring(0, 22);
+            temp_range = temp_range.Trim();
+            //fieldName = addQuotesAndSemicolon(fieldName);
+            writer.Write(fieldName + "[");
+            string[] tempRangeLine = temp_range.Split(separator);
+            int tempRangeCount = 0;
+            int tempRangeLineLength = tempRangeLine.Length;
+            foreach (var tempItem in tempRangeLine)
+            {
+                tempRangeCount = tempRangeCount + 1;
+                if (tempItem == "")
+                {
+                    continue;
+                }
+                // add the quotes
+                string m_temp = tempItem.ToString();
+                if (tempRangeCount <= tempRangeLineLength - 1)
+                {
+                    //m_temp = addQuotesAndComma(m_temp);
+                    writer.Write(m_temp + ", ");
+                }
+                else if (tempRangeCount >= tempRangeLineLength)
+                {
+                    //m_temp  = addQuotesAndComma(m_temp);
+                    writer.Write(m_temp + "]" + ", ");
+                }
 
-            //parser.SkipLine();
-            //parser.SetFieldWidths(6);
-
-            //delimitedFieldParser.SetDelimiters(' ');
-            //delimitedFieldParser.SkipLines(2);
-            //delimitedFieldParser.SqueezeDelimiters = true;
-            ////TextFields m_description = delimitedFieldParser.ReadFields();
-            //parser.SetFieldWidths(2);
-            //TextFields m_name = parser.ReadFields();
-
-            //m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
-            //m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
-            //t_intervalsFieldName = addQuotesAndSemicolon(t_intervalsFieldName);
-
-            ////string descriptionField = "\n\t\t\t\"" + "description" + "\"" + ":" + " ";
-            ////string t_intervalField  = "\n\t\t\t\"" + "t_intervals"  + "\"" + ":" + "";
-
-            //parser.SetFieldWidths(24);
-            //TextFields m_descr = parser.ReadFields();
-
-            //Console.WriteLine(" Thermo file to json");
-
-            //streamWriter.Write("\t\t");
-            //streamWriter.Write(m_descriptionFieldName);
-            ////streamWriter.Write(m_description);
-            //streamWriter.WriteLine();
-
-            //streamWriter.Write("\t\t");
-            //streamWriter.Write(t_intervalsFieldName);
-            ////streamWriter.Write(t_intervals);
-            //streamWriter.Close();
-            //Console.Read();
+            }
         }
 
         private static string addQuotesAndSemicolon(string fieldName)
