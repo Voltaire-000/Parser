@@ -382,14 +382,18 @@ namespace Parser
             writer.WriteLine();
             writer.Write("\t\t");
             writer.Write(fieldName + "[");
-            char separator = ' ';
+            string[] separator = {"+", "-", " " };
+            StringSplitOptions options;
+            options= StringSplitOptions.None;
             line = reader.ReadLine();
             string mLineContinue = reader.ReadLine();
             //  concant the lines m_current and mLineContinue
             string concantLine = line + mLineContinue;
+            concantLine = concantLine.Replace('D', 'e');
             string coefficientSubstring = concantLine.Substring(0, 128);
-            string[] coefficientLine = coefficientSubstring.Split(separator);
-            string[] m_coefficientLine = coefficientSubstring.Split(separator);
+            int xf = coefficientSubstring.IndexOf('e');
+            string[] coefficientLine = coefficientSubstring.Split(separator, options);
+            string[] m_coefficientLine = coefficientSubstring.Split(separator, options);
             int m_coefficientCount = 0;
             int m_coefficientLineLength = m_coefficientLine.Length;
             int spaceSkip = 0;
@@ -403,11 +407,13 @@ namespace Parser
                 }
                 if (m_coefficientCount <= spaceSkip)
                 {
-                    writer.Write(coefficient.Remove(11, 4) + ", ");
+                    //writer.Write(coefficient.Remove(11, 4) + ", ");
+                    writer.Write(coefficient + ", ");
                 }
                 else if (m_coefficientCount > spaceSkip - 1)
                 {
-                    writer.Write(coefficient.Remove(11, 4) + "]" + ", ");
+                    //writer.Write(coefficient.Remove(11, 4) + "]" + ", ");
+                    writer.Write(coefficient + ", ");
                 }
             }
 
