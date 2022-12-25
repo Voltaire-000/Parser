@@ -11,4 +11,4 @@
 			"heatOfFormation": 284900.000,
 			"temperatureRange":[200.000,1000.000],
 			"numberOfCoefficients":7,
-			"tExponents":[-2.0,-1.0,0.0,1.0,2.0,3.0,4.0,0],
+			"tExponents":[-2.0,-1.0,0.0,1.0,2.0,3.0,4.0,0.0],

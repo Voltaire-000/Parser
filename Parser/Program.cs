@@ -235,7 +235,7 @@ namespace Parser
                     streamWriter.Write(m_coefficientNumberFieldName);
                     streamWriter.Write(m_coeff + ",");
                     //  T exponents line column 24-63,  38spaces
-                    string m_tExponents = m_currentLine.Substring(23, 38);
+                    string m_tExponents = m_currentLine.Substring(23, 40);
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
                     m_tExponentsFiledName = addQuotesAndSemicolon(m_tExponentsFiledName);
@@ -261,6 +261,7 @@ namespace Parser
                         
                     }
 
+                    //  H line
 
                     //  end record line
 
