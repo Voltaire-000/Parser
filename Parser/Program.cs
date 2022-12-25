@@ -26,6 +26,7 @@ namespace Parser
             string m_heatOfFormationFieldName = "heatOfFormation";
             string m_temperatureRangeFieldName = "temperatureRange";
             string m_coefficientNumberFieldName = "numberOfCoefficients";
+            string m_tExponentsFiledName = "tExponents";
 
             int count = 0;
             int m_peek = 0;
@@ -197,18 +198,17 @@ namespace Parser
                     m_currentLine = streamReader.ReadLine();
                     string temp_range = m_currentLine.Substring(0, 22);
                     temp_range = temp_range.Trim();
-                    char[] tempRangeCharArray = temp_range.ToCharArray();
+                    //char[] tempRangeCharArray = temp_range.ToCharArray();
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t");
                     m_temperatureRangeFieldName = addQuotesAndSemicolon(m_temperatureRangeFieldName);
                     streamWriter.Write(m_temperatureRangeFieldName + "[");
                     string[] tempRangeLine = temp_range.Split(separator);
                     int tempRangeCount = 0;
-                    int tempRangeLineLength = 0;
+                    int tempRangeLineLength = tempRangeLine.Length;
                     foreach (var tempItem in tempRangeLine)
                     {
                         tempRangeCount = tempRangeCount + 1;
-                        tempRangeLineLength = tempRangeLine.Length;
                         if (tempItem == "")
                         {
                             continue;
@@ -234,6 +234,32 @@ namespace Parser
                     m_coefficientNumberFieldName = addQuotesAndSemicolon(m_coefficientNumberFieldName);
                     streamWriter.Write(m_coefficientNumberFieldName);
                     streamWriter.Write(m_coeff + ",");
+                    //  T exponents line column 24-63,  38spaces
+                    string m_tExponents = m_currentLine.Substring(23, 38);
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    m_tExponentsFiledName = addQuotesAndSemicolon(m_tExponentsFiledName);
+                    streamWriter.Write(m_tExponentsFiledName + "[");
+                    string[] tExponentLine = m_tExponents.Split(separator);
+                    int tExponentCount = 0;
+                    int tExpLineLength = tExponentLine.Length;
+                    foreach (var exponent in tExponentLine)
+                    {
+                        tExponentCount = tExponentCount + 1;
+                        if (exponent == "")
+                        {
+                            continue;
+                        }
+                        if (tExponentCount <= tExpLineLength -1)
+                        {
+                            streamWriter.Write(exponent + ",");
+                        }
+                        else if (tExponentCount >= tExpLineLength)
+                        {
+                            streamWriter.Write(exponent + "]" + ",");
+                        }
+                        
+                    }
 
 
                     //  end record line
