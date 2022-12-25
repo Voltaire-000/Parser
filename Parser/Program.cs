@@ -342,8 +342,9 @@ namespace Parser
                     //  start with temperature range
                     printTemperatureRange(m_currentLine, m_temperatureRangeFieldName, streamWriter);
                     printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
-                    printTexponentsArray(streamWriter, m_tExponentsFiledName);
-
+                    printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
+                    printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
+                    printCoefficientsArray(streamWriter, m_currentLine, m_CoefficientsFieldName);
 
                     //AreWeAtNewRecord();
 
@@ -373,11 +374,51 @@ namespace Parser
 
         }
 
-        private static void printTexponentsArray(StreamWriter writer, string fieldName)
+        private static void printCoefficientsArray(StreamWriter writer, string line, string fieldName)
         {
+            throw new NotImplementedException();
+        }
+
+        private static void printH_line(StreamWriter writer, string line, string fieldName)
+        {
+            string m_Hline = line.Substring(66, 14);
+            m_Hline = m_Hline.Trim();
             writer.WriteLine();
             writer.Write("\t\t");
             writer.Write(fieldName);
+            writer.Write(" " + m_Hline + ",");
+
+        }
+
+        private static void printTexponentsArray(StreamWriter writer,string line, string fieldName)
+        {
+            char separator = ' ';
+            writer.WriteLine();
+            writer.Write("\t\t");
+            string m_tExponents = line.Substring(23, 40);
+            writer.Write(fieldName + "[");
+            string[] tExponentLine = m_tExponents.Split(separator);
+            int tExponentCount = 0;
+            int spaceSkip = 0;
+            int tExpLineLength = tExponentLine.Length;
+            foreach (var exponent in tExponentLine)
+            {
+                tExponentCount = tExponentCount + 1;
+                if (exponent == "")
+                {
+                    spaceSkip = spaceSkip + 1;
+                    continue;
+                }
+                if (tExponentCount <= tExpLineLength - 1)
+                {
+                    writer.Write(exponent + ",");
+                }
+                else if (tExponentCount >= tExpLineLength)
+                {
+                    writer.Write(exponent + "]" + ",");
+                }
+
+            }
         }
 
         private static void printNumberOfCoefficients(StreamWriter writer, string line, string fieldName)

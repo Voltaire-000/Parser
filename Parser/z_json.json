@@ -17,4 +17,5 @@
 			"integrationConstants":[3.352002370], 6.562819350], 
 			"temperatureRange":[1000.000, 6000.000], 
 			"numberOfCoefficients":7,
-			"tExponents":
+			"tExponents":[-2.0,-1.0,0.0,1.0,2.0,3.0,4.0,0.0],
+			"H^(298.15)-H^(0) J/mol": 6197.428,
