@@ -361,61 +361,17 @@ namespace Parser
                     printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
                     printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName);
 
+                    // Are We At New Record or END, take a peek()
                     bool newReactant = IsNewReactant(streamReader); 
-
-                    //AreWeAtNewRecord(); take a peek()
-                    int mpeek = streamReader.Peek();
-                    //unicodeCategory
-                    //Char m_firstChar = m_currentLine.First();
-                    Char mxx_char = '(';
-                    // A = 65
-                    // ( = 40
-                    unicodeCategory = char.GetUnicodeCategory((char)mxx_char);
-                    if (unicodeCategory != UnicodeCategory.UppercaseLetter && unicodeCategory != UnicodeCategory.OpenPunctuation)
+                    if (newReactant)
                     {
-                        // we are at end of file
-                        streamReader.Close();
-                    }
-                    else
-                    {
-                        //  we have a new record
-                        m_currentLine = streamReader.ReadLine();
-                        // check if END
-                        bool endRecord =  EndRecord(streamReader, m_currentLine);
-                        if (!endRecord)
-                        {
-                            // start new record
-                        }
-                        else
-                        {
-                            // end of file print close curly brace, close  bracket and final close curly brace
-                            streamWriter.WriteLine();
-                             //streamWriter.WriteLine("\t\t}");
-                            streamWriter.WriteLine("\t]");
-                            streamWriter.WriteLine("}");
-                        }
+                        // read new reactant record
                     }
 
+                    
+
 
                 }
-                
-                m_firstChar = m_currentLine.First();
-                unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
-
-                if (unicodeCategory == UnicodeCategory.SpaceSeparator)
-                {
-                    // print T Intervals
-
-                }
-
-                else
-                {
-                    //  we are at end of file. close the streamWriter
-                    streamWriter.Close();
-                }
-
-                //Console.WriteLine(count);
-                //count = count +1;
 
             }
 
@@ -434,8 +390,25 @@ namespace Parser
             }
             else
             {
-                // we have a new record, return true
-                return true;
+                // we have a new record, check for END
+                string checkForEND = reader.ReadLine();
+                // check if END
+                bool endRecord = EndRecord(reader, checkForEND);
+                if (!endRecord)
+                {
+                    // start new record
+                    return true;
+                }
+                else
+                {
+                    // end of file print close curly brace, close  bracket and final close curly brace
+                    //streamWriter.WriteLine();
+                    ////streamWriter.WriteLine("\t\t}");
+                    //streamWriter.WriteLine("\t]");
+                    //streamWriter.WriteLine("}");
+                    return false;
+                }
+
             }
 
             return false;
@@ -445,7 +418,7 @@ namespace Parser
         {
             //bool endRecord = false;
             string endSubstring = m_currentLine.Substring(0, 3);
-            endSubstring = "END";
+            //endSubstring = "END";
             if (endSubstring == "END")
             {
                 return true;
