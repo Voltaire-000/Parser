@@ -366,11 +366,28 @@ namespace Parser
                     //unicodeCategory
                     //Char m_firstChar = m_currentLine.First();
                     Char mxx_char = '(';
+                    // A = 65
+                    // ( = 40
                     unicodeCategory = char.GetUnicodeCategory((char)mxx_char);
-                    if (unicodeCategory  == UnicodeCategory.UppercaseLetter || unicodeCategory == UnicodeCategory.OpenPunctuation)
+                    if (unicodeCategory != UnicodeCategory.UppercaseLetter && unicodeCategory != UnicodeCategory.OpenPunctuation)
+                    {
+                        // we are at end of file
+                        streamReader.Close();
+                    }
+                    else
                     {
                         //  we have a new record
                         m_currentLine = streamReader.ReadLine();
+                        // check if END
+                        bool endRecord =  EndRecord(streamReader, m_currentLine);
+                        if (!endRecord)
+                        {
+                            // start new record
+                        }
+                        else
+                        {
+                            // end of file print close curly brace, close  bracket and final close curly brace
+                        }
                     }
 
 
@@ -396,6 +413,19 @@ namespace Parser
 
             }
 
+        }
+
+        private static bool EndRecord(StreamReader streamReader, string m_currentLine)
+        {
+            //bool endRecord = false;
+            string endSubstring = m_currentLine.Substring(0, 3);
+            endSubstring = "END";
+            if (endSubstring == "END")
+            {
+                return true;
+            }
+            return false;
+            throw new NotImplementedException();
         }
 
         // unused
