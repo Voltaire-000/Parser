@@ -66,7 +66,7 @@ namespace Parser
                     m_currentLine = streamReader.ReadLine();
                 }
 
-                printTintervalsDataLine(streamWriter, streamReader, m_currentLine,m_tIntervalsFieldName, m_optionalIdFieldName, m_chemformulaFieldName, m_speciesTypeFieldName, m_molecularWeightFieldName, m_heatOfFormationFieldName)
+                printTintervalsDataLine(streamWriter, streamReader, m_currentLine, m_tIntervalsFieldName, m_optionalIdFieldName, m_chemformulaFieldName, m_speciesTypeFieldName, m_molecularWeightFieldName, m_heatOfFormationFieldName);
                 //  print open bracket
                 //if (!openBracketPrinted)
                 //{
@@ -402,7 +402,63 @@ namespace Parser
 
         private static void printTintervalsDataLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2, string fieldName3, string fieldName4, string fieldName5, string m_fieldName6)
         {
-            throw new NotImplementedException();
+            char separator = ' ';
+            writer.WriteLine();
+            writer.Write("\t\t");
+            fieldName1 = addQuotesAndSemicolon(fieldName1);
+            writer.Write(fieldName1);
+            string intervalsSubstring = line.Substring(0, 2);
+            writer.Write(intervalsSubstring + ",");
+            writer.WriteLine();
+            writer.Write("\t\t");
+            fieldName2 = addQuotesAndSemicolon(fieldName2);
+            writer.Write(fieldName2);
+            string idCodeSubstring = line.Substring(3, 7);
+            idCodeSubstring= idCodeSubstring.Trim();
+            idCodeSubstring = addQuotesAndComma(idCodeSubstring);
+            writer.Write(idCodeSubstring);
+            writer.WriteLine();
+            writer.Write("\t\t");
+            fieldName3 = addQuotesAndSemicolon(fieldName3);
+            writer.Write(fieldName3 + "[");
+            string chemFormulaSubstring = line.Substring(9, 41);
+            chemFormulaSubstring = chemFormulaSubstring.Trim();
+            string[] formulaLine = chemFormulaSubstring.Split(separator);
+            int formulaLineLength = formulaLine.Length;
+            int itemCount = 0;
+            string m_item = "";
+            foreach (var item in formulaLine)
+            {
+                itemCount = itemCount + 1;
+                int m_itemLength = item.Count();
+                // skip over spaces
+                if (item == "")
+                {
+                    continue;
+                }
+                // add the quotes to formula name
+                if (itemCount < 2)
+                {
+                    m_item = item.ToString();
+                    m_item = addQuotesAndComma(m_item);
+                    writer.Write(m_item);
+                }
+
+                if (itemCount >= 2 && itemCount < formulaLineLength)
+                {
+                    //m_item = addQuotesAndComma(m_item);
+                    writer.Write(formulaLine[itemCount - 1] + ",");
+                }
+                else if (itemCount >= formulaLineLength)
+                {
+                    //m_item= addQuotes(m_item);
+                    writer.Write(formulaLine[itemCount - 1] + "]" + ",");
+                }
+
+            }
+
+
+            //throw new NotImplementedException();
         }
 
         private static void printReactantAndCommentsLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2)
@@ -422,7 +478,7 @@ namespace Parser
             string descriptionSubstring = line.Substring(18);
             descriptionSubstring = descriptionSubstring.Trim();
             descriptionSubstring = addQuotesAndComma(descriptionSubstring);
-            writer.Write(descriptionSubstring); writer.WriteLine();
+            writer.Write(descriptionSubstring);
 
         }
 
