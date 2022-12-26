@@ -361,7 +361,9 @@ namespace Parser
                     printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
                     printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName);
 
-                    //AreWeAtNewRecord(); take a peek(0
+                    bool newReactant = IsNewReactant(streamReader); 
+
+                    //AreWeAtNewRecord(); take a peek()
                     int mpeek = streamReader.Peek();
                     //unicodeCategory
                     //Char m_firstChar = m_currentLine.First();
@@ -419,6 +421,26 @@ namespace Parser
 
         }
 
+        private static bool IsNewReactant(StreamReader reader)
+        {
+            //bool thisIsNewReactant = false;
+            int recordPeek = reader.Peek();
+            UnicodeCategory unicodeCategory;
+            unicodeCategory = char.GetUnicodeCategory((char)recordPeek);
+            if (unicodeCategory != UnicodeCategory.UppercaseLetter && unicodeCategory != UnicodeCategory.OpenPunctuation)
+            {
+                // we are at end of file
+                reader.Close();
+            }
+            else
+            {
+                // we have a new record, return true
+                return true;
+            }
+
+            return false;
+        }
+
         private static bool EndRecord(StreamReader streamReader, string m_currentLine)
         {
             //bool endRecord = false;
@@ -429,7 +451,6 @@ namespace Parser
                 return true;
             }
             return false;
-            throw new NotImplementedException();
         }
 
         // unused
