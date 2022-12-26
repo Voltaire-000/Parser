@@ -466,13 +466,38 @@ namespace Parser
             string[] formulaLine = chemFormulaSubstring.Split(separator);
             int formulaLineLength = formulaLine.Length;
 
-            var test = chemFormulaSubstring.Where(c => c > 46);
-            
+            char[] anyof = { '9', '8', '7', '6', '5', '4', '3', '2', '1' };
+            //var eew = chemFormulaSubstring.IndexOf((char)49);
 
-            for (int i = 0; i < formulalength; i++)
-            {
-                string mx = chemFormulaSubstring[i].ToString();
-            }
+            int firstColumn = 3;    // element
+            int secondColumn = 5;   // number
+            int thirdColumn = 3;    // element
+            int fourthColumn = 5;   // number
+            int fifthColumn = 3;
+            int sixthColumn = 5;    // element
+            int seventhColumn = 3;  // number
+            int eigthColumn = 5;    // element
+            int ninthColumn = 3;    // number
+            int tenthColumn = 5;    // element
+
+            //int firstNumber = chemFormulaSubstring.IndexOfAny(anyof);   // returns 4
+            string m_firstElement = chemFormulaSubstring.Substring(0, firstColumn); // return "AG"
+            string m_numberOfFirstAtoms = chemFormulaSubstring.Substring(firstColumn, secondColumn);
+
+            string secondElement = chemFormulaSubstring.Substring(firstColumn + secondColumn, thirdColumn);
+            string m_numberOfSecondAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn, fourthColumn);
+
+            string thirdElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn, fifthColumn);
+            string thirdAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn, sixthColumn);
+
+            string fourthElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn, seventhColumn);
+            string fourthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn, eigthColumn);
+
+            string fifthelement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn, ninthColumn);
+            string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
+
+            //var test = chemFormulaSubstring.Where(c => c >= '0' && c <= '9');
+
             int itemCount = 0;
             string m_item = "";
             foreach (var item in formulaLine)
