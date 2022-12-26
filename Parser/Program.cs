@@ -433,11 +433,14 @@ namespace Parser
             char separator = ' ';
             writer.WriteLine();
             writer.Write("\t\t");
+            // t intervals
             fieldName1 = addQuotesAndSemicolon(fieldName1);
             writer.Write(fieldName1);
             string intervalsSubstring = line.Substring(0, 2);
             int.TryParse(intervalsSubstring, out int value);
             writer.Write(intervalsSubstring + ",");
+
+            // id code
             writer.WriteLine();
             writer.Write("\t\t");
             fieldName2 = addQuotesAndSemicolon(fieldName2);
@@ -446,14 +449,30 @@ namespace Parser
             idCodeSubstring = idCodeSubstring.Trim();
             idCodeSubstring = addQuotesAndComma(idCodeSubstring);
             writer.Write(idCodeSubstring);
+
+            //  chemical formula line
             writer.WriteLine();
             writer.Write("\t\t");
             fieldName3 = addQuotesAndSemicolon(fieldName3);
             writer.Write(fieldName3 + "[");
             string chemFormulaSubstring = line.Substring(9, 41);
             chemFormulaSubstring = chemFormulaSubstring.Trim();
+            //UnicodeCategory.DecimalDigitNumber
+            char[] firstSpace = chemFormulaSubstring.ToCharArray();
+            char zz = 'A';
+            char xx = 'G';
+            string vv = zz.ToString() + xx.ToString();
+            int formulalength = chemFormulaSubstring.Length;
             string[] formulaLine = chemFormulaSubstring.Split(separator);
             int formulaLineLength = formulaLine.Length;
+
+            var test = chemFormulaSubstring.Where(c => c > 46);
+            
+
+            for (int i = 0; i < formulalength; i++)
+            {
+                string mx = chemFormulaSubstring[i].ToString();
+            }
             int itemCount = 0;
             string m_item = "";
             foreach (var item in formulaLine)
