@@ -363,7 +363,15 @@ namespace Parser
 
                     //AreWeAtNewRecord(); take a peek(0
                     int mpeek = streamReader.Peek();
-
+                    //unicodeCategory
+                    //Char m_firstChar = m_currentLine.First();
+                    Char mxx_char = '(';
+                    unicodeCategory = char.GetUnicodeCategory((char)mxx_char);
+                    if (unicodeCategory  == UnicodeCategory.UppercaseLetter || unicodeCategory == UnicodeCategory.OpenPunctuation)
+                    {
+                        //  we have a new record
+                        m_currentLine = streamReader.ReadLine();
+                    }
 
 
                 }
