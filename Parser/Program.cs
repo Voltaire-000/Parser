@@ -348,13 +348,21 @@ namespace Parser
                     printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
                     printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
                     printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
-                    printCoefficientsArray(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName);
-                    printIntegrationConstants(streamWriter, streamReader, m_currentLine, m_integrationConstantsFieldName);
+                    printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName);
 
-                    //  integration constants
+                    // read new line, print temp interval, and next lines
+                    m_currentLine = streamReader.ReadLine();
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    //  start with temperature range
+                    printTemperatureRange(m_currentLine, m_temperatureRangeFieldName, streamWriter);
+                    printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
+                    printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
+                    printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
+                    printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName);
 
-
-                    //AreWeAtNewRecord();
+                    //AreWeAtNewRecord(); take a peek(0
+                    int mpeek = streamReader.Peek();
 
 
 
@@ -382,6 +390,7 @@ namespace Parser
 
         }
 
+        // unused
         private static void printIntegrationConstants(StreamWriter writer, StreamReader reader, string line, string fieldName)
         {
             // new record line
@@ -389,8 +398,9 @@ namespace Parser
             writer.Write("\t\t");
             writer.Write(fieldName + "[");
             char separator = ' ';
-            //reader.ReadLine();
-            //line = reader.ReadLine();
+            Stream s = reader.BaseStream;
+            line = reader.ReadLine();
+
             string mLineContinue = reader.ReadLine();
             //  concant the lines m_current and mLineContinue
             //string concantLine = line + mLineContinue;
@@ -400,14 +410,16 @@ namespace Parser
 
         }
 
-        private static void printCoefficientsArray(StreamWriter writer,StreamReader reader, string line, string fieldName)
+        private static void printCoeffAndIntegrationConstants(StreamWriter writer,StreamReader reader, string line, string fieldName1, string fieldName2)
         {
             // new record line
             writer.WriteLine();
             writer.Write("\t\t");
-            writer.Write(fieldName + "[");
+            writer.Write(fieldName1 + "[");
             char separator = ' ';
+            Stream stream= reader.BaseStream;
             line = reader.ReadLine();
+            Stream stream1= reader.BaseStream;
             string mLineContinue = reader.ReadLine();
             //  concant the lines m_current and mLineContinue
             string concantLine = line + mLineContinue;
@@ -459,6 +471,37 @@ namespace Parser
                     writer.Write(coefficient + "]" + ", ");
                 }
             }
+
+            //  done with Coefficients, do integration constants
+            // new record line
+            writer.WriteLine();
+            writer.Write("\t\t");
+            writer.Write(fieldName2 + "[");
+
+            int m_integrationCount = 0;
+            string integrationConstants = concantLine.Substring(129, 31);
+            string[] integrationLine = integrationConstants.Split(separator);
+            int m_integrationLineLength = integrationLine.Length;
+            int spaceIntegrateSkip = 0;
+
+            foreach (var integrateNum in integrationLine)
+            {
+                m_integrationCount = m_integrationCount + 1;
+                if(integrateNum == "")
+                {
+                    spaceIntegrateSkip= spaceIntegrateSkip + 1;
+                    continue;
+                }
+                if(m_integrationCount <= m_integrationLineLength -1)
+                {
+                    writer.Write(integrateNum + ", ");
+                }
+                else if (m_integrationCount >= m_integrationLineLength)
+                {
+                    writer.Write(integrateNum + "]" + ",");
+                }
+            }
+
 
         }
 
