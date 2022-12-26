@@ -39,6 +39,8 @@ namespace Parser
             string m_currentLine = "";
 
             StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
+            streamWriter.AutoFlush = true;
+
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
 
             while (!streamReader.EndOfStream)
@@ -347,6 +349,10 @@ namespace Parser
                     printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
                     printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
                     printCoefficientsArray(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName);
+                    printIntegrationConstants(streamWriter, streamReader, m_currentLine, m_integrationConstantsFieldName);
+
+                    //  integration constants
+
 
                     //AreWeAtNewRecord();
 
@@ -373,6 +379,24 @@ namespace Parser
                 //count = count +1;
 
             }
+
+        }
+
+        private static void printIntegrationConstants(StreamWriter writer, StreamReader reader, string line, string fieldName)
+        {
+            // new record line
+            writer.WriteLine();
+            writer.Write("\t\t");
+            writer.Write(fieldName + "[");
+            char separator = ' ';
+            //reader.ReadLine();
+            //line = reader.ReadLine();
+            string mLineContinue = reader.ReadLine();
+            //  concant the lines m_current and mLineContinue
+            //string concantLine = line + mLineContinue;
+            //concantLine = concantLine.Replace('D', 'e');
+            // (129,31)
+            //string m_integrationSubstring = concantLine.Substring(129, 31);
 
         }
 
@@ -446,7 +470,6 @@ namespace Parser
             writer.Write("\t\t");
             writer.Write(fieldName);
             writer.Write(" " + m_Hline + ",");
-
         }
 
         private static void printTexponentsArray(StreamWriter writer,string line, string fieldName)
@@ -488,7 +511,6 @@ namespace Parser
             string m_coeff = line.Substring(22, 1);
             writer.Write(fieldName);
             writer.Write(m_coeff + ",");
-
         }
 
         private static void printTemperatureRange(string line, string fieldName, StreamWriter writer)
