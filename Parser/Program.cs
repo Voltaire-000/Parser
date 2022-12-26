@@ -387,6 +387,10 @@ namespace Parser
                         else
                         {
                             // end of file print close curly brace, close  bracket and final close curly brace
+                            streamWriter.WriteLine();
+                             //streamWriter.WriteLine("\t\t}");
+                            streamWriter.WriteLine("\t]");
+                            streamWriter.WriteLine("}");
                         }
                     }
 
