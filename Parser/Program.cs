@@ -457,6 +457,22 @@ namespace Parser
 
             }
 
+            writer.WriteLine();
+            writer.Write("\t\t");
+            string speciesType = line.Substring(41, 1);
+            fieldName4 = addQuotesAndSemicolon(fieldName4);
+            writer.Write(fieldName4);
+            if (speciesType == "0")
+            {
+                writer.Write(" false" + ",");
+            }
+            else
+            {
+                writer.Write(" true", ",");
+            }
+            writer.WriteLine();
+            writer.Write("\t\t");
+
 
             //throw new NotImplementedException();
         }

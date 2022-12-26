@@ -6,3 +6,5 @@
 			"t_intervals": 3,
 			"id_code":	"g10/97",
 			"chemicalFormula":[	"AG",1.00,0.00,0.00,0.00,0.00],
+			"gaseous": false,
+		
