@@ -45,344 +45,401 @@ namespace Parser
 
             while (!streamReader.EndOfStream)
             {
-                //  print open bracket
-                if (!openBracketPrinted)
+
+                // read until thermo
+                m_currentLine= streamReader.ReadLine();
+                printThermoLine(streamWriter, streamReader, m_currentLine, m_thermoFieldName);
+                m_currentLine = streamReader.ReadLine();
+                bool m_newReactant = IsNewReactant(streamReader, m_currentLine);
+                if (!m_newReactant)
                 {
-                    // we are at start of file
-                    streamWriter.WriteLine("{");
-                    openBracketPrinted = true;
+                    //  todo
+                }
+                else
+                {
+                    // check for record line or end statement
+                    // print open curly bracket, new line, and get reactant line
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t" + "{");
+                    //m_currentLine= streamReader.ReadLine();
+                    printReactantAndCommentsLine(streamWriter, streamReader, m_currentLine, m_reactantFieldName, m_descriptionFieldName);
+                    m_currentLine = streamReader.ReadLine();
                 }
 
-                m_currentLine = streamReader.ReadLine();
+                printTintervalsDataLine(streamWriter, streamReader, m_currentLine,m_tIntervalsFieldName, m_optionalIdFieldName, m_chemformulaFieldName, m_speciesTypeFieldName, m_molecularWeightFieldName, m_heatOfFormationFieldName)
+                //  print open bracket
+                //if (!openBracketPrinted)
+                //{
+                //    // we are at start of file
+                //    streamWriter.WriteLine("{");
+                //    openBracketPrinted = true;
+                //}
+
+                //m_currentLine = streamReader.ReadLine();
 
                 //m_peek = streamReader.Peek();
                 //m_peek != -1
-                if (m_currentLine == "")
-                {
-                    m_currentLine = streamReader.ReadLine();
-                }
-                Char m_firstChar = m_currentLine.First();
+                //if (m_currentLine == "")
+                //{
+                //    m_currentLine = streamReader.ReadLine();
+                //}
+                //Char m_firstChar = m_currentLine.First();
 
-                unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
+                //unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
 
-                if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_firstChar == 't')
-                {
-                    // this is thermo line
-                    Console.WriteLine("Thermo line");
-                    m_thermoFieldName = JsonStart(m_currentLine, m_thermo, m_thermoFieldName, streamReader);
-                    m_thermoFieldName = addQuotesAndSemicolon(m_thermoFieldName);
-                    streamWriter.Write(m_thermoFieldName);
-                    streamWriter.WriteLine("[");
-                    streamWriter.WriteLine("\t\t{");
-                }
+                //if (unicodeCategory == UnicodeCategory.LowercaseLetter && m_firstChar == 't')
+                //{
+                //    // this is thermo line
+                //    Console.WriteLine("Thermo line");
+                //    m_thermoFieldName = JsonStart(m_currentLine, m_thermo, m_thermoFieldName, streamReader);
+                //    m_thermoFieldName = addQuotesAndSemicolon(m_thermoFieldName);
+                //    streamWriter.Write(m_thermoFieldName);
+                //    streamWriter.WriteLine("[");
+                //    streamWriter.WriteLine("\t\t{");
+                //}
 
-                m_currentLine = streamReader.ReadLine();
-                m_firstChar = m_currentLine.First();
-                unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
+                //m_currentLine = streamReader.ReadLine();
+                //m_firstChar = m_currentLine.First();
+                //unicodeCategory = Char.GetUnicodeCategory(m_firstChar);
 
-                if (unicodeCategory == UnicodeCategory.UppercaseLetter)
-                {
-                    //  this is a reactant field start of line. print reactant name to file
-                    //string m_nextLine = streamReader.ReadLine();
-                    char separator = ' ';
-                    string[] m_line = m_currentLine.Split(separator);
-                    
-                    //  reactant line
-                    m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
-                    string reactant = "\"" + m_line[0] + "\"" + ",";
+                //if (unicodeCategory == UnicodeCategory.UppercaseLetter)
+                //{
+                //    //  this is a reactant field start of line. print reactant name to file
+                //    //string m_nextLine = streamReader.ReadLine();
+                //    char separator = ' ';
+                //    string[] m_line = m_currentLine.Split(separator);
 
-                    //  description line comments
-                    int startdescription = reactant.Length;
-                    string m_description = m_currentLine.Substring(startdescription);
-                    m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
-                    m_description = addQuotesAndComma(m_description);
-                    
-                    streamWriter.Write("\t\t");
-                    streamWriter.Write(m_reactantFieldName + reactant);
-                    //streamWriter.Write(reactant);
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    streamWriter.Write(m_descriptionFieldName + m_description);
-                    //streamWriter.Write(m_description);
-                    streamWriter.WriteLine();
+                //    //  reactant line
+                //    m_reactantFieldName = addQuotesAndSemicolon(m_reactantFieldName);
+                //    string reactant = "\"" + m_line[0] + "\"" + ",";
 
-                    //  new record line
-                    //  T intervals line 
-                    m_currentLine = streamReader.ReadLine();
-                    string t_intervals = m_currentLine.Substring(0, 2);
-                    m_tIntervalsFieldName = addQuotesAndSemicolon(m_tIntervalsFieldName);
-                    streamWriter.Write("\t\t");
-                    streamWriter.Write(m_tIntervalsFieldName + t_intervals);
-                    //streamWriter.Write(t_intervals);
-                    streamWriter.Write(",");
+                //    //  description line comments
+                //    int startdescription = reactant.Length;
+                //    string m_description = m_currentLine.Substring(startdescription);
+                //    m_descriptionFieldName = addQuotesAndSemicolon(m_descriptionFieldName);
+                //    m_description = addQuotesAndComma(m_description);
 
-                    //  optional id continued from T intervals line
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_optionalIdFieldName = addQuotesAndSemicolon(m_optionalIdFieldName);
-                    string optionalId = m_currentLine.Substring(3, 7);
-                    optionalId= addQuotesAndComma(optionalId);
-                    streamWriter.Write(m_optionalIdFieldName+ optionalId);
+                //    streamWriter.Write("\t\t");
+                //    streamWriter.Write(m_reactantFieldName + reactant);
+                //    //streamWriter.Write(reactant);
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    streamWriter.Write(m_descriptionFieldName + m_description);
+                //    //streamWriter.Write(m_description);
+                //    streamWriter.WriteLine();
 
-                    //  chemical formula
-                    string chemFormula = m_currentLine.Substring(9, 41);
-                    chemFormula = chemFormula.Trim();
-                    char[] chemCharArray = chemFormula.ToCharArray();
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_chemformulaFieldName = addQuotesAndSemicolon(m_chemformulaFieldName);
-                    streamWriter.Write(m_chemformulaFieldName + "[");
-                    string[] formulaLine = chemFormula.Split(separator);
-                    int formulaLineLength = formulaLine.Length;
-                    int itemCount = 0;
-                    string m_item = "";
-                    foreach (var item in formulaLine)
-                    {
-                        itemCount = itemCount + 1;
-                        int m_itemLength = item.Count();
-                        // skip over spaces
-                        if (item == "")
-                        {
-                            continue;
-                        }
-                        // add the quotes to formula name
-                        if (itemCount < 2)
-                        {
-                            m_item = item.ToString();
-                            m_item = addQuotesAndComma(m_item);
-                            streamWriter.Write(m_item);
-                        }
+                //    //  new record line
+                //    //  T intervals line 
+                //    m_currentLine = streamReader.ReadLine();
+                //    string t_intervals = m_currentLine.Substring(0, 2);
+                //    m_tIntervalsFieldName = addQuotesAndSemicolon(m_tIntervalsFieldName);
+                //    streamWriter.Write("\t\t");
+                //    streamWriter.Write(m_tIntervalsFieldName + t_intervals);
+                //    //streamWriter.Write(t_intervals);
+                //    streamWriter.Write(",");
 
-                        if (itemCount >= 2 && itemCount < formulaLineLength)
-                        {
-                            //m_item = addQuotesAndComma(m_item);
-                            streamWriter.Write(formulaLine[itemCount - 1] + ",");
-                        }
-                        else if(itemCount >=formulaLineLength)
-                        {
-                            //m_item= addQuotes(m_item);
-                            streamWriter.Write(formulaLine[itemCount -1] + "]" + ",");
-                        }
-                        
-                    }
+                //    //  optional id continued from T intervals line
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_optionalIdFieldName = addQuotesAndSemicolon(m_optionalIdFieldName);
+                //    string optionalId = m_currentLine.Substring(3, 7);
+                //    optionalId= addQuotesAndComma(optionalId);
+                //    streamWriter.Write(m_optionalIdFieldName+ optionalId);
 
-                    //  Gaseous species, true or false
-                    string speciesType = m_currentLine.Substring(41, 1);
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_speciesTypeFieldName = addQuotesAndSemicolon(m_speciesTypeFieldName);
-                    streamWriter.Write(m_speciesTypeFieldName);
-                    if (speciesType == "0")
-                    {
-                        streamWriter.Write(" false" + ",");
-                    }
-                    else
-                    {
-                        streamWriter.Write(" true" + ",");
-                    }
+                //    //  chemical formula
+                //    string chemFormula = m_currentLine.Substring(9, 41);
+                //    chemFormula = chemFormula.Trim();
+                //    char[] chemCharArray = chemFormula.ToCharArray();
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_chemformulaFieldName = addQuotesAndSemicolon(m_chemformulaFieldName);
+                //    streamWriter.Write(m_chemformulaFieldName + "[");
+                //    string[] formulaLine = chemFormula.Split(separator);
+                //    int formulaLineLength = formulaLine.Length;
+                //    int itemCount = 0;
+                //    string m_item = "";
+                //    foreach (var item in formulaLine)
+                //    {
+                //        itemCount = itemCount + 1;
+                //        int m_itemLength = item.Count();
+                //        // skip over spaces
+                //        if (item == "")
+                //        {
+                //            continue;
+                //        }
+                //        // add the quotes to formula name
+                //        if (itemCount < 2)
+                //        {
+                //            m_item = item.ToString();
+                //            m_item = addQuotesAndComma(m_item);
+                //            streamWriter.Write(m_item);
+                //        }
 
-                    //  molecular weight
-                    string molecularWeight = m_currentLine.Substring(54, 11);
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_molecularWeightFieldName = addQuotesAndSemicolon(m_molecularWeightFieldName);
-                    streamWriter.Write(m_molecularWeightFieldName);
-                    streamWriter.Write( " " + molecularWeight + ",");
+                //        if (itemCount >= 2 && itemCount < formulaLineLength)
+                //        {
+                //            //m_item = addQuotesAndComma(m_item);
+                //            streamWriter.Write(formulaLine[itemCount - 1] + ",");
+                //        }
+                //        else if(itemCount >=formulaLineLength)
+                //        {
+                //            //m_item= addQuotes(m_item);
+                //            streamWriter.Write(formulaLine[itemCount -1] + "]" + ",");
+                //        }
 
-                    //  heat of formation
-                    string heatOfFormation = m_currentLine.Substring(65, 15);
-                    heatOfFormation = heatOfFormation.Trim();
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_heatOfFormationFieldName = addQuotesAndSemicolon(m_heatOfFormationFieldName);
-                    streamWriter.Write(m_heatOfFormationFieldName);
-                    streamWriter.Write(" " + heatOfFormation + ",");
-                    //  end record line
+                //    }
 
-                    //  new record line = temp range =column 2-21, number of coefficients = 23, T exponents = 24-63, H^ = 66-80
-                    m_currentLine = streamReader.ReadLine();
-                    string temp_range = m_currentLine.Substring(0, 22);
-                    temp_range = temp_range.Trim();
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_temperatureRangeFieldName = addQuotesAndSemicolon(m_temperatureRangeFieldName);
-                    streamWriter.Write(m_temperatureRangeFieldName + "[");
-                    string[] tempRangeLine = temp_range.Split(separator);
-                    int tempRangeCount = 0;
-                    int tempRangeLineLength = tempRangeLine.Length;
-                    foreach (var tempItem in tempRangeLine)
-                    {
-                        tempRangeCount = tempRangeCount + 1;
-                        if (tempItem == "")
-                        {
-                            continue;
-                        }
-                        // add the quotes
-                        string m_temp = tempItem.ToString();
-                        if (tempRangeCount <= tempRangeLineLength - 1)
-                        {
-                            //m_temp = addQuotesAndComma(m_temp);
-                            streamWriter.Write(m_temp + ",");
-                        }
-                        else if (tempRangeCount >= tempRangeLineLength)
-                        {
-                            //m_temp  = addQuotesAndComma(m_temp);
-                            streamWriter.Write(m_temp + "]" + ",");
-                        }
+                //    //  Gaseous species, true or false
+                //    string speciesType = m_currentLine.Substring(41, 1);
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_speciesTypeFieldName = addQuotesAndSemicolon(m_speciesTypeFieldName);
+                //    streamWriter.Write(m_speciesTypeFieldName);
+                //    if (speciesType == "0")
+                //    {
+                //        streamWriter.Write(" false" + ",");
+                //    }
+                //    else
+                //    {
+                //        streamWriter.Write(" true" + ",");
+                //    }
 
-                    }
+                //    //  molecular weight
+                //    string molecularWeight = m_currentLine.Substring(54, 11);
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_molecularWeightFieldName = addQuotesAndSemicolon(m_molecularWeightFieldName);
+                //    streamWriter.Write(m_molecularWeightFieldName);
+                //    streamWriter.Write( " " + molecularWeight + ",");
 
-                    // number of Coefficients column 23
-                    string m_coeff = m_currentLine.Substring(22, 1);
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_numberOfcoefficientsFieldName = addQuotesAndSemicolon(m_numberOfcoefficientsFieldName);
-                    streamWriter.Write(m_numberOfcoefficientsFieldName);
-                    streamWriter.Write(m_coeff + ",");
+                //    //  heat of formation
+                //    string heatOfFormation = m_currentLine.Substring(65, 15);
+                //    heatOfFormation = heatOfFormation.Trim();
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_heatOfFormationFieldName = addQuotesAndSemicolon(m_heatOfFormationFieldName);
+                //    streamWriter.Write(m_heatOfFormationFieldName);
+                //    streamWriter.Write(" " + heatOfFormation + ",");
+                //    //  end record line
 
-                    //  T exponents line column 24-63,  38spaces
-                    string m_tExponents = m_currentLine.Substring(23, 40);
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_tExponentsFiledName = addQuotesAndSemicolon(m_tExponentsFiledName);
-                    streamWriter.Write(m_tExponentsFiledName + "[");
-                    string[] tExponentLine = m_tExponents.Split(separator);
-                    int tExponentCount = 0;
-                    int spaceSkip = 0;
-                    int tExpLineLength = tExponentLine.Length;
-                    foreach (var exponent in tExponentLine)
-                    {
-                        tExponentCount = tExponentCount + 1;
-                        if (exponent == "")
-                        {
-                            spaceSkip = spaceSkip + 1;
-                            continue;
-                        }
-                        if (tExponentCount <= tExpLineLength -1)
-                        {
-                            streamWriter.Write(exponent + ",");
-                        }
-                        else if (tExponentCount >= tExpLineLength)
-                        {
-                            streamWriter.Write(exponent + "]" + ",");
-                        }
-                        
-                    }
+                //    //  new record line = temp range =column 2-21, number of coefficients = 23, T exponents = 24-63, H^ = 66-80
+                //    m_currentLine = streamReader.ReadLine();
+                //    string temp_range = m_currentLine.Substring(0, 22);
+                //    temp_range = temp_range.Trim();
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_temperatureRangeFieldName = addQuotesAndSemicolon(m_temperatureRangeFieldName);
+                //    streamWriter.Write(m_temperatureRangeFieldName + "[");
+                //    string[] tempRangeLine = temp_range.Split(separator);
+                //    int tempRangeCount = 0;
+                //    int tempRangeLineLength = tempRangeLine.Length;
+                //    foreach (var tempItem in tempRangeLine)
+                //    {
+                //        tempRangeCount = tempRangeCount + 1;
+                //        if (tempItem == "")
+                //        {
+                //            continue;
+                //        }
+                //        // add the quotes
+                //        string m_temp = tempItem.ToString();
+                //        if (tempRangeCount <= tempRangeLineLength - 1)
+                //        {
+                //            //m_temp = addQuotesAndComma(m_temp);
+                //            streamWriter.Write(m_temp + ",");
+                //        }
+                //        else if (tempRangeCount >= tempRangeLineLength)
+                //        {
+                //            //m_temp  = addQuotesAndComma(m_temp);
+                //            streamWriter.Write(m_temp + "]" + ",");
+                //        }
 
-                    //  H line column 66-80
-                    string m_Hline = m_currentLine.Substring(66, 14);
-                    m_Hline = m_Hline.Trim();
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_HlineJmolFieldName = addQuotesAndSemicolon(m_HlineJmolFieldName);
-                    streamWriter.Write(m_HlineJmolFieldName);
-                    streamWriter.Write(" " + m_Hline + ",");
-                    //  end record line
+                //    }
 
-                    //  new record line, line of Coefficients 1-80 ( first 5 coefficients), put all on 1 line
-                    m_currentLine = streamReader.ReadLine();
-                    string mLineContinue = streamReader.ReadLine();
-                    //  concant the lines m_current and mLineContinue
-                    string concantLine = m_currentLine + mLineContinue;
-                    string coefficientSubstring = concantLine.Substring(0, 128);
-                    string[] coefficientLine = coefficientSubstring.Split(separator);
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_CoefficientsFieldName = addQuotesAndSemicolon(m_CoefficientsFieldName);
-                    streamWriter.Write(m_CoefficientsFieldName + "[");
-                    string[] m_coefficientLine = coefficientSubstring.Split(separator);
-                    int m_coefficientCount = 0;
-                    int m_coefficientLineLength = m_coefficientLine.Length;
-                    foreach (var coefficient in m_coefficientLine)
-                    {
-                        m_coefficientCount = m_coefficientCount + 1;
-                        if (coefficient == "")
-                        {
-                            continue;
-                        }
-                        if (m_coefficientCount <= spaceSkip)
-                        {
-                            streamWriter.Write(coefficient.Remove(11,4) + ", ");
-                        }
-                        else if (m_coefficientCount > spaceSkip -1)
-                        {
-                            streamWriter.Write(coefficient.Remove(11,4) + "]" + ", ");
-                        }
-                    }
+                //    // number of Coefficients column 23
+                //    string m_coeff = m_currentLine.Substring(22, 1);
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_numberOfcoefficientsFieldName = addQuotesAndSemicolon(m_numberOfcoefficientsFieldName);
+                //    streamWriter.Write(m_numberOfcoefficientsFieldName);
+                //    streamWriter.Write(m_coeff + ",");
 
+                //    //  T exponents line column 24-63,  38spaces
+                //    string m_tExponents = m_currentLine.Substring(23, 40);
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_tExponentsFiledName = addQuotesAndSemicolon(m_tExponentsFiledName);
+                //    streamWriter.Write(m_tExponentsFiledName + "[");
+                //    string[] tExponentLine = m_tExponents.Split(separator);
+                //    int tExponentCount = 0;
+                //    int spaceSkip = 0;
+                //    int tExpLineLength = tExponentLine.Length;
+                //    foreach (var exponent in tExponentLine)
+                //    {
+                //        tExponentCount = tExponentCount + 1;
+                //        if (exponent == "")
+                //        {
+                //            spaceSkip = spaceSkip + 1;
+                //            continue;
+                //        }
+                //        if (tExponentCount <= tExpLineLength -1)
+                //        {
+                //            streamWriter.Write(exponent + ",");
+                //        }
+                //        else if (tExponentCount >= tExpLineLength)
+                //        {
+                //            streamWriter.Write(exponent + "]" + ",");
+                //        }
 
-                    //  integration constants
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    m_integrationConstantsFieldName = addQuotesAndSemicolon(m_integrationConstantsFieldName);
-                    streamWriter.Write(m_integrationConstantsFieldName + "[");
-                    string m_integrationSubstring = concantLine.Substring(129, 31);
-                    string[] integrationLine = m_integrationSubstring.Split(separator);
-                    int integrationCount = 0;
-                    int integrationLineLength = integrationLine.Length;
-                    spaceSkip= 0;
-                    foreach (var integrationConstant in integrationLine)
-                    {
-                        integrationCount = integrationCount + 1;
-                        if (integrationConstant == "")
-                        {
-                            spaceSkip = spaceSkip + 1;
-                            continue;
-                        }
-                        if (integrationCount <= spaceSkip)
-                        {
-                            streamWriter.Write(integrationConstant.Remove(11, 4) + ", ");
-                        }
-                        else if (integrationCount > spaceSkip -1)
-                        {
-                            streamWriter.Write(integrationConstant.Remove(11, 4) + "]" + ", ");
-                        }
-                    }
+                //    }
 
-                    //  read new line, print temp interval, and next 2 lines
-                    m_currentLine = streamReader.ReadLine();
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    //  start with temperature range
-                    printTemperatureRange(m_currentLine, m_temperatureRangeFieldName, streamWriter);
-                    printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
-                    printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
-                    printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
-                    printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName);
+                //    //  H line column 66-80
+                //    string m_Hline = m_currentLine.Substring(66, 14);
+                //    m_Hline = m_Hline.Trim();
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_HlineJmolFieldName = addQuotesAndSemicolon(m_HlineJmolFieldName);
+                //    streamWriter.Write(m_HlineJmolFieldName);
+                //    streamWriter.Write(" " + m_Hline + ",");
+                //    //  end record line
 
-                    // read new line, print temp interval, and next lines
-                    m_currentLine = streamReader.ReadLine();
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
-                    //  start with temperature range
-                    printTemperatureRange(m_currentLine, m_temperatureRangeFieldName, streamWriter);
-                    printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
-                    printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
-                    printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
-                    printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName);
-
-                    // Are We At New Record or END, take a peek()
-                    bool newReactant = IsNewReactant(streamReader); 
-                    if (newReactant)
-                    {
-                        // read new reactant record
-                    }
-
-                    
+                //    //  new record line, line of Coefficients 1-80 ( first 5 coefficients), put all on 1 line
+                //    m_currentLine = streamReader.ReadLine();
+                //    string mLineContinue = streamReader.ReadLine();
+                //    //  concant the lines m_current and mLineContinue
+                //    string concantLine = m_currentLine + mLineContinue;
+                //    string coefficientSubstring = concantLine.Substring(0, 128);
+                //    string[] coefficientLine = coefficientSubstring.Split(separator);
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_CoefficientsFieldName = addQuotesAndSemicolon(m_CoefficientsFieldName);
+                //    streamWriter.Write(m_CoefficientsFieldName + "[");
+                //    string[] m_coefficientLine = coefficientSubstring.Split(separator);
+                //    int m_coefficientCount = 0;
+                //    int m_coefficientLineLength = m_coefficientLine.Length;
+                //    foreach (var coefficient in m_coefficientLine)
+                //    {
+                //        m_coefficientCount = m_coefficientCount + 1;
+                //        if (coefficient == "")
+                //        {
+                //            continue;
+                //        }
+                //        if (m_coefficientCount <= spaceSkip)
+                //        {
+                //            streamWriter.Write(coefficient.Remove(11,4) + ", ");
+                //        }
+                //        else if (m_coefficientCount > spaceSkip -1)
+                //        {
+                //            streamWriter.Write(coefficient.Remove(11,4) + "]" + ", ");
+                //        }
+                //    }
 
 
-                }
+                //    //  integration constants
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    m_integrationConstantsFieldName = addQuotesAndSemicolon(m_integrationConstantsFieldName);
+                //    streamWriter.Write(m_integrationConstantsFieldName + "[");
+                //    string m_integrationSubstring = concantLine.Substring(129, 31);
+                //    string[] integrationLine = m_integrationSubstring.Split(separator);
+                //    int integrationCount = 0;
+                //    int integrationLineLength = integrationLine.Length;
+                //    spaceSkip= 0;
+                //    foreach (var integrationConstant in integrationLine)
+                //    {
+                //        integrationCount = integrationCount + 1;
+                //        if (integrationConstant == "")
+                //        {
+                //            spaceSkip = spaceSkip + 1;
+                //            continue;
+                //        }
+                //        if (integrationCount <= spaceSkip)
+                //        {
+                //            streamWriter.Write(integrationConstant.Remove(11, 4) + ", ");
+                //        }
+                //        else if (integrationCount > spaceSkip -1)
+                //        {
+                //            streamWriter.Write(integrationConstant.Remove(11, 4) + "]" + ", ");
+                //        }
+                //    }
+
+                //    //  read new line, print temp interval, and next 2 lines
+                //    m_currentLine = streamReader.ReadLine();
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    //  start with temperature range
+                //    printTemperatureRange(m_currentLine, m_temperatureRangeFieldName, streamWriter);
+                //    printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
+                //    printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
+                //    printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
+                //    printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName);
+
+                //    // read new line, print temp interval, and next lines
+                //    m_currentLine = streamReader.ReadLine();
+                //    streamWriter.WriteLine();
+                //    streamWriter.Write("\t\t");
+                //    //  start with temperature range
+                //    printTemperatureRange(m_currentLine, m_temperatureRangeFieldName, streamWriter);
+                //    printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
+                //    printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFiledName);
+                //    printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
+                //    printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName);
+
+                //    // Are We At New Record or END, take a peek()
+                //    bool newReactant = IsNewReactant(streamReader); 
+                //    if (newReactant)
+                //    {
+                //        // read new reactant record
+                //    }
+
+
+
+
+                ////}
+                streamReader.Close();
 
             }
 
         }
 
-        private static bool IsNewReactant(StreamReader reader)
+        private static void printTintervalsDataLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2, string fieldName3, string fieldName4, string fieldName5, string m_fieldName6)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void printReactantAndCommentsLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2)
+        {
+            writer.WriteLine();
+            writer.Write("\t\t");
+            fieldName1 = addQuotesAndSemicolon(fieldName1);
+            writer.Write(fieldName1);
+            string formulaString = line.Substring(0, 18);
+            formulaString = formulaString.Trim();
+            formulaString = addQuotesAndComma(formulaString);
+            writer.Write(formulaString);
+            writer.WriteLine();
+            writer.Write("\t\t");
+            fieldName2= addQuotesAndSemicolon(fieldName2);
+            writer.Write(fieldName2);
+            string descriptionSubstring = line.Substring(18);
+            descriptionSubstring = descriptionSubstring.Trim();
+            descriptionSubstring = addQuotesAndComma(descriptionSubstring);
+            writer.Write(descriptionSubstring); writer.WriteLine();
+
+        }
+
+        private static void printThermoLine(StreamWriter writer, StreamReader reader, string line, string fieldName)
+        {
+            fieldName = addQuotesAndSemicolon(fieldName);
+            writer.WriteLine("{");
+            writer.Write(fieldName + "[");
+        }
+
+        private static bool IsNewReactant(StreamReader reader, string line)
         {
             //bool thisIsNewReactant = false;
-            int recordPeek = reader.Peek();
+            //int recordPeek = reader.Peek();
+            char firstCharacter = line.First();
             UnicodeCategory unicodeCategory;
-            unicodeCategory = char.GetUnicodeCategory((char)recordPeek);
+            unicodeCategory = char.GetUnicodeCategory(firstCharacter);
             if (unicodeCategory != UnicodeCategory.UppercaseLetter && unicodeCategory != UnicodeCategory.OpenPunctuation)
             {
                 // we are at end of file
@@ -391,12 +448,13 @@ namespace Parser
             else
             {
                 // we have a new record, check for END
-                string checkForEND = reader.ReadLine();
+                //string checkForEND = "END";
                 // check if END
-                bool endRecord = EndRecord(reader, checkForEND);
+                bool endRecord = EndRecord(line);
                 if (!endRecord)
                 {
                     // start new record
+                    //reader.ReadLine();
                     return true;
                 }
                 else
@@ -414,7 +472,7 @@ namespace Parser
             return false;
         }
 
-        private static bool EndRecord(StreamReader streamReader, string m_currentLine)
+        private static bool EndRecord(string m_currentLine)
         {
             //bool endRecord = false;
             string endSubstring = m_currentLine.Substring(0, 3);
