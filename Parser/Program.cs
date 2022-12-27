@@ -422,7 +422,7 @@ namespace Parser
 
 
                 ////}
-                //streamReader.Close();
+                streamReader.Close();
 
             }
 
@@ -499,65 +499,26 @@ namespace Parser
             writer.WriteLine();
             writer.Write("\t\t\t\t\t");
             firstElement = addQuotesAndSemicolon(firstElement);
-            firstElement.TrimEnd();
             writer.Write(firstElement); writer.Write(firstAtoms + ",");
             writer.WriteLine();
             writer.Write("\t\t\t\t\t");
             secondElement= addQuotesAndSemicolon(secondElement);
-            secondElement.TrimEnd();
-            writer.Write(secondElement);
-
-            string concantFormula = firstElement + " " + firstAtoms + 
-                " " + secondElement + " " + secondAtoms +
-                " " + thirdElement + " " + thirdAtoms + 
-                " " + fourthElement + " " + fourthAtoms +
-                " " + fifthelement + " " + fifthAtoms;
-
-            concantFormula= concantFormula.Trim();
-            int m_atomCount = 0;
-
-            string[] chemFormulaLine = concantFormula.Split(separator);
-            int m_chemFormulaLength = chemFormulaLine.Length;
-            int formulaSkip = 0;
-
-            foreach (var item in chemFormulaLine)
-            {
-                m_atomCount = m_atomCount+ 1;
-                int m_itemLength = item.Count();
-                // skip over spaces
-                if (item == "")
-                {
-                    continue;
-                }
-
-                // if char is letter. put quotes, else if number no quotes
-                if (item[0].ToString() == "1")
-                {
-                    // print number
-                }
-                //  this is element name
-                // add the quotes to element name
-                if (m_atomCount < m_chemFormulaLength)
-                {
-                    string m_item = item.ToString();
-                    writer.WriteLine();
-                    writer.Write("\t\t\t\t\t");
-                    m_item = addQuotesAndSemicolon(m_item);
-                    writer.Write(m_item);
-                }
-
-                //if (itemCount >= 2 && itemCount < formulaLineLength)
-                //{
-                //    //m_item = addQuotesAndComma(m_item);
-                //    writer.Write(formulaLine[itemCount - 1] + ",");
-                //}
-                //else if (itemCount >= formulaLineLength)
-                //{
-                //    //m_item= addQuotes(m_item);
-                //    writer.Write(formulaLine[itemCount - 1] + "]" + ",");
-                //}
-
-            }
+            writer.Write(secondElement); writer.Write(secondAtoms + ",");
+            writer.WriteLine();
+            writer.Write("\t\t\t\t\t");
+            thirdElement = addQuotesAndSemicolon(thirdElement);
+            writer.Write(thirdElement); writer.Write(thirdAtoms + ",");
+            writer.WriteLine();
+            writer.Write("\t\t\t\t\t");
+            fourthElement = addQuotesAndSemicolon(fourthElement);
+            writer.Write(fourthElement); writer.Write(fourthAtoms + ",");
+            writer.WriteLine();
+            writer.Write("\t\t\t\t\t");
+            fifthelement= addQuotesAndSemicolon(fifthelement);
+            writer.Write(fifthelement); writer.Write(fifthAtoms);
+            writer.WriteLine();
+            writer.Write("\t\t\t\t\t\t");
+            writer.Write("}" + ",");
 
             // gas species line
             writer.WriteLine();
