@@ -482,10 +482,10 @@ namespace Parser
 
             //int firstNumber = chemFormulaSubstring.IndexOfAny(anyof);   // returns 4
             string firstElement = chemFormulaSubstring.Substring(0, firstColumn); // return "AG"
-            string numberOfFirstAtoms = chemFormulaSubstring.Substring(firstColumn, secondColumn);
+            string firstAtoms = chemFormulaSubstring.Substring(firstColumn, secondColumn);
 
             string secondElement = chemFormulaSubstring.Substring(firstColumn + secondColumn, thirdColumn);
-            string numberOfSecondAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn, fourthColumn);
+            string secondAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn, fourthColumn);
 
             string thirdElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn, fifthColumn);
             string thirdAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn, sixthColumn);
@@ -496,8 +496,8 @@ namespace Parser
             string fifthelement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn, ninthColumn);
             string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
 
-            string concantFormuls = firstElement + " " + numberOfFirstAtoms + " " + secondElement + 
-                    " " + numberOfSecondAtoms + " " + thirdElement + " " + thirdAtoms + 
+            string concantFormula = firstElement + " " + firstAtoms + " " + secondElement + 
+                    " " + secondAtoms + " " + thirdElement + " " + thirdAtoms + 
                     " " + fourthElement + " " + fourthAtoms + " " + fifthelement + " " + fifthAtoms;
 
             //var test = chemFormulaSubstring.Where(c => c >= '0' && c <= '9');
