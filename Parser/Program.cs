@@ -496,17 +496,22 @@ namespace Parser
             string fifthelement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn, ninthColumn);
             string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
 
-            string concantFormula = firstElement + " " + firstAtoms + " " + secondElement + 
-                    " " + secondAtoms + " " + thirdElement + " " + thirdAtoms + 
-                    " " + fourthElement + " " + fourthAtoms + " " + fifthelement + " " + fifthAtoms;
+            string concantFormula = firstElement + " " + firstAtoms + 
+                " " + secondElement + " " + secondAtoms +
+                " " + thirdElement + " " + thirdAtoms + 
+                " " + fourthElement + " " + fourthAtoms +
+                " " + fifthelement + " " + fifthAtoms;
 
-            //var test = chemFormulaSubstring.Where(c => c >= '0' && c <= '9');
+            concantFormula= concantFormula.Trim();
+            int m_atomCount = 0;
 
-            int itemCount = 0;
-            string m_item = "";
-            foreach (var item in formulaLine)
+            string[] chemFormulaLine = concantFormula.Split(separator);
+            int m_chemFormulaLength = chemFormulaLine.Length;
+            int formulaSkip = 0;
+
+            foreach (var item in chemFormulaLine)
             {
-                itemCount = itemCount + 1;
+                m_atomCount = m_atomCount+ 1;
                 int m_itemLength = item.Count();
                 // skip over spaces
                 if (item == "")
@@ -514,23 +519,23 @@ namespace Parser
                     continue;
                 }
                 // add the quotes to formula name
-                if (itemCount < 2)
+                if (m_atomCount < m_chemFormulaLength)
                 {
-                    m_item = item.ToString();
+                    string m_item = item.ToString();
                     m_item = addQuotesAndComma(m_item);
                     writer.Write(m_item);
                 }
 
-                if (itemCount >= 2 && itemCount < formulaLineLength)
-                {
-                    //m_item = addQuotesAndComma(m_item);
-                    writer.Write(formulaLine[itemCount - 1] + ",");
-                }
-                else if (itemCount >= formulaLineLength)
-                {
-                    //m_item= addQuotes(m_item);
-                    writer.Write(formulaLine[itemCount - 1] + "]" + ",");
-                }
+                //if (itemCount >= 2 && itemCount < formulaLineLength)
+                //{
+                //    //m_item = addQuotesAndComma(m_item);
+                //    writer.Write(formulaLine[itemCount - 1] + ",");
+                //}
+                //else if (itemCount >= formulaLineLength)
+                //{
+                //    //m_item= addQuotes(m_item);
+                //    writer.Write(formulaLine[itemCount - 1] + "]" + ",");
+                //}
 
             }
 
