@@ -453,8 +453,8 @@ namespace Parser
             //  chemical formula line
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName3 = addQuotesAndSemicolon(fieldName3);
-            writer.Write(fieldName3 + "[");
+            fieldName3 = addQuotesSemiColonAndOpenBracket(fieldName3);
+            writer.Write(fieldName3);
             string chemFormulaSubstring = line.Substring(9, 41);
             chemFormulaSubstring = chemFormulaSubstring.Trim();
             //UnicodeCategory.DecimalDigitNumber
@@ -496,6 +496,17 @@ namespace Parser
             string fifthelement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn, ninthColumn);
             string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
 
+            writer.WriteLine();
+            writer.Write("\t\t\t\t\t");
+            firstElement = addQuotesAndSemicolon(firstElement);
+            firstElement.TrimEnd();
+            writer.Write(firstElement); writer.Write(firstAtoms + ",");
+            writer.WriteLine();
+            writer.Write("\t\t\t\t\t");
+            secondElement= addQuotesAndSemicolon(secondElement);
+            secondElement.TrimEnd();
+            writer.Write(secondElement);
+
             string concantFormula = firstElement + " " + firstAtoms + 
                 " " + secondElement + " " + secondAtoms +
                 " " + thirdElement + " " + thirdAtoms + 
@@ -518,11 +529,20 @@ namespace Parser
                 {
                     continue;
                 }
-                // add the quotes to formula name
+
+                // if char is letter. put quotes, else if number no quotes
+                if (item[0].ToString() == "1")
+                {
+                    // print number
+                }
+                //  this is element name
+                // add the quotes to element name
                 if (m_atomCount < m_chemFormulaLength)
                 {
                     string m_item = item.ToString();
-                    m_item = addQuotesAndComma(m_item);
+                    writer.WriteLine();
+                    writer.Write("\t\t\t\t\t");
+                    m_item = addQuotesAndSemicolon(m_item);
                     writer.Write(m_item);
                 }
 
@@ -884,6 +904,12 @@ namespace Parser
         private static string addQuotesAndSemicolon(string fieldName)
         {
             fieldName = "\t\"" + fieldName + "\"" + ":" + "";
+            return fieldName;
+        }
+
+        private static string addQuotesSemiColonAndOpenBracket(string fieldName)
+        {
+            fieldName = "\t\"" + fieldName + "\"" + ":" + "{";
             return fieldName;
         }
 
