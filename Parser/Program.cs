@@ -74,7 +74,26 @@ namespace Parser
                     printReactantAndCommentsLine(streamWriter, streamReader, m_currentLine, m_reactantFieldName, m_descriptionFieldName);
                     m_currentLine = streamReader.ReadLine();
                     numberOfTemperatureIntervals = printTintervalsDataLine(streamWriter, streamReader, m_currentLine, m_tIntervalsFieldName, m_optionalIdFieldName, m_chemformulaFieldName, m_speciesTypeFieldName, m_molecularWeightFieldName, m_heatOfFormationFieldName);
+                    if (numberOfTemperatureIntervals == 0)
+                    {
+                        // special case for temperature intervals == 0
+                        // just print temp range line and move on
+                        for (int i = 0; i < 1; i++)
+                        {
+                            m_currentLine = streamReader.ReadLine();
 
+                            string ZeroTemprange = m_currentLine.Substring(0, 22);
+                            string ZeroNumberCoeff = m_currentLine.Substring(22, 3);
+                            string ZeroTexponents8 = m_currentLine.Substring(23, 40);
+                            string ZeroHline = m_currentLine.Substring(75, 5);
+                            printTemperatureRange(streamWriter, m_currentLine, m_temperatureRangeFieldName);
+                            printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
+                            printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
+                            printZeroHline(streamWriter, m_currentLine, m_HlineJmolFieldName);
+
+                        }
+         
+                    }
                     for (int i = 0; i < numberOfTemperatureIntervals; i++)
                     {
                         m_currentLine = streamReader.ReadLine();
@@ -92,10 +111,21 @@ namespace Parser
 
                 }
 
-                streamReader.Close();
+                //streamReader.Close();
 
             }
 
+        }
+
+        private static void printZeroHline(StreamWriter writer, string line, string fieldName)
+        {
+            string m_Hline = line.Substring(66, 14);
+            m_Hline = m_Hline.Trim();
+            writer.WriteLine();
+            writer.Write("\t\t");
+            fieldName = addQuotesAndSemicolon(fieldName);
+            writer.Write(fieldName);
+            writer.Write(" " + m_Hline);
         }
 
         private static int printTintervalsDataLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2, string fieldName3, string fieldName4, string fieldName5, string fieldName6)
