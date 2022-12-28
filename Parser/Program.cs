@@ -27,7 +27,8 @@ namespace Parser
             string m_molecularWeightFieldName = "molecularWeight";
             string m_heatOfFormationFieldName = "heatOfFormation";
             string m_temperatureRangeFieldName = "temperatureRange";
-            string x_temperatureRangeFieldName = "temperatureRange";
+            string m_specialCase = "temperatureRange";
+            string x_temperatureRangeFieldName = "\"" + m_specialCase + "\"" + ":" + "{";
             string m_numberOfcoefficientsFieldName = "numberOfCoefficients";
             string m_tExponentsFieldName = "tExponents";
             string m_HlineJmolFieldName = "H^(298.15)-H^(0) J/mol";
@@ -97,9 +98,9 @@ namespace Parser
          
                     }
 
-                    x_temperatureRangeFieldName = AddQuotesSemiColonAndOpenBracket(x_temperatureRangeFieldName);
+                    //x_temperatureRangeFieldName = AddQuotesSemiColonAndOpenBracket(x_temperatureRangeFieldName);
                     streamWriter.WriteLine();
-                    streamWriter.Write("\t\t");
+                    streamWriter.Write("\t\t\t");
                     streamWriter.Write(x_temperatureRangeFieldName);
                     for (int i = 0; i < numberOfTemperatureIntervals; i++)
                     {
@@ -127,11 +128,16 @@ namespace Parser
                     streamWriter.Write("\t\t");
                     streamWriter.WriteLine("}" + ",");
 
+                    if (streamReader.Peek() == -1)
+                    {
+                        streamWriter.Write("]");
+                        streamReader.Close();
+                    }
+
                 }
 
-                //streamReader.Close();
-
             }
+            
 
         }
 
@@ -548,7 +554,7 @@ namespace Parser
                         writer.WriteLine();
                         writer.Write("\t\t\t\t\t\t\t" + "}");
                         writer.WriteLine();
-                        writer.Write("\t\t\t\t\t\t" + "}" + ",");
+                        writer.Write("\t\t\t\t\t\t" + "}");
                     }
 
                     intGlobalInterval = intGlobalInterval + 1;
