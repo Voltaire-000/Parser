@@ -547,7 +547,8 @@ namespace Parser
                         writer.Write(integrateNum + "]");
                         writer.WriteLine();
                         writer.Write("\t\t\t\t\t\t\t" + "}");
-                        //writer.WriteLine("}" + ",");
+                        writer.WriteLine();
+                        writer.Write("\t\t\t\t\t\t" + "}" + ",");
                     }
 
                     intGlobalInterval = intGlobalInterval + 1;
