@@ -538,13 +538,15 @@ namespace Parser
                 {
                     if (intGlobalInterval != intervals - 1)
                     {
-                        writer.Write(integrateNum + "]" + ",");
+                        writer.Write(integrateNum + "]");
+                        writer.WriteLine();
+                        writer.Write("\t\t\t\t\t\t\t" + "}" + ",");
                     }
                     else
                     {
                         writer.Write(integrateNum + "]");
-                        //writer.WriteLine();
-                        //writer.Write("\t\t");
+                        writer.WriteLine();
+                        writer.Write("\t\t\t\t\t\t\t" + "}");
                         //writer.WriteLine("}" + ",");
                     }
 
