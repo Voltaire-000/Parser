@@ -62941,7 +62941,7 @@
 						"C .":00032,
 						".":00000
 						},
-			"gaseous": true
+			"gaseous": true,
 			"molecularWeight":  28.9651159,
 			"heatOfFormation": -125.530,
 			"temperatureRange":{
@@ -63744,7 +63744,7 @@
 						"O": 4.70,
 						"F": 0.02
 						},
-			"gaseous": true
+			"gaseous": true,
 			"molecularWeight":  99.9905349,
 			"heatOfFormation": -270496.000,							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
