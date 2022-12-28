@@ -41,7 +41,7 @@ namespace Parser
             bool thermoLineDone = false;
             string m_currentLine = "";
 
-            StreamWriter streamWriter = new StreamWriter("..\\..\\z_json.json");
+            StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINPjson.json");
             streamWriter.AutoFlush = true;
 
             StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");

@@ -56,5 +56,10 @@
     <None Include="thermo.inp" />
     <None Include="trans.inp" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="atomicWeight.txt" />
+    <Content Include="elements.txt" />
+    <Content Include="valence.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
