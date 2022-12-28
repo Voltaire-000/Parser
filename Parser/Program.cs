@@ -44,10 +44,12 @@ namespace Parser
             bool thermoLineDone = false;
             string m_currentLine = "";
 
-            StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINPjson.json");
+            //StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINPjson.json");
+            StreamWriter streamWriter = new StreamWriter("..\\..\\shortThermo.json");
             streamWriter.AutoFlush = true;
 
-            StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
+            //StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
+            StreamReader streamReader = new StreamReader("..\\..\\shortthermo.inp");
 
             while (!streamReader.EndOfStream)
             {
