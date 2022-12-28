@@ -27,11 +27,13 @@ namespace Parser
             string m_molecularWeightFieldName = "molecularWeight";
             string m_heatOfFormationFieldName = "heatOfFormation";
             string m_temperatureRangeFieldName = "temperatureRange";
+            string x_temperatureRangeFieldName = "temperatureRange";
             string m_numberOfcoefficientsFieldName = "numberOfCoefficients";
             string m_tExponentsFieldName = "tExponents";
             string m_HlineJmolFieldName = "H^(298.15)-H^(0) J/mol";
             string m_CoefficientsFieldName = "coefficients";
             string m_integrationConstantsFieldName = "integrationConstants";
+            string m_range = "range_";
 
             int count = 0;
             int m_peek = 0;
@@ -97,6 +99,19 @@ namespace Parser
                     for (int i = 0; i < numberOfTemperatureIntervals; i++)
                     {
                         m_currentLine = streamReader.ReadLine();
+                        int c = i + 1;
+                        m_range = m_range + c.ToString();
+                        x_temperatureRangeFieldName = AddQuotesSemiColonAndOpenBracket(x_temperatureRangeFieldName);
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t");
+                        streamWriter.Write(x_temperatureRangeFieldName);
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t");
+                        m_range = AddQuotesSemiColonAndOpenBracket(m_range);
+                        streamWriter.WriteLine(m_range);
+                        //streamWriter.WriteLine();
+                        //streamWriter.Write("\t\t\t\t\t\t");
+
                         PrintTemperatureRange(streamWriter, m_currentLine, m_temperatureRangeFieldName);
                         PrintNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
                         PrintTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
@@ -423,7 +438,7 @@ namespace Parser
         {
             // new record line
             writer.WriteLine();
-            writer.Write("\t\t");
+            writer.Write("\t\t\t\t\t\t");
             fieldName1 = AddQuotesAndSemicolon(fieldName1);
             writer.Write(fieldName1 + "[");
             char separator = ' ';
@@ -542,7 +557,7 @@ namespace Parser
             string m_Hline = line.Substring(66, 14);
             m_Hline = m_Hline.Trim();
             writer.WriteLine();
-            writer.Write("\t\t");
+            writer.Write("\t\t\t\t\t\t");
             fieldName = AddQuotesAndSemicolon(fieldName);
             writer.Write(fieldName);
             writer.Write(" " + m_Hline + ",");
@@ -552,7 +567,7 @@ namespace Parser
         {
             char separator = ' ';
             writer.WriteLine();
-            writer.Write("\t\t");
+            writer.Write("\t\t\t\t\t\t");
             string m_tExponents = line.Substring(23, 40);
             fieldName = AddQuotesAndSemicolon(fieldName);
             writer.Write(fieldName + "[");
@@ -583,7 +598,7 @@ namespace Parser
         private static void PrintNumberOfCoefficients(StreamWriter writer, string line, string fieldName)
         {
             writer.WriteLine();
-            writer.Write("\t\t");
+            writer.Write("\t\t\t\t\t\t");
             // number of Coefficients column 23
             string m_coeff = line.Substring(22, 1);
             fieldName = AddQuotesAndSemicolon(fieldName);
@@ -594,8 +609,8 @@ namespace Parser
         private static void PrintTemperatureRange(StreamWriter writer, string line, string fieldName)
         {
             char separator = ' ';
-            writer.WriteLine();
-            writer.Write("\t\t");
+            //writer.WriteLine();
+            writer.Write("\t\t\t\t\t\t");
             string temp_range = line.Substring(0, 22);
             temp_range = temp_range.Trim();
             fieldName = AddQuotesAndSemicolon(fieldName);
