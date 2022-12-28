@@ -96,19 +96,21 @@ namespace Parser
                         }
          
                     }
+
+                    x_temperatureRangeFieldName = AddQuotesSemiColonAndOpenBracket(x_temperatureRangeFieldName);
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t");
+                    streamWriter.Write(x_temperatureRangeFieldName);
                     for (int i = 0; i < numberOfTemperatureIntervals; i++)
                     {
                         m_currentLine = streamReader.ReadLine();
                         int c = i + 1;
-                        m_range = m_range + c.ToString();
-                        x_temperatureRangeFieldName = AddQuotesSemiColonAndOpenBracket(x_temperatureRangeFieldName);
-                        streamWriter.WriteLine();
-                        streamWriter.Write("\t\t");
-                        streamWriter.Write(x_temperatureRangeFieldName);
+                        //m_range = m_range + c.ToString();
+
                         streamWriter.WriteLine();
                         streamWriter.Write("\t\t\t\t\t");
-                        m_range = AddQuotesSemiColonAndOpenBracket(m_range);
-                        streamWriter.WriteLine(m_range);
+                        //m_range = AddQuotesSemiColonAndOpenBracket(m_range);
+                        streamWriter.WriteLine( "\"" + m_range + c.ToString() + "\"" + ":" + "{");
                         //streamWriter.WriteLine();
                         //streamWriter.Write("\t\t\t\t\t\t");
 
@@ -117,6 +119,7 @@ namespace Parser
                         PrintTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
                         PrintH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
                         PrintCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName, numberOfTemperatureIntervals);
+                        //  print closing curly brace for range
                     }
 
                     // print the close curly bracket for reactant
