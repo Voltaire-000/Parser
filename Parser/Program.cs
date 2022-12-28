@@ -320,7 +320,7 @@ namespace Parser
             }
             else
             {
-                writer.Write(" true", ",");
+                writer.Write(" true" + ",");
             }
 
             //  molecular weight line
