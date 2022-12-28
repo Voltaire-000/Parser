@@ -503,7 +503,7 @@ namespace Parser
             //  done with Coefficients, do integration constants
             // new record line
             writer.WriteLine();
-            writer.Write("\t\t");
+            writer.Write("\t\t\t\t\t\t");
             fieldName2 = AddQuotesAndSemicolon(fieldName2);
             writer.Write(fieldName2 + "[");
 
