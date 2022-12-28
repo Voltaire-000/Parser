@@ -14,7 +14,7 @@ namespace Parser
     {
         private static int intGlobalInterval = 0;
 
-        static void Main(string[] args)
+        static void Main(string[])
         {
             string m_thermo = "";
             string m_thermoFieldName = "thermo";
@@ -54,7 +54,7 @@ namespace Parser
                 {
                     // read until thermo
                     m_currentLine = streamReader.ReadLine();
-                    thermoLineDone = printThermoLine(streamWriter, streamReader, m_currentLine, m_thermoFieldName);
+                    thermoLineDone = PrintThermoLine(streamWriter, streamReader, m_currentLine, m_thermoFieldName);
                 }
 
                 m_currentLine = streamReader.ReadLine();
@@ -71,9 +71,9 @@ namespace Parser
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t" + "{");
                     //m_currentLine= streamReader.ReadLine();
-                    printReactantAndCommentsLine(streamWriter, streamReader, m_currentLine, m_reactantFieldName, m_descriptionFieldName);
+                    PrintReactantAndCommentsLine(streamWriter, streamReader, m_currentLine, m_reactantFieldName, m_descriptionFieldName);
                     m_currentLine = streamReader.ReadLine();
-                    numberOfTemperatureIntervals = printTintervalsDataLine(streamWriter, streamReader, m_currentLine, m_tIntervalsFieldName, m_optionalIdFieldName, m_chemformulaFieldName, m_speciesTypeFieldName, m_molecularWeightFieldName, m_heatOfFormationFieldName);
+                    numberOfTemperatureIntervals = PrintTintervalsDataLine(streamWriter, streamReader, m_currentLine, m_tIntervalsFieldName, m_optionalIdFieldName, m_chemformulaFieldName, m_speciesTypeFieldName, m_molecularWeightFieldName, m_heatOfFormationFieldName);
                     if (numberOfTemperatureIntervals == 0)
                     {
                         // special case for temperature intervals == 0
@@ -86,10 +86,10 @@ namespace Parser
                             string ZeroNumberCoeff = m_currentLine.Substring(22, 3);
                             string ZeroTexponents8 = m_currentLine.Substring(23, 40);
                             string ZeroHline = m_currentLine.Substring(75, 5);
-                            printTemperatureRange(streamWriter, m_currentLine, m_temperatureRangeFieldName);
-                            printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
-                            printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
-                            printZeroHline(streamWriter, m_currentLine, m_HlineJmolFieldName);
+                            PrintTemperatureRange(streamWriter, m_currentLine, m_temperatureRangeFieldName);
+                            PrintNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
+                            PrintTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
+                            PrintZeroHline(streamWriter, m_currentLine, m_HlineJmolFieldName);
 
                         }
          
@@ -97,11 +97,11 @@ namespace Parser
                     for (int i = 0; i < numberOfTemperatureIntervals; i++)
                     {
                         m_currentLine = streamReader.ReadLine();
-                        printTemperatureRange(streamWriter, m_currentLine, m_temperatureRangeFieldName);
-                        printNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
-                        printTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
-                        printH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
-                        printCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName, numberOfTemperatureIntervals);
+                        PrintTemperatureRange(streamWriter, m_currentLine, m_temperatureRangeFieldName);
+                        PrintNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
+                        PrintTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
+                        PrintH_line(streamWriter, m_currentLine, m_HlineJmolFieldName);
+                        PrintCoeffAndIntegrationConstants(streamWriter, streamReader, m_currentLine, m_CoefficientsFieldName, m_integrationConstantsFieldName, numberOfTemperatureIntervals);
                     }
 
                     // print the close curly bracket for reactant
@@ -117,24 +117,24 @@ namespace Parser
 
         }
 
-        private static void printZeroHline(StreamWriter writer, string line, string fieldName)
+        private static void PrintZeroHline(StreamWriter writer, string line, string fieldName)
         {
             string m_Hline = line.Substring(66, 14);
             m_Hline = m_Hline.Trim();
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName = addQuotesAndSemicolon(fieldName);
+            fieldName = AddQuotesAndSemicolon(fieldName);
             writer.Write(fieldName);
             writer.Write(" " + m_Hline);
         }
 
-        private static int printTintervalsDataLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2, string fieldName3, string fieldName4, string fieldName5, string fieldName6)
+        private static int PrintTintervalsDataLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2, string fieldName3, string fieldName4, string fieldName5, string fieldName6)
         {
             char separator = ' ';
             writer.WriteLine();
             writer.Write("\t\t");
             // t intervals
-            fieldName1 = addQuotesAndSemicolon(fieldName1);
+            fieldName1 = AddQuotesAndSemicolon(fieldName1);
             writer.Write(fieldName1);
             string intervalsSubstring = line.Substring(0, 2);
             int.TryParse(intervalsSubstring, out int value);
@@ -143,17 +143,17 @@ namespace Parser
             // id code
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName2 = addQuotesAndSemicolon(fieldName2);
+            fieldName2 = AddQuotesAndSemicolon(fieldName2);
             writer.Write(fieldName2);
             string idCodeSubstring = line.Substring(3, 7);
             idCodeSubstring = idCodeSubstring.Trim();
-            idCodeSubstring = addQuotesAndComma(idCodeSubstring);
+            idCodeSubstring = AddQuotesAndComma(idCodeSubstring);
             writer.Write(idCodeSubstring);
 
             //  chemical formula line
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName3 = addQuotesSemiColonAndOpenBracket(fieldName3);
+            fieldName3 = AddQuotesSemiColonAndOpenBracket(fieldName3);
             writer.Write(fieldName3);
             string chemFormulaSubstring = line.Substring(9, 41);
             chemFormulaSubstring = chemFormulaSubstring.Trim();
@@ -182,40 +182,104 @@ namespace Parser
 
             //int firstNumber = chemFormulaSubstring.IndexOfAny(anyof);   // returns 4
             string firstElement = chemFormulaSubstring.Substring(0, firstColumn); // return "AG"
+            firstElement = firstElement.Trim();
+            int l_firstElement = firstElement.Length;
             string firstAtoms = chemFormulaSubstring.Substring(firstColumn, secondColumn);
 
             string secondElement = chemFormulaSubstring.Substring(firstColumn + secondColumn, thirdColumn);
+            secondElement = secondElement.Trim();
+            int l_secondElement = secondElement.Length;
             string secondAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn, fourthColumn);
 
             string thirdElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn, fifthColumn);
+            thirdElement = thirdElement.Trim();
+            int l_thirdElement = thirdElement.Length;
             string thirdAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn, sixthColumn);
 
             string fourthElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn, seventhColumn);
+            fourthElement = fourthElement.Trim();
+            int l_fourthElement = fourthElement.Length;
             string fourthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn, eigthColumn);
 
             string fifthelement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn, ninthColumn);
+            fifthelement= fifthelement.Trim();
+            int l_fifthElement = fifthelement.Length;
             string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
 
             writer.WriteLine();
             writer.Write("\t\t\t\t\t");
-            firstElement = addQuotesAndSemicolon(firstElement);
-            writer.Write(firstElement); writer.Write(firstAtoms + ",");
-            writer.WriteLine();
-            writer.Write("\t\t\t\t\t");
-            secondElement= addQuotesAndSemicolon(secondElement);
-            writer.Write(secondElement); writer.Write(secondAtoms + ",");
-            writer.WriteLine();
-            writer.Write("\t\t\t\t\t");
-            thirdElement = addQuotesAndSemicolon(thirdElement);
-            writer.Write(thirdElement); writer.Write(thirdAtoms + ",");
-            writer.WriteLine();
-            writer.Write("\t\t\t\t\t");
-            fourthElement = addQuotesAndSemicolon(fourthElement);
-            writer.Write(fourthElement); writer.Write(fourthAtoms + ",");
-            writer.WriteLine();
-            writer.Write("\t\t\t\t\t");
-            fifthelement= addQuotesAndSemicolon(fifthelement);
-            writer.Write(fifthelement); writer.Write(fifthAtoms);
+            firstElement = AddQuotesAndSemicolon(firstElement);
+            writer.Write(firstElement);
+
+            if (l_secondElement > 0)
+            {
+                writer.Write(firstAtoms + ","); 
+            }
+            else
+            {
+                writer.Write(firstAtoms);
+            }
+
+            if (l_secondElement > 0)
+            {
+                writer.WriteLine();
+                writer.Write("\t\t\t\t\t");
+                secondElement = AddQuotesAndSemicolon(secondElement);
+                writer.Write(secondElement);
+
+                if (l_thirdElement > 0)
+                {
+                    writer.Write(secondAtoms + ","); 
+                }
+                else
+                {
+                    writer.Write(secondAtoms);
+                }
+
+                if (l_thirdElement > 0)
+                {
+                    writer.WriteLine();
+                    writer.Write("\t\t\t\t\t");
+                    thirdElement = AddQuotesAndSemicolon(thirdElement);
+                    writer.Write(thirdElement);
+
+                    if (l_fourthElement > 0)
+                    {
+                        writer.Write(thirdAtoms + ","); 
+                    }
+                    else
+                    {
+                        writer.Write(thirdAtoms);
+                    }
+
+                    if (l_fourthElement > 0)
+                    {
+                        writer.WriteLine();
+                        writer.Write("\t\t\t\t\t");
+                        fourthElement = AddQuotesAndSemicolon(fourthElement);
+                        writer.Write(fourthElement);
+
+                        if (l_fifthElement > 0)
+                        {
+                            writer.Write(fourthAtoms + ","); 
+                        }
+                        else
+                        {
+                            writer.Write(fourthAtoms);
+                        }
+
+                        if (l_fifthElement > 0)
+                        {
+                            writer.WriteLine();
+                            writer.Write("\t\t\t\t\t");
+                            fifthelement = AddQuotesAndSemicolon(fifthelement);
+                            writer.Write(fifthelement);
+                            writer.Write(fifthAtoms);  
+                        } 
+                    } 
+                }
+            }
+
             writer.WriteLine();
             writer.Write("\t\t\t\t\t\t");
             writer.Write("}" + ",");
@@ -224,7 +288,7 @@ namespace Parser
             writer.WriteLine();
             writer.Write("\t\t");
             string speciesType = line.Substring(41, 1);
-            fieldName4 = addQuotesAndSemicolon(fieldName4);
+            fieldName4 = AddQuotesAndSemicolon(fieldName4);
             writer.Write(fieldName4);
             if (speciesType == "0")
             {
@@ -239,7 +303,7 @@ namespace Parser
             writer.WriteLine();
             writer.Write("\t\t");
             string m_molecularWeight = line.Substring(54, 11);
-            fieldName5 = addQuotesAndSemicolon(fieldName5);
+            fieldName5 = AddQuotesAndSemicolon(fieldName5);
             writer.Write(fieldName5);
             writer.Write(" " + m_molecularWeight + ",");
 
@@ -248,37 +312,37 @@ namespace Parser
             writer.Write("\t\t");
             string m_heatOfFormation = line.Substring(65, 15);
             m_heatOfFormation = m_heatOfFormation.Trim();
-            fieldName6 = addQuotesAndSemicolon(fieldName6);
+            fieldName6 = AddQuotesAndSemicolon(fieldName6);
             writer.Write(fieldName6);
             writer.Write(" " + m_heatOfFormation + ",");
             //  end record start read new line
             return value;
         }
 
-        private static void printReactantAndCommentsLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2)
+        private static void PrintReactantAndCommentsLine(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2)
         {
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName1 = addQuotesAndSemicolon(fieldName1);
+            fieldName1 = AddQuotesAndSemicolon(fieldName1);
             writer.Write(fieldName1);
             string formulaString = line.Substring(0, 18);
             formulaString = formulaString.Trim();
-            formulaString = addQuotesAndComma(formulaString);
+            formulaString = AddQuotesAndComma(formulaString);
             writer.Write(formulaString);
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName2 = addQuotesAndSemicolon(fieldName2);
+            fieldName2 = AddQuotesAndSemicolon(fieldName2);
             writer.Write(fieldName2);
             string descriptionSubstring = line.Substring(18);
             descriptionSubstring = descriptionSubstring.Trim();
-            descriptionSubstring = addQuotesAndComma(descriptionSubstring);
+            descriptionSubstring = AddQuotesAndComma(descriptionSubstring);
             writer.Write(descriptionSubstring);
 
         }
 
-        private static bool printThermoLine(StreamWriter writer, StreamReader reader, string line, string fieldName)
+        private static bool PrintThermoLine(StreamWriter writer, StreamReader reader, string line, string fieldName)
         {
-            fieldName = addQuotesAndSemicolon(fieldName);
+            fieldName = AddQuotesAndSemicolon(fieldName);
             writer.WriteLine("{");
             writer.Write(fieldName + "[");
             return true;
@@ -336,7 +400,7 @@ namespace Parser
         }
 
         // unused
-        private static void printIntegrationConstants(StreamWriter writer, StreamReader reader, string line, string fieldName)
+        private static void PrintIntegrationConstants(StreamWriter writer, StreamReader reader, string line, string fieldName)
         {
             // new record line
             writer.WriteLine();
@@ -355,12 +419,12 @@ namespace Parser
 
         }
 
-        private static void printCoeffAndIntegrationConstants(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2, int intervals)
+        private static void PrintCoeffAndIntegrationConstants(StreamWriter writer, StreamReader reader, string line, string fieldName1, string fieldName2, int intervals)
         {
             // new record line
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName1 = addQuotesAndSemicolon(fieldName1);
+            fieldName1 = AddQuotesAndSemicolon(fieldName1);
             writer.Write(fieldName1 + "[");
             char separator = ' ';
             Stream stream = reader.BaseStream;
@@ -422,7 +486,7 @@ namespace Parser
             // new record line
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName2 = addQuotesAndSemicolon(fieldName2);
+            fieldName2 = AddQuotesAndSemicolon(fieldName2);
             writer.Write(fieldName2 + "[");
 
             int m_integrationCount = 0;
@@ -473,24 +537,24 @@ namespace Parser
 
         }
 
-        private static void printH_line(StreamWriter writer, string line, string fieldName)
+        private static void PrintH_line(StreamWriter writer, string line, string fieldName)
         {
             string m_Hline = line.Substring(66, 14);
             m_Hline = m_Hline.Trim();
             writer.WriteLine();
             writer.Write("\t\t");
-            fieldName = addQuotesAndSemicolon(fieldName);
+            fieldName = AddQuotesAndSemicolon(fieldName);
             writer.Write(fieldName);
             writer.Write(" " + m_Hline + ",");
         }
 
-        private static void printTexponentsArray(StreamWriter writer, string line, string fieldName)
+        private static void PrintTexponentsArray(StreamWriter writer, string line, string fieldName)
         {
             char separator = ' ';
             writer.WriteLine();
             writer.Write("\t\t");
             string m_tExponents = line.Substring(23, 40);
-            fieldName = addQuotesAndSemicolon(fieldName);
+            fieldName = AddQuotesAndSemicolon(fieldName);
             writer.Write(fieldName + "[");
             string[] tExponentLine = m_tExponents.Split(separator);
             int tExponentCount = 0;
@@ -516,25 +580,25 @@ namespace Parser
             }
         }
 
-        private static void printNumberOfCoefficients(StreamWriter writer, string line, string fieldName)
+        private static void PrintNumberOfCoefficients(StreamWriter writer, string line, string fieldName)
         {
             writer.WriteLine();
             writer.Write("\t\t");
             // number of Coefficients column 23
             string m_coeff = line.Substring(22, 1);
-            fieldName = addQuotesAndSemicolon(fieldName);
+            fieldName = AddQuotesAndSemicolon(fieldName);
             writer.Write(fieldName);
             writer.Write(" " + m_coeff + ",");
         }
 
-        private static void printTemperatureRange(StreamWriter writer, string line, string fieldName)
+        private static void PrintTemperatureRange(StreamWriter writer, string line, string fieldName)
         {
             char separator = ' ';
             writer.WriteLine();
             writer.Write("\t\t");
             string temp_range = line.Substring(0, 22);
             temp_range = temp_range.Trim();
-            fieldName = addQuotesAndSemicolon(fieldName);
+            fieldName = AddQuotesAndSemicolon(fieldName);
             writer.Write(fieldName + "[");
             string[] tempRangeLine = temp_range.Split(separator);
             int tempRangeCount = 0;
@@ -562,24 +626,24 @@ namespace Parser
             }
         }
 
-        private static string addQuotesAndSemicolon(string fieldName)
+        private static string AddQuotesAndSemicolon(string fieldName)
         {
             fieldName = "\t\"" + fieldName + "\"" + ":" + "";
             return fieldName;
         }
 
-        private static string addQuotesSemiColonAndOpenBracket(string fieldName)
+        private static string AddQuotesSemiColonAndOpenBracket(string fieldName)
         {
             fieldName = "\t\"" + fieldName + "\"" + ":" + "{";
             return fieldName;
         }
 
-        private static string addQuotesAndComma(string fieldName)
+        private static string AddQuotesAndComma(string fieldName)
         {
             fieldName = "\t\"" + fieldName.Trim() + "\"" + ",";
             return fieldName;
         }
-        private static string addQuotes(string fieldName)
+        private static string AddQuotes(string fieldName)
         {
             fieldName = "\"" + fieldName + "\"";
             return fieldName;
@@ -592,7 +656,7 @@ namespace Parser
                 string m_thermoLine = streamReader.ReadLine();
                 m_thermo = m_thermoLine.Substring(0, 6);
                 //m_thermoField = "\t\"" + m_thermo.ToString() + "\"";
-                m_thermoField = addQuotesAndSemicolon(m_thermoField);
+                m_thermoField = AddQuotesAndSemicolon(m_thermoField);
             }
             return m_thermoField;
         }
