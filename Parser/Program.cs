@@ -14,7 +14,7 @@ namespace Parser
     {
         private static int intGlobalInterval = 0;
 
-        static void Main(string[])
+        static void Main(string[] args)
         {
             string m_thermo = "";
             string m_thermoFieldName = "thermo";
