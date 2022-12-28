@@ -62975,10 +62975,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  27.6696400,
-			"heatOfFormation": 16445.000,							"temperatureRange":[180.590, 0.000], 
+			"heatOfFormation": 16445.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[180.590, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -62993,10 +62995,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  63.1264600,
-			"heatOfFormation": 42840.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": 42840.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63011,10 +63015,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  14.0265800,
-			"heatOfFormation": -25600.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -25600.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63031,10 +63037,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  61.0400200,
-			"heatOfFormation": -113100.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -113100.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63049,10 +63057,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  16.0424600,
-			"heatOfFormation": -89233.000,							"temperatureRange":[111.643, 0.000], 
+			"heatOfFormation": -89233.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[111.643, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63093,10 +63103,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  46.0717400,
-			"heatOfFormation": 54200.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": 54200.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63111,10 +63123,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  26.0372800,
-			"heatOfFormation": 207599.000,							"temperatureRange":[192.350, 0.000], 
+			"heatOfFormation": 207599.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[192.350, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63130,10 +63144,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  41.0519200,
-			"heatOfFormation": 31380.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": 31380.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63148,10 +63164,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  28.0531600,
-			"heatOfFormation": 33945.000,							"temperatureRange":[169.420, 0.000], 
+			"heatOfFormation": 33945.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[169.420, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63167,10 +63185,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  44.0525600,
-			"heatOfFormation": -78841.000,							"temperatureRange":[283.650, 0.000], 
+			"heatOfFormation": -78841.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[283.650, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63185,10 +63205,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  30.0690400,
-			"heatOfFormation": -103819.000,							"temperatureRange":[184.559, 0.000], 
+			"heatOfFormation": -103819.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[184.559, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63229,10 +63251,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  60.0983200,
-			"heatOfFormation": 48900.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": 48900.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63247,10 +63271,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  52.0348000,
-			"heatOfFormation": 283209.000,							"temperatureRange":[252.050, 0.000], 
+			"heatOfFormation": 283209.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[252.050, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63265,10 +63291,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  42.0797400,
-			"heatOfFormation": -2704.000,							"temperatureRange":[225.460, 0.000], 
+			"heatOfFormation": -2704.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[225.460, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63285,10 +63313,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight": 105.0925800,
-			"heatOfFormation": -214500.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -214500.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63303,10 +63333,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  44.0956200,
-			"heatOfFormation": -128228.000,							"temperatureRange":[231.076, 0.000], 
+			"heatOfFormation": -128228.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[231.076, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63321,10 +63353,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  56.1063200,
-			"heatOfFormation": -25173.000,							"temperatureRange":[266.920, 0.000], 
+			"heatOfFormation": -25173.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[266.920, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63339,10 +63373,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  58.1222000,
-			"heatOfFormation": -150664.000,							"temperatureRange":[272.638, 0.000], 
+			"heatOfFormation": -150664.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[272.638, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63357,10 +63393,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  58.1222000,
-			"heatOfFormation": -159664.000,							"temperatureRange":[261.361, 0.000], 
+			"heatOfFormation": -159664.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[261.361, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63375,10 +63413,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  72.1487800,
-			"heatOfFormation": -173490.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -173490.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63562,10 +63602,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  92.4482096,
-			"heatOfFormation": -193386.000,							"temperatureRange":[284.890, 0.000], 
+			"heatOfFormation": -193386.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[284.890, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63614,10 +63656,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight": 102.4496032,
-			"heatOfFormation": -47436.000,							"temperatureRange":[226.400, 0.000], 
+			"heatOfFormation": -47436.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[226.400, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63631,10 +63675,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  70.9060000,
-			"heatOfFormation": -22550.000,							"temperatureRange":[239.120, 0.000], 
+			"heatOfFormation": -22550.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[239.120, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63648,10 +63694,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  37.9968064,
-			"heatOfFormation": -13091.000,							"temperatureRange":[85.020, 0.000], 
+			"heatOfFormation": -13091.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[85.020, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63666,10 +63714,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  53.9962064,
-			"heatOfFormation": 6672.000,							"temperatureRange":[128.400, 0.000], 
+			"heatOfFormation": 6672.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[128.400, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63685,10 +63735,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  63.0128400,
-			"heatOfFormation": -173013.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -173013.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63702,10 +63754,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":   2.0158800,
-			"heatOfFormation": -9012.000,							"temperatureRange":[20.270, 0.000], 
+			"heatOfFormation": -9012.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[20.270, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63746,10 +63800,12 @@
 						},
 			"gaseous": true,
 			"molecularWeight":  99.9905349,
-			"heatOfFormation": -270496.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -270496.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63764,10 +63820,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  13.9661036,
-			"heatOfFormation": -22723.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -22723.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63782,10 +63840,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  13.9459448,
-			"heatOfFormation": -22183.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -22183.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63800,10 +63860,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight": 136.2340400,
-			"heatOfFormation": -122800.400,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -122800.400,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63907,10 +63969,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight": 106.3916000,
-			"heatOfFormation": -380700.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -380700.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63925,10 +63989,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  71.0019096,
-			"heatOfFormation": -150387.000,							"temperatureRange":[144.090, 0.000], 
+			"heatOfFormation": -150387.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[144.090, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -63943,10 +64009,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  17.0305200,
-			"heatOfFormation": -71555.000,							"temperatureRange":[239.720, 0.000], 
+			"heatOfFormation": -71555.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[239.720, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -64153,10 +64221,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  28.0134000,
-			"heatOfFormation": -12107.000,							"temperatureRange":[77.352, 0.000], 
+			"heatOfFormation": -12107.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[77.352, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -64195,10 +64265,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  92.0110000,
-			"heatOfFormation": -17549.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -17549.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -64212,10 +64284,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  31.9988000,
-			"heatOfFormation": -12979.000,							"temperatureRange":[90.170, 0.000], 
+			"heatOfFormation": -12979.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[90.170, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -64229,10 +64303,12 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  47.9982000,
-			"heatOfFormation": 122527.000,							"temperatureRange":[161.850, 0.000], 
+			"heatOfFormation": 122527.000,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[161.850, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -64247,9 +64323,11 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  13.9761830,
-			"heatOfFormation": -24717.700,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -24717.700,
+			"temperatureRange":{
+					"range_1":{
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
-							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},

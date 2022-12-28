@@ -45,12 +45,12 @@ namespace Parser
             bool m_tIntervalsIsZero = false;
             string m_currentLine = "";
 
-            //StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINPjson.json");
-            StreamWriter streamWriter = new StreamWriter("..\\..\\shortThermo.json");
+            StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINPjson.json");
+            //StreamWriter streamWriter = new StreamWriter("..\\..\\shortThermo.json");
             streamWriter.AutoFlush = true;
 
-            //StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
-            StreamReader streamReader = new StreamReader("..\\..\\shortthermo.inp");
+            StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
+            //StreamReader streamReader = new StreamReader("..\\..\\shortthermo.inp");
 
             while (!streamReader.EndOfStream)
             {
@@ -94,9 +94,14 @@ namespace Parser
                             string ZeroTexponents8 = m_currentLine.Substring(23, 40);
                             string ZeroHline = m_currentLine.Substring(75, 5);
                             streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t");
+                            streamWriter.Write(x_temperatureRangeFieldName);
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t");
+                            streamWriter.WriteLine("\"" + m_range + "1" + "\"" + ":" + "{");
                             PrintTemperatureRange(streamWriter, m_currentLine, m_temperatureRangeFieldName);
                             PrintNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
-                            PrintTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
+                            //PrintTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
                             PrintZeroHline(streamWriter, m_currentLine, m_HlineJmolFieldName, m_tIntervalsIsZero);
 
                         }
