@@ -110,10 +110,11 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  27.6696400,
-			"heatOfFormation": 16445.000,							"temperatureRange":[180.590, 0.000], 
+			"heatOfFormation": 16445.000,
+							"temperatureRange":[180.590, 0.000], 
 							"numberOfCoefficients": 0,
 							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -128,10 +129,11 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  63.1264600,
-			"heatOfFormation": 42840.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": 42840.000,
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
 							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -146,10 +148,11 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  14.0265800,
-			"heatOfFormation": -25600.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -25600.000,
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
 							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -166,10 +169,11 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  61.0400200,
-			"heatOfFormation": -113100.000,							"temperatureRange":[298.150, 0.000], 
+			"heatOfFormation": -113100.000,
+							"temperatureRange":[298.150, 0.000], 
 							"numberOfCoefficients": 0,
 							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},
 
@@ -184,9 +188,10 @@
 						},
 			"gaseous": false,
 			"molecularWeight":  16.0424600,
-			"heatOfFormation": -89233.000,							"temperatureRange":[111.643, 0.000], 
+			"heatOfFormation": -89233.000,
+							"temperatureRange":[111.643, 0.000], 
 							"numberOfCoefficients": 0,
 							"tExponents":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
-			"H^(298.15)-H^(0) J/mol": 0.000
+							"H^(298.15)-H^(0) J/mol": 0.000
 			"temperatureRange":{
 		},

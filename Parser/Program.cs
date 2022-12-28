@@ -42,6 +42,7 @@ namespace Parser
             UnicodeCategory unicodeCategory;
             bool openBracketPrinted = false;
             bool thermoLineDone = false;
+            bool m_tIntervalsIsZero = false;
             string m_currentLine = "";
 
             //StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINPjson.json");
@@ -81,6 +82,7 @@ namespace Parser
                     numberOfTemperatureIntervals = PrintTintervalsDataLine(streamWriter, streamReader, m_currentLine, m_tIntervalsFieldName, m_optionalIdFieldName, m_chemformulaFieldName, m_speciesTypeFieldName, m_molecularWeightFieldName, m_heatOfFormationFieldName);
                     if (numberOfTemperatureIntervals == 0)
                     {
+                        m_tIntervalsIsZero = true;
                         // special case for temperature intervals == 0
                         // just print temp range line and move on
                         for (int i = 0; i < 1; i++)
@@ -91,12 +93,15 @@ namespace Parser
                             string ZeroNumberCoeff = m_currentLine.Substring(22, 3);
                             string ZeroTexponents8 = m_currentLine.Substring(23, 40);
                             string ZeroHline = m_currentLine.Substring(75, 5);
+                            streamWriter.WriteLine();
                             PrintTemperatureRange(streamWriter, m_currentLine, m_temperatureRangeFieldName);
                             PrintNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
                             PrintTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
-                            PrintZeroHline(streamWriter, m_currentLine, m_HlineJmolFieldName);
+                            PrintZeroHline(streamWriter, m_currentLine, m_HlineJmolFieldName, m_tIntervalsIsZero);
 
                         }
+
+                        m_tIntervalsIsZero = false;
          
                     }
 
@@ -143,11 +148,15 @@ namespace Parser
 
         }
 
-        private static void PrintZeroHline(StreamWriter writer, string line, string fieldName)
+        private static void PrintZeroHline(StreamWriter writer, string line, string fieldName, bool intervals)
         {
             string m_Hline = line.Substring(66, 14);
             m_Hline = m_Hline.Trim();
             writer.WriteLine();
+            if (intervals)
+            {
+                writer.Write("\t\t\t\t");
+            }
             writer.Write("\t\t");
             fieldName = AddQuotesAndSemicolon(fieldName);
             writer.Write(fieldName);
