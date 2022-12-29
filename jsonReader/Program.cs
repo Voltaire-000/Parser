@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
+
 
 namespace jsonReader
 {
@@ -10,6 +9,15 @@ namespace jsonReader
     {
         static void Main(string[] args)
         {
+            
+            //string file = "..\\..\\thermoINPjson.json";
+            string file = "..\\..\\shortThermo.json";
+           
+
+
+
+            Console.WriteLine("Hello world");
+            
         }
     }
 }
