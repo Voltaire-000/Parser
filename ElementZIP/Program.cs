@@ -47,36 +47,43 @@ namespace ElementZIP
                 atoms = atoms.Replace(nnn, ' ');
                 atoms = atoms.Replace("    ", "");
 
+                //  Valence
                 string valence = valenceReader.ReadToEnd();
+                valence = valence.Replace('.', ' ');
+                valence = valence.Replace(rrr, ' ');
+                valence = valence.Replace(nnn, ' ');
                 string[] z_valence = valence.Split(separator);
 
 
+                //  Elements
                 string[] z_elements = m_elements.Split(separator);
                 for (int i = 0; i < z_elements.Length; i++)
                 {
                     z_elements[i] = z_elements[i].ToString().Trim();
                 }
 
+                //  Atomic Weight
                 string[] z_atoms = atoms.Split(separator);
                 for (int i = 0; i < z_atoms.Length; i++)
                 {
                     z_atoms[i] = z_atoms[i].ToString().Trim();
                 }
 
-                var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + ":" + " " + second);
+                var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + ":" + " " + "[" + second);
                 foreach (var item in elementsZip)
                 {
-                    //zipWriter.Write(item + ", ");
-                    //zipWriter.WriteLine();
-                    //zipWriter.Flush();
-                }
-
-                var table = elementsZip.Zip(z_valence, (third, fourth) => third + " " + fourth);
-                foreach (var item in table)
-                {
-                    zipWriter.Write(item + ",");
+                    zipWriter.Write(item + ", ");
                     zipWriter.WriteLine();
                     zipWriter.Flush();
+                }
+
+
+                var table = elementsZip.Zip(z_valence, (third, fourth) => third + " " + fourth);
+                foreach (var val in table)
+                {
+                    //zipWriter.Write( "," + val);
+                    //zipWriter.WriteLine();
+                    //zipWriter.Flush();
 
                 }
 
