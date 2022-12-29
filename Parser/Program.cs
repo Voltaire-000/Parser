@@ -351,7 +351,7 @@ namespace Parser
             //  molecular weight line
             writer.WriteLine();
             writer.Write("\t\t");
-            string m_molecularWeight = line.Substring(54, 11);
+            string m_molecularWeight = line.Substring(53, 12);
             fieldName5 = AddQuotesAndSemicolon(fieldName5);
             writer.Write(fieldName5);
             writer.Write(" " + m_molecularWeight + ",");

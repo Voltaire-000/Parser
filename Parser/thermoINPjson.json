@@ -42276,7 +42276,7 @@
 				"O": 15.00
 			},
 			"gaseous": false,
-			"molecularWeight": 159.1910000,
+			"molecularWeight": 1159.1910000,
 			"heatOfFormation": -3551492.326,
 			"temperatureRange": {
 				"range_1": {
@@ -61678,7 +61678,7 @@
 				"O": 9.00
 			},
 			"gaseous": false,
-			"molecularWeight": 096.1102400,
+			"molecularWeight": 1096.1102400,
 			"heatOfFormation": -4512000.000,
 			"temperatureRange": {
 				"range_1": {
@@ -61702,7 +61702,7 @@
 				"O": 9.00
 			},
 			"gaseous": false,
-			"molecularWeight": 096.1102400,
+			"molecularWeight": 1096.1102400,
 			"heatOfFormation": -4512000.000,
 			"temperatureRange": {
 				"range_1": {
@@ -61734,7 +61734,7 @@
 				"O": 9.00
 			},
 			"gaseous": false,
-			"molecularWeight": 096.1102400,
+			"molecularWeight": 1096.1102400,
 			"heatOfFormation": -4512000.000,
 			"temperatureRange": {
 				"range_1": {

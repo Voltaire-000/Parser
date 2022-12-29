@@ -19,9 +19,9 @@ namespace jsonReader
     {
         static void Main(string[] args)
         {
-            
-            //string file = "..\\..\\thermoINPjson.json";
-            string file = "..\\..\\shortThermo.json";
+
+            string file = "..\\..\\thermoINPjson.json";
+            //string file = "..\\..\\shortThermo.json";
             string jsonString = File.ReadAllText(file);
             JsonDocument jsonDocument;
             jsonDocument = JsonDocument.Parse(jsonString);
@@ -66,7 +66,7 @@ namespace jsonReader
                 bool m_foundReactant = m_current.TryGetProperty("reactant", out m_name);
                 string elename = m_name.GetString();
 
-                if (elename == "CH4(L)")
+                if (elename == "RP-1")
                 {
                     int sum = 99;
                 }
