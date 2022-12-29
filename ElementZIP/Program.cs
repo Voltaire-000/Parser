@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Collections;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 
@@ -9,40 +10,38 @@ namespace ElementZIP
         static void Main(string[] args)
         {
 
-            StreamReader streamReader = new StreamReader("..\\..\\element.txt");
-            //StreamReader streamReader = new StreamReader("..\\..\\atomic.txt");
-            //StreamReader streamReader = new StreamReader("..\\..\\valence.txt");
+            StreamReader elementReader = new StreamReader("..\\..\\element.txt");
+            StreamReader atomReader = new StreamReader("..\\..\\atomic.txt");
+            //StreamReader valenceReader = new StreamReader("..\\..\\valence.txt");
 
-            StreamWriter streamWriter = new StreamWriter("..\\..\\zipElement.txt");
-            //StreamWriter streamWriter = new StreamWriter("..\\..\\zipAtomic.txt");
-            //StreamWriter streamWriter = new StreamWriter("..\\..\\zipValence.txt");
+            StreamWriter elementWriter = new StreamWriter("..\\..\\zipElement.txt");
+            StreamWriter atomWriter = new StreamWriter("..\\..\\zipAtomic.txt");
+            //StreamWriter valenceWriter = new StreamWriter("..\\..\\zipValence.txt");
 
-            streamWriter.AutoFlush = true;
+            atomWriter.AutoFlush = true;
 
-            while (!streamReader.EndOfStream)
+            while (!atomReader.EndOfStream)
             {
                 char separator = ',';
                 char oldChar = '\'';
                 char newChar = '"';
 
-                streamWriter.NewLine = ",";
-                string m_elements = streamReader.ReadToEnd();
-                m_elements= m_elements.Trim();
-                m_elements =  m_elements.Replace(oldChar, newChar);
-                string[] z_elements = m_elements.Split(separator);
-                
+                atomWriter.NewLine = ",";
 
-                string mnew = streamWriter.NewLine;
-                for (int i = 0; i < z_elements.Length; i++)
-                {
-                    streamWriter.WriteLine(z_elements[i]);
-                }
 
-                streamReader.Close();
-                streamWriter.Close();
-                
+                string m_elements = elementReader.ReadToEnd();
+                //string[] z_elements = m_elements.Split(separator);
+
+                string atoms = atomReader.ReadToEnd();
+                string[] z_atoms = atoms.Split(separator);
+
+                //var zip = m_elements.Zip(atoms, out object ziplist);
+                IEnumerable ziplist;
+                Enumerable.Zip(m_elements, atoms, ziplist);
 
             }
+                atomReader.Close();
+                atomWriter.Close();
 
         }
     }
