@@ -10,7 +10,7 @@ namespace ElementZIP
         static void Main(string[] args)
         {
 
-            StreamReader elementReader = new StreamReader("..\\..\\zip_Element.txt");
+            StreamReader elementReader = new StreamReader("..\\..\\zipElement.txt");
             StreamReader atomReader = new StreamReader("..\\..\\atomic.txt");
             //StreamReader valenceReader = new StreamReader("..\\..\\valence.txt");
 
@@ -35,7 +35,11 @@ namespace ElementZIP
                 string atoms = atomReader.ReadToEnd();
                 string[] z_atoms = atoms.Split(separator);
 
-                var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + second);
+                var elementsZip = m_elements.Zip(z_atoms, (first, second) => first + " " + second);
+                foreach (var item in elementsZip)
+                {
+
+                }
 
 
             }
