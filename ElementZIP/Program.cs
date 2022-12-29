@@ -29,13 +29,15 @@ namespace ElementZIP
                 //atomWriter.NewLine = ",";
 
 
+
                 string m_elements = elementReader.ReadToEnd();
-                string[] z_elements = m_elements.Split(separator);
 
                 string atoms = atomReader.ReadToEnd();
+
+                string[] z_elements = m_elements.Split(separator);
                 string[] z_atoms = atoms.Split(separator);
 
-                var elementsZip = m_elements.Zip(z_atoms, (first, second) => first + " " + second);
+                var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + second);
                 foreach (var item in elementsZip)
                 {
 
