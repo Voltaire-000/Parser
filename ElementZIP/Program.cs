@@ -30,14 +30,13 @@ namespace ElementZIP
 
 
                 string m_elements = elementReader.ReadToEnd();
-                //string[] z_elements = m_elements.Split(separator);
+                string[] z_elements = m_elements.Split(separator);
 
                 string atoms = atomReader.ReadToEnd();
                 string[] z_atoms = atoms.Split(separator);
 
-                //var zip = m_elements.Zip(atoms, out object ziplist);
-                IEnumerable ziplist;
-                Enumerable.Zip(m_elements, atoms, ziplist);
+                var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + second);
+
 
             }
                 atomReader.Close();
