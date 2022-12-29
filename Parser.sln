@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{2C180339-56EB-4979-8801-C0018192EA5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jsonReader", "jsonReader\jsonReader.csproj", "{67E63754-DF52-4253-BC7F-CB8F966F0E2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2C180339-56EB-4979-8801-C0018192EA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C180339-56EB-4979-8801-C0018192EA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C180339-56EB-4979-8801-C0018192EA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67E63754-DF52-4253-BC7F-CB8F966F0E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E63754-DF52-4253-BC7F-CB8F966F0E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E63754-DF52-4253-BC7F-CB8F966F0E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E63754-DF52-4253-BC7F-CB8F966F0E2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
