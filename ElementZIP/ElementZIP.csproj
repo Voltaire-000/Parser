@@ -53,6 +53,7 @@
     <Content Include="atomic.txt" />
     <Content Include="element.txt" />
     <Content Include="valence.txt" />
+    <Content Include="zipElement.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
