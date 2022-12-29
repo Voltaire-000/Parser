@@ -64,6 +64,7 @@ namespace jsonReader
                 JsonElement m_current =  m_reactants.Current;
                 JsonElement m_name;
                 m_current.TryGetProperty("reactant", out m_name);
+                bool foundCH4 = m_current.ValueEquals("CH4(L)");
             }
             
 
