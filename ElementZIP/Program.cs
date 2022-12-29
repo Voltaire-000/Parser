@@ -36,6 +36,7 @@ namespace ElementZIP
                 string m_elements = elementReader.ReadToEnd();
                 m_elements = m_elements.Replace(rrr, ' ');
                 m_elements = m_elements.Replace(nnn, ' ');
+                m_elements = m_elements.Replace("       ", "");
 
 
                 char oldChar = 'D';
@@ -44,10 +45,20 @@ namespace ElementZIP
                 atoms = atoms.Replace(oldChar, newChar);
                 atoms = atoms.Replace(rrr, ' ');
                 atoms = atoms.Replace(nnn, ' ');
+                atoms = atoms.Replace("    ", "");
+
 
                 string[] z_elements = m_elements.Split(separator);
-                string[] z_atoms = atoms.Split(separator);
+                for (int i = 0; i < z_elements.Length; i++)
+                {
+                    z_elements[i] = z_elements[i].ToString().Trim();
+                }
 
+                string[] z_atoms = atoms.Split(separator);
+                for (int i = 0; i < z_atoms.Length; i++)
+                {
+                    z_atoms[i] = z_atoms[i].ToString().Trim();
+                }
 
                 var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + ":" + " " + second);
                 foreach (var item in elementsZip)
