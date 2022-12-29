@@ -23,8 +23,8 @@ namespace ElementZIP
             while (!atomReader.EndOfStream)
             {
                 char separator = ',';
-                char oldChar = '\'';
-                char newChar = '"';
+                //char oldChar = '\'';
+                //char newChar = '"';
 
                 //atomWriter.NewLine = ",";
 
