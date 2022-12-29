@@ -24,26 +24,34 @@ namespace ElementZIP
             while (!atomReader.EndOfStream)
             {
                 char separator = ',';
-                string oldChar = "\r\n";
-                string newChar = "";
+
                 //char oldChar = '\'';
                 //char newChar = '"';
 
                 //atomWriter.NewLine = ",";
 
 
-
+                char rrr = '\r';
+                char nnn = '\n';
                 string m_elements = elementReader.ReadToEnd();
+                m_elements = m_elements.Replace(rrr, ' ');
+                m_elements = m_elements.Replace(nnn, ' ');
 
+
+                char oldChar = 'D';
+                char newChar = 'e';
                 string atoms = atomReader.ReadToEnd();
+                atoms = atoms.Replace(oldChar, newChar);
+                atoms = atoms.Replace(rrr, ' ');
+                atoms = atoms.Replace(nnn, ' ');
 
                 string[] z_elements = m_elements.Split(separator);
                 string[] z_atoms = atoms.Split(separator);
 
+
                 var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + ":" + " " + second);
                 foreach (var item in elementsZip)
                 {
-                    item.Replace(oldChar, newChar);
                     zipWriter.Write(item + ",");
                     zipWriter.WriteLine();
                     zipWriter.Flush();
