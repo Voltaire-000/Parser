@@ -65,6 +65,7 @@ namespace jsonReader
                 JsonElement m_name;
                 bool m_foundReactant = m_current.TryGetProperty("reactant", out m_name);
                 string elename = m_name.GetString();
+                var xxx = m_name.ValueEquals;
                 if (elename == "CH4(L)")
                 {
                     int sum = 99;
