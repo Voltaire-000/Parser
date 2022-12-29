@@ -30,24 +30,32 @@ namespace jsonReader
             var x = thermo_element[1];
             int thermolength = thermo_element.GetArrayLength();
             var ch4 = thermo_element[7];
+
             Type ch4Type = ch4.GetType();
+
             JsonElement m_description;
-            JsonElement m_chemFor;
             ch4.TryGetProperty("description", out m_description);
-            ch4.TryGetProperty("chemicalFormula", out m_chemFor);
             string desc = m_description.ToString();
+
+            JsonElement m_chemFor;
+            ch4.TryGetProperty("chemicalFormula", out m_chemFor);
+            
+
             JsonElement numberOfCarbonAtoms = m_chemFor.GetProperty("C");
             double c_num = numberOfCarbonAtoms.GetDouble();
+
             JsonElement numberHydrogen = m_chemFor.GetProperty("H");
             double h_num = numberHydrogen.GetDouble();
+
             JsonElement m_weight;
             ch4.TryGetProperty("molecularWeight", out m_weight);
             double moleWeight = m_weight.GetDouble();
 
             JsonElement m_tempRange = ch4.GetProperty("temperatureRange");
-
-
-
+            JsonElement m_range1 = m_tempRange.GetProperty("range_1");
+            JsonElement m_temp = m_range1.GetProperty("temperatureRange");
+            int m_num = m_temp.GetArrayLength();
+            double lowTemp = m_temp[0].GetDouble();
 
 
 
