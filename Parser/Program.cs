@@ -103,6 +103,12 @@ namespace Parser
                             PrintNumberOfCoefficients(streamWriter, m_currentLine, m_numberOfcoefficientsFieldName);
                             //PrintTexponentsArray(streamWriter, m_currentLine, m_tExponentsFieldName);
                             PrintZeroHline(streamWriter, m_currentLine, m_HlineJmolFieldName, m_tIntervalsIsZero);
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t\t\t");
+                            streamWriter.Write("}");
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t\t");
+                            streamWriter.Write("}");
 
                         }
 
@@ -111,9 +117,12 @@ namespace Parser
                     }
 
                     //x_temperatureRangeFieldName = AddQuotesSemiColonAndOpenBracket(x_temperatureRangeFieldName);
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t\t");
-                    streamWriter.Write(x_temperatureRangeFieldName);
+                    if (numberOfTemperatureIntervals !=0)
+                    {
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t");
+                        streamWriter.Write(x_temperatureRangeFieldName); 
+                    }
                     for (int i = 0; i < numberOfTemperatureIntervals; i++)
                     {
                         m_currentLine = streamReader.ReadLine();
