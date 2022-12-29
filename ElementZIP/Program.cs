@@ -8,9 +8,7 @@ namespace ElementZIP
     {
         static void Main(string[] args)
         {
-            string m_currentLine;
-            int m_currentChar;
-            
+
             StreamReader streamReader = new StreamReader("..\\..\\element.txt");
             //StreamReader streamReader = new StreamReader("..\\..\\atomic.txt");
             //StreamReader streamReader = new StreamReader("..\\..\\valence.txt");
@@ -27,10 +25,19 @@ namespace ElementZIP
                 char oldChar = '\'';
                 char newChar = '"';
 
-                //m_currentLine = streamReader.ReadLine();
+                streamWriter.NewLine = ",";
                 string m_elements = streamReader.ReadToEnd();
                 m_elements= m_elements.Trim();
                 m_elements =  m_elements.Replace(oldChar, newChar);
+                string[] z_elements = m_elements.Split(separator);
+                
+
+                string mnew = streamWriter.NewLine;
+                for (int i = 0; i < z_elements.Length; i++)
+                {
+                    streamWriter.WriteLine(z_elements[i]);
+                }
+                
 
             }
 
