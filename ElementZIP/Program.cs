@@ -37,6 +37,9 @@ namespace ElementZIP
                 {
                     streamWriter.WriteLine(z_elements[i]);
                 }
+
+                streamReader.Close();
+                streamWriter.Close();
                 
 
             }
