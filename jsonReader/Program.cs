@@ -57,6 +57,15 @@ namespace jsonReader
             int m_num = m_temp.GetArrayLength();
             double lowTemp = m_temp[0].GetDouble();
 
+            JsonElement.ArrayEnumerator m_reactants = thermo_element.EnumerateArray();
+            for (int i = 0; i < thermolength; i++)
+            {
+                m_reactants.MoveNext();
+                JsonElement m_current =  m_reactants.Current;
+                JsonElement m_name;
+                m_current.TryGetProperty("reactant", out m_name);
+            }
+            
 
 
             Console.WriteLine("Hello world");
