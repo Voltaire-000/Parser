@@ -38,10 +38,12 @@ namespace ElementZIP
                 string[] z_elements = m_elements.Split(separator);
                 string[] z_atoms = atoms.Split(separator);
 
-                var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + second);
+                var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + ":" + " " + second);
                 foreach (var item in elementsZip)
                 {
-                    zipWriter.WriteLine(item);
+                    zipWriter.Write(item + ",");
+                    zipWriter.WriteLine();
+                    zipWriter.Flush();
                 }
 
 
