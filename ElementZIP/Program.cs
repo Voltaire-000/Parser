@@ -24,6 +24,8 @@ namespace ElementZIP
             while (!atomReader.EndOfStream)
             {
                 char separator = ',';
+                string oldChar = "\r\n";
+                string newChar = "";
                 //char oldChar = '\'';
                 //char newChar = '"';
 
@@ -41,6 +43,7 @@ namespace ElementZIP
                 var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + ":" + " " + second);
                 foreach (var item in elementsZip)
                 {
+                    item.Replace(oldChar, newChar);
                     zipWriter.Write(item + ",");
                     zipWriter.WriteLine();
                     zipWriter.Flush();
