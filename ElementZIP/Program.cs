@@ -17,6 +17,7 @@ namespace ElementZIP
             //StreamWriter elementWriter = new StreamWriter("..\\..\\zipElement.txt");
             //StreamWriter atomWriter = new StreamWriter("..\\..\\zipAtomic.txt");
             //StreamWriter valenceWriter = new StreamWriter("..\\..\\zipValence.txt");
+            StreamWriter zipWriter = new StreamWriter("..\\..\\elementAndAtomWeight.txt");
 
             //atomWriter.AutoFlush = true;
 
@@ -40,13 +41,15 @@ namespace ElementZIP
                 var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + second);
                 foreach (var item in elementsZip)
                 {
-
+                    zipWriter.WriteLine(item);
                 }
 
 
             }
                 atomReader.Close();
+                elementReader.Close();
                 //atomWriter.Close();
+                zipWriter.Close();
 
         }
     }
