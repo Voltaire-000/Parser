@@ -41,11 +41,11 @@ namespace jsonReader
             ch4.TryGetProperty("chemicalFormula", out m_chemFor);
             
 
-            JsonElement numberOfCarbonAtoms = m_chemFor.GetProperty("C");
-            double c_num = numberOfCarbonAtoms.GetDouble();
+            //JsonElement numberOfCarbonAtoms = m_chemFor.GetProperty("C");
+            //double c_num = numberOfCarbonAtoms.GetDouble();
 
-            JsonElement numberHydrogen = m_chemFor.GetProperty("H");
-            double h_num = numberHydrogen.GetDouble();
+            //JsonElement numberHydrogen = m_chemFor.GetProperty("H");
+            //double h_num = numberHydrogen.GetDouble();
 
             JsonElement m_weight;
             ch4.TryGetProperty("molecularWeight", out m_weight);
