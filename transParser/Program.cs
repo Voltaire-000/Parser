@@ -59,8 +59,17 @@ namespace transParser
                 }
                 if (unicodeCategory == UnicodeCategory.SpaceSeparator)
                 {
-                    string m_coeffLine = m_currentLine;
-                    string m_
+                    char m_V = m_currentLine.ElementAt(1);
+                    if (m_V == 'V')
+                    {
+                        //  we have viscosity coefficients
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t");
+                        streamWriter.Write("\"" + "viscosity_coefficients" + "\"" + ": " + "{");
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t");
+                        streamWriter.Write("\"" + "temperature_intervals" + "\"" + ": " + "{");
+                    }
                 }
                 {
 
