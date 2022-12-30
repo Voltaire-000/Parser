@@ -57,18 +57,23 @@ namespace transParser
                     m_char = m_currentLine.First();
                     unicodeCategory = char.GetUnicodeCategory(m_char);
                 }
+                int vCount = 0;
                 if (unicodeCategory == UnicodeCategory.SpaceSeparator)
                 {
                     char m_V = m_currentLine.ElementAt(1);
                     if (m_V == 'V')
                     {
+                        vCount = vCount + 1;
                         //  we have viscosity coefficients
                         streamWriter.WriteLine();
                         streamWriter.Write("\t\t\t\t\t");
                         streamWriter.Write("\"" + "viscosity_coefficients" + "\"" + ": " + "{");
                         streamWriter.WriteLine();
-                        streamWriter.Write("\t\t\t\t\t");
+                        streamWriter.Write("\t\t\t\t\t\t\t");
                         streamWriter.Write("\"" + "temperature_intervals" + "\"" + ": " + "{");
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t\t\t");
+                        streamWriter.Write
                     }
                 }
                 {
