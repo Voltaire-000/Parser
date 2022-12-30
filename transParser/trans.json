@@ -1,10 +1,5 @@
 {
 	"transport_property_coefficients": [
 				{
-					"species names": ["Ar"],
-					"description": "V3C3  BICH ET AL (1990)",
-					"viscosity_coefficients":{
-						"temperatureRange":{
-							"range_1":
-							{
-								
+					"species names": ["V  200.0   100","0.0   -0.612057"],
+					"description": "E 00-0.67714354E 02 0.19040660E 03 0.21588272E 01",

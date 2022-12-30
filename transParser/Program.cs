@@ -9,9 +9,10 @@ namespace transParser
     {
         static void Main(string[] args)
         {
+
             StreamReader streamReader = new StreamReader("..\\..\\trans.inp");
             StreamWriter streamWriter = new StreamWriter("..\\..\\trans.json");
-            streamWriter.AutoFlush = true;
+            //streamWriter.AutoFlush = true;
 
             string rootName = "transport_property_coefficients";
             bool printRoot = false;
@@ -34,17 +35,17 @@ namespace transParser
 
                 }
 
-                m_currentLine = streamReader.ReadLine();
+                string firstline = streamReader.ReadLine();
 
                 // skip over first line
-                if (m_currentLine.First() == 't')
+                if (firstline.First() == 't')
                 {
                     m_currentLine = streamReader.ReadLine();
                 }
 
                 if (m_currentLine.First() != ' ')
                 {
-                    PrintSymbolsAndDescription(streamWriter, m_currentLine, m_symbol, m_description);
+                    PrintSymbolsAndDescription(streamWriter, streamReader, m_symbol, m_description);
                     streamWriter.Flush();
                 }
 
@@ -54,13 +55,13 @@ namespace transParser
                 {
                     PrintViscosityLabels(streamWriter, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
                     //m_currentLine= streamReader.ReadLine();
-                    PrintTempRange(streamWriter, streamReader, m_currentLine);
+                    PrintTempRange(streamWriter, streamReader);
                     PrintCoefficients(streamWriter, m_currentLine);
                     streamWriter.FlushAsync();
                 }
 
 
-                //break;
+                break;
 
             }
                 streamReader.Close();
@@ -68,14 +69,14 @@ namespace transParser
 
         }
 
-        private static void PrintTempRange(StreamWriter streamWriter, StreamReader streamReader, string line)
+        private static void PrintTempRange(StreamWriter writer, StreamReader reader)
         {
-            //line = streamReader.ReadLine();
-            string m_temp_1 = line.Substring(2, 7);
+            string mx = reader.ReadLine();
+            string m_temp_1 = mx.Substring(2, 7);
             m_temp_1= m_temp_1.Trim();
-            string m_temp_2 = line.Substring(9, 10);
+            string m_temp_2 = mx.Substring(9, 10);
             m_temp_2= m_temp_2.Trim();
-            streamWriter.WriteLine(m_temp_1 + ", " + m_temp_2 + "]" + ",");
+            writer.WriteLine(m_temp_1 + ", " + m_temp_2 + "]" + ",");
         }
 
         private static void PrintCoefficients(StreamWriter streamWriter, string line)
@@ -180,21 +181,21 @@ namespace transParser
             return null;
         }
 
-        private static void PrintSymbolsAndDescription(StreamWriter streamWriter, string m_currentLine, string m_symbol, string m_description)
+        private static void PrintSymbolsAndDescription(StreamWriter streamWriter, StreamReader streamReader, string m_symbol, string m_description)
         {
             UnicodeCategory unicodeCategory;
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("{");
             streamWriter.WriteLine();
-
-            char m_char = m_currentLine.First();
+            string mx = streamReader.ReadLine();
+            char m_char = mx.First();
             unicodeCategory = char.GetUnicodeCategory(m_char);
             Type type = m_char.GetType();
             if (unicodeCategory != UnicodeCategory.LowercaseLetter || m_char == 'e')
             {
-                string name1 = m_currentLine.Substring(0, 15);
+                string name1 = mx.Substring(0, 15);
                 name1 = name1.Trim();
-                string name2 = m_currentLine.Substring(15, 15);
+                string name2 = mx.Substring(15, 15);
                 name2 = name2.Trim();
                 if (name2.Length > 0)
                 {
@@ -209,7 +210,7 @@ namespace transParser
                     streamWriter.Write("\"" + name1 + "\"" + "]" + ",");
                 }
 
-                m_description = m_currentLine.Substring(32);
+                m_description = mx.Substring(32);
                 m_description = m_description.Trim();
 
                 streamWriter.WriteLine();
