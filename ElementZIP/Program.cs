@@ -55,7 +55,11 @@ namespace ElementZIP
                 string[] z_valence = valence.Split(separator);
                 valence = valence.Replace(rrr, ' ');
                 valence = valence.Replace(nnn, ' ');
-                valence = valence.Replace("     ", "");
+                //valence = valence.Replace("           ", "");
+                for (int i = 0; i < z_valence.Length; i++)
+                {
+                    z_valence[i] = z_valence[i].ToString().Trim();
+                }
                 foreach (var valenceItem in z_valence)
                 {
                     valenceWriter.Write(valenceItem);
