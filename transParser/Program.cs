@@ -12,7 +12,7 @@ namespace transParser
 
             StreamReader streamReader = new StreamReader("..\\..\\trans.inp");
             StreamWriter streamWriter = new StreamWriter("..\\..\\trans.json");
-            //streamWriter.AutoFlush = true;
+            streamWriter.AutoFlush = true;
 
             string rootName = "transport_property_coefficients";
             bool printRoot = false;
@@ -60,8 +60,8 @@ namespace transParser
                     streamWriter.FlushAsync();
                 }
 
-                continue;
-                //break;
+                //continue;
+                break;
 
             }
                 streamReader.Close();
