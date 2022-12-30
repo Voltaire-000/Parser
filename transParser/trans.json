@@ -11,5 +11,6 @@
 										},
 							"temperatureRange": {
 									"range_2": { 
-										"temperatureRange":[1000.0, 5000.0],
-										"coefficients":[0.69357334e+00, , 0.70953943e+02-0.28386007e+05, 0.14856447e+01],
+										"temperatureRange":[1000.0,   5000.0],
+										"coefficients":[0.69357334e+00, , 0.70953943e+02-0.28386007e+05, 0.14856447e+01]
+										},
