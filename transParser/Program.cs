@@ -8,6 +8,7 @@ namespace transParser
     {
         static void Main(string[] args)
         {
+            StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
         }
     }
 }
