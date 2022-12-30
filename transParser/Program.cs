@@ -39,7 +39,11 @@ namespace transParser
                 }
 
                 PrintNameAndDescription(streamWriter, m_currentLine, m_symbol, m_description);
-                int numlines = GetFirstCharEachLine(streamWriter, streamReader, m_currentLine);
+                int numlines = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
+                if (numlines > 0)
+                {
+                    streamWriter.WriteLine(m_currentLine);
+                }
                 
 
                 break;
@@ -50,24 +54,19 @@ namespace transParser
 
         }
 
-        private static int GetFirstCharEachLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
+        private static int GetNextViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
         {
             UnicodeCategory unicodeCategory;
-            int countLines = 0;
-
+            int m_V = 0;
             m_currentLine = streamReader.ReadLine();
             char m_char = m_currentLine.First();
             unicodeCategory = char.GetUnicodeCategory(m_char);
-            while (unicodeCategory == UnicodeCategory.SpaceSeparator)
+            if (unicodeCategory == UnicodeCategory.SpaceSeparator)
             {
-                countLines = countLines + 1;
-                m_currentLine = streamReader.ReadLine();
-                m_char = m_currentLine.First();
-                unicodeCategory = char.GetUnicodeCategory(m_char);
-
+                m_V = m_currentLine.IndexOf('V');
             }
 
-            return countLines;
+            return m_V;
         }
 
         private static void PrintNameAndDescription(StreamWriter streamWriter, string m_currentLine, string m_symbol, string m_description)
