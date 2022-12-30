@@ -50,7 +50,7 @@ namespace transParser
                 }
 
 
-                break;
+                //break;
 
             }
                 streamReader.Close();
@@ -110,6 +110,7 @@ namespace transParser
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t");
             streamWriter.Write("}");
+            //int mz = streamReader.Peek();
 
         }
 
