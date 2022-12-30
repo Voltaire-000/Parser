@@ -1,11 +1,11 @@
 {
 	"transport_property_coefficients": [
 				{
-					"symbol": "Ar",
+					"species names": ["Ar"],
 					"description": "V3C3  BICH ET AL (1990)",
 					"viscosity_coefficients":{
 						"temperatureRange":{
 							"range_1":
 							{
-								"temperatureRange":[  200.0,   1000.0 ],
+								"temperatureRange":[200.0, 1000.0],
 								"coefficients":[

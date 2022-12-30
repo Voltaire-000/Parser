@@ -18,6 +18,7 @@ namespace transParser
 
             string m_currentLine = "";
             string m_symbol = "symbol";
+            string m_speciesNames = "species names";
             string m_description = "description";
             string m_viscosityLabel = "viscosity_coefficients";
             string m_tempRangeLabel = "temperatureRange";
@@ -78,14 +79,20 @@ namespace transParser
             //  print temperature range as array [200.0, 1000.0],
             streamWriter.Write("\"" + tempLabel + "\"" + ":" + "[");
             string m_temp_1 = line.Substring(2, 7);
+            m_temp_1 = m_temp_1.Trim();
             string m_temp_2 = line.Substring(9, 10);
-            streamWriter.Write(m_temp_1 + "," + m_temp_2 + "]" + ",");
+            m_temp_2 = m_temp_2.Trim();
+            streamWriter.Write(m_temp_1 + ", " + m_temp_2 + "]" + ",");
             // print coefficients
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t\t");
             streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
             line = line.Replace('E', 'e');
-            string m_coeff1 = line.Substring(2, 7);
+            int ml = line.Length;
+            line = line.Insert(66, ",");
+            line = line.Insert(51, ",");
+            line = line.Insert(36, ",");
+            string m_viscosityLine = line.Substring(19);
 
         }
 
@@ -117,13 +124,26 @@ namespace transParser
             Type type = m_char.GetType();
             if (unicodeCategory != UnicodeCategory.LowercaseLetter || m_char == 'e')
             {
-                m_symbol = m_currentLine.Substring(0, 15);
-                m_description = m_currentLine.Substring(15);
-                m_symbol = m_symbol.Trim();
+                string name1 = m_currentLine.Substring(0, 15);
+                name1 = name1.Trim();
+                string name2 = m_currentLine.Substring(15, 15);
+                name2 = name2.Trim();
+                if (name2.Length > 0)
+                {
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "species names" + "\"" + ": " + "[");
+                    streamWriter.Write("\"" + name1 + "\"" + "," + "\"" + name2 + "\"" + "]" + ",");
+                }
+                else
+                {
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "species names" + "\"" + ": " + "[");
+                    streamWriter.Write("\"" + name1 + "\"" + "]" + ",");
+                }
+
+                m_description = m_currentLine.Substring(32);
                 m_description = m_description.Trim();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "symbol" + "\"" + ": ");
-                streamWriter.Write("\"" + m_symbol + "\"" + ",");
+
                 streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.Write("\"" + "description" + "\"" + ": ");
