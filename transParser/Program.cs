@@ -55,10 +55,12 @@ namespace transParser
                     streamWriter.Write("\"" + m_description + "\"" + ",");
                     m_currentLine = streamReader.ReadLine();
                     m_char = m_currentLine.First();
+                    unicodeCategory = char.GetUnicodeCategory(m_char);
                 }
-                else if (true)
+                if (unicodeCategory == UnicodeCategory.SpaceSeparator)
                 {
-
+                    string m_coeffLine = m_currentLine;
+                    string m_
                 }
                 {
 
