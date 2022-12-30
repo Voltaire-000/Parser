@@ -20,6 +20,8 @@ namespace transParser
             string m_symbol = "symbol";
             string m_description = "description";
             string m_viscosityLabel = "viscosity_coefficients";
+            string m_tempRangeLabel = "temperatureRange";
+            string m_rangeLabel = range_;
 
             while (!streamReader.EndOfStream)
             {
@@ -42,7 +44,7 @@ namespace transParser
                 int numlines = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (numlines > 0)
                 {
-                    streamWriter.WriteLine(m_currentLine);
+                    PrintViscosityLine(streamWriter, streamReader, m_currentLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel);
                 }
                 
 
@@ -52,6 +54,19 @@ namespace transParser
                 streamReader.Close();
                 streamWriter.Close();
 
+        }
+
+        private static void PrintViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine, string coefficientLabel, string tempLabel, string rangeLabel)
+        {
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t");
+            streamWriter.Write("\"" + coefficientLabel + "\"" + ":" + "{");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t");
+            streamWriter.Write("\"" + tempLabel + "\"" + ":" + "{");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            streamWriter.Write("\"" + m_)
         }
 
         private static int GetNextViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
