@@ -35,33 +35,33 @@ namespace transParser
 
                 }
 
-                string firstline = streamReader.ReadLine();
+                m_currentLine = streamReader.ReadLine();
 
                 // skip over first line
-                if (firstline.First() == 't')
+                if (m_currentLine.First() == 't')
                 {
                     m_currentLine = streamReader.ReadLine();
                 }
 
                 if (m_currentLine.First() != ' ')
                 {
-                    PrintSymbolsAndDescription(streamWriter, streamReader, m_symbol, m_description);
+                    PrintSymbolsAndDescription(streamWriter, streamReader, m_currentLine, m_symbol, m_description);
                     streamWriter.Flush();
                 }
 
-                
+
                 string viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (viscosityLine != null)
                 {
                     PrintViscosityLabels(streamWriter, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
                     //m_currentLine= streamReader.ReadLine();
-                    PrintTempRange(streamWriter, streamReader);
-                    PrintCoefficients(streamWriter, m_currentLine);
+                    PrintTempRange(streamWriter, streamReader, viscosityLine);
+                    PrintCoefficients(streamWriter, viscosityLine);
                     streamWriter.FlushAsync();
                 }
 
-
-                break;
+                continue;
+                //break;
 
             }
                 streamReader.Close();
@@ -69,9 +69,10 @@ namespace transParser
 
         }
 
-        private static void PrintTempRange(StreamWriter writer, StreamReader reader)
+        private static void PrintTempRange(StreamWriter writer, StreamReader reader, string line)
         {
-            string mx = reader.ReadLine();
+            //string mx = reader.ReadLine();
+            string mx = line;
             string m_temp_1 = mx.Substring(2, 7);
             m_temp_1= m_temp_1.Trim();
             string m_temp_2 = mx.Substring(9, 10);
@@ -181,13 +182,13 @@ namespace transParser
             return null;
         }
 
-        private static void PrintSymbolsAndDescription(StreamWriter streamWriter, StreamReader streamReader, string m_symbol, string m_description)
+        private static void PrintSymbolsAndDescription(StreamWriter streamWriter, StreamReader streamReader, string line, string m_symbol, string m_description)
         {
             UnicodeCategory unicodeCategory;
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("{");
             streamWriter.WriteLine();
-            string mx = streamReader.ReadLine();
+            string mx = line;
             char m_char = mx.First();
             unicodeCategory = char.GetUnicodeCategory(m_char);
             Type type = m_char.GetType();
