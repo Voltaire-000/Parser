@@ -37,25 +37,34 @@ namespace transParser
                 streamWriter.Write("{");
                 streamWriter.WriteLine();
 
-                string value;
                 char m_char = m_currentLine.First();
                 unicodeCategory = char.GetUnicodeCategory(m_char);
                 Type type = m_char.GetType();
-                //if ( m_currentLine.First() == m_char.
-                //{
+                if (unicodeCategory != UnicodeCategory.LowercaseLetter || m_char == 'e')
+                {
+                    string m_speciesName = m_currentLine.Substring(0, 15);
+                    string m_description = m_currentLine.Substring(15, 42);
+                    m_speciesName = m_speciesName.Trim();
+                    m_description = m_description.Trim();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "symbol" + "\"" + ": ");
+                    streamWriter.Write("\"" + m_speciesName + "\"" + ",");
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "description" + "\"" + ": ");
+                    streamWriter.Write("\"" + m_description + "\"" + ",");
+                    m_currentLine = streamReader.ReadLine();
+                    m_char = m_currentLine.First();
+                }
+                else if (true)
+                {
 
-                //}
-                string m_speciesName = m_currentLine.Substring(0, 15);
-                string m_description = m_currentLine.Substring(15, 42);
-                m_speciesName = m_speciesName.Trim();
-                m_description = m_description.Trim();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "symbol" + "\"" + ": ");
-                streamWriter.Write("\"" + m_speciesName + "\"" + ",");
-                streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "description" + "\"" + ": ");
-                streamWriter.Write("\"" + m_description + "\"" + ",");
+                }
+                {
+
+                    //streamWriter.Write
+                }
+
 
                 break;
 
