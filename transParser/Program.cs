@@ -42,11 +42,18 @@ namespace transParser
                     m_currentLine = streamReader.ReadLine();
                 }
 
-                PrintNameAndDescription(streamWriter, m_currentLine, m_symbol, m_description);
+                if (m_currentLine.First() != ' ')
+                {
+                    PrintNameAndDescription(streamWriter, m_currentLine, m_symbol, m_description);
+                    streamWriter.Flush();
+                }
+
+                
                 string viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (viscosityLine != null)
                 {
                     PrintViscosityLine(streamWriter, streamReader, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
+                    streamWriter.FlushAsync();
                 }
 
 
