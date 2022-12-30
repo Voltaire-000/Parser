@@ -70,14 +70,14 @@ namespace transParser
                         streamWriter.Write("\"" + "viscosity_coefficients" + "\"" + ": " + "{");
                         streamWriter.WriteLine();
                         streamWriter.Write("\t\t\t\t\t\t\t");
-                        streamWriter.Write("\"" + "temperature_intervals" + "\"" + ": " + "{");
+                        streamWriter.Write("\"" + "temperatureRange" + "\"" + ": " + "{");
                         streamWriter.WriteLine();
                         streamWriter.Write("\t\t\t\t\t\t\t\t\t");
                         streamWriter.Write("\"" + "range_" + vCount.ToString() + "\"" + ": " + "{ ");
                         streamWriter.WriteLine();
                         streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
                         streamWriter.Write("\"" + "temperatureRange" + "\"" + ":" + "[");
-                        string m_tempInterval_1 = m_currentLine.Substring(4, 6);
+                        string m_tempInterval_1 = m_currentLine.Substring(3, 6);
                         streamWriter.Write(m_tempInterval_1 + ", ");
                         string m_tempInterval_2 = m_currentLine.Substring(10, 8);
                         m_tempInterval_2 = m_tempInterval_2.Trim();
@@ -87,7 +87,51 @@ namespace transParser
                         streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
                         string m_coeff = m_currentLine.Substring(21, 59);
                         m_coeff = m_coeff.Replace('E', 'e');
-                        streamWriter.Write(m_coeff);
+                        m_coeff = m_coeff.Replace("e ", "e+");
+                        m_coeff = m_coeff.Insert(14, " ");
+                        m_coeff = m_coeff.Replace(" ", ", ");
+                        
+                        streamWriter.Write(m_coeff + "]");
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
+                        streamWriter.Write("}" + ",");
+
+                        m_currentLine = streamReader.ReadLine();
+                        m_V = m_currentLine.ElementAt(1);
+                        if (m_V == 'V')
+                        {
+                            vCount = vCount + 1;
+                            streamWriter.WriteLine();
+                            //streamWriter.Write("\t\t\t\t\t");
+                            //streamWriter.Write("\"" + "viscosity_coefficients" + "\"" + ": " + "{");
+                            //streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t\t\t");
+                            streamWriter.Write("\"" + "temperatureRange" + "\"" + ": " + "{");
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t\t\t\t\t");
+                            streamWriter.Write("\"" + "range_" + vCount.ToString() + "\"" + ": " + "{ ");
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
+                            streamWriter.Write("\"" + "temperatureRange" + "\"" + ":" + "[");
+                            m_tempInterval_1 = m_currentLine.Substring(3, 6);
+                            streamWriter.Write(m_tempInterval_1 + ", ");
+                            m_tempInterval_2 = m_currentLine.Substring(10, 8);
+                            m_tempInterval_2 = m_tempInterval_2.Trim();
+                            streamWriter.Write(m_tempInterval_2 + "]" + ",");
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
+                            streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
+                            m_coeff = m_currentLine.Substring(21, 59);
+                            m_coeff = m_coeff.Replace('E', 'e');
+                            m_coeff = m_coeff.Replace("e ", "e+");
+                            m_coeff = m_coeff.Insert(14, " ");
+                            m_coeff = m_coeff.Replace(" ", ", ");
+
+                            streamWriter.Write(m_coeff + "]");
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
+                            streamWriter.Write("}" + ",");
+                        }
 
                     }
                 }
