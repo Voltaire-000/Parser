@@ -16,7 +16,7 @@ namespace ElementZIP
 
             //StreamWriter elementWriter = new StreamWriter("..\\..\\zipElement.txt");
             //StreamWriter atomWriter = new StreamWriter("..\\..\\zipAtomic.txt");
-            //StreamWriter valenceWriter = new StreamWriter("..\\..\\zipValence.txt");
+            StreamWriter valenceWriter = new StreamWriter("..\\..\\zipValence.txt");
             StreamWriter zipWriter = new StreamWriter("..\\..\\elementAndAtomWeight.txt");
 
             //atomWriter.AutoFlush = true;
@@ -53,6 +53,16 @@ namespace ElementZIP
                 valence = valence.Replace(rrr, ' ');
                 valence = valence.Replace(nnn, ' ');
                 string[] z_valence = valence.Split(separator);
+                valence = valence.Replace(rrr, ' ');
+                valence = valence.Replace(nnn, ' ');
+                valence = valence.Replace("     ", "");
+                foreach (var valenceItem in z_valence)
+                {
+                    valenceWriter.Write(valenceItem);
+                    valenceWriter.WriteLine();
+                    valenceWriter.Flush();
+                }
+                
 
 
                 //  Elements
@@ -72,9 +82,9 @@ namespace ElementZIP
                 var elementsZip = z_elements.Zip(z_atoms, (first, second) => first + " " + ":" + " " + "[" + second);
                 foreach (var item in elementsZip)
                 {
-                    zipWriter.Write(item + ", ");
-                    zipWriter.WriteLine();
-                    zipWriter.Flush();
+                    //zipWriter.Write(item + ", ");
+                    //zipWriter.WriteLine();
+                    //zipWriter.Flush();
                 }
 
 
@@ -94,6 +104,7 @@ namespace ElementZIP
             valenceReader.Close();
                 //atomWriter.Close();
             zipWriter.Close();
+            valenceWriter.Close();
 
         }
     }
