@@ -47,13 +47,20 @@ namespace ElementZIP
                 //atomWriter.NewLine = ",";
                 m_elementAndAtomLine = elementAndAtomReader.ReadLine();
                 m_elementAndAtomLine = m_elementAndAtomLine.Replace(":", "\r" + "\t\t\t\t\t\t" + "\"" + "atomic_weight" + "\"" + ":");
+                m_elementAndAtomLine = m_elementAndAtomLine.Replace("[", "");
+                m_elementAndAtomLine = m_elementAndAtomLine.Replace(",", "," + "\r");
+
+
                 m_valenceLine = valenceReader.ReadLine();
+
+                m_valenceLine.Prepend(';');
 
 
 
                 tableElements.Write("\t\t\t\t\t\t" + "\"" + "symbol" + "\"" + ":" + m_elementAndAtomLine);
-                tableElements.WriteLine("\t\t\t" + "\"" + ":" );
-                tableElements.Write(m_valenceLine); tableElements.Write("]");tableElements.Write(",");
+                //tableElements.WriteLine("\t\t\t" + "\"" + ":" );
+                tableElements.Write(m_valenceLine);
+                //tableElements.Write(",");
                 tableElements.WriteLine();
                 //char rrr = '\r';
                 //char nnn = '\n';
