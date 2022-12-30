@@ -52,7 +52,7 @@ namespace transParser
                 string viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (viscosityLine != null)
                 {
-                    PrintViscosityLine(streamWriter, streamReader, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
+                    string nextVline = PrintViscosityLine(streamWriter, streamReader, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
                     streamWriter.FlushAsync();
                 }
 
@@ -65,31 +65,17 @@ namespace transParser
 
         }
 
-        private static void PrintViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string line, string coefficientLabel, string tempLabel, string rangeLabel, int count)
+        private static void PrintTempRange(StreamWriter streamWriter, string line)
         {
-            //m_currentLine = streamReader.ReadLine();
-            int v_count = count + 1;
-            streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t");
-            streamWriter.Write("\"" + coefficientLabel + "\"" + ":" + "{");
-            streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t\t");
-            streamWriter.Write("\"" + tempLabel + "\"" + ":" + "{");
-            streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t\t\t");
-            streamWriter.Write("\"" + rangeLabel + v_count.ToString() + "\"" + ":");
-            streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t\t\t");
-            streamWriter.Write("{");
-            streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t\t\t\t");
-            //  print temperature range as array [200.0, 1000.0],
-            streamWriter.Write("\"" + tempLabel + "\"" + ":" + "[");
             string m_temp_1 = line.Substring(2, 7);
-            m_temp_1 = m_temp_1.Trim();
+            m_temp_1= m_temp_1.Trim();
             string m_temp_2 = line.Substring(9, 10);
-            m_temp_2 = m_temp_2.Trim();
-            streamWriter.Write(m_temp_1 + ", " + m_temp_2 + "]" + ",");
+            m_temp_2= m_temp_2.Trim();
+            streamWriter.WriteLine(m_temp_1 + ", " + m_temp_2 + "]" + ",");
+        }
+
+        private static void PrintCoefficients(StreamWriter streamWriter, string line)
+        {
             // print coefficients
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t\t");
@@ -112,12 +98,69 @@ namespace transParser
             {
                 split[i] = split[i].Replace(' ', '+');
             }
-
             streamWriter.Write(split[0] + ", " + split[1] + ", " + split[2] + ", " + split[3] + "]");
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t");
             streamWriter.Write("}");
-            //int mz = streamReader.Peek();
+        }
+
+        private static string PrintViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string line, string coefficientLabel, string tempLabel, string rangeLabel, int count)
+        {
+            //m_currentLine = streamReader.ReadLine();
+            int v_count = count + 1;
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t");
+            streamWriter.Write("\"" + coefficientLabel + "\"" + ":" + "{");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t");
+            streamWriter.Write("\"" + tempLabel + "\"" + ":" + "{");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            streamWriter.Write("\"" + rangeLabel + v_count.ToString() + "\"" + ":");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            streamWriter.Write("{");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t\t");
+            ////  print temperature range as array [200.0, 1000.0],
+            //streamWriter.Write("\"" + tempLabel + "\"" + ":" + "[");
+            //string m_temp_1 = line.Substring(2, 7);
+            //m_temp_1 = m_temp_1.Trim();
+            //string m_temp_2 = line.Substring(9, 10);
+            //m_temp_2 = m_temp_2.Trim();
+            //streamWriter.Write(m_temp_1 + ", " + m_temp_2 + "]" + ",");
+
+            //// print coefficients
+            //streamWriter.WriteLine();
+            //streamWriter.Write("\t\t\t\t\t\t\t\t");
+            //streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
+            //line = line.Replace('E', 'e');
+            //int ml = line.Length;
+            //line = line.Insert(66, ",");
+            //line = line.Insert(51, ",");
+            //line = line.Insert(36, ",");
+            ////line = line.Insert(21, ",");
+            //string m_viscosityLine = line.Substring(20);
+            //m_viscosityLine = m_viscosityLine.Trim();
+            ////m_viscosityLine = m_viscosityLine.Replace(' ', '+');
+            //string[] split = m_viscosityLine.Split(',');
+            //for (int i = 0; i < split.Length; i++)
+            //{
+            //    split[i] = split[i].Trim();
+            //}
+            //for (int i = 0; i < split.Length; i++)
+            //{
+            //    split[i] = split[i].Replace(' ', '+');
+            //}
+
+            //streamWriter.Write(split[0] + ", " + split[1] + ", " + split[2] + ", " + split[3] + "]");
+            //streamWriter.WriteLine();
+            //streamWriter.Write("\t\t\t\t\t\t\t");
+            //streamWriter.Write("}");
+
+            // get next line and test for viscosity
+            string m_nextLine = GetNextViscosityLine(streamWriter, streamReader, line);
+            return m_nextLine;
 
         }
 
