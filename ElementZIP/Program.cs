@@ -43,6 +43,10 @@ namespace ElementZIP
                 m_elementAndAtomLine= elementAndAtomReader.ReadLine();
                 m_valenceLine = valenceReader.ReadLine();
 
+                tableElements.Write("{");
+                tableElements.WriteLine("\t\t");
+                tableElements.Write("[");
+                tableElements.Write(m_elementAndAtomLine); tableElements.Write(" ");tableElements.Write(m_valenceLine);tableElements.Write("]");
                 //char rrr = '\r';
                 //char nnn = '\n';
                 //string m_elements = elementReader.ReadToEnd();
