@@ -30,6 +30,11 @@ namespace ElementZIP
 
             //atomWriter.AutoFlush = true;
 
+            tableElements.Write("{");
+            tableElements.WriteLine();
+            tableElements.WriteLine("\t" + "\"" + "TableOfElements" + "\"" + ":" + "[");
+            tableElements.WriteLine("\t\t\t\t\t" + "{");
+
             while (!elementAndAtomReader.EndOfStream)
             {
                 char separator = ',';
@@ -40,13 +45,16 @@ namespace ElementZIP
                 //char newChar = '"';
 
                 //atomWriter.NewLine = ",";
-                m_elementAndAtomLine= elementAndAtomReader.ReadLine();
+                m_elementAndAtomLine = elementAndAtomReader.ReadLine();
+                m_elementAndAtomLine = m_elementAndAtomLine.Replace(":", "\r" + "\t\t\t\t\t\t" + "\"" + "atomic_weight" + "\"" + ":");
                 m_valenceLine = valenceReader.ReadLine();
 
-                tableElements.Write("{");
-                tableElements.WriteLine("\t\t");
-                tableElements.Write("[");
-                tableElements.Write(m_elementAndAtomLine); tableElements.Write(" ");tableElements.Write(m_valenceLine);tableElements.Write("]");
+
+
+                tableElements.Write("\t\t\t\t\t\t" + "\"" + "symbol" + "\"" + ":" + m_elementAndAtomLine);
+                tableElements.WriteLine("\t\t\t" + "\"" + ":" );
+                tableElements.Write(m_valenceLine); tableElements.Write("]");tableElements.Write(",");
+                tableElements.WriteLine();
                 //char rrr = '\r';
                 //char nnn = '\n';
                 //string m_elements = elementReader.ReadToEnd();
@@ -82,7 +90,7 @@ namespace ElementZIP
                 //    valenceWriter.WriteLine();
                 //    valenceWriter.Flush();
                 //}
-                
+
 
 
                 //  Elements

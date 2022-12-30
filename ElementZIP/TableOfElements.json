@@ -1,101 +1,203 @@
-{		
-["H " : [1.00794e0,  1]{		
-["D " : [2.014102e0,  1]{		
-["HE" : [4.002602e0,  0]{		
-["LI" : [6.941e0,  1]{		
-["BE" : [9.012182e0,  2]{		
-["B " : [10.811e0,  3]{		
-["C " : [12.0107e0,  4]{		
-["N " : [14.0067e0,  0]{		
-["O " : [15.9994e0,  - 2]{		
-["F " : [18.9984032e0,  - 1]{		
-["NE" : [20.1797e0,  0]{		
-["NA" : [22.989770e0,  1]{		
-["MG" : [24.305e0,  2]{		
-["AL" : [26.981538e0,  3]{		
-["SI" : [28.0855e0,  4]{		
-["P " : [30.973761e0,  5]{		
-["S " : [32.065e0,  4]{		
-["CL" : [35.453e0,  - 1]{		
-["AR" : [39.948e0,  0]{		
-["K " : [39.0983e0,  1]{		
-["CA" : [40.078e0,  2]{		
-["SC" : [44.95591e0,  3]{		
-["TI" : [47.867e0,  4]{		
-["V " : [50.9415e0,  5]{		
-["CR" : [51.9961e0,  3]{		
-["MN" : [54.938049e0,  2]{		
-["FE" : [55.845e0,  3]{		
-["CO" : [58.933200e0,  2]{		
-["NI" : [58.6934e0,  2]{		
-["CU" : [63.546e0,  2]{		
-["ZN" : [65.39e0,  2]{		
-["GA" : [69.723e0,  3]{		
-["GE" : [72.64e0,  4]{		
-["AS" : [74.92160e0,  3]{		
-["SE" : [78.96e0,  4]{		
-["BR" : [79.904e0,  - 1]{		
-["KR" : [83.80e0,  0]{		
-["RB" : [85.4678e0,  1]{		
-["SR" : [87.62e0,  2]{		
-["Y " : [88.90585e0,  3]{		
-["ZR" : [91.224e0,  4]{		
-["NB" : [92.90638e0,  5]{		
-["MO" : [95.94e0,  6]{		
-["TC" : [97.9072e0,  7]{		
-["RU" : [101.07e0,  3]{		
-["RH" : [102.9055e0,  3]{		
-["PD" : [106.42e0,  2]{		
-["AG" : [107.8682e0,  1]{		
-["CD" : [112.411e0,  2]{		
-["IN" : [114.818e0,  3]{		
-["SN" : [118.710e0,  4]{		
-["SB" : [121.760e0,  3]{		
-["TE" : [127.6e0,  4]{		
-["I " : [126.90447e0,  - 1]{		
-["XE" : [131.293e0,  0]{		
-["CS" : [132.90545e0,  1]{		
-["BA" : [137.327e0,  2]{		
-["LA" : [138.9055e0,  3]{		
-["CE" : [140.116e0,  3]{		
-["PR" : [140.90765e0,  3]{		
-["ND" : [144.9127e0,  3]{		
-["PM" : [145.e0,  3]{		
-["SM" : [150.36e0,  3]{		
-["EU" : [151.964e0,  3]{		
-["GD" : [157.25e0,  3]{		
-["TB" : [158.92534e0,  3]{		
-["DY" : [162.50e0,  3]{		
-["HO" : [164.93032e0,  3]{		
-["ER" : [167.259e0,  3]{		
-["TM" : [168.93421e0,  3]{		
-["YB" : [173.04e0,  3]{		
-["LU" : [174.967e0,  3]{		
-["HF" : [178.49e0,  4]{		
-["TA" : [180.9479e0,  5]{		
-["W " : [183.84e0,  6]{		
-["RE" : [186.207e0,  7]{		
-["OS" : [190.23e0,  4]{		
-["IR" : [192.217e0,  4]{		
-["PT" : [195.078e0,  4]{		
-["AU" : [196.96655e0,  3]{		
-["HG" : [200.59e0,  2]{		
-["TL" : [204.3833e0,  1]{		
-["PB" : [207.2e0,  2]{		
-["BI" : [208.98038e0,  3]{		
-["PO" : [208.9824e0,  2]{		
-["AT" : [209.9871e0,  - 1]{		
-["RN" : [222.0176e0,  0]{		
-["FR" : [223.0197e0,  1]{		
-["RA" : [226.0254e0,  2]{		
-["AC" : [227.0278e0,  3]{		
-["TH" : [232.0381e0,  4]{		
-["PA" : [231.03588e0,  5]{		
-["U " : [238.02891e0,  6]{		
-["NP" : [237.0482e0,  5]{		
-["PU" : [244.0642e0,  4]{		
-["AM" : [243.0614e0,  3]{		
-["CM" : [247.0703e0,  3]{		
-["BK" : [247.0703e0,  3]{		
-["CF" : [251.0587e0,  3]{		
-["ES" : [252.083e0,  3]
+{
+	"TableOfElements":[
+					{
+						"symbol":"H " 						"atomic_weight": [1.00794e0, 			":
+1],
+						"symbol":"D " 						"atomic_weight": [2.014102e0, 			":
+1],
+						"symbol":"HE" 						"atomic_weight": [4.002602e0, 			":
+0],
+						"symbol":"LI" 						"atomic_weight": [6.941e0, 			":
+1],
+						"symbol":"BE" 						"atomic_weight": [9.012182e0, 			":
+2],
+						"symbol":"B " 						"atomic_weight": [10.811e0, 			":
+3],
+						"symbol":"C " 						"atomic_weight": [12.0107e0, 			":
+4],
+						"symbol":"N " 						"atomic_weight": [14.0067e0, 			":
+0],
+						"symbol":"O " 						"atomic_weight": [15.9994e0, 			":
+- 2],
+						"symbol":"F " 						"atomic_weight": [18.9984032e0, 			":
+- 1],
+						"symbol":"NE" 						"atomic_weight": [20.1797e0, 			":
+0],
+						"symbol":"NA" 						"atomic_weight": [22.989770e0, 			":
+1],
+						"symbol":"MG" 						"atomic_weight": [24.305e0, 			":
+2],
+						"symbol":"AL" 						"atomic_weight": [26.981538e0, 			":
+3],
+						"symbol":"SI" 						"atomic_weight": [28.0855e0, 			":
+4],
+						"symbol":"P " 						"atomic_weight": [30.973761e0, 			":
+5],
+						"symbol":"S " 						"atomic_weight": [32.065e0, 			":
+4],
+						"symbol":"CL" 						"atomic_weight": [35.453e0, 			":
+- 1],
+						"symbol":"AR" 						"atomic_weight": [39.948e0, 			":
+0],
+						"symbol":"K " 						"atomic_weight": [39.0983e0, 			":
+1],
+						"symbol":"CA" 						"atomic_weight": [40.078e0, 			":
+2],
+						"symbol":"SC" 						"atomic_weight": [44.95591e0, 			":
+3],
+						"symbol":"TI" 						"atomic_weight": [47.867e0, 			":
+4],
+						"symbol":"V " 						"atomic_weight": [50.9415e0, 			":
+5],
+						"symbol":"CR" 						"atomic_weight": [51.9961e0, 			":
+3],
+						"symbol":"MN" 						"atomic_weight": [54.938049e0, 			":
+2],
+						"symbol":"FE" 						"atomic_weight": [55.845e0, 			":
+3],
+						"symbol":"CO" 						"atomic_weight": [58.933200e0, 			":
+2],
+						"symbol":"NI" 						"atomic_weight": [58.6934e0, 			":
+2],
+						"symbol":"CU" 						"atomic_weight": [63.546e0, 			":
+2],
+						"symbol":"ZN" 						"atomic_weight": [65.39e0, 			":
+2],
+						"symbol":"GA" 						"atomic_weight": [69.723e0, 			":
+3],
+						"symbol":"GE" 						"atomic_weight": [72.64e0, 			":
+4],
+						"symbol":"AS" 						"atomic_weight": [74.92160e0, 			":
+3],
+						"symbol":"SE" 						"atomic_weight": [78.96e0, 			":
+4],
+						"symbol":"BR" 						"atomic_weight": [79.904e0, 			":
+- 1],
+						"symbol":"KR" 						"atomic_weight": [83.80e0, 			":
+0],
+						"symbol":"RB" 						"atomic_weight": [85.4678e0, 			":
+1],
+						"symbol":"SR" 						"atomic_weight": [87.62e0, 			":
+2],
+						"symbol":"Y " 						"atomic_weight": [88.90585e0, 			":
+3],
+						"symbol":"ZR" 						"atomic_weight": [91.224e0, 			":
+4],
+						"symbol":"NB" 						"atomic_weight": [92.90638e0, 			":
+5],
+						"symbol":"MO" 						"atomic_weight": [95.94e0, 			":
+6],
+						"symbol":"TC" 						"atomic_weight": [97.9072e0, 			":
+7],
+						"symbol":"RU" 						"atomic_weight": [101.07e0, 			":
+3],
+						"symbol":"RH" 						"atomic_weight": [102.9055e0, 			":
+3],
+						"symbol":"PD" 						"atomic_weight": [106.42e0, 			":
+2],
+						"symbol":"AG" 						"atomic_weight": [107.8682e0, 			":
+1],
+						"symbol":"CD" 						"atomic_weight": [112.411e0, 			":
+2],
+						"symbol":"IN" 						"atomic_weight": [114.818e0, 			":
+3],
+						"symbol":"SN" 						"atomic_weight": [118.710e0, 			":
+4],
+						"symbol":"SB" 						"atomic_weight": [121.760e0, 			":
+3],
+						"symbol":"TE" 						"atomic_weight": [127.6e0, 			":
+4],
+						"symbol":"I " 						"atomic_weight": [126.90447e0, 			":
+- 1],
+						"symbol":"XE" 						"atomic_weight": [131.293e0, 			":
+0],
+						"symbol":"CS" 						"atomic_weight": [132.90545e0, 			":
+1],
+						"symbol":"BA" 						"atomic_weight": [137.327e0, 			":
+2],
+						"symbol":"LA" 						"atomic_weight": [138.9055e0, 			":
+3],
+						"symbol":"CE" 						"atomic_weight": [140.116e0, 			":
+3],
+						"symbol":"PR" 						"atomic_weight": [140.90765e0, 			":
+3],
+						"symbol":"ND" 						"atomic_weight": [144.9127e0, 			":
+3],
+						"symbol":"PM" 						"atomic_weight": [145.e0, 			":
+3],
+						"symbol":"SM" 						"atomic_weight": [150.36e0, 			":
+3],
+						"symbol":"EU" 						"atomic_weight": [151.964e0, 			":
+3],
+						"symbol":"GD" 						"atomic_weight": [157.25e0, 			":
+3],
+						"symbol":"TB" 						"atomic_weight": [158.92534e0, 			":
+3],
+						"symbol":"DY" 						"atomic_weight": [162.50e0, 			":
+3],
+						"symbol":"HO" 						"atomic_weight": [164.93032e0, 			":
+3],
+						"symbol":"ER" 						"atomic_weight": [167.259e0, 			":
+3],
+						"symbol":"TM" 						"atomic_weight": [168.93421e0, 			":
+3],
+						"symbol":"YB" 						"atomic_weight": [173.04e0, 			":
+3],
+						"symbol":"LU" 						"atomic_weight": [174.967e0, 			":
+3],
+						"symbol":"HF" 						"atomic_weight": [178.49e0, 			":
+4],
+						"symbol":"TA" 						"atomic_weight": [180.9479e0, 			":
+5],
+						"symbol":"W " 						"atomic_weight": [183.84e0, 			":
+6],
+						"symbol":"RE" 						"atomic_weight": [186.207e0, 			":
+7],
+						"symbol":"OS" 						"atomic_weight": [190.23e0, 			":
+4],
+						"symbol":"IR" 						"atomic_weight": [192.217e0, 			":
+4],
+						"symbol":"PT" 						"atomic_weight": [195.078e0, 			":
+4],
+						"symbol":"AU" 						"atomic_weight": [196.96655e0, 			":
+3],
+						"symbol":"HG" 						"atomic_weight": [200.59e0, 			":
+2],
+						"symbol":"TL" 						"atomic_weight": [204.3833e0, 			":
+1],
+						"symbol":"PB" 						"atomic_weight": [207.2e0, 			":
+2],
+						"symbol":"BI" 						"atomic_weight": [208.98038e0, 			":
+3],
+						"symbol":"PO" 						"atomic_weight": [208.9824e0, 			":
+2],
+						"symbol":"AT" 						"atomic_weight": [209.9871e0, 			":
+- 1],
+						"symbol":"RN" 						"atomic_weight": [222.0176e0, 			":
+0],
+						"symbol":"FR" 						"atomic_weight": [223.0197e0, 			":
+1],
+						"symbol":"RA" 						"atomic_weight": [226.0254e0, 			":
+2],
+						"symbol":"AC" 						"atomic_weight": [227.0278e0, 			":
+3],
+						"symbol":"TH" 						"atomic_weight": [232.0381e0, 			":
+4],
+						"symbol":"PA" 						"atomic_weight": [231.03588e0, 			":
+5],
+						"symbol":"U " 						"atomic_weight": [238.02891e0, 			":
+6],
+						"symbol":"NP" 						"atomic_weight": [237.0482e0, 			":
+5],
+						"symbol":"PU" 						"atomic_weight": [244.0642e0, 			":
+4],
+						"symbol":"AM" 						"atomic_weight": [243.0614e0, 			":
+3],
+						"symbol":"CM" 						"atomic_weight": [247.0703e0, 			":
+3],
+						"symbol":"BK" 						"atomic_weight": [247.0703e0, 			":
+3],
+						"symbol":"CF" 						"atomic_weight": [251.0587e0, 			":
+3],
+						"symbol":"ES" 						"atomic_weight": [252.083e0, 			":
+3],
