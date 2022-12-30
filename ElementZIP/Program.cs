@@ -19,9 +19,14 @@ namespace ElementZIP
             //StreamWriter valenceWriter = new StreamWriter("..\\..\\zipValence.txt");
             //StreamWriter zipWriter = new StreamWriter("..\\..\\elementAndAtomWeight.txt");
 
+            StreamReader elementAndAtomReader = new StreamReader("..\\..\\elementAndAtomWeight.txt");
+            StreamReader valenceReader = new StreamReader("..\\..\\zipValence.txt");
+
+            StreamWriter tableElements = new StreamWriter("..\\..\\TableOfElements.json");
+
             //atomWriter.AutoFlush = true;
 
-            while (!)
+            while (!elementAndAtomReader.EndOfStream)
             {
                 char separator = ',';
 
