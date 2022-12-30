@@ -92,7 +92,8 @@ namespace transParser
             line = line.Insert(66, ",");
             line = line.Insert(51, ",");
             line = line.Insert(36, ",");
-            string m_viscosityLine = line.Substring(19);
+            //line = line.Insert(21, ",");
+            string m_viscosityLine = line.Substring(20);
 
         }
 
