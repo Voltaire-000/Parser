@@ -43,7 +43,7 @@ namespace transParser
                 if (unicodeCategory != UnicodeCategory.LowercaseLetter || m_char == 'e')
                 {
                     string m_speciesName = m_currentLine.Substring(0, 15);
-                    string m_description = m_currentLine.Substring(15, 42);
+                    string m_description = m_currentLine.Substring(15);
                     m_speciesName = m_speciesName.Trim();
                     m_description = m_description.Trim();
                     streamWriter.Write("\t\t\t\t\t");
@@ -98,39 +98,6 @@ namespace transParser
 
                         m_currentLine = streamReader.ReadLine();
                         m_V = m_currentLine.ElementAt(1);
-                        if (m_V == 'V')
-                        {
-                            vCount = vCount + 1;
-                            streamWriter.WriteLine();
-                            //streamWriter.Write("\t\t\t\t\t");
-                            //streamWriter.Write("\"" + "viscosity_coefficients" + "\"" + ": " + "{");
-                            //streamWriter.WriteLine();
-                            streamWriter.Write("\t\t\t\t\t\t\t");
-                            streamWriter.Write("\"" + "temperatureRange" + "\"" + ": " + "{");
-                            streamWriter.WriteLine();
-                            streamWriter.Write("\t\t\t\t\t\t\t\t\t");
-                            streamWriter.Write("\"" + "range_" + vCount.ToString() + "\"" + ": " + "{ ");
-                            streamWriter.WriteLine();
-                            streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
-                            streamWriter.Write("\"" + "temperatureRange" + "\"" + ":" + "[");
-                            streamWriter.Write(m_currentLine.Substring(3, 6) + ", ");
-                            _ = m_currentLine.Substring(10, 8);
-                            _ = m_currentLine.Substring(10, 8).Trim();
-                            streamWriter.Write(m_currentLine.Substring(10, 8) + "]" + ",");
-                            streamWriter.WriteLine();
-                            streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
-                            streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
-                            string m_coeff2 = m_currentLine.Substring(21, 59);
-                            m_coeff2 = m_coeff2.Replace('E', 'e');
-                            m_coeff2 = m_coeff2.Replace("e ", "e+");
-                            m_coeff2 = m_coeff2.Insert(14, " ");
-                            m_coeff2 = m_coeff2.Replace(" ", ", ");
-
-                            streamWriter.Write(m_coeff2 + "]");
-                            streamWriter.WriteLine();
-                            streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
-                            streamWriter.Write("}" + ",");
-                        }
 
                     }
                 }
@@ -140,7 +107,7 @@ namespace transParser
                 }
 
 
-                break;
+                //break;
 
             }
                 streamReader.Close();
