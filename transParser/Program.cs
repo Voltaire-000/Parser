@@ -94,6 +94,22 @@ namespace transParser
             line = line.Insert(36, ",");
             //line = line.Insert(21, ",");
             string m_viscosityLine = line.Substring(20);
+            m_viscosityLine = m_viscosityLine.Trim();
+            //m_viscosityLine = m_viscosityLine.Replace(' ', '+');
+            string[] split = m_viscosityLine.Split(',');
+            for (int i = 0; i < split.Length; i++)
+            {
+                split[i] = split[i].Trim();
+            }
+            for (int i = 0; i < split.Length; i++)
+            {
+                split[i] = split[i].Replace(' ', '+');
+            }
+
+            streamWriter.Write(split[0] + ", " + split[1] + ", " + split[2] + ", " + split[3] + "]");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            streamWriter.Write("}");
 
         }
 
