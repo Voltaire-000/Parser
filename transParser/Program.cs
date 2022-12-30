@@ -28,6 +28,11 @@ namespace transParser
 
             while (!streamReader.EndOfStream)
             {
+                if (streamReader.EndOfStream)
+                {
+                    streamReader.Close();
+                    streamWriter.Close();
+                }
 
                 if (!printRoot)
                 {
@@ -53,19 +58,25 @@ namespace transParser
                 string viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (viscosityLine != null)
                 {
-                    PrintViscosityLabels(streamWriter, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
+                    //PrintViscosityLabels(streamWriter, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
                     //m_currentLine= streamReader.ReadLine();
                     PrintTempRange(streamWriter, streamReader, viscosityLine);
                     PrintCoefficients(streamWriter, viscosityLine);
-                    streamWriter.FlushAsync();
+                    streamWriter.Flush();
                 }
 
                 //continue;
-                break;
+                //break;
+                if (streamReader.EndOfStream)
+                {
+                    streamReader.Close();
+                    streamWriter.Close();
+                }
+
 
             }
-                streamReader.Close();
-                streamWriter.Close();
+
+
 
         }
 
@@ -77,7 +88,7 @@ namespace transParser
             m_temp_1= m_temp_1.Trim();
             string m_temp_2 = mx.Substring(9, 10);
             m_temp_2= m_temp_2.Trim();
-            writer.WriteLine(m_temp_1 + ", " + m_temp_2 + "]" + ",");
+            writer.WriteLine("\"" + "temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
         }
 
         private static void PrintCoefficients(StreamWriter streamWriter, string line)
@@ -189,36 +200,40 @@ namespace transParser
             streamWriter.Write("{");
             streamWriter.WriteLine();
             string mx = line;
-            char m_char = mx.First();
-            unicodeCategory = char.GetUnicodeCategory(m_char);
-            Type type = m_char.GetType();
-            if (unicodeCategory != UnicodeCategory.LowercaseLetter || m_char == 'e')
+
+            if (mx != "end ")
             {
-                string name1 = mx.Substring(0, 15);
-                name1 = name1.Trim();
-                string name2 = mx.Substring(15, 15);
-                name2 = name2.Trim();
-                if (name2.Length > 0)
+                char m_char = mx.First();
+                unicodeCategory = char.GetUnicodeCategory(m_char);
+                Type type = m_char.GetType();
+                if (unicodeCategory != UnicodeCategory.LowercaseLetter || m_char == 'e')
                 {
+                    string name1 = mx.Substring(0, 15);
+                    name1 = name1.Trim();
+                    string name2 = mx.Substring(15, 15);
+                    name2 = name2.Trim();
+                    if (name2.Length > 0)
+                    {
+                        streamWriter.Write("\t\t\t\t\t");
+                        streamWriter.Write("\"" + "species names" + "\"" + ": " + "[");
+                        streamWriter.Write("\"" + name1 + "\"" + "," + "\"" + name2 + "\"" + "]" + ",");
+                    }
+                    else
+                    {
+                        streamWriter.Write("\t\t\t\t\t");
+                        streamWriter.Write("\"" + "species names" + "\"" + ": " + "[");
+                        streamWriter.Write("\"" + name1 + "\"" + "]" + ",");
+                    }
+
+                    m_description = mx.Substring(32);
+                    m_description = m_description.Trim();
+
+                    streamWriter.WriteLine();
                     streamWriter.Write("\t\t\t\t\t");
-                    streamWriter.Write("\"" + "species names" + "\"" + ": " + "[");
-                    streamWriter.Write("\"" + name1 + "\"" + "," + "\"" + name2 + "\"" + "]" + ",");
-                }
-                else
-                {
-                    streamWriter.Write("\t\t\t\t\t");
-                    streamWriter.Write("\"" + "species names" + "\"" + ": " + "[");
-                    streamWriter.Write("\"" + name1 + "\"" + "]" + ",");
-                }
+                    streamWriter.Write("\"" + "description" + "\"" + ": ");
+                    streamWriter.Write("\"" + m_description + "\"" + ",");
 
-                m_description = mx.Substring(32);
-                m_description = m_description.Trim();
-
-                streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "description" + "\"" + ": ");
-                streamWriter.Write("\"" + m_description + "\"" + ",");
-
+                } 
             }
         }
 
