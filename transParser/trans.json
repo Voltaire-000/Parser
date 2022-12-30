@@ -3,4 +3,8 @@
 				{
 					"symbol": "Ar",
 					"description": "V3C3  BICH ET AL (1990)",
-					"viscosity_coefficients
+					"viscosity_coefficients":{
+						"temperatureRange":{
+							"range_1":
+							{
+								"temperatureRange":[
