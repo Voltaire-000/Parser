@@ -33,7 +33,7 @@ namespace ElementZIP
             tableElements.Write("{");
             tableElements.WriteLine();
             tableElements.WriteLine("\t" + "\"" + "TableOfElements" + "\"" + ":" + "[");
-            tableElements.WriteLine("\t\t\t\t\t" + "{");
+            //tableElements.WriteLine("\t\t\t\t\t" + "{");
 
             while (!elementAndAtomReader.EndOfStream)
             {
@@ -54,9 +54,9 @@ namespace ElementZIP
                 m_valenceLine = valenceReader.ReadLine();
 
 
-                tableElements.Write("\t\t\t\t\t\t" + "\"" + "symbol" + "\"" + ":" + m_elementAndAtomLine);
+                tableElements.Write("\t\t\t\t\t\t" + "{" + "\r" + "\t\t\t\t\t\t" + "\"" + "symbol" + "\"" + ":" + m_elementAndAtomLine);
                 //tableElements.WriteLine("\t\t\t" + "\"" + ":" );
-                tableElements.Write(m_valenceLine + ",");
+                tableElements.Write(m_valenceLine + "\r" + "\t\t\t\t\t\t" + "}" + ",");
                 //tableElements.Write(",");
                 tableElements.WriteLine();
                 //char rrr = '\r';
