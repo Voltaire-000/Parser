@@ -7,4 +7,5 @@
 						"temperatureRange":{
 							"range_1":
 							{
-								"temperatureRange":[  200.0,   1000.0 ]
+								"temperatureRange":[  200.0,   1000.0 ],
+								"coefficients":[

@@ -83,7 +83,7 @@ namespace transParser
             // print coefficients
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t\t");
-            streamWriter.Write("\"" + coefficientLabel + "\"" + ":" + "[");
+            streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
 
         }
 
