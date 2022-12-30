@@ -78,6 +78,12 @@ namespace transParser
             //  print temperature range as array [200.0, 1000.0],
             streamWriter.Write("\"" + tempLabel + "\"" + ":" + "[");
             string m_temp_1 = line.Substring(2, 7);
+            string m_temp_2 = line.Substring(9, 10);
+            streamWriter.Write(m_temp_1 + "," + m_temp_2 + "]" + ",");
+            // print coefficients
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t\t");
+            streamWriter.Write("\"" + coefficientLabel + "\"" + ":" + "[");
 
         }
 
