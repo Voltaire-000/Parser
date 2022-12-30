@@ -30,9 +30,17 @@ namespace transParser
                     m_currentLine = streamReader.ReadLine();
                 }
 
+                streamWriter.Write("\t\t\t\t");
+                streamWriter.Write("{");
                 streamWriter.WriteLine();
 
-                string m_subString = m_currentLine;
+                string m_speciesName = m_currentLine.Substring(0, 15);
+                m_speciesName = m_speciesName.Trim();
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.Write("\"" + m_speciesName + "\"" + ":");
+                streamWriter.WriteLine();
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.Write("\"" + "description" + "\"");
 
             }
                 streamReader.Close();
