@@ -5,3 +5,6 @@
 					"description": "V3C3  BICH ET AL (1990)",
 					"viscosity_coefficients": {
 							"temperature_intervals": {
+									"range_1": { 
+										"temperatureRange":[200.0 ,   1000.0],
+										"coefficients":[

@@ -72,8 +72,23 @@ namespace transParser
                         streamWriter.Write("\t\t\t\t\t\t\t");
                         streamWriter.Write("\"" + "temperature_intervals" + "\"" + ": " + "{");
                         streamWriter.WriteLine();
-                        streamWriter.Write("\t\t\t\t\t\t\t");
-                        streamWriter.Write
+                        streamWriter.Write("\t\t\t\t\t\t\t\t\t");
+                        streamWriter.Write("\"" + "range_" + vCount.ToString() + "\"" + ": " + "{ ");
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
+                        streamWriter.Write("\"" + "temperatureRange" + "\"" + ":" + "[");
+                        string m_tempInterval_1 = m_currentLine.Substring(4, 6);
+                        streamWriter.Write(m_tempInterval_1 + ", ");
+                        string m_tempInterval_2 = m_currentLine.Substring(10, 8);
+                        m_tempInterval_2 = m_tempInterval_2.Trim();
+                        streamWriter.Write(m_tempInterval_2 + "]" + ",");
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t\t\t\t\t\t");
+                        streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
+                        string m_coeff = m_currentLine.Substring(21, 59);
+                        m_coeff = m_coeff.Replace('E', 'e');
+                        streamWriter.Write(m_coeff);
+
                     }
                 }
                 {
