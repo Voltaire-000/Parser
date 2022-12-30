@@ -44,7 +44,7 @@ namespace transParser
 
                 if (m_currentLine.First() != ' ')
                 {
-                    PrintNameAndDescription(streamWriter, m_currentLine, m_symbol, m_description);
+                    PrintSymbolsAndDescription(streamWriter, m_currentLine, m_symbol, m_description);
                     streamWriter.Flush();
                 }
 
@@ -52,7 +52,10 @@ namespace transParser
                 string viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (viscosityLine != null)
                 {
-                    string nextVline = PrintViscosityLine(streamWriter, streamReader, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
+                    PrintViscosityLabels(streamWriter, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
+                    //m_currentLine= streamReader.ReadLine();
+                    PrintTempRange(streamWriter, streamReader, m_currentLine);
+                    PrintCoefficients(streamWriter, m_currentLine);
                     streamWriter.FlushAsync();
                 }
 
@@ -65,8 +68,9 @@ namespace transParser
 
         }
 
-        private static void PrintTempRange(StreamWriter streamWriter, string line)
+        private static void PrintTempRange(StreamWriter streamWriter, StreamReader streamReader, string line)
         {
+            //line = streamReader.ReadLine();
             string m_temp_1 = line.Substring(2, 7);
             m_temp_1= m_temp_1.Trim();
             string m_temp_2 = line.Substring(9, 10);
@@ -104,7 +108,7 @@ namespace transParser
             streamWriter.Write("}");
         }
 
-        private static string PrintViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string line, string coefficientLabel, string tempLabel, string rangeLabel, int count)
+        private static void PrintViscosityLabels(StreamWriter streamWriter, string line, string coefficientLabel, string tempLabel, string rangeLabel, int count)
         {
             //m_currentLine = streamReader.ReadLine();
             int v_count = count + 1;
@@ -158,10 +162,6 @@ namespace transParser
             //streamWriter.Write("\t\t\t\t\t\t\t");
             //streamWriter.Write("}");
 
-            // get next line and test for viscosity
-            string m_nextLine = GetNextViscosityLine(streamWriter, streamReader, line);
-            return m_nextLine;
-
         }
 
         private static string GetNextViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
@@ -180,7 +180,7 @@ namespace transParser
             return null;
         }
 
-        private static void PrintNameAndDescription(StreamWriter streamWriter, string m_currentLine, string m_symbol, string m_description)
+        private static void PrintSymbolsAndDescription(StreamWriter streamWriter, string m_currentLine, string m_symbol, string m_description)
         {
             UnicodeCategory unicodeCategory;
             streamWriter.Write("\t\t\t\t");
