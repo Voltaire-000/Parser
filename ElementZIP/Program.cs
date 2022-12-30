@@ -23,6 +23,10 @@ namespace ElementZIP
             StreamReader valenceReader = new StreamReader("..\\..\\zipValence.txt");
 
             StreamWriter tableElements = new StreamWriter("..\\..\\TableOfElements.json");
+            tableElements.AutoFlush = true;
+
+            string m_elementAndAtomLine = "";
+            string m_valenceLine = "";
 
             //atomWriter.AutoFlush = true;
 
@@ -30,11 +34,14 @@ namespace ElementZIP
             {
                 char separator = ',';
 
+
+
                 //char oldChar = '\'';
                 //char newChar = '"';
 
                 //atomWriter.NewLine = ",";
-
+                m_elementAndAtomLine= elementAndAtomReader.ReadLine();
+                m_valenceLine = valenceReader.ReadLine();
 
                 //char rrr = '\r';
                 //char nnn = '\n';
@@ -111,9 +118,13 @@ namespace ElementZIP
             //atomReader.Close();
             //elementReader.Close();
             //valenceReader.Close();
-                //atomWriter.Close();
+            //atomWriter.Close();
             //zipWriter.Close();
             //valenceWriter.Close();
+            elementAndAtomReader.Close();
+            valenceReader.Close();
+
+            tableElements.Close();
 
         }
     }
