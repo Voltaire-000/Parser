@@ -88,9 +88,6 @@ namespace transParser
                 m_peekNextLine = streamReader.Peek();
                 currentLine= streamReader.ReadLine();
 
-                //  is this a viscosity line
-                viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
-
                 if (viscosityLine)
                 {
                     visCount = visCount + 1;
@@ -104,6 +101,10 @@ namespace transParser
                     //  print the coefficients
                     PrintCoefficients(streamWriter, currentLine);
                     streamWriter.Flush();
+                }
+                if (coefficientLine)
+                {
+
                 }
 
             }
