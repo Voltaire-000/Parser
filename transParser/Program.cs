@@ -68,7 +68,7 @@ namespace transParser
             bool newRecordSet = false;
             bool viscosityLine = false;
             bool coefficientLine = false;
-            string m_viscosityLabel = "viscosity_coefficients";
+            string m_viscosityLabel = "tempsAndCoefficients";
             string m_coeff = "coefficients";
             string m_tempRangeLabel = "temperatureRange";
             string m_rangeLabel = "range_";
@@ -106,14 +106,19 @@ namespace transParser
                     PrintCoefficients(streamWriter, currentLine);
                     streamWriter.Flush();
                 }
+                coefficientLine = GetCoefficientLine(streamWriter,streamReader, currentLine);
                 if (coefficientLine)
                 {
                     coefCount= coefCount + 1;
                     if (coefCount <= 1)
                     {
-                        PrintViscosityLabels(streamWriter, )
+                        PrintViscosityLabels(streamWriter, m_coeff, m_tempRangeLabel);
                     }
-
+                    //  print the temp range
+                    PrintTempRange(streamWriter, streamReader, currentLine, m_rangeLabel, coefCount);
+                    //  print the coefficients
+                    PrintCoefficients(streamWriter, currentLine);
+                    streamWriter.Flush();
                 }
 
             }
