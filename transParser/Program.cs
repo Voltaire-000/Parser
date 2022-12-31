@@ -66,6 +66,7 @@ namespace transParser
         private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
         {
             bool newRecordSet = false;
+            bool viscosityLine = false;
             string m_viscosityLabel = "viscosity_coefficients";
             string m_tempRangeLabel = "temperatureRange";
             string m_rangeLabel = "range_";
@@ -82,23 +83,32 @@ namespace transParser
             newRecordSet = true;
 
             //  is this a viscosity line
-            bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
+            viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
             //  if we have a viscosity line print temps and coefficients
-            while (viscosityLine)
+
+            while (viscosityLine && newRecordSet)
             {
 
-                visCount = visCount + 1;
-                if (visCount <= 1)
+                if (viscosityLine)
                 {
-                    PrintViscosityLabels(streamWriter, m_viscosityLabel, m_tempRangeLabel);
-                }
+                    visCount = visCount + 1;
+                    if (visCount <= 1)
+                    {
+                        PrintViscosityLabels(streamWriter, m_viscosityLabel, m_tempRangeLabel);
+                    }
 
-                //  print the temp range
-                PrintTempRange(streamWriter, streamReader, currentLine, m_rangeLabel, visCount);
-                //  print the coefficients
-                PrintCoefficients(streamWriter, currentLine);
-                streamWriter.Flush();
+                    //  print the temp range
+                    PrintTempRange(streamWriter, streamReader, currentLine, m_rangeLabel, visCount);
+                    //  print the coefficients
+                    PrintCoefficients(streamWriter, currentLine);
+                    streamWriter.Flush();
+
+                    currentLine = streamReader.ReadLine();
+                    viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
+                }
             }
+
+
 
 
             // ------------------------------ print the closing bracket for record------------------------------------------
