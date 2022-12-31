@@ -25,44 +25,39 @@ namespace transParser
             string m_tempRangeLabel = "temperatureRange";
             string m_rangeLabel = "range_";
             int v_count = 0;
+            int visCount = 0;
 
             while (!streamReader.EndOfStream)
             {
-                if (streamReader.EndOfStream)
-                {
-                    streamReader.Close();
-                    streamWriter.Close();
-                }
-
+                //  reads new line here
+                m_currentLine = streamReader.ReadLine();
                 if (!printRoot)
                 {
                     printRoot = PrintRootName(streamWriter, rootName);
-
-                }
-
-                m_currentLine = streamReader.ReadLine();
-
-                // skip over first line
-                if (m_currentLine.First() == 't')
-                {
                     m_currentLine = streamReader.ReadLine();
+
                 }
 
                 if (m_currentLine.First() != ' ')
                 {
+
+                    //m_currentLine = streamReader.ReadLine();
                     PrintSymbolsAndDescription(streamWriter, streamReader, m_currentLine, m_symbol, m_description);
                     streamWriter.Flush();
                 }
 
-                int visCount = 0;
-                string viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
-                if (viscosityLine != null)
+
+
+
+
+                bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
+                if (viscosityLine)
                 {
                     visCount = visCount + 1;
-                    PrintViscosityLabels(streamWriter, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
+                    PrintViscosityLabels(streamWriter, m_currentLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
                     //m_currentLine= streamReader.ReadLine();
-                    PrintTempRange(streamWriter, streamReader, viscosityLine, m_rangeLabel, visCount);
-                    PrintCoefficients(streamWriter, viscosityLine);
+                    PrintTempRange(streamWriter, streamReader, m_currentLine, m_rangeLabel, visCount);
+                    PrintCoefficients(streamWriter, m_currentLine);
                     streamWriter.Flush();
                 }
 
@@ -86,9 +81,9 @@ namespace transParser
             // print the rangeLabel
             rangeLabel = rangeLabel + count.ToString();
             string m_temp_1 = line.Substring(2, 7);
-            m_temp_1= m_temp_1.Trim();
+            m_temp_1 = m_temp_1.Trim();
             string m_temp_2 = line.Substring(9, 10);
-            m_temp_2= m_temp_2.Trim();
+            m_temp_2 = m_temp_2.Trim();
             writer.WriteLine("\"" + rangeLabel + "\"" + ":");
             writer.Write("\t\t\t\t\t\t\t");
             writer.WriteLine("{");
@@ -141,7 +136,7 @@ namespace transParser
 
         }
 
-        private static string GetNextViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
+        private static bool GetNextViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
         {
             UnicodeCategory unicodeCategory;
             int m_V = 0;
@@ -151,10 +146,14 @@ namespace transParser
             if (unicodeCategory == UnicodeCategory.SpaceSeparator)
             {
                 m_V = m_currentLine.IndexOf('V');
-                return m_currentLine;
+                if (m_V == 1)
+                {
+                    return true;
+                }
+                
             }
 
-            return null;
+            return false;
         }
 
         private static void PrintSymbolsAndDescription(StreamWriter streamWriter, StreamReader streamReader, string line, string m_symbol, string m_description)
@@ -197,7 +196,7 @@ namespace transParser
                     streamWriter.Write("\"" + "description" + "\"" + ": ");
                     streamWriter.Write("\"" + m_description + "\"" + ",");
 
-                } 
+                }
             }
         }
 
