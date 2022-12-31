@@ -40,7 +40,7 @@ namespace transParser
                     streamWriter.Flush();
                 }
 
-                
+
 
                 //  do we have Coefficient line
                 if (true)
@@ -65,6 +65,7 @@ namespace transParser
 
         private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
         {
+            bool newRecordSet = false;
             string m_viscosityLabel = "viscosity_coefficients";
             string m_tempRangeLabel = "temperatureRange";
             string m_rangeLabel = "range_";
@@ -77,12 +78,15 @@ namespace transParser
 
             //  print symbols and description lines, 2 records
             PrintSymbolsAndDescription(streamWriter, currentLine);
+            //  begin new record set
+            newRecordSet = true;
 
             //  is this a viscosity line
             bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
             //  if we have a viscosity line print temps and coefficients
-            if (viscosityLine)
+            while (viscosityLine)
             {
+
                 visCount = visCount + 1;
                 if (visCount <= 1)
                 {
@@ -95,10 +99,7 @@ namespace transParser
                 PrintCoefficients(streamWriter, currentLine);
                 streamWriter.Flush();
             }
-            else
-            {
-                // not a viscosity line
-            }
+
 
             // ------------------------------ print the closing bracket for record------------------------------------------
             streamWriter.Write("\t\t\t\t");
@@ -179,7 +180,7 @@ namespace transParser
                 {
                     return true;
                 }
-                
+
             }
 
             return false;

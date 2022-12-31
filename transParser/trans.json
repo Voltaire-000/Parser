@@ -2,32 +2,4 @@
 	"transport_property_coefficients": [
 				{
 					"species names": ["Ar"],
-					"description": "V3C3  BICH ET AL (1990)",				},				{
-					"species names": ["V  200.0   100","0.0   -0.612057"],
-					"description": "E 00-0.67714354E 02 0.19040660E 03 0.21588272E 01",
-					"viscosity_coefficients":{
-						"temperatureRange":{
-							"range_1":
-							{
-								"temperatureRange":[200.0, 1000.0],
-								"coefficients":[-0.61205763e+00, -0.67714354e+02, 0.19040660e+03, 0.21588272e+01]
-							}				},				{
-					"species names": ["V 1000.0   500","0.0   0.6935733"],
-					"description": "00 0.70953943E 02-0.28386007E 05 0.14856447E 01",
-					"viscosity_coefficients":{
-						"temperatureRange":{
-							"range_1":
-							{
-								"temperatureRange":[1000.0, 5000.0],
-								"coefficients":[0.69357334e+00, 0.70953943e+02-, 0.28386007e+05, 0.14856447e+01]
-							}				},				{
-					"species names": ["V 5000.0  1500","0.0   0.7660893"],
-					"description": "+00 0.67867215E+03-0.84991417E+06 0.77935167E+00",
-					"viscosity_coefficients":{
-						"temperatureRange":{
-							"range_1": {
-								"temperatureRange": [ 5000.0, 15000.0 ],
-								"coefficients": [ 0.76608935e+00, 0.67867215e+03-, 0.84991417e+06, 0.77935167e+00 ]
-							}
-
-						},
+					"description": "V3C3  BICH ET AL (1990)",
