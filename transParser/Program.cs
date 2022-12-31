@@ -30,11 +30,10 @@ namespace transParser
             while (!streamReader.EndOfStream)
             {
                 //  reads new line here
+                m_currentLine = streamReader.ReadLine();
                 if (!printRoot)
                 {
                     printRoot = PrintRootName(streamWriter, rootName);
-                    m_currentLine = streamReader.ReadLine();
-
                 }
 
                 if (m_currentLine.First() != ' ')
@@ -48,7 +47,7 @@ namespace transParser
 
 
 
-
+                //  do we have a viscosity line
                 bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (viscosityLine)
                 {
@@ -62,6 +61,11 @@ namespace transParser
                     PrintTempRange(streamWriter, streamReader, m_currentLine, m_rangeLabel, visCount);
                     PrintCoefficients(streamWriter, m_currentLine);
                     streamWriter.Flush();
+                }
+                //  do we have Coefficient line
+                if (true)
+                {
+
                 }
 
                 //continue;
