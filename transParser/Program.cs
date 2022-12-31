@@ -106,9 +106,10 @@ namespace transParser
                     currentLine = streamReader.ReadLine();
                     viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
                 }
+                viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
             }
 
-
+            
 
 
             // ------------------------------ print the closing bracket for record------------------------------------------
