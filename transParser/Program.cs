@@ -54,13 +54,14 @@ namespace transParser
                     streamWriter.Flush();
                 }
 
-
+                int visCount = 0;
                 string viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (viscosityLine != null)
                 {
+                    visCount = visCount + 1;
                     PrintViscosityLabels(streamWriter, viscosityLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
                     //m_currentLine= streamReader.ReadLine();
-                    PrintTempRange(streamWriter, streamReader, viscosityLine);
+                    PrintTempRange(streamWriter, streamReader, viscosityLine, m_rangeLabel, visCount);
                     PrintCoefficients(streamWriter, viscosityLine);
                     streamWriter.Flush();
                 }
@@ -80,14 +81,18 @@ namespace transParser
 
         }
 
-        private static void PrintTempRange(StreamWriter writer, StreamReader reader, string line)
+        private static void PrintTempRange(StreamWriter writer, StreamReader reader, string line, string rangeLabel, int count)
         {
-            //string mx = reader.ReadLine();
-            //string mx = line;
+            // print the rangeLabel
+            rangeLabel = rangeLabel + count.ToString();
             string m_temp_1 = line.Substring(2, 7);
             m_temp_1= m_temp_1.Trim();
             string m_temp_2 = line.Substring(9, 10);
             m_temp_2= m_temp_2.Trim();
+            writer.WriteLine("\"" + rangeLabel + "\"" + ":");
+            writer.Write("\t\t\t\t\t\t\t");
+            writer.WriteLine("{");
+            writer.Write("\t\t\t\t\t\t\t\t");
             writer.WriteLine("\"" + "temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
         }
 
