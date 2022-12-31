@@ -67,10 +67,13 @@ namespace transParser
         {
             bool newRecordSet = false;
             bool viscosityLine = false;
+            bool coefficientLine = false;
             string m_viscosityLabel = "viscosity_coefficients";
+            string m_coeff = "coefficients";
             string m_tempRangeLabel = "temperatureRange";
             string m_rangeLabel = "range_";
             int visCount = 0;
+            int coefCount = 0;
 
             //------------------------- print the open bracket for record-----------------------------------------
             streamWriter.Write("\t\t\t\t");
@@ -88,6 +91,7 @@ namespace transParser
                 m_peekNextLine = streamReader.Peek();
                 currentLine= streamReader.ReadLine();
 
+                viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
                 if (viscosityLine)
                 {
                     visCount = visCount + 1;
@@ -104,6 +108,11 @@ namespace transParser
                 }
                 if (coefficientLine)
                 {
+                    coefCount= coefCount + 1;
+                    if (coefCount <= 1)
+                    {
+                        PrintViscosityLabels(streamWriter, )
+                    }
 
                 }
 
@@ -187,6 +196,26 @@ namespace transParser
             if (unicodeCategory == UnicodeCategory.SpaceSeparator)
             {
                 m_V = m_currentLine.IndexOf('V');
+                if (m_V == 1)
+                {
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
+
+        private static bool GetCoefficientLine(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
+        {
+            UnicodeCategory unicodeCategory;
+            int m_V = 0;
+            //m_currentLine = streamReader.ReadLine();
+            char m_char = currentLine.First();
+            unicodeCategory = char.GetUnicodeCategory(m_char);
+            if (unicodeCategory == UnicodeCategory.SpaceSeparator)
+            {
+                m_V = currentLine.IndexOf('C');
                 if (m_V == 1)
                 {
                     return true;
