@@ -99,7 +99,7 @@ namespace transParser
         private static void PrintCoefficients(StreamWriter streamWriter, string line)
         {
             // print coefficients
-            streamWriter.WriteLine();
+            //streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t\t");
             streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
             line = line.Replace('E', 'e');
