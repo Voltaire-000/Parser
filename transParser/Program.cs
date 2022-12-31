@@ -30,7 +30,6 @@ namespace transParser
             while (!streamReader.EndOfStream)
             {
                 //  reads new line here
-                m_currentLine = streamReader.ReadLine();
                 if (!printRoot)
                 {
                     printRoot = PrintRootName(streamWriter, rootName);
@@ -54,7 +53,11 @@ namespace transParser
                 if (viscosityLine)
                 {
                     visCount = visCount + 1;
-                    PrintViscosityLabels(streamWriter, m_currentLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
+                    if (visCount <= 1)
+                    {
+                        PrintViscosityLabels(streamWriter, m_currentLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
+                    }
+ 
                     //m_currentLine= streamReader.ReadLine();
                     PrintTempRange(streamWriter, streamReader, m_currentLine, m_rangeLabel, visCount);
                     PrintCoefficients(streamWriter, m_currentLine);
@@ -140,7 +143,7 @@ namespace transParser
         {
             UnicodeCategory unicodeCategory;
             int m_V = 0;
-            m_currentLine = streamReader.ReadLine();
+            //m_currentLine = streamReader.ReadLine();
             char m_char = m_currentLine.First();
             unicodeCategory = char.GetUnicodeCategory(m_char);
             if (unicodeCategory == UnicodeCategory.SpaceSeparator)
