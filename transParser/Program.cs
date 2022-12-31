@@ -79,15 +79,17 @@ namespace transParser
 
             //  print symbols and description lines, 2 records
             PrintSymbolsAndDescription(streamWriter, currentLine);
-            //  begin new record set
-            newRecordSet = true;
 
-            //  is this a viscosity line
-            viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
-            //  if we have a viscosity line print temps and coefficients
 
-            while (viscosityLine && newRecordSet)
+            int m_peekNextLine = streamReader.Peek();
+
+            while (m_peekNextLine == 32)
             {
+                m_peekNextLine = streamReader.Peek();
+                currentLine= streamReader.ReadLine();
+
+                //  is this a viscosity line
+                viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
 
                 if (viscosityLine)
                 {
@@ -102,11 +104,8 @@ namespace transParser
                     //  print the coefficients
                     PrintCoefficients(streamWriter, currentLine);
                     streamWriter.Flush();
-
-                    currentLine = streamReader.ReadLine();
-                    viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
                 }
-                viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
+
             }
 
             
