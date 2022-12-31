@@ -20,7 +20,7 @@ namespace transParser
             string m_currentLine = "";
             string m_symbol = "symbol";
             string m_speciesNames = "species names";
-            string m_description = "description";
+
             int v_count = 0;
 
             while (!streamReader.EndOfStream)
@@ -34,13 +34,13 @@ namespace transParser
 
                 if (m_currentLine.First() != ' ')
                 {
-
+                    DoRecordSet(streamWriter, streamReader, m_currentLine);
                     //m_currentLine = streamReader.ReadLine();
                     //PrintSymbolsAndDescription(streamWriter, streamReader, m_currentLine, m_symbol, m_description);
                     streamWriter.Flush();
                 }
 
-                DoRecordSet(streamWriter, streamReader, m_currentLine);
+                
 
                 //  do we have Coefficient line
                 if (true)
@@ -70,9 +70,10 @@ namespace transParser
             string m_rangeLabel = "range_";
             int visCount = 0;
 
-            // print the open bracket for record
+            //------------------------- print the open bracket for record-----------------------------------------
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("{");
+            //----------------------------------------------------------------------------------------------
 
             //  print symbols and description lines, 2 records
             PrintSymbolsAndDescription(streamWriter, currentLine);
@@ -99,9 +100,10 @@ namespace transParser
                 // not a viscosity line
             }
 
-            //  print the closing bracket for record
+            // ------------------------------ print the closing bracket for record------------------------------------------
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("}" + ",");
+            //---------------------------------------------------------------------------------------------------------------
         }
 
         private static void PrintTempRange(StreamWriter writer, StreamReader reader, string line, string rangeLabel, int count)
@@ -185,6 +187,7 @@ namespace transParser
 
         private static void PrintSymbolsAndDescription(StreamWriter streamWriter, string line)
         {
+            string m_description = "description";
 
             string mx = line;
 
