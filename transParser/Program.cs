@@ -21,11 +21,7 @@ namespace transParser
             string m_symbol = "symbol";
             string m_speciesNames = "species names";
             string m_description = "description";
-            string m_viscosityLabel = "viscosity_coefficients";
-            string m_tempRangeLabel = "temperatureRange";
-            string m_rangeLabel = "range_";
             int v_count = 0;
-            int visCount = 0;
 
             while (!streamReader.EndOfStream)
             {
@@ -44,24 +40,8 @@ namespace transParser
                     streamWriter.Flush();
                 }
 
+                DoRecordSet(streamWriter, streamReader, m_currentLine);
 
-
-
-                //  do we have a viscosity line
-                //bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
-                if (viscosityLine)
-                {
-                    visCount = visCount + 1;
-                    if (visCount <= 1)
-                    {
-                        PrintViscosityLabels(streamWriter, m_currentLine, m_viscosityLabel, m_tempRangeLabel, m_rangeLabel, v_count);
-                    }
- 
-                    //m_currentLine= streamReader.ReadLine();
-                    PrintTempRange(streamWriter, streamReader, m_currentLine, m_rangeLabel, visCount);
-                    PrintCoefficients(streamWriter, m_currentLine);
-                    streamWriter.Flush();
-                }
                 //  do we have Coefficient line
                 if (true)
                 {
@@ -85,6 +65,11 @@ namespace transParser
 
         private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
         {
+            string m_viscosityLabel = "viscosity_coefficients";
+            string m_tempRangeLabel = "temperatureRange";
+            string m_rangeLabel = "range_";
+            int visCount = 0;
+
             // print the open bracket for record
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("{");
@@ -95,7 +80,24 @@ namespace transParser
             //  is this a viscosity line
             bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
             //  if we have a viscosity line print temps and coefficients
+            if (viscosityLine)
+            {
+                visCount = visCount + 1;
+                if (visCount <= 1)
+                {
+                    PrintViscosityLabels(streamWriter, m_viscosityLabel, m_tempRangeLabel);
+                }
 
+                //  print the temp range
+                PrintTempRange(streamWriter, streamReader, currentLine, m_rangeLabel, visCount);
+                //  print the coefficients
+                PrintCoefficients(streamWriter, currentLine);
+                streamWriter.Flush();
+            }
+            else
+            {
+                // not a viscosity line
+            }
 
             //  print the closing bracket for record
             streamWriter.Write("\t\t\t\t");
@@ -147,10 +149,9 @@ namespace transParser
             streamWriter.Write("}");
         }
 
-        private static void PrintViscosityLabels(StreamWriter streamWriter, string line, string coefficientLabel, string tempLabel, string rangeLabel, int count)
+        private static void PrintViscosityLabels(StreamWriter streamWriter, string coefficientLabel, string tempLabel)
         {
             //m_currentLine = streamReader.ReadLine();
-            int v_count = count + 1;
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t");
             streamWriter.Write("\"" + coefficientLabel + "\"" + ":" + "{");
