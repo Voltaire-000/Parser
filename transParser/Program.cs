@@ -32,7 +32,7 @@ namespace transParser
                     printRoot = PrintRootName(streamWriter, rootName);
                 }
 
-                if (m_currentLine.First() != ' ')
+                if (m_currentLine.First() != 't')
                 {
                     DoRecordSet(streamWriter, streamReader, m_currentLine);
                     //m_currentLine = streamReader.ReadLine();

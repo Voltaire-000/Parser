@@ -1,218 +1,33 @@
 {
 	"transport_property_coefficients": [
 				{
-				},				{
 					"species names": ["Ar"],
 					"description": "V3C3  BICH ET AL (1990)",				},				{
-					"species names": ["BCL3"],
-					"description": "V2C2  SVEHLA (1962)",				},				{
-					"species names": ["BF3"],
-					"description": "V2C2  SVEHLA (1962,1994)",				},				{
-					"species names": ["Br2"],
-					"description": "V2C2  SVEHLA (1962,1994)",				},				{
-					"species names": ["C"],
-					"description": "V2C2  BIOLSI (1982)",				},				{
-					"species names": ["C","O"],
-					"description": "V1C0  CAPITELLI & FICOCELLI (1973)",				},				{
-					"species names": ["CCLF3"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["CCL2F2"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["CCL3F"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["CCL4"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["CF4"],
-					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["CHCLF2"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["CHCL2F"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["CHCL3"],
-					"description": "V2C2  SVEHLA (1962,1994)",				},				{
-					"species names": ["CHF3"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["CH2CL2"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["CH3CL"],
-					"description": "V2C2  MONCHICK & MASON (1961)  SVEHLA (1994)",				},				{
-					"species names": ["CH4"],
-					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["CH4","O2"],
-					"description": "V2C0  SVEHLA (1994)",				},				{
-					"species names": ["CH3OH"],
-					"description": "V2C2  MONCHICK & MASON (1961)  SVEHLA (1994)",				},				{
-					"species names": ["CO"],
-					"description": "V3C3  SVEHLA (1994)",				},				{
-					"species names": ["CO","CO2"],
-					"description": "V3C0  SVEHLA (1995)",				},				{
-					"species names": ["CO","N2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["CO","O2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["COS"],
-					"description": "V2C2  SVEHLA (1962)",				},				{
-					"species names": ["CO2"],
-					"description": "V3C3  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["CO2","H2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["CO2","H2O"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["CO2","N2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["CO2","O2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["CS2"],
-					"description": "V2C2  SVEHLA (1962)",				},				{
-					"species names": ["C2H2,acetylene"],
-					"description": "V2C2  SVEHLA (1962,1994)",				},				{
-					"species names": ["C2H4"],
-					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["C2H6"],
-					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["C2H5OH"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["C2N2"],
-					"description": "V2C2  SVEHLA (1962)",				},				{
-					"species names": ["CL2"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["D2"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["D2O"],
-					"description": "V2C2  MATSUNAGA & NAGASHIMA(1983) SVEHLA(1994)",				},				{
-					"species names": ["e-"],
-					"description": "V1C1  MASON ET AL (1967)",				},				{
-					"species names": ["e-","H"],
-					"description": "V2C0  CAPITELLI ET AL (1976)",				},				{
-					"species names": ["e-","H2"],
-					"description": "V2C0  CAPITELLI ET AL (1976)",				},				{
-					"species names": ["e-","N"],
-					"description": "V2C0  CAPITELLI & DEVOTO (1973)",				},				{
-					"species names": ["e-","NO"],
-					"description": "V2C0  GUPTA ET AL (1990)",				},				{
-					"species names": ["e-","N2"],
-					"description": "V2C0  CAPITELLI & DEVOTO (1973)",				},				{
-					"species names": ["e-","O"],
-					"description": "V2C0  GUPTA ET AL (1990)",				},				{
-					"species names": ["e-","O2"],
-					"description": "V2C0  GUPTA ET AL (1990)",				},				{
-					"species names": ["F2"],
-					"description": "V2C2  SVEHLA (1962,1994)",				},				{
-					"species names": ["H"],
-					"description": "V2C2  VANDERSLICE ET AL (1962)",				},				{
-					"species names": ["H","H+"],
-					"description": "V2C0  CAPITELLI ET AL (1976)",				},				{
-					"species names": ["H","H2"],
-					"description": "V2C0  TANG & WEI (1974)  SVEHLA (1994)",				},				{
-					"species names": ["H","Li"],
-					"description": "V2C0  KRUPENIE ET AL (1963)",				},				{
-					"species names": ["H","N"],
-					"description": "V2C0  STALLCOP ET AL (1992b)",				},				{
-					"species names": ["H","N2"],
-					"description": "V2C0  STALLCOP ET AL (1992a)",				},				{
-					"species names": ["H","O"],
-					"description": "V2C0  KRUPENIE ET AL (1963)",				},				{
-					"species names": ["HBr"],
-					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",				},				{
-					"species names": ["HCN"],
-					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",				},				{
-					"species names": ["HCL"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["HF"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["HF","H6F6"],
-					"description": "V2C0  SVEHLA (1994)",				},				{
-					"species names": ["HI"],
-					"description": "V2C2  SVEHLA (1962)",				},				{
-					"species names": ["H2"],
-					"description": "V3C3  ASSAEL ET AL (1986)  SVEHLA (1994)",				},				{
-					"species names": ["H2","H2O"],
-					"description": "V3C0  SVEHLA (1964)",				},				{
-					"species names": ["H2","N2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["H2","O2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["H2O"],
-					"description": "V3C3  SENGERS & WATSON (1986)  SVEHLA (1994)",				},				{
-					"species names": ["H2O","N2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["H2O","O2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["H2S"],
-					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",				},				{
-					"species names": ["H6F6"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["He"],
-					"description": "V3C3  BICH ET AL (1990)",				},				{
-					"species names": ["He","N2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["I2"],
-					"description": "V2C2  SVEHLA (1962)",				},				{
-					"species names": ["Kr"],
-					"description": "V3C3  BICH ET AL (1990)",				},				{
-					"species names": ["Li"],
-					"description": "V2C2  HOLLAND ET AL (1986)",				},				{
-					"species names": ["N"],
-					"description": "V2C2  LEVIN ET AL (1990)",				},				{
-					"species names": ["N","N+"],
-					"description": "V2C0  STALLCOP ET AL (1991)",				},				{
-					"species names": ["N","NO"],
-					"description": "V2C0  CUBLEY & MASON (1975)",				},				{
-					"species names": ["N","N2"],
-					"description": "V2C0  CUBLEY & MASON (1975)",				},				{
-					"species names": ["N","O"],
-					"description": "V2C0  LEVIN ET AL (1990)",				},				{
-					"species names": ["N","O+"],
-					"description": "V2C0  PARTRIDGE ET AL (1991)",				},				{
-					"species names": ["N","O2"],
-					"description": "V2C0  CUBLEY & MASON (1975)",				},				{
-					"species names": ["N+","O"],
-					"description": "V2C0  PARTRIDGE ET AL (1991)",				},				{
-					"species names": ["NH3"],
-					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",				},				{
-					"species names": ["NO"],
-					"description": "V3C3  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["NO","O"],
-					"description": "V2C0  CUBLEY & MASON (1975)",				},				{
-					"species names": ["NOCL"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["NO2"],
-					"description": "V2C2  SVEHLA (1966)",				},				{
-					"species names": ["N2"],
-					"description": "V3C3  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["N2","O"],
-					"description": "V2C0  CUBLEY & MASON (1975)",				},				{
-					"species names": ["N2","O2"],
-					"description": "V3C0  SVEHLA (1994)",				},				{
-					"species names": ["N2O"],
-					"description": "V2C2  BOUSHEHRI ET AL(1987)  URIBE ET AL(1990)",				},				{
-					"species names": ["N2O4"],
-					"description": "V2C2  SVEHLA (1966)",				},				{
-					"species names": ["Na"],
-					"description": "V2C2  HOLLAND & BIOLSI (1987)",				},				{
-					"species names": ["Ne"],
-					"description": "V3C3  BICH ET AL (1990)",				},				{
-					"species names": ["O"],
-					"description": "V2C2  LEVIN ET AL (1990)",				},				{
-					"species names": ["O","O+"],
-					"description": "V2C0  STALLCOP ET AL (1991)",				},				{
-					"species names": ["O","O2"],
-					"description": "V2C0  CUBLEY & MASON (1975)",				},				{
-					"species names": ["OH"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["O2"],
-					"description": "V3C3  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["SF6"],
-					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",				},				{
-					"species names": ["SO2"],
-					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",				},				{
-					"species names": ["SiCL4"],
-					"description": "V2C2  SVEHLA (1994)",				},				{
-					"species names": ["SiF4"],
-					"description": "V2C2  SVEHLA (1962,1994)",				},				{
-					"species names": ["SiH4"],
-					"description": "V2C2  SVEHLA (1962)",				},				{
-					"species names": ["UF6"],
-					"description": "V2C0  SVEHLA (1962)",				},				{
-					"species names": ["Xe"],
-					"description": "V3C3  BICH ET AL (1990)",				},				{				},
+					"species names": ["V  200.0   100","0.0   -0.612057"],
+					"description": "E 00-0.67714354E 02 0.19040660E 03 0.21588272E 01",
+					"viscosity_coefficients":{
+						"temperatureRange":{
+							"range_1":
+							{
+								"temperatureRange":[200.0, 1000.0],
+								"coefficients":[-0.61205763e+00, -0.67714354e+02, 0.19040660e+03, 0.21588272e+01]
+							}				},				{
+					"species names": ["V 1000.0   500","0.0   0.6935733"],
+					"description": "00 0.70953943E 02-0.28386007E 05 0.14856447E 01",
+					"viscosity_coefficients":{
+						"temperatureRange":{
+							"range_1":
+							{
+								"temperatureRange":[1000.0, 5000.0],
+								"coefficients":[0.69357334e+00, 0.70953943e+02-, 0.28386007e+05, 0.14856447e+01]
+							}				},				{
+					"species names": ["V 5000.0  1500","0.0   0.7660893"],
+					"description": "+00 0.67867215E+03-0.84991417E+06 0.77935167E+00",
+					"viscosity_coefficients":{
+						"temperatureRange":{
+							"range_1": {
+								"temperatureRange": [ 5000.0, 15000.0 ],
+								"coefficients": [ 0.76608935e+00, 0.67867215e+03-, 0.84991417e+06, 0.77935167e+00 ]
+							}
+
+						},
