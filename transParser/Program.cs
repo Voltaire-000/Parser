@@ -40,7 +40,7 @@ namespace transParser
                 {
 
                     //m_currentLine = streamReader.ReadLine();
-                    PrintSymbolsAndDescription(streamWriter, streamReader, m_currentLine, m_symbol, m_description);
+                    //PrintSymbolsAndDescription(streamWriter, streamReader, m_currentLine, m_symbol, m_description);
                     streamWriter.Flush();
                 }
 
@@ -48,7 +48,7 @@ namespace transParser
 
 
                 //  do we have a viscosity line
-                bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
+                //bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, m_currentLine);
                 if (viscosityLine)
                 {
                     visCount = visCount + 1;
@@ -81,6 +81,25 @@ namespace transParser
 
 
 
+        }
+
+        private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
+        {
+            // print the open bracket for record
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("{");
+
+            //  print symbols and description lines, 2 records
+            PrintSymbolsAndDescription(streamWriter, currentLine);
+
+            //  is this a viscosity line
+            bool viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
+            //  if we have a viscosity line print temps and coefficients
+
+
+            //  print the closing bracket for record
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("}" + ",");
         }
 
         private static void PrintTempRange(StreamWriter writer, StreamReader reader, string line, string rangeLabel, int count)
@@ -163,16 +182,15 @@ namespace transParser
             return false;
         }
 
-        private static void PrintSymbolsAndDescription(StreamWriter streamWriter, StreamReader streamReader, string line, string m_symbol, string m_description)
+        private static void PrintSymbolsAndDescription(StreamWriter streamWriter, string line)
         {
-            UnicodeCategory unicodeCategory;
-            streamWriter.Write("\t\t\t\t");
-            streamWriter.Write("{");
-            streamWriter.WriteLine();
+
             string mx = line;
 
             if (mx != "end ")
             {
+                UnicodeCategory unicodeCategory;
+                streamWriter.WriteLine();
                 char m_char = mx.First();
                 unicodeCategory = char.GetUnicodeCategory(m_char);
                 Type type = m_char.GetType();
