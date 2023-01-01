@@ -27,6 +27,8 @@ namespace transParser
             {
                 //  reads new line here
                 m_currentLine = streamReader.ReadLine();
+
+                DoSwitch(streamWriter, streamReader, m_currentLine);
                 
 
                 //continue;
@@ -42,6 +44,22 @@ namespace transParser
 
 
 
+        }
+
+        private static void DoSwitch(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
+        {
+            string m_rootLabel = "transport_property_coefficients";
+            UnicodeCategory unicodeCategory;
+            char m_char = m_currentLine.First();
+            unicodeCategory = char.GetUnicodeCategory(m_char);
+
+            switch (m_char)
+            {
+                case 't':
+                    PrintRootName(streamWriter, m_rootLabel);
+                break;
+
+            }
         }
 
         private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
