@@ -160,7 +160,7 @@ namespace transParser
             // ---------------------------Print the close curly brace for the record
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t");
-            streamWriter.Write("}" + ",");
+            streamWriter.Write("}");
             streamWriter.WriteLine();
         }
 
