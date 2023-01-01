@@ -142,7 +142,7 @@ namespace transParser
 
         private static void PrintCtemps(StreamWriter streamWriter, string currentLine, int c_count)
         {
-            string rangeLabel = "range_";
+            string rangeLabel = "C_range_";
             string m_temp_1 = currentLine.Substring(2, 7);
             m_temp_1 = m_temp_1.Trim();
             string m_temp_2 = currentLine.Substring(9, 10);
@@ -176,7 +176,7 @@ namespace transParser
 
         private static void PrintVTemps(StreamWriter streamWriter, string line, int count)
         {
-            string rangeLabel = "range_";
+            string rangeLabel = "V_range_";
             string m_temp_1 = line.Substring(2, 7);
             m_temp_1 = m_temp_1.Trim();
             string m_temp_2 = line.Substring(9, 10);
