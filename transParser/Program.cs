@@ -374,7 +374,7 @@ namespace transParser
             // print coefficients
             //streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t\t");
-            streamWriter.Write("\"" + "C_coefficients" + "\"" + ":" + "[");
+            streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
             line = line.Replace('E', 'e');
             int ml = line.Length;
             line = line.Insert(65, ",");
