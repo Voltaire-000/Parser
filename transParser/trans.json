@@ -1,2 +1,8 @@
 {
 	"transport_property_coefficients": [
+					{
+					"species names": ["Ar"],
+						"description": "V3C3  BICH ET AL (1990)",
+					"V_range_":
+							{
+								"temperatureRange":[200.0, 1000.0],

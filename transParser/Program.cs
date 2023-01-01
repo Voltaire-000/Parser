@@ -29,7 +29,7 @@ namespace transParser
                 m_currentLine = streamReader.ReadLine();
 
                 DoSwitch(streamWriter, streamReader, m_currentLine);
-                
+
 
                 //continue;
                 //break;
@@ -56,87 +56,122 @@ namespace transParser
             switch (unicodeCategory)
             {
                 case UnicodeCategory.LowercaseLetter:
-                    PrintRootName(streamWriter, m_rootLabel);
-                    case UnicodeCategory.UppercaseLetter:
-                    PrintViscosityLine(streamWriter, streamReader, m_currentLine);
-                break;
+                    if (m_char != 'e')
+                    {
+                        PrintRootName(streamWriter, m_rootLabel);
+                    }
+
+                    break;
+                case UnicodeCategory.UppercaseLetter:
+                    //  Uppercase letter is new record set
+                    PrintSymbolsAndDescription(streamWriter, m_currentLine);
+                    break;
+                case UnicodeCategory.SpaceSeparator:
+                    bool is_V = GetNextViscosityLine(m_currentLine);
+                    if (is_V)
+                    {
+                        PrintViscosityLine(streamWriter, streamReader, m_currentLine);
+                    }
+
+                    break;
 
             }
         }
 
-        private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
+        private static bool GetNextViscosityLine(string m_currentLine)
         {
-            bool newRecordSet = false;
-            bool viscosityLine = false;
-            bool coefficientLine = false;
-            string m_viscosityLabel = "tempsAndCoefficients";
-            string m_coeff = "coefficients";
-            string m_tempRangeLabel = "temperatureRange";
-            string m_rangeLabel = "range_";
-            int visCount = 0;
-            int coefCount = 0;
-
-            //------------------------- print the open bracket for record-----------------------------------------
-            streamWriter.Write("\t\t\t\t");
-            streamWriter.Write("{");
-            //----------------------------------------------------------------------------------------------
-
-            //  print symbols and description lines, 2 records
-            PrintSymbolsAndDescription(streamWriter, currentLine);
-
-
-            int m_peekNextLine = streamReader.Peek();
-
-            while (m_peekNextLine == 32)
+            UnicodeCategory unicodeCategory;
+            int m_V = 0;
+            //m_currentLine = streamReader.ReadLine();
+            char m_char = m_currentLine.First();
+            unicodeCategory = char.GetUnicodeCategory(m_char);
+            if (unicodeCategory == UnicodeCategory.SpaceSeparator)
             {
-                m_peekNextLine = streamReader.Peek();
-                currentLine= streamReader.ReadLine();
-
-                viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
-                if (viscosityLine)
+                m_V = m_currentLine.IndexOf('V');
+                if (m_V == 1)
                 {
-                    visCount = visCount + 1;
-                    if (visCount <= 1)
-                    {
-                        PrintViscosityLabels(streamWriter, m_viscosityLabel, m_tempRangeLabel);
-                    }
-
-                    //  print the temp range
-                    PrintViscosityLine(streamWriter, streamReader, currentLine, m_rangeLabel, visCount);
-                    //  print the coefficients
-                    PrintCoefficients(streamWriter, currentLine);
-                    streamWriter.Flush();
-                }
-                coefficientLine = GetCoefficientLine(streamWriter,streamReader, currentLine);
-                if (coefficientLine)
-                {
-                    coefCount= coefCount + 1;
-                    if (coefCount <= 1)
-                    {
-                        PrintViscosityLabels(streamWriter, m_coeff, m_tempRangeLabel);
-                    }
-                    //  print the temp range
-                    PrintCoeffLine(streamWriter, streamReader, currentLine, m_rangeLabel, coefCount);
-                    //  print the coefficients
-                    PrintCoefficients(streamWriter, currentLine);
-                    streamWriter.Flush();
+                    return true;
                 }
 
             }
 
-            
-
-
-            // ------------------------------ print the closing bracket for record------------------------------------------
-            streamWriter.Write("\t\t\t\t");
-            streamWriter.Write("}" + ",");
-            //---------------------------------------------------------------------------------------------------------------
+            return false;
         }
 
-        private static void PrintViscosityLine(StreamWriter writer, StreamReader reader, string line, string rangeLabel, int count)
+        //private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
+        //{
+        //    bool newRecordSet = false;
+        //    bool viscosityLine = false;
+        //    bool coefficientLine = false;
+        //    string m_viscosityLabel = "tempsAndCoefficients";
+        //    string m_coeff = "coefficients";
+        //    string m_tempRangeLabel = "temperatureRange";
+        //    string m_rangeLabel = "range_";
+        //    int visCount = 0;
+        //    int coefCount = 0;
+
+        //    //------------------------- print the open bracket for record-----------------------------------------
+        //    streamWriter.Write("\t\t\t\t");
+        //    streamWriter.Write("{");
+        //    //----------------------------------------------------------------------------------------------
+
+        //    //  print symbols and description lines, 2 records
+        //    PrintSymbolsAndDescription(streamWriter, currentLine);
+
+
+        //    int m_peekNextLine = streamReader.Peek();
+
+        //    while (m_peekNextLine == 32)
+        //    {
+        //        m_peekNextLine = streamReader.Peek();
+        //        currentLine = streamReader.ReadLine();
+
+        //        viscosityLine = GetNextViscosityLine(streamWriter, streamReader, currentLine);
+        //        if (viscosityLine)
+        //        {
+        //            visCount = visCount + 1;
+        //            if (visCount <= 1)
+        //            {
+        //                PrintViscosityLabels(streamWriter, m_viscosityLabel, m_tempRangeLabel);
+        //            }
+
+        //            //  print the temp range
+        //            PrintViscosityLine(streamWriter, streamReader, currentLine, m_rangeLabel, visCount);
+        //            //  print the coefficients
+        //            PrintCoefficients(streamWriter, currentLine);
+        //            streamWriter.Flush();
+        //        }
+        //        coefficientLine = GetCoefficientLine(streamWriter, streamReader, currentLine);
+        //        if (coefficientLine)
+        //        {
+        //            coefCount = coefCount + 1;
+        //            if (coefCount <= 1)
+        //            {
+        //                PrintViscosityLabels(streamWriter, m_coeff, m_tempRangeLabel);
+        //            }
+        //            //  print the temp range
+        //            PrintCoeffLine(streamWriter, streamReader, currentLine, m_rangeLabel, coefCount);
+        //            //  print the coefficients
+        //            PrintCoefficients(streamWriter, currentLine);
+        //            streamWriter.Flush();
+        //        }
+
+        //    }
+
+
+
+
+        //    // ------------------------------ print the closing bracket for record------------------------------------------
+        //    streamWriter.Write("\t\t\t\t");
+        //    streamWriter.Write("}" + ",");
+        //    //---------------------------------------------------------------------------------------------------------------
+        //}
+
+        private static void PrintViscosityLine(StreamWriter writer, StreamReader reader, string line)
         {
+            string rangeLabel = "V_range_";
             // print the rangeLabel
-            rangeLabel = "V_" + rangeLabel + count.ToString();
+            //rangeLabel = "V_" + rangeLabel + count.ToString();
             string m_temp_1 = line.Substring(2, 7);
             m_temp_1 = m_temp_1.Trim();
             string m_temp_2 = line.Substring(9, 10);
@@ -286,6 +321,7 @@ namespace transParser
                     streamWriter.Write("\t\t\t\t\t");
                     streamWriter.Write("\"" + "description" + "\"" + ": ");
                     streamWriter.Write("\"" + m_description + "\"" + ",");
+                    streamWriter.WriteLine();
 
                 }
             }
@@ -297,6 +333,8 @@ namespace transParser
             streamWriter.WriteLine();
             streamWriter.Write("\t" + "\"" + fieldName + "\"" + ":" + " " + "[");
             streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t");
+            streamWriter.Write("{");
             return true;
         }
     }
