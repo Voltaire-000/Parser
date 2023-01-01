@@ -91,6 +91,9 @@ namespace transParser
         {
             bool IsViscosityLine = false;
             bool IsCoefLine = false;
+            int v_count = 0;
+            int c_count = 0;
+
             //  --------------------------Print the open curly brace for the record set------------------
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t");
@@ -108,13 +111,15 @@ namespace transParser
                 IsViscosityLine = GetViscosityLine(currentLine);
                 if (IsViscosityLine)
                 {
-                    streamWriter.WriteLine("\"" + "viscosity" + "\"");
+                    v_count = v_count+ 1;
+                    streamWriter.WriteLine("\"" + "viscosity_" + v_count.ToString() + "\"");
                 }
 
                 IsCoefLine = GetCoefficientLine(currentLine);
                 if (IsCoefLine)
                 {
-                    streamWriter.WriteLine("\"" + "coeff" + "\"");
+                    c_count= c_count+ 1;
+                    streamWriter.WriteLine("\"" + "coeff_" + c_count.ToString() +  "\"");
 
                 }
                 currentLine = streamReader.ReadLine();
