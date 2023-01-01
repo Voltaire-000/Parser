@@ -60,10 +60,12 @@ namespace transParser
                     {
                         PrintRootName(streamWriter, m_rootLabel);
                     }
-                    else
+                    if (m_char == 'x')
                     {
-
+                        //  end of file
+                        EndOfFile();
                     }
+ 
 
                     break;
                 case UnicodeCategory.UppercaseLetter:
@@ -87,6 +89,17 @@ namespace transParser
                     break;
 
             }
+        }
+
+        private static void EndOfFile()
+        {
+            
+            throw new NotImplementedException();
+        }
+
+        private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
+        {
+            throw new NotImplementedException();
         }
 
         private static bool GetCoefficientLine(string m_currentLine)
