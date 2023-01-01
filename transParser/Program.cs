@@ -53,10 +53,12 @@ namespace transParser
             char m_char = m_currentLine.First();
             unicodeCategory = char.GetUnicodeCategory(m_char);
 
-            switch (m_char)
+            switch (unicodeCategory)
             {
-                case 't':
+                case UnicodeCategory.LowercaseLetter:
                     PrintRootName(streamWriter, m_rootLabel);
+                    case UnicodeCategory.UppercaseLetter:
+                    PrintViscosityLine(streamWriter, streamReader, m_currentLine);
                 break;
 
             }
