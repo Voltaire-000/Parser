@@ -67,10 +67,17 @@ namespace transParser
                     PrintSymbolsAndDescription(streamWriter, m_currentLine);
                     break;
                 case UnicodeCategory.SpaceSeparator:
-                    bool is_V = GetNextViscosityLine(m_currentLine);
+                    bool is_V = GetViscosityLine(m_currentLine);
+                    bool is_C = GetCoefficientLine(m_currentLine);
                     if (is_V)
                     {
-                        PrintViscosityLine(streamWriter, streamReader, m_currentLine);
+                        PrintTemps(streamWriter, m_currentLine);
+                        PrintCoefficients(streamWriter, m_currentLine);
+                    }
+                    if (is_C)
+                    {
+                        PrintTemps(streamWriter, m_currentLine);
+                        PrintCoefficients(streamWriter, m_currentLine);
                     }
 
                     break;
@@ -78,7 +85,41 @@ namespace transParser
             }
         }
 
-        private static bool GetNextViscosityLine(string m_currentLine)
+        private static bool GetCoefficientLine(string m_currentLine)
+        {
+            UnicodeCategory unicodeCategory;
+            int m_C = 0;
+            //m_currentLine = streamReader.ReadLine();
+            char m_char = m_currentLine.First();
+            unicodeCategory = char.GetUnicodeCategory(m_char);
+            if (unicodeCategory == UnicodeCategory.SpaceSeparator)
+            {
+                m_C = m_currentLine.IndexOf('C');
+                if (m_C == 1)
+                {
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
+
+        private static void PrintTemps(StreamWriter streamWriter, string m_currentLine)
+        {
+            string rangeLabel = "temperaturesAndCoefficients";
+            string m_temp_1 = m_currentLine.Substring(2, 7);
+            m_temp_1 = m_temp_1.Trim();
+            string m_temp_2 = m_currentLine.Substring(9, 10);
+            m_temp_2 = m_temp_2.Trim();
+            streamWriter.WriteLine("\"" + rangeLabel + "\"" + ":");
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            streamWriter.WriteLine("{");
+            streamWriter.Write("\t\t\t\t\t\t\t\t");
+            streamWriter.WriteLine("\"" + "temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
+        }
+
+        private static bool GetViscosityLine(string m_currentLine)
         {
             UnicodeCategory unicodeCategory;
             int m_V = 0;
@@ -242,7 +283,7 @@ namespace transParser
 
         }
 
-        private static bool GetNextViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
+        private static bool GetViscosityLine(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
         {
             UnicodeCategory unicodeCategory;
             int m_V = 0;
@@ -322,6 +363,7 @@ namespace transParser
                     streamWriter.Write("\"" + "description" + "\"" + ": ");
                     streamWriter.Write("\"" + m_description + "\"" + ",");
                     streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
 
                 }
             }
