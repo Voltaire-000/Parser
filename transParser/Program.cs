@@ -65,7 +65,7 @@ namespace transParser
                         //  end of file
                         EndOfFile(streamWriter, streamReader);
                     }
- 
+
 
                     break;
                 case UnicodeCategory.UppercaseLetter:
@@ -126,12 +126,12 @@ namespace transParser
             while (m_peek == 32)
             {
                 m_peek = streamReader.Peek();
-                
+
                 //streamWriter.WriteLine("test" + ",");
                 IsViscosityLine = GetViscosityLine(currentLine);
                 if (IsViscosityLine)
                 {
-                    v_count = v_count+ 1;
+                    v_count = v_count + 1;
                     //streamWriter.WriteLine("\"" + "viscosity_" + v_count.ToString() + "\"");
                     PrintVTemps(streamWriter, currentLine, v_count);
                     PrintVcoefficients(streamWriter, currentLine);
@@ -140,17 +140,25 @@ namespace transParser
                 IsCoefLine = GetCoefficientLine(currentLine);
                 if (IsCoefLine)
                 {
-                    c_count= c_count+ 1;
+                    c_count = c_count + 1;
                     //streamWriter.WriteLine("\"" + "coeff_" + c_count.ToString() +  "\"");
                     PrintCtemps(streamWriter, currentLine, c_count);
-                    PrintCcoefficients(streamWriter, currentLine);
+                    if (m_peek == 32)
+                    {
+                        PrintCcoefficients(streamWriter, currentLine);
+                    }
+                    else
+                    {
+                        PrintCoefNoComma(streamWriter, currentLine);
+                    }
+
 
                 }
                 if (m_peek == 32)
                 {
                     currentLine = streamReader.ReadLine();
                 }
-                
+
 
 
             }
@@ -162,6 +170,37 @@ namespace transParser
             streamWriter.Write("\t\t\t\t\t\t");
             streamWriter.Write("}");
             streamWriter.WriteLine();
+        }
+
+        private static void PrintCoefNoComma(StreamWriter streamWriter, string currentLine)
+        {
+            // print coefficients
+            //streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t\t");
+            streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
+            currentLine = currentLine.Replace('E', 'e');
+            int ml = currentLine.Length;
+            currentLine = currentLine.Insert(65, ",");
+            currentLine = currentLine.Insert(50, ",");
+            currentLine = currentLine.Insert(35, ",");
+            //line = line.Insert(21, ",");
+            string m_viscosityLine = currentLine.Substring(20);
+            m_viscosityLine = m_viscosityLine.Trim();
+            //m_viscosityLine = m_viscosityLine.Replace(' ', '+');
+            string[] split = m_viscosityLine.Split(',');
+            for (int i = 0; i < split.Length; i++)
+            {
+                split[i] = split[i].Trim();
+            }
+            for (int i = 0; i < split.Length; i++)
+            {
+                split[i] = split[i].Replace(' ', '+');
+            }
+            streamWriter.Write(split[0] + ", " + split[1] + ", " + split[2] + ", " + split[3] + "]");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            //streamWriter.WriteLine("}" + ",");
+            streamWriter.WriteLine("}");
         }
 
         private static void PrintCtemps(StreamWriter streamWriter, string currentLine, int c_count)
