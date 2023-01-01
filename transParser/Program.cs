@@ -60,6 +60,10 @@ namespace transParser
                     {
                         PrintRootName(streamWriter, m_rootLabel);
                     }
+                    else
+                    {
+
+                    }
 
                     break;
                 case UnicodeCategory.UppercaseLetter:
@@ -72,12 +76,12 @@ namespace transParser
                     if (is_V)
                     {
                         PrintVtemps(streamWriter, m_currentLine);
-                        PrintCoefficients(streamWriter, m_currentLine);
+                        PrintVcoefficients(streamWriter, m_currentLine);
                     }
                     if (is_C)
                     {
                         PrintCtemps(streamWriter, m_currentLine);
-                        PrintCoefficients(streamWriter, m_currentLine);
+                        PrintCcoefficients(streamWriter, m_currentLine);
                     }
 
                     break;
@@ -252,17 +256,47 @@ namespace transParser
             streamWriter.WriteLine("\"" + "temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
         }
 
-        private static void PrintCoefficients(StreamWriter streamWriter, string line)
+        private static void PrintVcoefficients(StreamWriter streamWriter, string line)
         {
             // print coefficients
             //streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t\t");
-            streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
+            streamWriter.Write("\"" + "V_coefficients" + "\"" + ":" + "[");
             line = line.Replace('E', 'e');
             int ml = line.Length;
-            line = line.Insert(66, ",");
-            line = line.Insert(51, ",");
-            line = line.Insert(36, ",");
+            line = line.Insert(65, ",");
+            line = line.Insert(50, ",");
+            line = line.Insert(35, ",");
+            //line = line.Insert(21, ",");
+            string m_viscosityLine = line.Substring(20);
+            m_viscosityLine = m_viscosityLine.Trim();
+            //m_viscosityLine = m_viscosityLine.Replace(' ', '+');
+            string[] split = m_viscosityLine.Split(',');
+            for (int i = 0; i < split.Length; i++)
+            {
+                split[i] = split[i].Trim();
+            }
+            for (int i = 0; i < split.Length; i++)
+            {
+                split[i] = split[i].Replace(' ', '+');
+            }
+            streamWriter.Write(split[0] + ", " + split[1] + ", " + split[2] + ", " + split[3] + "]");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            //streamWriter.WriteLine("}" + ",");
+            //streamWriter.WriteLine("}");
+        }
+        private static void PrintCcoefficients(StreamWriter streamWriter, string line)
+        {
+            // print coefficients
+            //streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t\t\t");
+            streamWriter.Write("\"" + "C_coefficients" + "\"" + ":" + "[");
+            line = line.Replace('E', 'e');
+            int ml = line.Length;
+            line = line.Insert(65, ",");
+            line = line.Insert(50, ",");
+            line = line.Insert(35, ",");
             //line = line.Insert(21, ",");
             string m_viscosityLine = line.Substring(20);
             m_viscosityLine = m_viscosityLine.Trim();
