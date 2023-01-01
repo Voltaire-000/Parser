@@ -28,8 +28,13 @@ namespace transParser
                 //  reads new line here
                 m_currentLine = streamReader.ReadLine();
 
-                DoSwitch(streamWriter, streamReader, m_currentLine);
 
+                DoSwitch(streamWriter, streamReader, m_currentLine);
+                
+                if (streamReader.BaseStream == null)
+                {
+                    break;
+                }
             }
 
 
