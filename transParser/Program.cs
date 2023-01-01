@@ -27,26 +27,7 @@ namespace transParser
             {
                 //  reads new line here
                 m_currentLine = streamReader.ReadLine();
-                if (!printRoot)
-                {
-                    printRoot = PrintRootName(streamWriter, rootName);
-                }
-
-                if (m_currentLine.First() != 't')
-                {
-                    DoRecordSet(streamWriter, streamReader, m_currentLine);
-                    //m_currentLine = streamReader.ReadLine();
-                    //PrintSymbolsAndDescription(streamWriter, streamReader, m_currentLine, m_symbol, m_description);
-                    streamWriter.Flush();
-                }
-
-
-
-                //  do we have Coefficient line
-                if (true)
-                {
-
-                }
+                
 
                 //continue;
                 //break;
