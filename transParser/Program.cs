@@ -73,18 +73,7 @@ namespace transParser
                     PrintSymbolsAndDescription(streamWriter, m_currentLine);
                     break;
                 case UnicodeCategory.SpaceSeparator:
-                    bool is_V = GetViscosityLine(m_currentLine);
-                    bool is_C = GetCoefficientLine(m_currentLine);
-                    if (is_V)
-                    {
-                        PrintVtemps(streamWriter, m_currentLine);
-                        PrintVcoefficients(streamWriter, m_currentLine);
-                    }
-                    if (is_C)
-                    {
-                        PrintCtemps(streamWriter, m_currentLine);
-                        PrintCcoefficients(streamWriter, m_currentLine);
-                    }
+                    DoRecordSet(streamWriter, streamReader, m_currentLine);
 
                     break;
 
@@ -99,7 +88,15 @@ namespace transParser
 
         private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
         {
-            throw new NotImplementedException();
+            //  --------------------------Print the open curly brace for the record set------------------
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("{");
+            //  ------------------------------------------------------------------------------------------
+
+
+            // ---------------------------Print the close curly brace for the record
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("}" + ",");
         }
 
         private static bool GetCoefficientLine(string m_currentLine)
