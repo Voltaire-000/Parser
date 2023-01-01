@@ -89,14 +89,25 @@ namespace transParser
         private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
         {
             //  --------------------------Print the open curly brace for the record set------------------
-            streamWriter.Write("\t\t\t\t");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t");
+            streamWriter.Write("\"" + "RecordData" + "\"");
             streamWriter.Write("{");
             //  ------------------------------------------------------------------------------------------
 
+            int m_peek = streamReader.Peek();
+            while (m_peek == 32)
+            {
+                streamWriter.WriteLine("test");
+            }
+
+
 
             // ---------------------------Print the close curly brace for the record
-            streamWriter.Write("\t\t\t\t");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t\t");
             streamWriter.Write("}" + ",");
+            streamWriter.WriteLine();
         }
 
         private static bool GetCoefficientLine(string m_currentLine)
@@ -420,8 +431,8 @@ namespace transParser
                     streamWriter.Write("\t\t\t\t\t");
                     streamWriter.Write("\"" + "description" + "\"" + ": ");
                     streamWriter.Write("\"" + m_description + "\"" + ",");
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t\t\t\t");
+                    //streamWriter.WriteLine();
+                    //streamWriter.Write("\t\t\t\t\t");
 
                 }
             }
