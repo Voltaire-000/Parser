@@ -1063,6 +1063,150 @@
 
 					},
 					{
+					"species names": ["e-"],
+					"description": "V1C1  MASON ET AL (1967)",
+						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[2000.0, 5000.0],
+								"coefficients":[0.59319174e+01, 0.56594215e+04, -0.22576125e+07, -0.53458874e+02]
+							},
+							"C_range_1":
+							{
+								"temperatureRange":[2000.0, 5000.0],
+								"coefficients":[0.59320964e+01, 0.56601476e+04, -0.22577332e+07, -0.42512600e+02]
+							}
+
+						}
+
+					},
+					{
+					"species names": ["e-","H"],
+					"description": "V2C0  CAPITELLI ET AL (1976)",
+						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[2000.0, 8000.0],
+								"coefficients":[0.12996657e+01, 0.29049200e+04, -0.19315880e+07, -0.96081497e+01]
+							},
+							"V_range_2":
+							{
+								"temperatureRange":[8000.0, 15000.0],
+								"coefficients":[0.13439163e+01, 0.62981265e+04, -0.14088393e+08, -0.10240040e+02]
+							}
+
+						}
+
+					},
+					{
+					"species names": ["e-","H2"],
+					"description": "V2C0  CAPITELLI ET AL (1976)",
+						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[1000.0, 8000.0],
+								"coefficients":[0.13682927e+01, 0.70665102e+04, -0.56748561e+07, -0.10480386e+02]
+							},
+							"V_range_2":
+							{
+								"temperatureRange":[8000.0, 15000.0],
+								"coefficients":[0.20875514e+01, 0.27345700e+05, -0.63775336e+08, -0.18571585e+02]
+							}
+
+						}
+
+					},
+					{
+					"species names": ["e-","N"],
+					"description": "V2C0  CAPITELLI & DEVOTO (1973)",
+						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[5000.0, 10000.0],
+								"coefficients":[0.14373966e+01, 0.18230345e+05, -0.27492090e+08, -0.96279246e+01]
+							},
+							"V_range_2":
+							{
+								"temperatureRange":[10000.0, 15000.0],
+								"coefficients":[0.22566004e+01, 0.48916050e+05, -0.13996043e+09, -0.19116958e+02]
+							}
+
+						}
+
+					},
+					{
+					"species names": ["e-","NO"],
+					"description": "V2C0  GUPTA ET AL (1990)",
+						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[2000.0, 6000.0],
+								"coefficients":[0.61252493e+00, 0.46768585e+04, -0.30292080e+07, -0.30467956e+01]
+							},
+							"V_range_2":
+							{
+								"temperatureRange":[6000.0, 15000.0],
+								"coefficients":[-0.31058569e+01, -0.69841116e+05, 0.15359384e+09, 0.37370344e+02]
+							}
+
+						}
+
+					},
+					{
+					"species names": ["e-","N2"],
+					"description": "V2C0  CAPITELLI & DEVOTO (1973)",
+						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[5000.0, 10000.0],
+								"coefficients":[0.22167522e+01, 0.22078280e+05, -0.26142843e+08, -0.18975334e+02]
+							},
+							"V_range_2":
+							{
+								"temperatureRange":[10000.0, 15000.0],
+								"coefficients":[0.14276153e+01, 0.81306835e+04, 0.41382925e+07, -0.10615166e+02]
+							}
+
+						}
+
+					},
+					{
+					"species names": ["e-","O"],
+					"description": "V2C0  GUPTA ET AL (1990)",
+						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[2000.0, 6000.0],
+								"coefficients":[-0.36876460e+00, -0.19261587e+04, 0.72235159e+06, 0.82699294e+01]
+							},
+							"V_range_2":
+							{
+								"temperatureRange":[6000.0, 15000.0],
+								"coefficients":[0.12858415e+00, 0.88173340e+04, -0.22555849e+08, 0.27992711e+01]
+							}
+
+						}
+
+					},
+					{
+					"species names": ["e-","O2"],
+					"description": "V2C0  GUPTA ET AL (1990)",
+						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[2000.0, 6000.0],
+								"coefficients":[-0.12686144e+01, -0.64961158e+04, 0.37615998e+07, 0.15676996e+02]
+							},
+							"V_range_2":
+							{
+								"temperatureRange":[6000.0, 15000.0],
+								"coefficients":[0.44642126e+01, 0.65553833e+05, -0.10919736e+09, -0.43066392e+02]
+							}
+
+						}
+
+					},
+					{
 					"species names": ["F2"],
 					"description": "V2C2  SVEHLA (1962,1994)",
 						"RecordData":{

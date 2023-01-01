@@ -50,6 +50,10 @@ namespace transParser
                     {
                         PrintRootName(streamWriter, m_rootLabel);
                     }
+                    else
+                    {
+                        PrintNewSpecies(streamWriter, streamReader, m_currentLine);
+                    }
                     if (m_char == 'x')
                     {
                         //  end of file
