@@ -33,11 +33,11 @@ namespace transParser
 
                 //continue;
                 //break;
-                if (streamReader.EndOfStream)
-                {
-                    streamReader.Close();
-                    streamWriter.Close();
-                }
+                //if (streamReader.EndOfStream)
+                //{
+                //    streamReader.Close();
+                //    streamWriter.Close();
+                //}
 
 
             }
@@ -63,7 +63,7 @@ namespace transParser
                     if (m_char == 'x')
                     {
                         //  end of file
-                        EndOfFile();
+                        EndOfFile(streamWriter, streamReader);
                     }
  
 
@@ -80,25 +80,46 @@ namespace transParser
             }
         }
 
-        private static void EndOfFile()
+        private static void EndOfFile(StreamWriter streamWriter, StreamReader streamReader)
         {
-            
-            throw new NotImplementedException();
+            streamWriter.Close();
+            streamReader.Close();
+            //throw new NotImplementedException();
         }
 
         private static void DoRecordSet(StreamWriter streamWriter, StreamReader streamReader, string currentLine)
         {
+            bool IsViscosityLine = false;
+            bool IsCoefLine = false;
             //  --------------------------Print the open curly brace for the record set------------------
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t");
-            streamWriter.Write("\"" + "RecordData" + "\"");
+            streamWriter.Write("\"" + "RecordData" + "\"" + ":");
             streamWriter.Write("{");
+            streamWriter.WriteLine();
             //  ------------------------------------------------------------------------------------------
 
             int m_peek = streamReader.Peek();
             while (m_peek == 32)
             {
-                streamWriter.WriteLine("test");
+                m_peek = streamReader.Peek();
+                
+                //streamWriter.WriteLine("test" + ",");
+                IsViscosityLine = GetViscosityLine(currentLine);
+                if (IsViscosityLine)
+                {
+                    streamWriter.WriteLine("\"" + "viscosity" + "\"");
+                }
+
+                IsCoefLine = GetCoefficientLine(currentLine);
+                if (IsCoefLine)
+                {
+                    streamWriter.WriteLine("\"" + "coeff" + "\"");
+
+                }
+                currentLine = streamReader.ReadLine();
+
+
             }
 
 
