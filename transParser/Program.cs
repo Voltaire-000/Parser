@@ -70,14 +70,34 @@ namespace transParser
                     break;
                 case UnicodeCategory.UppercaseLetter:
                     //  Uppercase letter is new record set
-                    PrintSymbolsAndDescription(streamWriter, m_currentLine);
+                    //PrintSymbolsAndDescription(streamWriter, m_currentLine);
+                    PrintNewSpecies(streamWriter, streamReader, m_currentLine);
                     break;
                 case UnicodeCategory.SpaceSeparator:
-                    DoRecordSet(streamWriter, streamReader, m_currentLine);
+                    //DoRecordSet(streamWriter, streamReader, m_currentLine);
 
                     break;
 
             }
+        }
+
+        private static void PrintNewSpecies(StreamWriter streamWriter, StreamReader streamReader, string m_currentLine)
+        {
+            //------------------Print open curly brace for species---------------------
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t");
+            streamWriter.Write("{");
+            //streamWriter.WriteLine();
+            //-------------------------------------------------------------------------
+            PrintSymbolsAndDescription(streamWriter, m_currentLine);
+            DoRecordSet(streamWriter, streamReader, m_currentLine);
+
+            //------------------Print closing curly brace for species------------------
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t");
+            streamWriter.Write("}" + ",");
+            //streamWriter.WriteLine();
+            //------------------------------------------------------------------------------
         }
 
         private static void EndOfFile(StreamWriter streamWriter, StreamReader streamReader)
@@ -505,9 +525,6 @@ namespace transParser
             streamWriter.Write("{");
             streamWriter.WriteLine();
             streamWriter.Write("\t" + "\"" + fieldName + "\"" + ":" + " " + "[");
-            streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t");
-            streamWriter.Write("{");
             return true;
         }
     }

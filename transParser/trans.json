@@ -37,6 +37,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["BCL3"],
 					"description": "V2C2  SVEHLA (1962)",
 						"RecordData":{
@@ -63,6 +65,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["BF3"],
 					"description": "V2C2  SVEHLA (1962,1994)",
 						"RecordData":{
@@ -89,6 +93,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["Br2"],
 					"description": "V2C2  SVEHLA (1962,1994)",
 						"RecordData":{
@@ -115,6 +121,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["C"],
 					"description": "V2C2  BIOLSI (1982)",
 						"RecordData":{
@@ -141,12 +149,21 @@
 
 						},
 
+					},
+					{
 					"species names": ["C","O"],
 					"description": "V1C0  CAPITELLI & FICOCELLI (1973)",
 						"RecordData":{
+							"V_range_1":
+							{
+								"temperatureRange":[4000.0, 15000.0],
+								"coefficients":[0.12635466e+01, 0.46866528e+04, -0.59789292e+07, -0.43066246e+01]
+							},
 
 						},
 
+					},
+					{
 					"species names": ["CCLF3"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -173,6 +190,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CCL2F2"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -199,6 +218,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CCL3F"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -225,6 +246,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CCL4"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -251,6 +274,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CF4"],
 					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -277,6 +302,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CHCLF2"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -303,6 +330,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CHCL2F"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -329,6 +358,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CHCL3"],
 					"description": "V2C2  SVEHLA (1962,1994)",
 						"RecordData":{
@@ -355,6 +386,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CHF3"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -381,6 +414,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CH2CL2"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -407,6 +442,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CH3CL"],
 					"description": "V2C2  MONCHICK & MASON (1961)  SVEHLA (1994)",
 						"RecordData":{
@@ -433,6 +470,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CH4"],
 					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -459,6 +498,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CH4","O2"],
 					"description": "V2C0  SVEHLA (1994)",
 						"RecordData":{
@@ -475,6 +516,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CH3OH"],
 					"description": "V2C2  MONCHICK & MASON (1961)  SVEHLA (1994)",
 						"RecordData":{
@@ -501,6 +544,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO"],
 					"description": "V3C3  SVEHLA (1994)",
 						"RecordData":{
@@ -537,6 +582,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO","CO2"],
 					"description": "V3C0  SVEHLA (1995)",
 						"RecordData":{
@@ -558,6 +605,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO","N2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -579,6 +628,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO","O2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -600,6 +651,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["COS"],
 					"description": "V2C2  SVEHLA (1962)",
 						"RecordData":{
@@ -626,6 +679,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO2"],
 					"description": "V3C3  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -662,6 +717,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO2","H2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -683,6 +740,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO2","H2O"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -704,6 +763,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO2","N2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -725,6 +786,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CO2","O2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -746,6 +809,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CS2"],
 					"description": "V2C2  SVEHLA (1962)",
 						"RecordData":{
@@ -772,6 +837,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["C2H2,acetylene"],
 					"description": "V2C2  SVEHLA (1962,1994)",
 						"RecordData":{
@@ -798,6 +865,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["C2H4"],
 					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -824,6 +893,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["C2H6"],
 					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -850,6 +921,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["C2H5OH"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -876,6 +949,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["C2N2"],
 					"description": "V2C2  SVEHLA (1962)",
 						"RecordData":{
@@ -902,6 +977,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["CL2"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -928,6 +1005,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["D2"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -954,6 +1033,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["D2O"],
 					"description": "V2C2  MATSUNAGA & NAGASHIMA(1983) SVEHLA(1994)",
 						"RecordData":{
@@ -980,118 +1061,8 @@
 
 						},
 
-						"RecordData":{
-							"V_range_1":
-							{
-								"temperatureRange":[2000.0, 5000.0],
-								"coefficients":[0.59319174e+01, 0.56594215e+04, -0.22576125e+07, -0.53458874e+02]
-							},
-							"C_range_1":
-							{
-								"temperatureRange":[2000.0, 5000.0],
-								"coefficients":[0.59320964e+01, 0.56601476e+04, -0.22577332e+07, -0.42512600e+02]
-							},
-
-						},
-
-						"RecordData":{
-							"V_range_1":
-							{
-								"temperatureRange":[2000.0, 8000.0],
-								"coefficients":[0.12996657e+01, 0.29049200e+04, -0.19315880e+07, -0.96081497e+01]
-							},
-							"V_range_2":
-							{
-								"temperatureRange":[8000.0, 15000.0],
-								"coefficients":[0.13439163e+01, 0.62981265e+04, -0.14088393e+08, -0.10240040e+02]
-							},
-
-						},
-
-						"RecordData":{
-							"V_range_1":
-							{
-								"temperatureRange":[1000.0, 8000.0],
-								"coefficients":[0.13682927e+01, 0.70665102e+04, -0.56748561e+07, -0.10480386e+02]
-							},
-							"V_range_2":
-							{
-								"temperatureRange":[8000.0, 15000.0],
-								"coefficients":[0.20875514e+01, 0.27345700e+05, -0.63775336e+08, -0.18571585e+02]
-							},
-
-						},
-
-						"RecordData":{
-							"V_range_1":
-							{
-								"temperatureRange":[5000.0, 10000.0],
-								"coefficients":[0.14373966e+01, 0.18230345e+05, -0.27492090e+08, -0.96279246e+01]
-							},
-							"V_range_2":
-							{
-								"temperatureRange":[10000.0, 15000.0],
-								"coefficients":[0.22566004e+01, 0.48916050e+05, -0.13996043e+09, -0.19116958e+02]
-							},
-
-						},
-
-						"RecordData":{
-							"V_range_1":
-							{
-								"temperatureRange":[2000.0, 6000.0],
-								"coefficients":[0.61252493e+00, 0.46768585e+04, -0.30292080e+07, -0.30467956e+01]
-							},
-							"V_range_2":
-							{
-								"temperatureRange":[6000.0, 15000.0],
-								"coefficients":[-0.31058569e+01, -0.69841116e+05, 0.15359384e+09, 0.37370344e+02]
-							},
-
-						},
-
-						"RecordData":{
-							"V_range_1":
-							{
-								"temperatureRange":[5000.0, 10000.0],
-								"coefficients":[0.22167522e+01, 0.22078280e+05, -0.26142843e+08, -0.18975334e+02]
-							},
-							"V_range_2":
-							{
-								"temperatureRange":[10000.0, 15000.0],
-								"coefficients":[0.14276153e+01, 0.81306835e+04, 0.41382925e+07, -0.10615166e+02]
-							},
-
-						},
-
-						"RecordData":{
-							"V_range_1":
-							{
-								"temperatureRange":[2000.0, 6000.0],
-								"coefficients":[-0.36876460e+00, -0.19261587e+04, 0.72235159e+06, 0.82699294e+01]
-							},
-							"V_range_2":
-							{
-								"temperatureRange":[6000.0, 15000.0],
-								"coefficients":[0.12858415e+00, 0.88173340e+04, -0.22555849e+08, 0.27992711e+01]
-							},
-
-						},
-
-						"RecordData":{
-							"V_range_1":
-							{
-								"temperatureRange":[2000.0, 6000.0],
-								"coefficients":[-0.12686144e+01, -0.64961158e+04, 0.37615998e+07, 0.15676996e+02]
-							},
-							"V_range_2":
-							{
-								"temperatureRange":[6000.0, 15000.0],
-								"coefficients":[0.44642126e+01, 0.65553833e+05, -0.10919736e+09, -0.43066392e+02]
-							},
-
-						},
-
+					},
+					{
 					"species names": ["F2"],
 					"description": "V2C2  SVEHLA (1962,1994)",
 						"RecordData":{
@@ -1118,6 +1089,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H"],
 					"description": "V2C2  VANDERSLICE ET AL (1962)",
 						"RecordData":{
@@ -1144,6 +1117,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H","H+"],
 					"description": "V2C0  CAPITELLI ET AL (1976)",
 						"RecordData":{
@@ -1160,6 +1135,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H","H2"],
 					"description": "V2C0  TANG & WEI (1974)  SVEHLA (1994)",
 						"RecordData":{
@@ -1176,6 +1153,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H","Li"],
 					"description": "V2C0  KRUPENIE ET AL (1963)",
 						"RecordData":{
@@ -1192,6 +1171,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H","N"],
 					"description": "V2C0  STALLCOP ET AL (1992b)",
 						"RecordData":{
@@ -1208,6 +1189,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H","N2"],
 					"description": "V2C0  STALLCOP ET AL (1992a)",
 						"RecordData":{
@@ -1224,6 +1207,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H","O"],
 					"description": "V2C0  KRUPENIE ET AL (1963)",
 						"RecordData":{
@@ -1240,6 +1225,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["HBr"],
 					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",
 						"RecordData":{
@@ -1266,6 +1253,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["HCN"],
 					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",
 						"RecordData":{
@@ -1292,6 +1281,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["HCL"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -1318,6 +1309,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["HF"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -1344,6 +1337,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["HF","H6F6"],
 					"description": "V2C0  SVEHLA (1994)",
 						"RecordData":{
@@ -1360,6 +1355,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["HI"],
 					"description": "V2C2  SVEHLA (1962)",
 						"RecordData":{
@@ -1386,6 +1383,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H2"],
 					"description": "V3C3  ASSAEL ET AL (1986)  SVEHLA (1994)",
 						"RecordData":{
@@ -1422,6 +1421,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H2","H2O"],
 					"description": "V3C0  SVEHLA (1964)",
 						"RecordData":{
@@ -1443,6 +1444,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H2","N2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -1464,6 +1467,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H2","O2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -1485,6 +1490,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H2O"],
 					"description": "V3C3  SENGERS & WATSON (1986)  SVEHLA (1994)",
 						"RecordData":{
@@ -1521,6 +1528,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H2O","N2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -1542,6 +1551,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H2O","O2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -1563,6 +1574,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H2S"],
 					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",
 						"RecordData":{
@@ -1589,6 +1602,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["H6F6"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -1615,6 +1630,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["He"],
 					"description": "V3C3  BICH ET AL (1990)",
 						"RecordData":{
@@ -1651,6 +1668,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["He","N2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -1672,6 +1691,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["I2"],
 					"description": "V2C2  SVEHLA (1962)",
 						"RecordData":{
@@ -1698,6 +1719,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["Kr"],
 					"description": "V3C3  BICH ET AL (1990)",
 						"RecordData":{
@@ -1734,6 +1757,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["Li"],
 					"description": "V2C2  HOLLAND ET AL (1986)",
 						"RecordData":{
@@ -1760,6 +1785,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N"],
 					"description": "V2C2  LEVIN ET AL (1990)",
 						"RecordData":{
@@ -1786,6 +1813,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N","N+"],
 					"description": "V2C0  STALLCOP ET AL (1991)",
 						"RecordData":{
@@ -1802,6 +1831,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N","NO"],
 					"description": "V2C0  CUBLEY & MASON (1975)",
 						"RecordData":{
@@ -1818,6 +1849,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N","N2"],
 					"description": "V2C0  CUBLEY & MASON (1975)",
 						"RecordData":{
@@ -1834,6 +1867,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N","O"],
 					"description": "V2C0  LEVIN ET AL (1990)",
 						"RecordData":{
@@ -1850,6 +1885,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N","O+"],
 					"description": "V2C0  PARTRIDGE ET AL (1991)",
 						"RecordData":{
@@ -1866,6 +1903,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N","O2"],
 					"description": "V2C0  CUBLEY & MASON (1975)",
 						"RecordData":{
@@ -1882,6 +1921,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N+","O"],
 					"description": "V2C0  PARTRIDGE ET AL (1991)",
 						"RecordData":{
@@ -1898,6 +1939,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["NH3"],
 					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",
 						"RecordData":{
@@ -1924,6 +1967,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["NO"],
 					"description": "V3C3  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -1960,6 +2005,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["NO","O"],
 					"description": "V2C0  CUBLEY & MASON (1975)",
 						"RecordData":{
@@ -1976,6 +2023,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["NOCL"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -2002,6 +2051,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["NO2"],
 					"description": "V2C2  SVEHLA (1966)",
 						"RecordData":{
@@ -2028,6 +2079,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N2"],
 					"description": "V3C3  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -2064,6 +2117,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N2","O"],
 					"description": "V2C0  CUBLEY & MASON (1975)",
 						"RecordData":{
@@ -2080,6 +2135,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N2","O2"],
 					"description": "V3C0  SVEHLA (1994)",
 						"RecordData":{
@@ -2101,6 +2158,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N2O"],
 					"description": "V2C2  BOUSHEHRI ET AL(1987)  URIBE ET AL(1990)",
 						"RecordData":{
@@ -2127,6 +2186,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["N2O4"],
 					"description": "V2C2  SVEHLA (1966)",
 						"RecordData":{
@@ -2153,6 +2214,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["Na"],
 					"description": "V2C2  HOLLAND & BIOLSI (1987)",
 						"RecordData":{
@@ -2179,6 +2242,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["Ne"],
 					"description": "V3C3  BICH ET AL (1990)",
 						"RecordData":{
@@ -2215,6 +2280,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["O"],
 					"description": "V2C2  LEVIN ET AL (1990)",
 						"RecordData":{
@@ -2241,6 +2308,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["O","O+"],
 					"description": "V2C0  STALLCOP ET AL (1991)",
 						"RecordData":{
@@ -2257,6 +2326,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["O","O2"],
 					"description": "V2C0  CUBLEY & MASON (1975)",
 						"RecordData":{
@@ -2273,6 +2344,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["OH"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -2299,6 +2372,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["O2"],
 					"description": "V3C3  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -2335,6 +2410,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["SF6"],
 					"description": "V2C2  BOUSHEHRI ET AL (1987)  SVEHLA (1994)",
 						"RecordData":{
@@ -2361,6 +2438,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["SO2"],
 					"description": "V2C2  ZELEZNIK & SVEHLA (1970)  SVEHLA (1994)",
 						"RecordData":{
@@ -2387,6 +2466,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["SiCL4"],
 					"description": "V2C2  SVEHLA (1994)",
 						"RecordData":{
@@ -2413,6 +2494,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["SiF4"],
 					"description": "V2C2  SVEHLA (1962,1994)",
 						"RecordData":{
@@ -2439,6 +2522,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["SiH4"],
 					"description": "V2C2  SVEHLA (1962)",
 						"RecordData":{
@@ -2465,6 +2550,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["UF6"],
 					"description": "V2C0  SVEHLA (1962)",
 						"RecordData":{
@@ -2481,6 +2568,8 @@
 
 						},
 
+					},
+					{
 					"species names": ["Xe"],
 					"description": "V3C3  BICH ET AL (1990)",
 						"RecordData":{
@@ -2516,6 +2605,6 @@
 							},
 
 						},
-{
+
+					},{
 	"transport_property_coefficients": [
-					{
