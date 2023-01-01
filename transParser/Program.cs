@@ -112,14 +112,18 @@ namespace transParser
                 if (IsViscosityLine)
                 {
                     v_count = v_count+ 1;
-                    streamWriter.WriteLine("\"" + "viscosity_" + v_count.ToString() + "\"");
+                    //streamWriter.WriteLine("\"" + "viscosity_" + v_count.ToString() + "\"");
+                    PrintVTemps(streamWriter, currentLine, v_count);
+                    PrintVcoefficients(streamWriter, currentLine);
                 }
 
                 IsCoefLine = GetCoefficientLine(currentLine);
                 if (IsCoefLine)
                 {
                     c_count= c_count+ 1;
-                    streamWriter.WriteLine("\"" + "coeff_" + c_count.ToString() +  "\"");
+                    //streamWriter.WriteLine("\"" + "coeff_" + c_count.ToString() +  "\"");
+                    PrintCtemps(streamWriter, currentLine, c_count);
+                    PrintCcoefficients(streamWriter, currentLine);
 
                 }
                 currentLine = streamReader.ReadLine();
@@ -134,6 +138,20 @@ namespace transParser
             streamWriter.Write("\t\t\t\t\t\t");
             streamWriter.Write("}" + ",");
             streamWriter.WriteLine();
+        }
+
+        private static void PrintCtemps(StreamWriter streamWriter, string currentLine, int c_count)
+        {
+            string rangeLabel = "range_";
+            string m_temp_1 = currentLine.Substring(2, 7);
+            m_temp_1 = m_temp_1.Trim();
+            string m_temp_2 = currentLine.Substring(9, 10);
+            m_temp_2 = m_temp_2.Trim();
+            streamWriter.WriteLine("\t\t\t\t\t\t\t" + "\"" + rangeLabel + c_count.ToString() + "\"" + ":");
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            streamWriter.WriteLine("{");
+            streamWriter.Write("\t\t\t\t\t\t\t\t");
+            streamWriter.WriteLine("\"" + "temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
         }
 
         private static bool GetCoefficientLine(string m_currentLine)
@@ -156,14 +174,28 @@ namespace transParser
             return false;
         }
 
+        private static void PrintVTemps(StreamWriter streamWriter, string line, int count)
+        {
+            string rangeLabel = "range_";
+            string m_temp_1 = line.Substring(2, 7);
+            m_temp_1 = m_temp_1.Trim();
+            string m_temp_2 = line.Substring(9, 10);
+            m_temp_2 = m_temp_2.Trim();
+            streamWriter.WriteLine("\t\t\t\t\t\t\t" + "\"" + rangeLabel + count.ToString() + "\"" + ":");
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            streamWriter.WriteLine("{");
+            streamWriter.Write("\t\t\t\t\t\t\t\t");
+            streamWriter.WriteLine("\"" + "temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
+        }
+
         private static void PrintVtemps(StreamWriter streamWriter, string m_currentLine)
         {
-            string rangeLabel = "temperaturesAndCoefficients";
+            string rangeLabel = "range_";
             string m_temp_1 = m_currentLine.Substring(2, 7);
             m_temp_1 = m_temp_1.Trim();
             string m_temp_2 = m_currentLine.Substring(9, 10);
             m_temp_2 = m_temp_2.Trim();
-            //streamWriter.WriteLine("\"" + rangeLabel + "\"" + ":");
+            streamWriter.WriteLine("\"" + rangeLabel + "\"" + ":");
             streamWriter.Write("\t\t\t\t\t\t\t");
             streamWriter.WriteLine("{");
             streamWriter.Write("\t\t\t\t\t\t\t\t");
@@ -308,7 +340,7 @@ namespace transParser
             // print coefficients
             //streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t\t");
-            streamWriter.Write("\"" + "V_coefficients" + "\"" + ":" + "[");
+            streamWriter.Write("\"" + "coefficients" + "\"" + ":" + "[");
             line = line.Replace('E', 'e');
             int ml = line.Length;
             line = line.Insert(65, ",");
@@ -330,7 +362,7 @@ namespace transParser
             streamWriter.Write(split[0] + ", " + split[1] + ", " + split[2] + ", " + split[3] + "]");
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t");
-            //streamWriter.WriteLine("}" + ",");
+            streamWriter.WriteLine("}" + ",");
             //streamWriter.WriteLine("}");
         }
         private static void PrintCcoefficients(StreamWriter streamWriter, string line)
@@ -360,7 +392,7 @@ namespace transParser
             streamWriter.Write(split[0] + ", " + split[1] + ", " + split[2] + ", " + split[3] + "]");
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t");
-            //streamWriter.WriteLine("}" + ",");
+            streamWriter.WriteLine("}" + ",");
             //streamWriter.WriteLine("}");
         }
 
