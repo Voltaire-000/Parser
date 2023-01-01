@@ -126,7 +126,11 @@ namespace transParser
                     PrintCcoefficients(streamWriter, currentLine);
 
                 }
-                currentLine = streamReader.ReadLine();
+                if (m_peek == 32)
+                {
+                    currentLine = streamReader.ReadLine();
+                }
+                
 
 
             }
