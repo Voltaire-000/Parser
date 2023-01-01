@@ -71,12 +71,12 @@ namespace transParser
                     bool is_C = GetCoefficientLine(m_currentLine);
                     if (is_V)
                     {
-                        PrintTemps(streamWriter, m_currentLine);
+                        PrintVtemps(streamWriter, m_currentLine);
                         PrintCoefficients(streamWriter, m_currentLine);
                     }
                     if (is_C)
                     {
-                        PrintTemps(streamWriter, m_currentLine);
+                        PrintCtemps(streamWriter, m_currentLine);
                         PrintCoefficients(streamWriter, m_currentLine);
                     }
 
@@ -105,18 +105,31 @@ namespace transParser
             return false;
         }
 
-        private static void PrintTemps(StreamWriter streamWriter, string m_currentLine)
+        private static void PrintVtemps(StreamWriter streamWriter, string m_currentLine)
         {
             string rangeLabel = "temperaturesAndCoefficients";
             string m_temp_1 = m_currentLine.Substring(2, 7);
             m_temp_1 = m_temp_1.Trim();
             string m_temp_2 = m_currentLine.Substring(9, 10);
             m_temp_2 = m_temp_2.Trim();
-            streamWriter.WriteLine("\"" + rangeLabel + "\"" + ":");
+            //streamWriter.WriteLine("\"" + rangeLabel + "\"" + ":");
             streamWriter.Write("\t\t\t\t\t\t\t");
             streamWriter.WriteLine("{");
             streamWriter.Write("\t\t\t\t\t\t\t\t");
-            streamWriter.WriteLine("\"" + "temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
+            streamWriter.WriteLine("\"" + "V_temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
+        }
+        private static void PrintCtemps(StreamWriter streamWriter, string m_currentLine)
+        {
+            string rangeLabel = "temperaturesAndCoefficients";
+            string m_temp_1 = m_currentLine.Substring(2, 7);
+            m_temp_1 = m_temp_1.Trim();
+            string m_temp_2 = m_currentLine.Substring(9, 10);
+            m_temp_2 = m_temp_2.Trim();
+            //streamWriter.WriteLine("\"" + rangeLabel + "\"" + ":");
+            streamWriter.Write("\t\t\t\t\t\t\t");
+            streamWriter.WriteLine("{");
+            streamWriter.Write("\t\t\t\t\t\t\t\t");
+            streamWriter.WriteLine("\"" + "C_temperatureRange" + "\"" + ":" + "[" + m_temp_1 + ", " + m_temp_2 + "]" + ",");
         }
 
         private static bool GetViscosityLine(string m_currentLine)
@@ -266,7 +279,8 @@ namespace transParser
             streamWriter.Write(split[0] + ", " + split[1] + ", " + split[2] + ", " + split[3] + "]");
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t\t\t");
-            streamWriter.WriteLine("}" + ",");
+            //streamWriter.WriteLine("}" + ",");
+            //streamWriter.WriteLine("}");
         }
 
         private static void PrintViscosityLabels(StreamWriter streamWriter, string coefficientLabel, string tempLabel)
