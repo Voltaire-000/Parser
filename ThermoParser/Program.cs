@@ -72,7 +72,9 @@ namespace ThermoParser
         {
             string rootName = "thermo";
             //string rootName = "species";
-            throw new NotImplementedException();
+            streamWriter.WriteLine();
+            streamWriter.Write("\t");
+            streamWriter.Write("\"" + rootName + "\"");
         }
     }
 }
