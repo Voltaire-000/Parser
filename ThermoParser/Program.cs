@@ -99,6 +99,7 @@ namespace ThermoParser
             streamWriter.WriteLine();
             streamWriter.Write("\t\t");
             streamWriter.Write("{");
+            //------------------------------------------------
 
 
 
@@ -106,6 +107,7 @@ namespace ThermoParser
             streamWriter.WriteLine();
             streamWriter.Write("\t\t");
             streamWriter.Write("}" + ",");
+            //-------------------------------------------
 
         }
     }
