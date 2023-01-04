@@ -278,6 +278,44 @@ namespace ThermoParser
                     streamWriter.Write("\t\t\t\t\t");
                     streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
                     streamWriter.Write(thirdAtoms);
+
+                    if (n_fourthAtoms !=0)
+                    {
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t");
+                        streamWriter.Write("  }" + ",");
+
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t");
+                        streamWriter.Write("  {");
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t");
+                        streamWriter.Write("\"" + m_symbolLabel + "\"" + ": ");
+                        streamWriter.Write("\"" + fourthElement + "\"" + ",");
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t");
+                        streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
+                        streamWriter.Write(fourthAtoms);
+
+                        if (n_fifthAtoms !=0)
+                        {
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t");
+                            streamWriter.Write("  }" + ",");
+
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t");
+                            streamWriter.Write("  {");
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t");
+                            streamWriter.Write("\"" + m_symbolLabel + "\"" + ": ");
+                            streamWriter.Write("\"" + l_fifthElement + "\"" + ",");
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t\t");
+                            streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
+                            streamWriter.Write(fifthAtoms);
+                        }
+                    }
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t\t\t");
                     streamWriter.Write("  }" + ",");
