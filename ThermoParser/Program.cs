@@ -78,7 +78,6 @@ namespace ThermoParser
 
         private static void DoRecordSet()
         {
-            UnicodeCategory unicodeCategory;
             m_currentLine = streamReader.ReadLine();
             char separator = ' ';
             char comma = ',';
@@ -122,6 +121,8 @@ namespace ThermoParser
                 {
                     streamWriter.Write("}");
                 }
+
+                m_currentLine = streamReader.ReadLine();
 
             }
 
