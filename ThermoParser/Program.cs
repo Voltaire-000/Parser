@@ -11,11 +11,13 @@ namespace ThermoParser
     internal class Program
     {
         private static string m_currentLine = "";
+        private static StreamReader streamReader;
+        private static StreamWriter streamWriter;
 
         static void Main(string[] args)
         {
-            StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
-            StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINP.json");
+            streamReader = new StreamReader("..\\..\\thermo.inp");
+            streamWriter = new StreamWriter("..\\..\\thermoINP.json");
             streamWriter.AutoFlush = true;
 
             while (!streamReader.EndOfStream)
@@ -43,7 +45,7 @@ namespace ThermoParser
                 case UnicodeCategory.LowercaseLetter:
                     if (m_char == 't')
                     {
-                        BeginNewJsonFile(streamWriter);
+                        BeginNewJsonFile(streamWriter, streamReader, m_currentLine);
                     }
                     else
                     {
@@ -55,7 +57,7 @@ namespace ThermoParser
 
         }
 
-        private static void BeginNewJsonFile(StreamWriter streamWriter)
+        private static void BeginNewJsonFile(StreamWriter streamWriter, StreamReader streamReader, string m_currentFile)
         {
             //--------------Print open curly for file--------------
             streamWriter.Write("{");
@@ -64,6 +66,7 @@ namespace ThermoParser
 
 
             //--------------Print close curly for file
+            streamWriter.WriteLine();
             streamWriter.Write("}");
 
         }
@@ -74,7 +77,36 @@ namespace ThermoParser
             //string rootName = "species";
             streamWriter.WriteLine();
             streamWriter.Write("\t");
-            streamWriter.Write("\"" + rootName + "\"");
+            streamWriter.Write("\"" + rootName + "\"" + ":");
+            PrintOpenCloseBracket(streamWriter);
+        }
+
+        private static void PrintOpenCloseBracket(StreamWriter streamWriter)
+        {
+            streamWriter.WriteLine();
+            streamWriter.Write("\t");
+            streamWriter.Write("[");
+            PrintNewSpecies(streamWriter, streamReader, m_currentLine);
+            streamWriter.WriteLine();
+            streamWriter.Write("\t");
+            streamWriter.Write("]");
+
+        }
+
+        private static void PrintNewSpecies(StreamWriter streamWriter, object streamReader, string m_currentLine)
+        {
+            //----------------Open curly brace for new species
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t");
+            streamWriter.Write("{");
+
+
+
+            //---------------Close curly for new species
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t");
+            streamWriter.Write("}" + ",");
+
         }
     }
 }
