@@ -223,8 +223,76 @@ namespace ThermoParser
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("{");
             streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t");
+            streamWriter.Write("\t\t\t\t\t\t");
             streamWriter.Write("\"" + m_symbolLabel + "\"" + ":");
+            //  write the element symbol
+            streamWriter.Write("\"" + firstElement + "\"" + ",");
+            if (l_secondElement > 0)
+            {
+                streamWriter.Write(firstAtoms + ",");
+            }
+            else
+            {
+                streamWriter.Write(firstAtoms);
+            }
+            if (l_secondElement > 0)
+            {
+                streamWriter.WriteLine();
+                streamWriter.Write("\t\t\t\t\t");
+                
+                streamWriter.Write("\"" + secondElement + "\"");
+
+                if (l_thirdElement > 0)
+                {
+                    streamWriter.Write(secondAtoms + ",");
+                }
+                else
+                {
+                    streamWriter.Write(secondAtoms);
+                }
+
+                if (l_thirdElement > 0)
+                {
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + thirdElement + "\"");
+
+                    if (l_fourthElement > 0)
+                    {
+                        streamWriter.Write(thirdAtoms + ",");
+                    }
+                    else
+                    {
+                        streamWriter.Write(thirdAtoms);
+                    }
+
+                    if (l_fourthElement > 0)
+                    {
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t\t");
+                        fourthElement = AddQuotesAndSemicolon(fourthElement);
+                        writer.Write(fourthElement);
+
+                        if (l_fifthElement > 0)
+                        {
+                            writer.Write(fourthAtoms + ",");
+                        }
+                        else
+                        {
+                            writer.Write(fourthAtoms);
+                        }
+
+                        if (l_fifthElement > 0)
+                        {
+                            writer.WriteLine();
+                            writer.Write("\t\t\t\t\t");
+                            fifthelement = AddQuotesAndSemicolon(fifthelement);
+                            writer.Write(fifthelement);
+                            writer.Write(fifthAtoms);
+                        }
+                    }
+                }
+            }
 
 
         }
