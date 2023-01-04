@@ -142,14 +142,46 @@ namespace ThermoParser
                 string concantCoef = coefFirstPart+ coefSecondPart;
                 concantCoef = concantCoef.Replace('D', 'e');
                 string coefSubstring = concantCoef.Substring(0, 128);
-                coefSubstring = coefSubstring.Trim();
+                //coefSubstring = coefSubstring.Trim();
+                int firstE = coefSubstring.IndexOf('e');
+                int secondE = coefSubstring.IndexOf('e', firstE);
+                int thirdE = coefSubstring.IndexOf('e', secondE);
+                int forthE = coefSubstring.IndexOf('e', thirdE);
+                int fifthE = coefSubstring.IndexOf('e', forthE);
+                int sixthE = coefSubstring.IndexOf('e', fifthE);
+                int seventhE = coefSubstring.IndexOf('e', sixthE);
+                int eighthE = coefSubstring.IndexOf('e', seventhE);
 
+                string firstCoef = coefSubstring.Substring(0, firstE + 4);
+                string secondCoef = coefSubstring.Substring(secondE + 4, firstE + 4);
+                string thirdCoef = coefSubstring.Substring(thirdE + 4 + secondE + 4, firstE + 4);
+                string forthCoef = coefSubstring.Substring(forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+                string fifthCoef = coefSubstring.Substring(fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+                string sixthCoef = coefSubstring.Substring(sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+                string seventhCoef = coefSubstring.Substring(seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+                string eighthCoef = coefSubstring.Substring(eighthE + 4 + seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+
+                string CoefConcant = firstCoef + " " + secondCoef + " " + thirdCoef + " " + forthCoef + " " + fifthCoef + " " + sixthCoef + " " + seventhCoef + " " + eighthCoef;
+                CoefConcant = CoefConcant.Trim();
+                CoefConcant = CoefConcant.Replace(" ", ",");
+                CoefConcant = CoefConcant.Replace(",,", ",");
+                string[] coeline = CoefConcant.Split(comma);
+                
 
                 streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.Write("\"" + "coefficients" + "\"" + ":");
-                //streamWriter.Write();
 
+                if (coeline.Count() == 7)
+                {
+                    streamWriter.Write("[" + coeline[0] + ", " + coeline[1] + ", " + coeline[2] + ", " + coeline[3] + ", " + coeline[4] + ", " + coeline[5] + ", " + coeline[6] + "]" + ",");
+                }
+                if (coeline.Count() == 8)
+                {
+                    streamWriter.Write("[" + coeline[0] + ", " + coeline[1] + ", " + coeline[2] + ", " + coeline[3] + ", " + coeline[4] + ", " + coeline[5] + ", " + coeline[6] + ", " + coeline[7] + "]" + ","); 
+                }
+
+                streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.Write("\"" + "integrationConstants" + "\"" + ":" + 7.145 );
                 streamWriter.Write("\t\t\t\t\t");

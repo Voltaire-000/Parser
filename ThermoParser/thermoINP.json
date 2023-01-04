@@ -25,4 +25,126 @@
 					"numberOfCoefficients": 7,
 					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
 					"hJmol": 6197.428,
-					"coefficients":
+					"coefficients":[0.000000000e+00, 0.000000000e+00, 2.500000000e+00, 0.000000000e+00, 0.000000000e+00, 0.000000000e+00, 0.000000000e+00],
+					"integrationConstants":7.145					},
+					{					
+					"temperatureRange":[298.150, 1000.000],
+					"numberOfCoefficients": 7,
+					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
+					"hJmol": 6197.428,
+					"coefficients":[0.000000000e+00, 0.000000000e+00, 2.500000000e+00, 0.000000000e+00, 0.000000000e+00, 0.000000000e+00, 0.000000000e+00],
+					"integrationConstants":7.145					},
+					{					
+					"temperatureRange":[298.150, 1000.000],
+					"numberOfCoefficients": 7,
+					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
+					"hJmol": 6197.428,
+					"coefficients":[0.000000000e+00, 0.000000000e+00, 2.500000000e+00, 0.000000000e+00, 0.000000000e+00, 0.000000000e+00, 0.000000000e+00],
+					"integrationConstants":7.145					}
+				]
+		},
+
+
+
+
+
+
+
+
+
+
+
+		{
+			"species": "Ag+",
+			"description": "Moore,1971.",
+			"tIntervals":3 ,
+			"idCode":"g10/97",
+			"chemicalformula":
+				[
+				  {
+					"symbol": "AG",
+					"numberOfAtoms":  1.00
+				  },
+				  {
+					"symbol": "E",
+					"numberOfAtoms":-1.00
+				  }
+				],
+			"gaseous": false,
+			 "molecularWeight": 107.8676514,
+			 "heatOfFormation": 1022093.730,
+			"dataRecords":
+				[
+					{					
+					"temperatureRange":[298.150, 1000.000],
+					"numberOfCoefficients": 7,
+					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
+					"hJmol": 6197.530,
+					"coefficients":[3.691132750e+06, -4.316983000e+04, 2.028445385e+02, -4.658413740e-01, 5.586200510e-04, -3.154880975e-07, 6.578702060e-11],
+					"integrationConstants":7.145					},
+					{					
+					"temperatureRange":[298.150, 1000.000],
+					"numberOfCoefficients": 7,
+					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
+					"hJmol": 6197.530,
+					"coefficients":[-5.327432350e+07, 1.310710631e+05, -1.098820208e+02, 4.826002760e-02, -1.093661557e-05, 1.263835910e-09, -5.852542535e-14],
+					"integrationConstants":7.145					},
+					{					
+					"temperatureRange":[298.150, 1000.000],
+					"numberOfCoefficients": 7,
+					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
+					"hJmol": 6197.530,
+					"coefficients":[-2.119469170e+08, 1.159621936e+05, -2.220792532e+01, 2.938747589e-03, -1.822389545e-07, 5.823925360e-12, -7.455184012e-17],
+					"integrationConstants":7.145					}
+				]
+		},
+
+
+
+
+
+
+
+
+
+
+
+		{
+			"species": "AL",
+			"description": "Hf:Cox,1989.",
+			"tIntervals":3 ,
+			"idCode":"g12/97",
+			"chemicalformula":
+				[
+				  {
+					"symbol": "AL",
+					"numberOfAtoms":  1.00
+				  }
+				],
+			"gaseous": false,
+			 "molecularWeight": 26.9815380,
+			 "heatOfFormation": 330000.000,
+			"dataRecords":
+				[
+					{					
+					"temperatureRange":[200.000, 1000.000],
+					"numberOfCoefficients": 7,
+					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
+					"hJmol": 6918.671,
+					"coefficients":[5.006608890e+03, 1.861304407e+01, 2.412531111e+00, 1.987604647e-04, -2.432362152e-07, 1.538281506e-10, -3.944375734e-14],
+					"integrationConstants":7.145					},
+					{					
+					"temperatureRange":[200.000, 1000.000],
+					"numberOfCoefficients": 7,
+					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
+					"hJmol": 6918.671,
+					"coefficients":[-2.920820938e+04, 1.167751876e+02, 2.356906505e+00, 7.737231520e-05, -1.529455262e-08, -9.971670260e-13, 5.053278264e-16],
+					"integrationConstants":7.145					},
+					{					
+					"temperatureRange":[200.000, 1000.000],
+					"numberOfCoefficients": 7,
+					"tExponents":[-2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 0.0],
+					"hJmol": 6918.671,
+					"coefficients":[-5.040682320e+08, 3.802322650e+05, -1.082347159e+02, 1.549444292e-02, -1.070103856e-06, 3.592110900e-11, -4.696039394e-16],
+					"integrationConstants":7.145					}
+				]
