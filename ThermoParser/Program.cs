@@ -173,6 +173,58 @@ namespace ThermoParser
                 streamWriter.Write("\"" + m_IdCode + "\"" + ","); 
             }
             //  chemical formula line
+            string m_formulaLabel = "chemicalformula";
+            string m_symbolLabel = "symbol";
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            streamWriter.Write("\"" + m_formulaLabel+ "\"" + ":");
+            string chemFormulaSubstring = m_currentLine.Substring(9, 41);
+            chemFormulaSubstring= chemFormulaSubstring.Trim();
+            int firstColumn = 3;    // element
+            int secondColumn = 5;   // number
+            int thirdColumn = 3;    // element
+            int fourthColumn = 5;   // number
+            int fifthColumn = 3;
+            int sixthColumn = 5;    // element
+            int seventhColumn = 3;  // number
+            int eigthColumn = 5;    // element
+            int ninthColumn = 3;    // number
+            int tenthColumn = 5;    // element
+
+            //int firstNumber = chemFormulaSubstring.IndexOfAny(anyof);   // returns 4
+            string firstElement = chemFormulaSubstring.Substring(0, firstColumn); // return "AG"
+            firstElement = firstElement.Trim();
+            int l_firstElement = firstElement.Length;
+            string firstAtoms = chemFormulaSubstring.Substring(firstColumn, secondColumn);
+
+            string secondElement = chemFormulaSubstring.Substring(firstColumn + secondColumn, thirdColumn);
+            secondElement = secondElement.Trim();
+            int l_secondElement = secondElement.Length;
+            string secondAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn, fourthColumn);
+
+            string thirdElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn, fifthColumn);
+            thirdElement = thirdElement.Trim();
+            int l_thirdElement = thirdElement.Length;
+            string thirdAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn, sixthColumn);
+
+            string fourthElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn, seventhColumn);
+            fourthElement = fourthElement.Trim();
+            int l_fourthElement = fourthElement.Length;
+            string fourthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn, eigthColumn);
+
+            string fifthelement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn, ninthColumn);
+            fifthelement = fifthelement.Trim();
+            int l_fifthElement = fifthelement.Length;
+            string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("[");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("{");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t");
+            streamWriter.Write("\"" + m_symbolLabel + "\"" + ":");
 
 
         }
