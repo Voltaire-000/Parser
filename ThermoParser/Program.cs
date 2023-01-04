@@ -172,9 +172,11 @@ namespace ThermoParser
                 streamWriter.Write("\"" + m_IdLabel + "\"" + ":");
                 streamWriter.Write("\"" + m_IdCode + "\"" + ","); 
             }
+
             //  chemical formula line
             string m_formulaLabel = "chemicalformula";
             string m_symbolLabel = "symbol";
+            string m_numElementslabel = "numberOfAtoms";
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
             streamWriter.Write("\"" + m_formulaLabel+ "\"" + ":");
@@ -201,98 +203,107 @@ namespace ThermoParser
             secondElement = secondElement.Trim();
             int l_secondElement = secondElement.Length;
             string secondAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn, fourthColumn);
+            double n_secondAtoms = 0.0;
+            double.TryParse(secondAtoms, out n_secondAtoms);
 
             string thirdElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn, fifthColumn);
             thirdElement = thirdElement.Trim();
             int l_thirdElement = thirdElement.Length;
             string thirdAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn, sixthColumn);
+            double n_thirdAtoms = 0.0;
+            double.TryParse(thirdAtoms, out n_thirdAtoms);
 
             string fourthElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn, seventhColumn);
             fourthElement = fourthElement.Trim();
             int l_fourthElement = fourthElement.Length;
             string fourthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn, eigthColumn);
+            double n_fourthAtoms = 0.0;
+            double.TryParse(fourthAtoms, out n_fourthAtoms);
 
             string fifthelement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn, ninthColumn);
             fifthelement = fifthelement.Trim();
             int l_fifthElement = fifthelement.Length;
             string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
+            double n_fifthAtoms = 0.0;
+            double.TryParse(fifthAtoms, out n_fifthAtoms);
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("[");
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
-            streamWriter.Write("{");
+            streamWriter.Write("  {");
             streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t\t");
-            streamWriter.Write("\"" + m_symbolLabel + "\"" + ":");
+            streamWriter.Write("\t\t\t\t\t");
+
             //  write the element symbol
+            streamWriter.Write("\"" + m_symbolLabel + "\"" + ": ");
             streamWriter.Write("\"" + firstElement + "\"" + ",");
-            if (l_secondElement > 0)
-            {
-                streamWriter.Write(firstAtoms + ",");
-            }
-            else
-            {
-                streamWriter.Write(firstAtoms);
-            }
-            if (l_secondElement > 0)
+
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t");
+            streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
+            streamWriter.Write(firstAtoms);
+            //  if no more atoms print close curly, else print curly + ,
+            if (n_secondAtoms != 0)
             {
                 streamWriter.WriteLine();
+                streamWriter.Write("\t\t\t\t");
+                streamWriter.Write("  }" + ",");
+                streamWriter.WriteLine();
+                streamWriter.Write("\t\t\t\t");
+                streamWriter.Write("  {");
+                streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
-                
-                streamWriter.Write("\"" + secondElement + "\"");
+                streamWriter.Write("\"" + m_symbolLabel + "\"" + ": ");
+                streamWriter.Write("\"" + secondElement + "\"" + ",");
+                streamWriter.WriteLine();
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
+                streamWriter.Write(secondAtoms);
 
-                if (l_thirdElement > 0)
+                if (n_thirdAtoms !=0)
                 {
-                    streamWriter.Write(secondAtoms + ",");
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t");
+                    streamWriter.Write("  }" + ",");
+
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t");
+                    streamWriter.Write("  {");
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + m_symbolLabel + "\"" + ": ");
+                    streamWriter.Write("\"" + thirdElement + "\"" + ",");
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
+                    streamWriter.Write(thirdAtoms);
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t");
+                    streamWriter.Write("  }" + ",");
+
+
                 }
                 else
                 {
-                    streamWriter.Write(secondAtoms);
-                }
-
-                if (l_thirdElement > 0)
-                {
                     streamWriter.WriteLine();
-                    streamWriter.Write("\t\t\t\t\t");
-                    streamWriter.Write("\"" + thirdElement + "\"");
-
-                    if (l_fourthElement > 0)
-                    {
-                        streamWriter.Write(thirdAtoms + ",");
-                    }
-                    else
-                    {
-                        streamWriter.Write(thirdAtoms);
-                    }
-
-                    if (l_fourthElement > 0)
-                    {
-                        streamWriter.WriteLine();
-                        streamWriter.Write("\t\t\t\t\t");
-                        fourthElement = AddQuotesAndSemicolon(fourthElement);
-                        writer.Write(fourthElement);
-
-                        if (l_fifthElement > 0)
-                        {
-                            writer.Write(fourthAtoms + ",");
-                        }
-                        else
-                        {
-                            writer.Write(fourthAtoms);
-                        }
-
-                        if (l_fifthElement > 0)
-                        {
-                            writer.WriteLine();
-                            writer.Write("\t\t\t\t\t");
-                            fifthelement = AddQuotesAndSemicolon(fifthelement);
-                            writer.Write(fifthelement);
-                            writer.Write(fifthAtoms);
-                        }
-                    }
+                    streamWriter.Write("\t\t\t\t");
+                    streamWriter.Write("  }");
                 }
+
+
             }
+            else
+            {
+                streamWriter.WriteLine();
+                streamWriter.Write("\t\t\t\t");
+                streamWriter.Write("  }");
+            }
+
+            //  print the closing bracket for formula
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("]");
 
 
         }
