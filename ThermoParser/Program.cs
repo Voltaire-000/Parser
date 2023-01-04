@@ -137,10 +137,21 @@ namespace ThermoParser
 
                 // must read new line here
                 m_currentLine = streamReader.ReadLine();
+                string coefFirstPart = m_currentLine;
+                string coefSecondPart = streamReader.ReadLine();
+                string concantCoef = coefFirstPart+ coefSecondPart;
+                concantCoef = concantCoef.Replace('D', 'e');
+                string coefSubstring = concantCoef.Substring(0, 128);
+                coefSubstring = coefSubstring.Trim();
+
+
+                streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
-                streamWriter.WriteLine("\"" + "coefficients" + "\"" + ":");
+                streamWriter.Write("\"" + "coefficients" + "\"" + ":");
+                //streamWriter.Write();
+
                 streamWriter.Write("\t\t\t\t\t");
-                streamWriter.WriteLine("\"" + "integrationConstants" + "\"" + ":" + 7.145 );
+                streamWriter.Write("\"" + "integrationConstants" + "\"" + ":" + 7.145 );
                 streamWriter.Write("\t\t\t\t\t");
 
                 // if this is last loop dont print comma
