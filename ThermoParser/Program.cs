@@ -43,18 +43,40 @@ namespace ThermoParser
             switch (unicodeCategory)
             {
                 case UnicodeCategory.LowercaseLetter:
-                    if (m_char == 't')
+                    if (m_char != 'e')
                     {
-                        BeginNewJsonFile(streamWriter, streamReader, m_currentLine);
+                        PrintRootName();
                     }
                     else
                     {
-                        //Print_ReferenceSpecies(streamReader, streamWriter, m_currentLine);
+                        break;
+                        //Print_ReferenceSpecies();
                     }
+                    if (m_char == 'x')
+                    {
+                        //  end of file
+                        EndOfFile();
+                    }
+                    break;
+                    case UnicodeCategory.UppercaseLetter:
+                    //  uppercase is new species with the exception of ref species
+                    PrintNewSpecies();
+                case UnicodeCategory.SpaceSeparator:
+                    DoRecordSet();
                     break;
 
             }
 
+        }
+
+        private static void DoRecordSet()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void EndOfFile()
+        {
+            throw new NotImplementedException();
         }
 
         private static void BeginNewJsonFile(StreamWriter streamWriter, StreamReader streamReader, string m_currentFile)
@@ -62,7 +84,7 @@ namespace ThermoParser
             //--------------Print open curly for file--------------
             streamWriter.Write("{");
 
-            PrintRootName(streamWriter);
+            //PrintRootName();
 
 
             //--------------Print close curly for file
@@ -71,14 +93,17 @@ namespace ThermoParser
 
         }
 
-        private static void PrintRootName(StreamWriter streamWriter)
+        private static void PrintRootName()
         {
             string rootName = "thermo";
             //string rootName = "species";
+            streamWriter.Write("{");
             streamWriter.WriteLine();
             streamWriter.Write("\t");
             streamWriter.Write("\"" + rootName + "\"" + ":");
-            PrintOpenCloseBracket(streamWriter);
+            streamWriter.WriteLine();
+            streamWriter.Write("\t");
+            streamWriter.Write("[");
         }
 
         private static void PrintOpenCloseBracket(StreamWriter streamWriter)
@@ -86,21 +111,21 @@ namespace ThermoParser
             streamWriter.WriteLine();
             streamWriter.Write("\t");
             streamWriter.Write("[");
-            PrintNewSpecies(streamWriter, streamReader, m_currentLine);
+            PrintNewSpecies();
             streamWriter.WriteLine();
             streamWriter.Write("\t");
             streamWriter.Write("]");
 
         }
 
-        private static void PrintNewSpecies(StreamWriter streamWriter, object streamReader, string m_currentLine)
+        private static void PrintNewSpecies()
         {
             //----------------Open curly brace for new species
             streamWriter.WriteLine();
             streamWriter.Write("\t\t");
             streamWriter.Write("{");
             //------------------------------------------------
-
+            PrintSpeciesAndDescription();
 
 
             //---------------Close curly for new species
@@ -109,6 +134,28 @@ namespace ThermoParser
             streamWriter.Write("}" + ",");
             //-------------------------------------------
 
+        }
+
+        private static void PrintSpeciesAndDescription()
+        {
+            string m_speciesLabel = "species";
+            string m_species;
+            string m_descriptionLabel = "description";
+            string m_description;
+
+            m_species = m_currentLine.Substring(0, 15);
+            m_species = m_species.Trim();
+            m_description = m_currentLine.Substring(15, 15);
+            m_description = m_description.Trim();
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            streamWriter.Write("\"" + m_speciesLabel + "\"" + ": ");
+            streamWriter.Write("\"" + m_species + "\"" + ",");
+
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            streamWriter.Write("\"" + m_descriptionLabel+ "\"" + ": ");
+            streamWriter.Write("\"" + m_description+ "\"" + ",");
         }
     }
 }

@@ -2,6 +2,8318 @@
 	"thermo":
 	[
 		{
+			"species": "Ag",
+			"description": "Hf:Cox,1989.",
 		},
-	]
-}
+		{
+			"species": "Ag+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Ag-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "AL",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "AL+",
+			"description": "Kaufman,1991",
+		},
+		{
+			"species": "AL-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "ALBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALBr3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALC",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALC2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALCL+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "ALCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALCL3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALF+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "ALFCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALFCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALF2-",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALF2CL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALF3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALF4-",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALHCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALHCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALHF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALHFCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALHF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALH2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALH2CL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALH2F",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALH3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALI3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALN",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALO+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "ALO-",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOF2-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "ALOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOHCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOHCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOHF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALOHF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALO2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALO2-",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL(OH)2CL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL(OH)2F",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL(OH)3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALS",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "ALS2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2Br6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2C2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2CL6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2F6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2I6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2O",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2O+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "AL2O2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2O2+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "AL2O3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2S",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "AL2S2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ar",
+			"description": "Ref-Elm. Moo",
+		},
+		{
+			"species": "Ar+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "B",
+			"description": "Martin,J.M.L",
+		},
+		{
+			"species": "B+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "B-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "BBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BBr3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BC",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BC2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BCL+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "BCLOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BCL(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BCL2+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "BCL2OH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BCL3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BFCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BFCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BFOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BF(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BF2+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "BF2-",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BF2CL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BF2OH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BF3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BF4-",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BH",
+			"description": "Bauschlicher",
+		},
+		{
+			"species": "BHCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BHCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BHF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BHFCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BHF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BH2",
+			"description": "Jacox,1994.",
+		},
+		{
+			"species": "BH2CL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BH2F",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BH3",
+			"description": "Allendorf,19",
+		},
+		{
+			"species": "BH4",
+			"description": "Radical. Sax",
+		},
+		{
+			"species": "BH5",
+			"description": "Schreiner,19",
+		},
+		{
+			"species": "BH3NH3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BI3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BN",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BO-",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BOCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BOCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BOF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BOF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BO2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BO2-",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BS",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BS2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2C",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2CL4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2F4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2H",
+			"description": "Adams,1989.",
+		},
+		{
+			"species": "B2H2",
+			"description": "Curtiss,1989",
+		},
+		{
+			"species": "B2H3",
+			"description": "Adams,1989.",
+		},
+		{
+			"species": "B2H3,db",
+			"description": "2-Bridges. A",
+		},
+		{
+			"species": "B2H4",
+			"description": "1-Bridge. Ru",
+		},
+		{
+			"species": "B2H4,db",
+			"description": "2-Bridges.Ru",
+		},
+		{
+			"species": "B2H5",
+			"description": "1-Bridge. Ru",
+		},
+		{
+			"species": "B2H5,db",
+			"description": "2-Bridges. R",
+		},
+		{
+			"species": "B2H6",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "B2O",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2O2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2O3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2(OH)4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2S",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2S2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B2S3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B3H7,C2v",
+			"description": "C2v symmetry",
+		},
+		{
+			"species": "B3H7,Cs",
+			"description": "Cs symmetry.",
+		},
+		{
+			"species": "B3H9",
+			"description": "Hf:McKee,199",
+		},
+		{
+			"species": "B3N3H6",
+			"description": "Borazole.  G",
+		},
+		{
+			"species": "B3O3CL3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B3O3FCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B3O3F2CL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B3O3F3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "B4H4",
+			"description": "Yu,1998. Mac",
+		},
+		{
+			"species": "B4H10",
+			"description": "Wagman,1982",
+		},
+		{
+			"species": "B4H12",
+			"description": "Shen,1993. Y",
+		},
+		{
+			"species": "B5H9",
+			"description": "Hf:Chase,199",
+		},
+		{
+			"species": "Ba",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ba+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "BaBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaCL+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaF+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaO+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaOH+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ba(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BaS",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ba2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Be",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Be+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Be++",
+			"description": "Moore,1970a.",
+		},
+		{
+			"species": "BeBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeH+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "BeH2",
+			"description": "Martin,J.M.L",
+		},
+		{
+			"species": "BeI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeN",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "BeO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeOH+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Be(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeS",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Be2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Be2CL4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Be2F4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Be2O",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Be2OF2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Be2O2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Be3O3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Be4O4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Br",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Br+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Br-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "BrCL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "BrF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "BrF3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "BrF5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "BrO",
+			"description": "Chase,1996a.",
+		},
+		{
+			"species": "OBrO",
+			"description": "Chase,1996a.",
+		},
+		{
+			"species": "BrOO",
+			"description": "Chase,1996a.",
+		},
+		{
+			"species": "BrO3",
+			"description": "Chase,1996a.",
+		},
+		{
+			"species": "Br2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "BrBrO",
+			"description": "Chase,1996a.",
+		},
+		{
+			"species": "BrOBr",
+			"description": "Chase,1996a.",
+		},
+		{
+			"species": "C",
+			"description": "Hf:Douglas,1",
+		},
+		{
+			"species": "C+",
+			"description": "Moore,1970b.",
+		},
+		{
+			"species": "C-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "CBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CBr2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CBr3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CBr4",
+			"description": "Kudchadker,1",
+		},
+		{
+			"species": "CCL",
+			"description": "Hf:Kumaran,1",
+		},
+		{
+			"species": "CCLBr3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CCL2",
+			"description": "Hf:Kumaran,1",
+		},
+		{
+			"species": "CCL2Br2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CCL3",
+			"description": "Hf:Hudgens,1",
+		},
+		{
+			"species": "CCL3Br",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CCL4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CF",
+			"description": "Hf:TRC(6/88)",
+		},
+		{
+			"species": "CF+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "CFBr3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CFCL",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "CFCLBr2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CFCL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CFCL2Br",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CFCL3",
+			"description": "Hf:TRC(6/89)",
+		},
+		{
+			"species": "CF2",
+			"description": "Hf:TRC(6/88)",
+		},
+		{
+			"species": "CF2+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "CF2Br2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CF2CL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CF2CLBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CF2CL2",
+			"description": "Hf:TRC(6/89)",
+		},
+		{
+			"species": "CF3",
+			"description": "Hf:TRC(6/88)",
+		},
+		{
+			"species": "CF3+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "CF3Br",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CF3CL",
+			"description": "Hf:TRC(6/89)",
+		},
+		{
+			"species": "CF4",
+			"description": "Hf:TRC(12/94",
+		},
+		{
+			"species": "CH",
+			"description": "Gurvich,1979",
+		},
+		{
+			"species": "CH+",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CHBr3",
+			"description": "Kudchadker,1",
+		},
+		{
+			"species": "CHCL",
+			"description": "Hf:TRC(12/93",
+		},
+		{
+			"species": "CHCLBr2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CHCL2",
+			"description": "TRC(12/93) t",
+		},
+		{
+			"species": "CHCL2Br",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CHCL3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CHF",
+			"description": "Hf:TRC(6/88)",
+		},
+		{
+			"species": "CHFBr2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CHFCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CHFCLBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CHFCL2",
+			"description": "Hf:TRC(6/89)",
+		},
+		{
+			"species": "CHF2",
+			"description": "TRC(6/88) tu",
+		},
+		{
+			"species": "CHF2Br",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CHF2CL",
+			"description": "Hf:TRC(6/89)",
+		},
+		{
+			"species": "CHF3",
+			"description": "Hf:TRC(12/89",
+		},
+		{
+			"species": "CHI3",
+			"description": "Kudchadker,1",
+		},
+		{
+			"species": "CH2",
+			"description": "D0(H2C-H): R",
+		},
+		{
+			"species": "CH2Br2",
+			"description": "Kudchadker,",
+		},
+		{
+			"species": "CH2CL",
+			"description": "Hf:TRC(12/93",
+		},
+		{
+			"species": "CH2CLBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CH2CL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CH2F",
+			"description": "TRC(6/88) tu",
+		},
+		{
+			"species": "CH2FBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CH2FCL",
+			"description": "Hf:TRC(6/89)",
+		},
+		{
+			"species": "CH2F2",
+			"description": "Hf:TRC(12/89",
+		},
+		{
+			"species": "CH2I2",
+			"description": "Kudchadker,1",
+		},
+		{
+			"species": "CH3",
+			"description": "D0(H3C-H): R",
+		},
+		{
+			"species": "CH3Br",
+			"description": "Kudchadker,1",
+		},
+		{
+			"species": "CH3CL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CH3F",
+			"description": "Hf:TRC(12/89",
+		},
+		{
+			"species": "CH3I",
+			"description": "Kudchadker,1",
+		},
+		{
+			"species": "CH2OH",
+			"description": "Hydroxymethy",
+		},
+		{
+			"species": "CH2OH+",
+			"description": "Hydroxymethy",
+		},
+		{
+			"species": "CH3O",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "CH4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CH3OH",
+			"description": "Hf:TRC(6/87)",
+		},
+		{
+			"species": "CH3OOH",
+			"description": "Methyl Hydro",
+		},
+		{
+			"species": "CI",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CI2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CI3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CI4",
+			"description": "Kudchadker,1",
+		},
+		{
+			"species": "CN",
+			"description": "Hf: Huang,19",
+		},
+		{
+			"species": "CN+",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CN-",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CNN",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CO",
+			"description": "Gurvich,1979",
+		},
+		{
+			"species": "CO+",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "COCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "COCL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "COFCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "COF2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "COHCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "COHF",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "COS",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CO2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CO2+",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "COOH",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CP",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CS",
+			"description": "Hf:Prinslow,",
+		},
+		{
+			"species": "CS2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2+",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2-",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2CL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2CL2",
+			"description": "Hf:Manion,20",
+		},
+		{
+			"species": "C2CL3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2CL4",
+			"description": "Hf:Manion,20",
+		},
+		{
+			"species": "C2CL6",
+			"description": "Hf:Manion,20",
+		},
+		{
+			"species": "C2F",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2FCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2FCL3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2F2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2F2CL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2F3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2F3CL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2F4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2F6",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2H",
+			"description": "Ervin, 1990.",
+		},
+		{
+			"species": "C2HCL",
+			"description": "Hf:Manion,20",
+		},
+		{
+			"species": "C2HCL3",
+			"description": "Hf:Manion,20",
+		},
+		{
+			"species": "C2HF",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2HFCL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2HF2CL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2HF3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2H2,acetylene",
+			"description": "Hf:TRC(10/93",
+		},
+		{
+			"species": "C2H2,vinylidene",
+			"description": "Chen,1989. O",
+		},
+		{
+			"species": "C2H2CL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2H2FCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C2H2F2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CH2CO,ketene",
+			"description": "D0(H2C=CO):",
+		},
+		{
+			"species": "O(CH)2O",
+			"description": "Glyoxal. Dor",
+		},
+		{
+			"species": "HO(CO)2OH",
+			"description": "Oxalic Acid,",
+		},
+		{
+			"species": "C2H3,vinyl",
+			"description": "Radical. Erv",
+		},
+		{
+			"species": "CH2Br-COOH",
+			"description": "Bromoacetic",
+		},
+		{
+			"species": "C2H3CL",
+			"description": "Hf:Manion,20",
+		},
+		{
+			"species": "CH2CL-COOH",
+			"description": "Chloroacetic",
+		},
+		{
+			"species": "C2H3F",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CH3CN",
+			"description": "Acetonitrile",
+		},
+		{
+			"species": "CH3CO,acetyl",
+			"description": "Radical. Hf:",
+		},
+		{
+			"species": "C2H4",
+			"description": "TRC(4/88) w2",
+		},
+		{
+			"species": "C2H4O,ethylen-o",
+			"description": "Ethylene Oxi",
+		},
+		{
+			"species": "CH3CHO,ethanal",
+			"description": "Hf:TRC (6/78",
+		},
+		{
+			"species": "CH3COOH",
+			"description": "Acetic Acid.",
+		},
+		{
+			"species": "OHCH2COOH",
+			"description": "Glycolic Aci",
+		},
+		{
+			"species": "C2H5",
+			"description": "Chen,1990.",
+		},
+		{
+			"species": "C2H5Br",
+			"description": "Bromoethane.",
+		},
+		{
+			"species": "C2H6",
+			"description": "Ethane. Pami",
+		},
+		{
+			"species": "CH3N2CH3",
+			"description": "Azomethane.",
+		},
+		{
+			"species": "C2H5OH",
+			"description": "Hf:TRC(6/87)",
+		},
+		{
+			"species": "CH3OCH3",
+			"description": "Dimethyl eth",
+		},
+		{
+			"species": "CH3O2CH3",
+			"description": "Dimethyl per",
+		},
+		{
+			"species": "CCN",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "CNC",
+			"description": "CNC radical.",
+		},
+		{
+			"species": "OCCN",
+			"description": "Cyanooxometh",
+		},
+		{
+			"species": "C2N2",
+			"description": "Gurvich,1979",
+		},
+		{
+			"species": "C2O",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "C2S2",
+			"description": "TRC(6/01) p8",
+		},
+		{
+			"species": "C3",
+			"description": "Gurvich,1979",
+		},
+		{
+			"species": "C3H3,1-propynl",
+			"description": "TRC(4/98) tu",
+		},
+		{
+			"species": "C3H3,2-propynl",
+			"description": "TRC(4/98) tu",
+		},
+		{
+			"species": "C3H4,allene",
+			"description": "TRC(4/84) w2",
+		},
+		{
+			"species": "C3H4,propyne",
+			"description": "Hf:TRC(10/93",
+		},
+		{
+			"species": "C3H4,cyclo-",
+			"description": "Dorofeeva,19",
+		},
+		{
+			"species": "C3H5,allyl",
+			"description": "Radical. Bur",
+		},
+		{
+			"species": "C3H6,propylene",
+			"description": "Hf:TRC(4/88)",
+		},
+		{
+			"species": "C3H6,cyclo-",
+			"description": "Dorofeeva,19",
+		},
+		{
+			"species": "C3H6O,propylox",
+			"description": "TRC(6/84) w6",
+		},
+		{
+			"species": "C3H6O,acetone",
+			"description": "Chao,1986. C",
+		},
+		{
+			"species": "C3H6O,propanal",
+			"description": "Hf:TRC(6/78)",
+		},
+		{
+			"species": "C3H7,n-propyl",
+			"description": "Radical. Tsa",
+		},
+		{
+			"species": "C3H7,i-propyl",
+			"description": "Radical. Tsa",
+		},
+		{
+			"species": "C3H8",
+			"description": "Hf:TRC(10/85",
+		},
+		{
+			"species": "C3H8O,1propanol",
+			"description": "Hf:TRC(6/87)",
+		},
+		{
+			"species": "C3H8O,2propanol",
+			"description": "Hf:TRC(6/87)",
+		},
+		{
+			"species": "CNCOCN",
+			"description": "Oxopropanedi",
+		},
+		{
+			"species": "C3OS",
+			"description": "TRC(6/01) p8",
+		},
+		{
+			"species": "C3O2",
+			"description": "Hf:Chase,199",
+		},
+		{
+			"species": "C3S2",
+			"description": "TRC(6/01) p8",
+		},
+		{
+			"species": "C4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C4H2,butadiyne",
+			"description": "1,3-Butadiyn",
+		},
+		{
+			"species": "C4H4,1,3-cyclo-",
+			"description": "1,3-Cyclobut",
+		},
+		{
+			"species": "C4H6,butadiene",
+			"description": "1,3-butadien",
+		},
+		{
+			"species": "C4H6,1butyne",
+			"description": "TRC(10/93) t",
+		},
+		{
+			"species": "C4H6,2butyne",
+			"description": "TRC(10/93) t",
+		},
+		{
+			"species": "C4H6,cyclo-",
+			"description": "Cyclobutene.",
+		},
+		{
+			"species": "C4H8,1-butene",
+			"description": "TRC(4/88) tu",
+		},
+		{
+			"species": "C4H8,cis2-buten",
+			"description": "Cis2-butene",
+		},
+		{
+			"species": "C4H8,tr2-butene",
+			"description": "TRC(4/88) tu",
+		},
+		{
+			"species": "C4H8,isobutene",
+			"description": "TRC(4/88) tu",
+		},
+		{
+			"species": "C4H8,cyclo-",
+			"description": "Cyclobutane.",
+		},
+		{
+			"species": "C4H9,n-butyl",
+			"description": "TRC(10/84) t",
+		},
+		{
+			"species": "C4H9,i-butyl",
+			"description": "2-methylprop",
+		},
+		{
+			"species": "C4H9,s-butyl",
+			"description": "1-methylprop",
+		},
+		{
+			"species": "C4H9,t-butyl",
+			"description": "1,1dimethyle",
+		},
+		{
+			"species": "C4H10,n-butane",
+			"description": "Hf:TRC(10/85",
+		},
+		{
+			"species": "C4H10,isobutane",
+			"description": "TRC(10/85) w",
+		},
+		{
+			"species": "C4N2",
+			"description": "Hf:TRC(12/93",
+		},
+		{
+			"species": "C5",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "C5H6,1,3cyclo-",
+			"description": "1,3-Cyclopen",
+		},
+		{
+			"species": "C5H8,cyclo-",
+			"description": "Cyclopentene",
+		},
+		{
+			"species": "C5H10,1-pentene",
+			"description": "TRC(4/87) tu",
+		},
+		{
+			"species": "C5H10,cyclo-",
+			"description": "Cyclopentane",
+		},
+		{
+			"species": "C5H11,pentyl",
+			"description": "Radical. TRC",
+		},
+		{
+			"species": "C5H11,t-pentyl",
+			"description": "1,1-dimethyl",
+		},
+		{
+			"species": "C5H12,n-pentane",
+			"description": "TRC(10/85) t",
+		},
+		{
+			"species": "C5H12,i-pentane",
+			"description": "2-Methylbuta",
+		},
+		{
+			"species": "CH3C(CH3)2CH3",
+			"description": "2,2-Dimethyl",
+		},
+		{
+			"species": "C6D5,phenyl",
+			"description": "Radical-d5.",
+		},
+		{
+			"species": "C6D6",
+			"description": "Benzene-d6.",
+		},
+		{
+			"species": "C6H2",
+			"description": "Dorofeeva,19",
+		},
+		{
+			"species": "C6H5,phenyl",
+			"description": "Radical.Hf:T",
+		},
+		{
+			"species": "C6H5O,phenoxy",
+			"description": "Phenoxy radi",
+		},
+		{
+			"species": "C6H6",
+			"description": "TRC(10/86)w3",
+		},
+		{
+			"species": "C6H5OH,phenol",
+			"description": "Burcat,1985.",
+		},
+		{
+			"species": "C6H10,cyclo-",
+			"description": "Cyclohexene.",
+		},
+		{
+			"species": "C6H12,1-hexene",
+			"description": "TRC(4/87) tu",
+		},
+		{
+			"species": "C6H12,cyclo-",
+			"description": "Cyclohexane.",
+		},
+		{
+			"species": "C6H13,n-hexyl",
+			"description": "TRC(10/83) t",
+		},
+		{
+			"species": "C6H14,n-hexane",
+			"description": "TRC(4/85) tu",
+		},
+		{
+			"species": "C7H7,benzyl",
+			"description": "Radical. Bro",
+		},
+		{
+			"species": "C7H8",
+			"description": "Hf:TRC(4/98)",
+		},
+		{
+			"species": "C7H8O,cresol-mx",
+			"description": "Eql. mixture",
+		},
+		{
+			"species": "C7H14,1-heptene",
+			"description": "TRC(4/87) tu",
+		},
+		{
+			"species": "C7H15,n-heptyl",
+			"description": "TRC(10/83) t",
+		},
+		{
+			"species": "C7H16,n-heptane",
+			"description": "TRC(10/85) t",
+		},
+		{
+			"species": "C7H16,2-methylh",
+			"description": "2-methylhexa",
+		},
+		{
+			"species": "C8H8,styrene",
+			"description": "Ethenylbenze",
+		},
+		{
+			"species": "C8H10,ethylbenz",
+			"description": "Ethylbenzene",
+		},
+		{
+			"species": "C8H16,1-octene",
+			"description": "TRC(4/87) tu",
+		},
+		{
+			"species": "C8H17,n-octyl",
+			"description": "TRC(10/83) t",
+		},
+		{
+			"species": "C8H18,n-octane",
+			"description": "TRC(4/85) tu",
+		},
+		{
+			"species": "C8H18,isooctane",
+			"description": "2,2,4-Trimet",
+		},
+		{
+			"species": "C9H19,n-nonyl",
+			"description": "TRC (10/83)",
+		},
+		{
+			"species": "C10H8,naphthale",
+			"description": "Naphthalene.",
+		},
+		{
+			"species": "C10H21,n-decyl",
+			"description": "TRC(10/83) t",
+		},
+		{
+			"species": "C12H9,o-bipheny",
+			"description": "o-Biphenyl r",
+		},
+		{
+			"species": "C12H10,biphenyl",
+			"description": "Burcat,1985.",
+		},
+		{
+			"species": "Ca",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Ca+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "CaBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaCL+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaF+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaO+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaOH+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ca(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "CaS",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ca2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Cd",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Cd+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "CL",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "CL+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "CL-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "CLCN",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "CLF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "CLF3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "CLF5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "CLO",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "CLO2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "CL2",
+			"description": "Ref-Elm. Gur",
+		},
+		{
+			"species": "CL2O",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "Co",
+			"description": "Hf:Hultgren,",
+		},
+		{
+			"species": "Co+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "Co-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "Cr",
+			"description": "Hf:Chase,199",
+		},
+		{
+			"species": "Cr+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "Cr-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "CrN",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "CrO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CrO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CrO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CrO3-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Cs+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Cs-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "CsBO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsBr",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsCL",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsF",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsH",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsI",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsLi",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsNO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsNO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsNa",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "CsOH",
+			"description": "Gurvich,1997",
+		},
+		{
+			"species": "CsRb",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2Br2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2CO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2CL2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2F2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2I2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2O",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2O+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2O2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2O2H2",
+			"description": "Gurvich,1997",
+		},
+		{
+			"species": "Cs2SO4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cu",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Cu+",
+			"description": "Sugar,1990.",
+		},
+		{
+			"species": "Cu-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "CuCL",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "CuF",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "CuF2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "CuO",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "CuOH",
+			"description": "Jacox,1994.",
+		},
+		{
+			"species": "Cu2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Cu3CL3",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "D",
+			"description": "D0(D2): Herz",
+		},
+		{
+			"species": "D+",
+			"description": "Moore,1972.",
+		},
+		{
+			"species": "D-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "DBr",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "DCL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "DF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "DOCL",
+			"description": "D0 estimated",
+		},
+		{
+			"species": "DO2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "DO2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "D2",
+			"description": "Ref-Species.",
+		},
+		{
+			"species": "D2+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "D2-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "D2O",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "D2O2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "D2S",
+			"description": "Miller,1967.",
+		},
+		{
+			"species": "F",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "F+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "F-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "FCN",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "FCO",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "FO",
+			"description": "Chase,1996b",
+		},
+		{
+			"species": "FO2,FOO",
+			"description": "Chase,1996b",
+		},
+		{
+			"species": "FO2,OFO",
+			"description": "Chase,1996b",
+		},
+		{
+			"species": "F2",
+			"description": "Ref-Elm. Gur",
+		},
+		{
+			"species": "F2O",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "F2O2",
+			"description": "FOOF. Chase,",
+		},
+		{
+			"species": "FS2F",
+			"description": "Difluorodisu",
+		},
+		{
+			"species": "Fe",
+			"description": "Hf:Hultgren,",
+		},
+		{
+			"species": "Fe+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "Fe-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "Fe(CO)5",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "FeCL",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "FeCL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "FeCL3",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "FeO",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Fe(OH)2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Fe2CL4",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Fe2CL6",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Ga",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "Ga+",
+			"description": "IP:Johansson",
+		},
+		{
+			"species": "GaBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaBr3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaCL3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaF3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaI3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2Br2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2Br4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2Br6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2CL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2CL4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2CL6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2F2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2F4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2F6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2I2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2I4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2I6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ga2O",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ge",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "Ge+",
+			"description": "Sugar,1993.",
+		},
+		{
+			"species": "Ge-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "GeBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeBr2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeBr3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeBr4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeCL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeCL3",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "GeCL4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeF",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeF2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeF3",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "GeF4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeH4",
+			"description": "Barin,1989 p",
+		},
+		{
+			"species": "GeI",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeO",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeO2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeS",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "GeS2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "Ge2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "H",
+			"description": "D0(H2):Herzb",
+		},
+		{
+			"species": "H+",
+			"description": "IP(H): Moore",
+		},
+		{
+			"species": "H-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "HALO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "HALO2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "HBO",
+			"description": "Boron oxide-",
+		},
+		{
+			"species": "HBO+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "HBO2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "HBS",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "HBS+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "HBr",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HCN",
+			"description": "Hf: East,199",
+		},
+		{
+			"species": "HCO",
+			"description": "Hf:Terentis,",
+		},
+		{
+			"species": "HCO+",
+			"description": "Formyl ion.",
+		},
+		{
+			"species": "HCCN",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HCCO",
+			"description": "Ketenyl rad.",
+		},
+		{
+			"species": "HCL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HD",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HD+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "HDO",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HDO2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HI",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "HNC",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "HNCO",
+			"description": "Hf:East,1993",
+		},
+		{
+			"species": "HNO",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HNO2",
+			"description": "Cis-trans. G",
+		},
+		{
+			"species": "HNO3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HOCL",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "HOF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "HO2",
+			"description": "Hf:Hills,198",
+		},
+		{
+			"species": "HO2-",
+			"description": "B3LYP.  EA:",
+		},
+		{
+			"species": "HPO",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "HSO3F",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "H2",
+			"description": "Ref-Elm. Gur",
+		},
+		{
+			"species": "H2+",
+			"description": "Gurvich,1978",
+		},
+		{
+			"species": "H2-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "HBOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "HCHO,formaldehy",
+			"description": "Hf:TRC(6/78)",
+		},
+		{
+			"species": "HCOOH",
+			"description": "Formic acid.",
+		},
+		{
+			"species": "H2F2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H2O",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "H2O+",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H2O2",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "H2S",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H2SO4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H2BOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "HB(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "H3BO3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "H3B3O3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "H3B3O6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "H3F3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H3O+",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H4F4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H5F5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H6F6",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "H7F7",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "He",
+			"description": "Ref-Elm. Moo",
+		},
+		{
+			"species": "He+",
+			"description": "Moore,1971;",
+		},
+		{
+			"species": "Hg",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Hg+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "HgBr2",
+			"description": "Hf: Pankratz",
+		},
+		{
+			"species": "I",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "I+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "I-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "IF5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "IF7",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "I2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "In",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "In+",
+			"description": "IP:Johansson",
+		},
+		{
+			"species": "InBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InBr3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InCL3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InF3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InI3",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2Br2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2Br4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2Br6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2CL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2CL4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2CL6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2F2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2F4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2F6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2I2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2I4",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2I6",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "In2O",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "K",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "K+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "K-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "KALF4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KBO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KBr",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KCN",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "KCL",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KF",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KH",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KI",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KLi",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KNO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KNO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KNa",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "KOH",
+			"description": "Gurvich,1997",
+		},
+		{
+			"species": "K2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2Br2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2CO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2C2N2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "K2CL2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2F2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2I2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2O",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2O+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2O2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K2O2H2",
+			"description": "Gurvich,1997",
+		},
+		{
+			"species": "K2SO4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Kr",
+			"description": "Ref-Elm. Sug",
+		},
+		{
+			"species": "Kr+",
+			"description": "Sugar,1991.",
+		},
+		{
+			"species": "Li",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Li+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Li-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "LiALF4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiBO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiBr",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiCL",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiF",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiH",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiI",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiN",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "LiNO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiNO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "LiOF",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "LiOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "LiON",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Li2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Li2+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li2Br2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li2CL2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li2F2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li2I2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li2O",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li2O+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li2O2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li2O2H2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Li2SO4",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Li3+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li3Br3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li3CL3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li3F3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Li3I3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Mg",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Mg+",
+			"description": "Kaufman,1991",
+		},
+		{
+			"species": "MgBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgCL+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgF+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgF2+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgN",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgOH+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Mg(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "MgS",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Mg2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Mg2F4",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Mn",
+			"description": "Hf:Desai,198",
+		},
+		{
+			"species": "Mn+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "Mo",
+			"description": "Hf:Desai,198",
+		},
+		{
+			"species": "Mo+",
+			"description": "Sugar,1988.",
+		},
+		{
+			"species": "Mo-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "MoO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "MoO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "MoO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "MoO3-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Mo2O6",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Mo3O9",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Mo4O12",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Mo5O15",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "N",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "N+",
+			"description": "Moore,1975.",
+		},
+		{
+			"species": "N-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "NCO",
+			"description": "Hf:East,1993",
+		},
+		{
+			"species": "ND",
+			"description": "Hf:est. from",
+		},
+		{
+			"species": "ND2",
+			"description": "Hf:est. from",
+		},
+		{
+			"species": "ND3",
+			"description": "Hf:est. from",
+		},
+		{
+			"species": "NF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NF2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NF3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NH",
+			"description": "Hf:Anderson,",
+		},
+		{
+			"species": "NH+",
+			"description": "Hf:Gibson,19",
+		},
+		{
+			"species": "NHF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NHF2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NH2",
+			"description": "Hf:Anderson,",
+		},
+		{
+			"species": "NH2F",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NH3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NH2OH",
+			"description": "Hydroxylamin",
+		},
+		{
+			"species": "NH4+",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NO",
+			"description": "Gurvich,1978",
+		},
+		{
+			"species": "NO+",
+			"description": "Cp,S,IP(NO):",
+		},
+		{
+			"species": "NOCL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NOF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NOF3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NO2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NO2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NO2CL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NO2F",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NO3",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "NO3-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NO3F",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N2",
+			"description": "Ref-Elm. Gur",
+		},
+		{
+			"species": "N2+",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N2-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "NCN",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "N2D2,cis",
+			"description": "Hf:Use NASA",
+		},
+		{
+			"species": "N2F2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N2F4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N2H2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "NH2NO2",
+			"description": "Aminyl Nitri",
+		},
+		{
+			"species": "N2H4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N2O",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N2O+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "N2O3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N2O4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N2O5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "N3H",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "Na",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Na+",
+			"description": "Martin,W.C.,",
+		},
+		{
+			"species": "Na-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "NaALF4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaBO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaBr",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaCN",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "NaCL",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaF",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaH",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaI",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaLi",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaNO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaNO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NaOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "NaOH+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Na2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na2Br2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na2CL2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na2F2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na2I2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na2O",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na2O+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na2O2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na2O2H2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Na2SO4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na3CL3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Na3F3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Nb",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "Nb+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Nb-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "NbCL5",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "NbO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "NbOCL3",
+			"description": "Barin,1989.",
+		},
+		{
+			"species": "NbO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Ne",
+			"description": "Ref-Elm. Moo",
+		},
+		{
+			"species": "Ne+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Ni",
+			"description": "Hf:Hultgren,",
+		},
+		{
+			"species": "Ni+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "Ni-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "NiCL",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "NiCL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "NiO",
+			"description": "Pedley,1983",
+		},
+		{
+			"species": "NiS",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "O",
+			"description": "D0(O2):Brix,",
+		},
+		{
+			"species": "O+",
+			"description": "Martin,W.C.,",
+		},
+		{
+			"species": "O-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "OD",
+			"description": "D0(OH)with Z",
+		},
+		{
+			"species": "OD-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "OH",
+			"description": "D0(H-OH): Ru",
+		},
+		{
+			"species": "OH+",
+			"description": "IP: Wiedmann",
+		},
+		{
+			"species": "OH-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "O2",
+			"description": "Ref-Elm. Gur",
+		},
+		{
+			"species": "O2+",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "O2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "O3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "P+",
+			"description": "Martin,W.C.,",
+		},
+		{
+			"species": "P-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "PCL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PCL2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PCL2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PCL3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PCL5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "PF-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "PFCL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PFCL-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PFCL2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PFCL4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF2CL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF2CL3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF3CL2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF4CL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PF5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PH",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PH2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PH2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PH3",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "PN",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PO",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PO-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "POCL3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "POFCL2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "POF2CL",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "POF3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PO2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PO2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "PS",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P2O3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P2O4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P2O5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P3O6",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P4O6",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P4O7",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P4O8",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P4O9",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "P4O10",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "Pb",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "Pb+",
+			"description": "Moore1971. M",
+		},
+		{
+			"species": "Pb-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "PbBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbBr2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbBr3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbBr4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbCL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbCL3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbCL4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbF",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbF2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbF3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbF4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbI",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbI2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbI3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbI4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbO",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbO2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbS",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "PbS2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "Rb",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Rb+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Rb-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "RbBO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbBr",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbCL",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbF",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbH",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbI",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbK",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbLi",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbNO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbNO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbNa",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbOH",
+			"description": "Gurvich,1997",
+		},
+		{
+			"species": "Rb2Br2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Rb2CL2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Rb2F2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Rb2I2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Rb2O",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Rb2O2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Rb2O2H2",
+			"description": "Gurvich,1997",
+		},
+		{
+			"species": "Rb2SO4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Rn",
+			"description": "Ref-Elm. Moo",
+		},
+		{
+			"species": "Rn+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "S",
+			"description": "Hf: Cox,1989",
+		},
+		{
+			"species": "S+",
+			"description": "Martin,W.C.,",
+		},
+		{
+			"species": "S-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "SCL",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SCL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SCL2+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SD",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SF",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SF-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF2+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SF2-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SF3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF3+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SF3-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF4+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SF4-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SF5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF5+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SF5-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF6",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SF6-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SH",
+			"description": "D0:Continett",
+		},
+		{
+			"species": "SH-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SN",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SO",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SO-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SOF2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SO2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SO2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SO2CL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SO2FCL",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SO2F2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "SO3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S2",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S2-",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S2CL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "S2F2",
+			"description": "Thiothionyl",
+		},
+		{
+			"species": "S2O",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S3",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S4",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S5",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S6",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S7",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "S8",
+			"description": "Gurvich,1989",
+		},
+		{
+			"species": "Sc",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "Sc+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "Sc-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "ScO",
+			"description": "D0,Props(ext",
+		},
+		{
+			"species": "ScO+",
+			"description": "D0,Estim.con",
+		},
+		{
+			"species": "ScO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Sc2O",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Sc2O2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Si",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Si+",
+			"description": "Martin,W.C.,",
+		},
+		{
+			"species": "Si-",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiBr2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiBr3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiBr4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiC",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiC2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiCL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiCL3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiCL4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiF",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiFCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiF2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiF3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiF4",
+			"description": "Johnson,1986",
+		},
+		{
+			"species": "SiH",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiH+",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiHBr3",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiHCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiHCL3",
+			"description": "Chase,1998 8",
+		},
+		{
+			"species": "SiHF",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiHF3",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiHI3",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiH2Br2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH2CL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH2F2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH2I2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiH3Br",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH3CL",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH3F",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH3I",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiH4",
+			"description": "Silane. Gurv",
+		},
+		{
+			"species": "SiI",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiI2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "SiN",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiO",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiO2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiS",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SiS2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "Si2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "Si2C",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "Si2F6",
+			"description": "Lyman,2001.",
+		},
+		{
+			"species": "Si2N",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Si3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "Sn",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Sn+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Sn-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "SnBr",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnBr2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnBr3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnBr4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnCL",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnCL2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnCL3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnCL4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnF",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnF2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnF3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnF4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnI",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnI2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnI3",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnI4",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnO",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnO2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnS",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "SnS2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "Sn2",
+			"description": "Gurvich,1991",
+		},
+		{
+			"species": "Sr",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "Sr+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "SrBr",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrBr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrCL",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrCL+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrCL2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrF",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrF+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrF2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrI",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrI2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrO",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrO+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrOH",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrOH+",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Sr(OH)2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "SrS",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Sr2",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "Ta",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "Ta+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Ta-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "TaCL5",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TaO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "TaO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Ti",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Ti+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "Ti-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "TiCL",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiCL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiCL3",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiCL4",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "TiO+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "TiOCL",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiOCL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiO2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "U",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF2+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF2-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF3+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF3-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF4+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF4-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF5",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF5+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF5-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF6",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UF6-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UOF",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UOF2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UOF3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UOF4",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO2+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO2-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO2F",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO2F2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "UO3-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "V",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "V+",
+			"description": "Sugar,1985.",
+		},
+		{
+			"species": "V-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "VCL4",
+			"description": "Nagarajan,19",
+		},
+		{
+			"species": "VN",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "VO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "VO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "V4O10",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "W",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "W+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "W-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "WCL6",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "WO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "WOCL4",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "WO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "WO2CL2",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "WO3",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "WO3-",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Xe",
+			"description": "Ref-Elm. Moo",
+		},
+		{
+			"species": "Xe+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Zn",
+			"description": "Hf:Cox,1989.",
+		},
+		{
+			"species": "Zn+",
+			"description": "Sugar,1995.",
+		},
+		{
+			"species": "Zr",
+			"description": "Hf:Gurvich,1",
+		},
+		{
+			"species": "Zr+",
+			"description": "Moore,1971.",
+		},
+		{
+			"species": "Zr-",
+			"description": "Hotop,1985.",
+		},
+		{
+			"species": "ZrN",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "ZrO",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "ZrO+",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "ZrO2",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Ag(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "Ag(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "AL(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "AL(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "ALBr3(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "ALBr3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "ALCL3(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "ALCL3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "ALF3(II)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "ALF3(I)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "ALH3(a)",
+			"description": "Alpha,hexago",
+		},
+		{
+			"species": "ALI3(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "ALI3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "ALN(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "ALN(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "AL(OH)3(a)",
+			"description": "Gibbsite. Gu",
+		},
+		{
+			"species": "AL2O3(a)",
+			"description": "Alpha,corund",
+		},
+		{
+			"species": "AL2O3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "AL2S3(a)",
+			"description": "Hexagonal al",
+		},
+		{
+			"species": "AL2S3(b)",
+			"description": "Rhombohedral",
+		},
+		{
+			"species": "AL2S3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "AL2SiO5(an)",
+			"description": "Andalusite.",
+		},
+		{
+			"species": "AL4C3(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "B(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "B(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "BN(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "BN(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "B2O3(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "B2O3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "B2S3(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "B2S3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "B3O3H3(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "B4C(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "B4C(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "Ba(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "Ba(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "BaBr2(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "BaBr2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "BaCO3(a)",
+			"description": "CrIII,rhombi",
+		},
+		{
+			"species": "BaCO3(b)",
+			"description": "CrII,hexagon",
+		},
+		{
+			"species": "BaCO3(c)",
+			"description": "CrI,cubic. G",
+		},
+		{
+			"species": "BaCO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "BaCL2(a)",
+			"description": "CrII,rhombic",
+		},
+		{
+			"species": "BaCL2(b)",
+			"description": "CrI,cubic. G",
+		},
+		{
+			"species": "BaCL2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "BaF2(a)",
+			"description": "CrIII,cubic.",
+		},
+		{
+			"species": "BaF2(b)",
+			"description": "CrII. Gurvic",
+		},
+		{
+			"species": "BaF2(c)",
+			"description": "CrI. Gurvich",
+		},
+		{
+			"species": "BaF2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "BaH2(a)",
+			"description": "CrII,rhombic",
+		},
+		{
+			"species": "BaH2(b)",
+			"description": "CrI,rhombic",
+		},
+		{
+			"species": "BaH2(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "BaI2(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "BaI2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "BaO(cr)",
+			"description": "Cubic Gurvic",
+		},
+		{
+			"species": "BaO(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "Ba(OH)2(b)",
+			"description": "CrII,rhombic",
+		},
+		{
+			"species": "Ba(OH)2(a)",
+			"description": "CrI,rhombic",
+		},
+		{
+			"species": "Ba(OH)2(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "BaS(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "BaS(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "BaSO4(a)",
+			"description": "CrII,rhombic",
+		},
+		{
+			"species": "BaSO4(b)",
+			"description": "CrI,cubic. G",
+		},
+		{
+			"species": "BaSO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Be(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Be(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Be(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "BeAL2O4(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "BeAL2O4(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "BeBr2(cr)",
+			"description": "Cr,rhombic.",
+		},
+		{
+			"species": "BeBr2(L)",
+			"description": "Liquid.Gurvi",
+		},
+		{
+			"species": "BeCO3(cr)",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "BeCL2(a)",
+			"description": "Cr,rhombic.",
+		},
+		{
+			"species": "BeCL2(b)",
+			"description": "CrI. Gurvich",
+		},
+		{
+			"species": "BeCL2(L)",
+			"description": "Liquid.Gurvi",
+		},
+		{
+			"species": "BeF2(a)",
+			"description": "CrII,hexagon",
+		},
+		{
+			"species": "BeF2(b)",
+			"description": "CrI,hexagona",
+		},
+		{
+			"species": "BeF2(L)",
+			"description": "Liquid.Gurvi",
+		},
+		{
+			"species": "BeI2(cr)",
+			"description": "Cr,rhombic.",
+		},
+		{
+			"species": "BeI2(L)",
+			"description": "Liquid.Gurvi",
+		},
+		{
+			"species": "BeO(a)",
+			"description": "CrII,hexagon",
+		},
+		{
+			"species": "BeO(b)",
+			"description": "CrI,tetragon",
+		},
+		{
+			"species": "BeO(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Be(OH)2(b)",
+			"description": "Rhombic,beta",
+		},
+		{
+			"species": "BeS(cr)",
+			"description": "Cr,cubic. Gu",
+		},
+		{
+			"species": "BeSO4(a)",
+			"description": "CrIII,tetr.",
+		},
+		{
+			"species": "BeSO4(b)",
+			"description": "CrII,rhombic",
+		},
+		{
+			"species": "BeSO4(c)",
+			"description": "CrI,cubic. G",
+		},
+		{
+			"species": "BeSO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Be2C(cr)",
+			"description": "Barin,1989.",
+		},
+		{
+			"species": "Be2C(L)",
+			"description": "Barin,1989.",
+		},
+		{
+			"species": "Be3N2(a)",
+			"description": "CrII,cubic.",
+		},
+		{
+			"species": "Be3N2(b)",
+			"description": "CrI,hexagona",
+		},
+		{
+			"species": "Be3N2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Br2(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "Br2(L)",
+			"description": "Liq.Ref-Elm.",
+		},
+		{
+			"species": "C(gr)",
+			"description": "Graphite. Re",
+		},
+		{
+			"species": "Ca(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Ca(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Ca(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "CaBr2(cr)",
+			"description": "Rhombic Gurv",
+		},
+		{
+			"species": "CaBr2(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "CaCO3(cr)",
+			"description": "Hexagonal Gu",
+		},
+		{
+			"species": "CaCO3(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "CaCL2(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "CaCL2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CaF2(a)",
+			"description": "CrII,cubic.G",
+		},
+		{
+			"species": "CaF2(b)",
+			"description": "CrI,cubic.Gu",
+		},
+		{
+			"species": "CaF2(L)",
+			"description": "Liquid.Gurvi",
+		},
+		{
+			"species": "CaH2(a)",
+			"description": "CrII,rhombic",
+		},
+		{
+			"species": "CaH2(b)",
+			"description": "CrI,cubic Gu",
+		},
+		{
+			"species": "CaH2(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "CaI2(cr)",
+			"description": "Hexagonal Gu",
+		},
+		{
+			"species": "CaI2(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "CaO(cr)",
+			"description": "Cubic Gurvic",
+		},
+		{
+			"species": "CaO(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "Ca(OH)2(cr)",
+			"description": "Hexagonal Gu",
+		},
+		{
+			"species": "Ca(OH)2(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "CaS(cr)",
+			"description": "Cubic Gurvic",
+		},
+		{
+			"species": "CaS(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "CaSO4(II)",
+			"description": "Rhombic Gurv",
+		},
+		{
+			"species": "CaSO4(I)",
+			"description": "Cubic Gurvic",
+		},
+		{
+			"species": "CaSO4(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "Cd(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "Cd(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "Co(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Co(b)",
+			"description": "Beta.Ref-Elm",
+		},
+		{
+			"species": "Co(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Co(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "Cr(cr)",
+			"description": "Below lambda",
+		},
+		{
+			"species": "Cr(cr)",
+			"description": "Above lambda",
+		},
+		{
+			"species": "Cr(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "CrN(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Cr2N(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Cr2O3(I')",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Cr2O3(I)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Cr2O3(I)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Cr2O3(I)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Cr2O3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Cs(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "Cs(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "CsBO2(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsBO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CsBr(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsBr(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CsCL(a)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsCL(b)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsCL(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CsF(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsF(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CsH(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CsI(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsI(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CsNO2(I)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsNO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CsNO3(a)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "CsNO3(b)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsNO3(L)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsOH(b)",
+			"description": "Beta.  Gurvi",
+		},
+		{
+			"species": "CsOH(c)",
+			"description": "Gamma. Gurvi",
+		},
+		{
+			"species": "CsOH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "CsO2(a)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "CsO2(c)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "CsO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Cs2CO3(cr)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2CO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Cs2O(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Cs2O(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Cs2O2(cr)",
+			"description": "Rhombic Gurv",
+		},
+		{
+			"species": "Cs2O2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Cs2SO4(a)",
+			"description": "Rhombohedral",
+		},
+		{
+			"species": "Cs2SO4(b)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "Cs2SO4(c)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Cs2SO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Cu(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "Cu(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "CuBr(a)",
+			"description": "Alpha. Pankr",
+		},
+		{
+			"species": "CuBr(b)",
+			"description": "Beta. Pankra",
+		},
+		{
+			"species": "CuBr(c)",
+			"description": "Gamma. Pankr",
+		},
+		{
+			"species": "CuBr(L)",
+			"description": "Liquid. Pank",
+		},
+		{
+			"species": "CuBr2(cr)",
+			"description": "Crystal. Pan",
+		},
+		{
+			"species": "CuCL(a)",
+			"description": "Alpha. Pankr",
+		},
+		{
+			"species": "CuCL(b)",
+			"description": "Beta. Pankra",
+		},
+		{
+			"species": "CuCL(L)",
+			"description": "Liquid. Pank",
+		},
+		{
+			"species": "CuCL2(cr)",
+			"description": "Crystal. Pan",
+		},
+		{
+			"species": "CuCL2(L)",
+			"description": "Liquid. Pank",
+		},
+		{
+			"species": "CuF(cr)",
+			"description": "Crystal. Pan",
+		},
+		{
+			"species": "CuF2(cr)",
+			"description": "Crystal. Pan",
+		},
+		{
+			"species": "CuF2(L)",
+			"description": "Liquid. Pank",
+		},
+		{
+			"species": "CuI(a)",
+			"description": "King,1973. P",
+		},
+		{
+			"species": "CuI(b)",
+			"description": "Beta. Pankra",
+		},
+		{
+			"species": "CuI(c)",
+			"description": "Gamma. Pankr",
+		},
+		{
+			"species": "CuI(L)",
+			"description": "Liquid. Pank",
+		},
+		{
+			"species": "CuO(cr)",
+			"description": "Crystal. Kin",
+		},
+		{
+			"species": "Cu(OH)2(cr)",
+			"description": "Crystal. Kin",
+		},
+		{
+			"species": "CuS(cr)",
+			"description": "Crystal. Pan",
+		},
+		{
+			"species": "CuSO4(cr)",
+			"description": "Crystal. Kin",
+		},
+		{
+			"species": "Cu2O(cr)",
+			"description": "Crystal. Kin",
+		},
+		{
+			"species": "Cu2O(L)",
+			"description": "Liquid. King",
+		},
+		{
+			"species": "Cu2S(a)",
+			"description": "Alpha. Pankr",
+		},
+		{
+			"species": "Cu2S(b)",
+			"description": "Beta. Pankra",
+		},
+		{
+			"species": "Cu2S(c)",
+			"description": "Gamma. Pankr",
+		},
+		{
+			"species": "Cu2S(L)",
+			"description": "Liquid. Pank",
+		},
+		{
+			"species": "Fe(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Fe(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Fe(c)",
+			"description": "Gamma. Ref-E",
+		},
+		{
+			"species": "Fe(d)",
+			"description": "Delta. Ref-E",
+		},
+		{
+			"species": "Fe(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "Fe(CO)5(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "FeCL2(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "FeCL2(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "FeCL3(cr)",
+			"description": "Pankratz,198",
+		},
+		{
+			"species": "FeCL3(L)",
+			"description": "Pankratz,198",
+		},
+		{
+			"species": "Fe.947O(cr)",
+			"description": "Wustite. Pan",
+		},
+		{
+			"species": "Fe.947O(L)",
+			"description": "Wustite Liqu",
+		},
+		{
+			"species": "FeOCL(cr)",
+			"description": "Stuve,1980.",
+		},
+		{
+			"species": "Fe(OH)2(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "Fe(OH)3(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "FeS(a)",
+			"description": "Alpha. Pankr",
+		},
+		{
+			"species": "FeS(b)",
+			"description": "Beta. Pankra",
+		},
+		{
+			"species": "FeS(c)",
+			"description": "Gamma. Pankr",
+		},
+		{
+			"species": "FeS(L)",
+			"description": "Liquid. Pank",
+		},
+		{
+			"species": "FeSO4(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "FeS2(cr)",
+			"description": "Pyrite. Chas",
+		},
+		{
+			"species": "Fe2O3(cr)",
+			"description": "Hematite bel",
+		},
+		{
+			"species": "Fe2O3(cr)",
+			"description": "Hematite abo",
+		},
+		{
+			"species": "Fe2(SO4)3(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Fe3O4(cr)",
+			"description": "Magnetite. P",
+		},
+		{
+			"species": "Fe3O4(cr)",
+			"description": "Magnetite ab",
+		},
+		{
+			"species": "Fe3O4(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "Ga(cr)",
+			"description": "Rhombic. Ref",
+		},
+		{
+			"species": "Ga(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "GaBr3(cr)",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "GaBr3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "GaCL3(cr)",
+			"description": "Triclinic. G",
+		},
+		{
+			"species": "GaCL3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "GaF3(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "GaI3(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "GaI3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Ga2O3(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "Ga2O3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Ge(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "Ge(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "GeO2(II)",
+			"description": "Tetragonal R",
+		},
+		{
+			"species": "GeO2(I)",
+			"description": "Hexagonal al",
+		},
+		{
+			"species": "GeO2(L)",
+			"description": "Tetragonal l",
+		},
+		{
+			"species": "GeS(cr)",
+			"description": "Crystal(II).",
+		},
+		{
+			"species": "GeS(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "GeS2(II)",
+			"description": "Crystal II.",
+		},
+		{
+			"species": "GeS2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "HBO2(cr)",
+			"description": "Crystal,meta",
+		},
+		{
+			"species": "HBO2(L)",
+			"description": "Liquid, meta",
+		},
+		{
+			"species": "H2O(cr)",
+			"description": "Ice. Gordon,",
+		},
+		{
+			"species": "H2O(L)",
+			"description": "Liquid. Cox,",
+		},
+		{
+			"species": "H2SO4(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "H3BO3(cr)",
+			"description": "Triclinic,or",
+		},
+		{
+			"species": "H3BO3(L)",
+			"description": "Liquid,ortho",
+		},
+		{
+			"species": "H3PO4(cr)",
+			"description": "Crystal,Phos",
+		},
+		{
+			"species": "H3PO4(L)",
+			"description": "Liquid,Phosp",
+		},
+		{
+			"species": "Hg(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "Hg(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "HgBr2(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "HgBr2(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "HgO(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "I2(cr)",
+			"description": "Rhombic. Ref",
+		},
+		{
+			"species": "I2(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "In(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "In(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "InBr(cr)",
+			"description": "Rhombic Gurv",
+		},
+		{
+			"species": "InBr(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "InBr3(cr)",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InBr3(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "InCL(crII)",
+			"description": "Cubic Gurvic",
+		},
+		{
+			"species": "InCL(crI)",
+			"description": "Rhombic Gurv",
+		},
+		{
+			"species": "InCL(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "InCL3(cr)",
+			"description": "Monoclinic G",
+		},
+		{
+			"species": "InCL3(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "InF3(cr)",
+			"description": "Hexagonal Gu",
+		},
+		{
+			"species": "InF3(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "InI(cr)",
+			"description": "Rhombic Gurv",
+		},
+		{
+			"species": "InI(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "InI2(crII)",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InI2(crI)",
+			"description": "Gurvich,1996",
+		},
+		{
+			"species": "InI2(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "InI3(cr)",
+			"description": "Monoclinic G",
+		},
+		{
+			"species": "InI3(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "In2O3(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "In2O3(L)",
+			"description": "Liquid.  Gur",
+		},
+		{
+			"species": "K(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "K(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "KALO2(II)",
+			"description": "Cubic  Gurvi",
+		},
+		{
+			"species": "KALO2(I)",
+			"description": "Cubic  Gurvi",
+		},
+		{
+			"species": "KALO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "KBO2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "KBO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "KBr(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "KBr(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "KCN(II)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "KCN(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "KCL(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "KCL(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "KF(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "KF(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "KH(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "KH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "K(HF2)(a)",
+			"description": "Alpha.  Chas",
+		},
+		{
+			"species": "K(HF2)(b)",
+			"description": "Beta.   Chas",
+		},
+		{
+			"species": "K(HF2)(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "KI(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "KI(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "KNO2(II)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "KNO2(I)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "KNO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "KNO3(a)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "KNO3(b)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "KNO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "KOH(a)",
+			"description": "Alpha,beta.",
+		},
+		{
+			"species": "KOH(b)",
+			"description": "Beta.",
+		},
+		{
+			"species": "KOH(c)",
+			"description": "Gamma.",
+		},
+		{
+			"species": "KOH(L)",
+			"description": "Liquid.",
+		},
+		{
+			"species": "KO2(b)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "KO2(a)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "KO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "K2CO3(a)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "K2CO3(b)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "K2CO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "K2O(c)",
+			"description": "III Cubic. G",
+		},
+		{
+			"species": "K2O(b)",
+			"description": "II Cubic. Gu",
+		},
+		{
+			"species": "K2O(a)",
+			"description": "I Tetragonal",
+		},
+		{
+			"species": "K2O(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "K2O2(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "K2O2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "K2S(cr)",
+			"description": "Below lambda",
+		},
+		{
+			"species": "K2S(cr)",
+			"description": "Above lambda",
+		},
+		{
+			"species": "K2S(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "K2SO4(II)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "K2SO4(I)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "K2SO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "K2SiO3(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "K2SiO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "K2Si2O5(a)",
+			"description": "III. Gurvich",
+		},
+		{
+			"species": "K2Si2O5(b)",
+			"description": "II. Gurvich,",
+		},
+		{
+			"species": "K2Si2O5(c)",
+			"description": "I. Gurvich,1",
+		},
+		{
+			"species": "K2Si2O5(L)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "K3ALF6(II)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "K3ALF6(I)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "K3ALF6(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Li(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "Li(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "LiALO2(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "LiALO2(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "LiBO2(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "LiBO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "LiBr(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "LiBr(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "LiCL(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "LiCL(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "LiF(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "LiF(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "LiH(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "LiH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "LiI(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "LiI(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "LiNO2(II)",
+			"description": "Crystal. Gur",
+		},
+		{
+			"species": "LiNO2(I)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "LiNO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "LiNO3(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "LiNO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "LiOH(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "LiOH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Li2CO3(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "Li2CO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Li2O(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "Li2O(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Li2O2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Li2SO4(a)",
+			"description": "Alpha. Gurvi",
+		},
+		{
+			"species": "Li2SO4(b)",
+			"description": "Beta. Gurvic",
+		},
+		{
+			"species": "Li2SO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Li3ALF6(IV)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "Li3ALF6(III)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "Li3ALF6(II)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "Li3ALF6(I)",
+			"description": "Crystal. Gur",
+		},
+		{
+			"species": "Li3ALF6(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Li3N(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Mg(cr)",
+			"description": "Hexagonal. R",
+		},
+		{
+			"species": "Mg(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "MgAL2O4(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "MgAL2O4(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "MgBr2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "MgBr2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgCO3(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "MgCO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgCL2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "MgCL2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgF2(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "MgF2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgH2(b)",
+			"description": "Beta,tetrago",
+		},
+		{
+			"species": "MgH2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgI2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "MgI2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgO(cr)",
+			"description": "Cubic Gurvic",
+		},
+		{
+			"species": "MgO(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "Mg(OH)2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Mg(OH)2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgS(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "MgS(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgSO4(II)",
+			"description": "CrII,rhombic",
+		},
+		{
+			"species": "MgSO4(I)",
+			"description": "CrI,rhombic.",
+		},
+		{
+			"species": "MgSO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "MgSiO3(I)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgSiO3(II)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgSiO3(III)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgSiO3(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgTiO3(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgTiO3(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "MgTi2O5(cr)",
+			"description": "Todd,1952. C",
+		},
+		{
+			"species": "MgTi2O5(L)",
+			"description": "Todd,1952. C",
+		},
+		{
+			"species": "Mg2SiO4(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Mg2SiO4(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Mg2TiO4(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Mg2TiO4(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Mg3N2(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "Mn(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Mn(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Mn(c)",
+			"description": "Gamma. Ref-E",
+		},
+		{
+			"species": "Mn(d)",
+			"description": "Delta. Ref-E",
+		},
+		{
+			"species": "Mn(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "Mo(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "Mo(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "MoO2(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "MoO3(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "MoO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NH4CL(II)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "NH4CL(III)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "NH4F(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "NH4F(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Na(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "Na(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "NaALO2(a)",
+			"description": "Alpha.Chase,",
+		},
+		{
+			"species": "NaALO2(b)",
+			"description": "Beta. Chase,",
+		},
+		{
+			"species": "NaBO2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "NaBO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaBr(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "NaBr(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaCN(II)",
+			"description": "Lambda trans",
+		},
+		{
+			"species": "NaCN(III)",
+			"description": "Lambda trans",
+		},
+		{
+			"species": "NaCN(L)",
+			"description": "Chase,1998(3",
+		},
+		{
+			"species": "NaCL(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "NaCL(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaF(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "NaF(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaH(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "NaH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaI(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "NaI(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaNO2(I)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "NaNO2(I')",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "NaNO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaNO3(a)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "NaNO3(b)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "NaNO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaOH(a)",
+			"description": "Alpha. Gurvi",
+		},
+		{
+			"species": "NaOH(b)",
+			"description": "Beta.  Gurvi",
+		},
+		{
+			"species": "NaOH(c)",
+			"description": "Gamma. Gurvi",
+		},
+		{
+			"species": "NaOH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NaO2(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "NaO2(L)",
+			"description": "Liq. Gurvich",
+		},
+		{
+			"species": "Na2CO3(a)",
+			"description": "Alpha,monocl",
+		},
+		{
+			"species": "Na2CO3(b)",
+			"description": "Beta,monocli",
+		},
+		{
+			"species": "Na2CO3(c)",
+			"description": "Gamma,hexago",
+		},
+		{
+			"species": "Na2CO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Na2O(c)",
+			"description": "Gamma. Gurvi",
+		},
+		{
+			"species": "Na2O(b)",
+			"description": "Beta. Gurvic",
+		},
+		{
+			"species": "Na2O(a)",
+			"description": "Alpha. Gurvi",
+		},
+		{
+			"species": "Na2O(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Na2O2(b)",
+			"description": "Beta. Gurvic",
+		},
+		{
+			"species": "Na2O2(a)",
+			"description": "Alpha. Gurvi",
+		},
+		{
+			"species": "Na2O2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Na2S(cr)",
+			"description": "Below lambda",
+		},
+		{
+			"species": "Na2S(cr)",
+			"description": "Above lambda",
+		},
+		{
+			"species": "Na2S(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Na2SO3(cr)",
+			"description": "Crystal. Bar",
+		},
+		{
+			"species": "Na2SO3(L)",
+			"description": "Liquid. Bari",
+		},
+		{
+			"species": "Na2SO4(V)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "Na2SO4(IV)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "Na2SO4(I)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Na2SO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Na3ALF6(a)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "Na3ALF6(b)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "Na3ALF6(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Na5AL3F14(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "Na5AL3F14(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Nb(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "Nb(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "NbO(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "NbO(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "NbOCL3(cr)",
+			"description": "Barin,1989 p",
+		},
+		{
+			"species": "NbO2(II)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "NbO2(I)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "NbO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Nb2O5(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "Nb2O5(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Ni(cr)",
+			"description": "Crystal Ref-",
+		},
+		{
+			"species": "Ni(cr)",
+			"description": "Crystal Ref-",
+		},
+		{
+			"species": "Ni(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "NiS(b)",
+			"description": "Beta. Chase,",
+		},
+		{
+			"species": "NiS(a)",
+			"description": "ALpha. Chase",
+		},
+		{
+			"species": "NiS(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "NiS2(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "NiS2(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "Ni3S2(a)",
+			"description": "Alpha. Pankr",
+		},
+		{
+			"species": "Ni3S2(b)",
+			"description": "Beta. Pankra",
+		},
+		{
+			"species": "Ni3S2(L)",
+			"description": "Liquid. Pank",
+		},
+		{
+			"species": "Ni3S4(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "P(cr)",
+			"description": "White.Ref-El",
+		},
+		{
+			"species": "P(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "P4O10(cr)",
+			"description": "Crystal. Gur",
+		},
+		{
+			"species": "P4O10(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Pb(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "Pb(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "PbBr2(cr)",
+			"description": "Rhombic Crys",
+		},
+		{
+			"species": "PbBr2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "PbCL2(cr)",
+			"description": "Rhombic Crys",
+		},
+		{
+			"species": "PbCL2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "PbF2(II)",
+			"description": "Rhombic Crys",
+		},
+		{
+			"species": "PbF2(I)",
+			"description": "Cubic Crysta",
+		},
+		{
+			"species": "PbF2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "PbI2(cr)",
+			"description": "Hexagonal Cr",
+		},
+		{
+			"species": "PbI2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "PbO(II-r)",
+			"description": "Tetragonal (",
+		},
+		{
+			"species": "PbO(I-y)",
+			"description": "Rhombic (I-y",
+		},
+		{
+			"species": "PbO(L)",
+			"description": "Liquid.Gurvi",
+		},
+		{
+			"species": "PbO2(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "PbS(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "PbS(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Pb2O3(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "Pb3O4(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "Rb(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "Rb(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "RbBO2(b)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbBO2(a)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbBO2(L)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "RbBr(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "RbBr(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "RbCL(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "RbCL(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "RbF(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "RbF(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "RbH(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "RbH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "RbI(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "RbI(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "RbNO2(I)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "RbNO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "RbNO3(IV)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "RbNO3(III)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "RbNO3(II)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "RbNO3(I)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "RbNO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "RbOH(b)",
+			"description": "Beta.  Gurvi",
+		},
+		{
+			"species": "RbOH(c)",
+			"description": "Gamma. Gurvi",
+		},
+		{
+			"species": "RbOH(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "RbO2(b)",
+			"description": "Beta,hexagon",
+		},
+		{
+			"species": "RbO2(a)",
+			"description": "Alpha,cubic.",
+		},
+		{
+			"species": "RbO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Rb2CO3(a)",
+			"description": "Alpha,monocl",
+		},
+		{
+			"species": "Rb2CO3(b)",
+			"description": "Beta,hexagon",
+		},
+		{
+			"species": "Rb2CO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Rb2O(c)",
+			"description": "Gamma,cubic.",
+		},
+		{
+			"species": "Rb2O(b)",
+			"description": "Beta,cubic.",
+		},
+		{
+			"species": "Rb2O(a)",
+			"description": "Alpha,hexago",
+		},
+		{
+			"species": "Rb2O(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Rb2O2(b)",
+			"description": "Beta,rhombic",
+		},
+		{
+			"species": "Rb2O2(a)",
+			"description": "Alpha,cubic.",
+		},
+		{
+			"species": "Rb2O2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Rb2SO4(a)",
+			"description": "Alpha,rhombi",
+		},
+		{
+			"species": "Rb2SO4(b)",
+			"description": "Beta,hexagon",
+		},
+		{
+			"species": "Rb2SO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "S(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "S(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "S(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "SCL2(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "S2CL2(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Sc(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Sc(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Sc(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "Sc2O3(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "Sc2O3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Si(cr)",
+			"description": "Cubic. Ref-E",
+		},
+		{
+			"species": "Si(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "SiC(b)",
+			"description": "Beta,cubic.",
+		},
+		{
+			"species": "SiC(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SiO2(a-qz)",
+			"description": "Alpha-quartz",
+		},
+		{
+			"species": "SiO2(b-qz)",
+			"description": "Beta-quartz,",
+		},
+		{
+			"species": "SiO2(b-crt)",
+			"description": "Beta-cristob",
+		},
+		{
+			"species": "SiO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SiS(cr)",
+			"description": "Crystal. Gur",
+		},
+		{
+			"species": "SiS(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SiS2(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "SiS2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Si2N2O(cr)",
+			"description": "Fegley,1981.",
+		},
+		{
+			"species": "Si3N4(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Sn(cr)",
+			"description": "CrI,tetragon",
+		},
+		{
+			"species": "Sn(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "SnBr2(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "SnBr2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnBr4(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "SnBr4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnCL2(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "SnCL2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnCL4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnF2(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "SnF2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnI2(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "SnI2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnI4(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "SnI4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnO(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "SnO(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnO2(cr)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "SnO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnS(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "SnS(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "SnS(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SnS2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Sr(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Sr(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Sr(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "SrBr2(a)",
+			"description": "Alpha,tetrag",
+		},
+		{
+			"species": "SrBr2(b)",
+			"description": "Beta. Gurvic",
+		},
+		{
+			"species": "SrBr2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SrCO3(a)",
+			"description": "Alpha,rhombi",
+		},
+		{
+			"species": "SrCO3(b)",
+			"description": "Beta,rhombic",
+		},
+		{
+			"species": "SrCO3(c)",
+			"description": "Gamma,cubic.",
+		},
+		{
+			"species": "SrCO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SrCL2(a)",
+			"description": "Alpha,cubic.",
+		},
+		{
+			"species": "SrCL2(b)",
+			"description": "Beta,cubic.",
+		},
+		{
+			"species": "SrCL2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SrF2(a)",
+			"description": "Alpha,cubic.",
+		},
+		{
+			"species": "SrF2(b)",
+			"description": "Beta,cubic.",
+		},
+		{
+			"species": "SrF2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SrH2(a)",
+			"description": "Alpha,rhombi",
+		},
+		{
+			"species": "SrH2(b)",
+			"description": "Beta. Gurvic",
+		},
+		{
+			"species": "SrH2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SrI2(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "SrI2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SrO(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "SrO(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Sr(OH)2(b)",
+			"description": "Beta,tetrago",
+		},
+		{
+			"species": "Sr(OH)2(a)",
+			"description": "Alpha. Gurvi",
+		},
+		{
+			"species": "Sr(OH)2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SrS(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "SrS(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "SrSO4(a)",
+			"description": "Alpha,Rhombi",
+		},
+		{
+			"species": "SrSO4(b)",
+			"description": "Beta,hexagon",
+		},
+		{
+			"species": "SrSO4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Ta(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "Ta(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "TaC(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TaC(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "Ta2O5(II)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "Ta2O5(I)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "Ta2O5(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Th(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Th(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Th(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "Ti(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Ti(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Ti(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "TiB(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "TiB2(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "TiB2(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "TiC(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiC(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiCL2(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiCL3(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiCL4(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiN(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiN(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "TiO(a)",
+			"description": "Alpha,monocl",
+		},
+		{
+			"species": "TiO(b)",
+			"description": "Beta,cubic.",
+		},
+		{
+			"species": "TiO(c)",
+			"description": "Gamma,cubic.",
+		},
+		{
+			"species": "TiO(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "TiO2(cr)",
+			"description": "Rutile,tetra",
+		},
+		{
+			"species": "TiO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Ti2O3(I)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Ti2O3(I')",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "Ti2O3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Ti3O5(a)",
+			"description": "Alpha,monocl",
+		},
+		{
+			"species": "Ti3O5(b)",
+			"description": "Beta,rhombic",
+		},
+		{
+			"species": "Ti3O5(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Ti4O7(cr)",
+			"description": "Triclinic. G",
+		},
+		{
+			"species": "Ti4O7(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "U(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "U(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "U(c)",
+			"description": "Gamma. Ref-E",
+		},
+		{
+			"species": "U(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "UF3(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "UF3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "UF4(cr)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "UF4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "UF5(b)",
+			"description": "Beta,tetrago",
+		},
+		{
+			"species": "UF5(a)",
+			"description": "Alpha,tetrag",
+		},
+		{
+			"species": "UF5(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "UF6(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "UF6(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "UO2(cr)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "UO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "UO2F2(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "UO3(c)",
+			"description": "Gamma,monocl",
+		},
+		{
+			"species": "U3O8(II)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "U3O8(I)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "U4O9(III)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "U4O9(II)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "U4O9(I)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "V(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "V(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "VCL2(cr)",
+			"description": "Pankratz,198",
+		},
+		{
+			"species": "VCL3(cr)",
+			"description": "Pankratz,198",
+		},
+		{
+			"species": "VN(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "VO(cr)",
+			"description": "Cubic Gurvic",
+		},
+		{
+			"species": "VO(L)",
+			"description": "Liquid Gurvi",
+		},
+		{
+			"species": "V2O3(cr)",
+			"description": "Hexagonal. G",
+		},
+		{
+			"species": "V2O3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "V2O4(II)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "V2O4(I)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "V2O4(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "V2O5(cr)",
+			"description": "Rhombic. Gur",
+		},
+		{
+			"species": "V2O5(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "W(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "W(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "WC(cr)",
+			"description": "Hf:Wagman,19",
+		},
+		{
+			"species": "WCL6(I)",
+			"description": "Alpha1. Chas",
+		},
+		{
+			"species": "WCL6(II)",
+			"description": "Alpha2. Chas",
+		},
+		{
+			"species": "WCL6(III)",
+			"description": "Beta. Chase,",
+		},
+		{
+			"species": "WCL6(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "WOCL4(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "WOCL4(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "WO2(cr)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "WO2CL2(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "WO3(III)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "WO3(III,II)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "WO3(I)",
+			"description": "Gurvich,1982",
+		},
+		{
+			"species": "WO3(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "Zn(cr)",
+			"description": "Crystal. Ref",
+		},
+		{
+			"species": "Zn(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "ZnSO4(a)",
+			"description": "Alpha. Chase",
+		},
+		{
+			"species": "ZnSO4(a')",
+			"description": "Alpha'.Chase",
+		},
+		{
+			"species": "ZnSO4(b)",
+			"description": "Beta. Chase,",
+		},
+		{
+			"species": "Zr(a)",
+			"description": "Alpha. Ref-E",
+		},
+		{
+			"species": "Zr(b)",
+			"description": "Beta. Ref-El",
+		},
+		{
+			"species": "Zr(L)",
+			"description": "Liquid. Ref-",
+		},
+		{
+			"species": "ZrC(cr)",
+			"description": "Crystal. Cha",
+		},
+		{
+			"species": "ZrC(L)",
+			"description": "Liquid. Chas",
+		},
+		{
+			"species": "ZrN(cr)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "ZrN(L)",
+			"description": "Chase,1998 p",
+		},
+		{
+			"species": "ZrO2(III)",
+			"description": "Monoclinic.",
+		},
+		{
+			"species": "ZrO2(II)",
+			"description": "Tetragonal.",
+		},
+		{
+			"species": "ZrO2(I)",
+			"description": "Cubic. Gurvi",
+		},
+		{
+			"species": "ZrO2(L)",
+			"description": "Liquid. Gurv",
+		},
+		{
+			"species": "END PRODUCTS",
+			"description": "",
+		},
+		{
+			"species": "Air",
+			"description": "Mole%:N2 78.",
+		},
+		{
+			"species": "B2H6(L)",
+			"description": "Diborane. Mc",
+		},
+		{
+			"species": "B5H9(L)",
+			"description": "Pentaborane.",
+		},
+		{
+			"species": "CH3NO2(L)",
+			"description": "Nitromethane",
+		},
+		{
+			"species": "CH4(L)",
+			"description": "Methane. McB",
+		},
+		{
+			"species": "CH3OH(L)",
+			"description": "MeOH. TRC(12",
+		},
+		{
+			"species": "CH6N2(L)",
+			"description": "Monomethyl H",
+		},
+		{
+			"species": "C2H2(L),acetyle",
+			"description": "Acetylene. M",
+		},
+		{
+			"species": "CH3CN(L)",
+			"description": "Ethanenitril",
+		},
+		{
+			"species": "C2H4(L)",
+			"description": "Ethylene. Mc",
+		},
+		{
+			"species": "C2H4O(L),ethyle",
+			"description": "Ethylene oxi",
+		},
+		{
+			"species": "C2H6(L)",
+			"description": "Ethane. McBr",
+		},
+		{
+			"species": "C2H5OH(L)",
+			"description": "Ethanol. TRC",
+		},
+		{
+			"species": "C2H8N2(L),UDMH",
+			"description": "Unsymmetrica",
+		},
+		{
+			"species": "C2N2(L)",
+			"description": "Cyanogen. Mc",
+		},
+		{
+			"species": "C3H6(L),propyle",
+			"description": "Propylene. M",
+		},
+		{
+			"species": "C3H7NO3(L)",
+			"description": "Propyl Nitra",
+		},
+		{
+			"species": "C3H8(L)",
+			"description": "Propane. McB",
+		},
+		{
+			"species": "C4H8(L),1-buten",
+			"description": "1-Butene. Mc",
+		},
+		{
+			"species": "C4H10(L),n-buta",
+			"description": "n-Butane. Mc",
+		},
+		{
+			"species": "C4H10(L),isobut",
+			"description": "Isobutane(2-",
+		},
+		{
+			"species": "C5H12(L),n-pent",
+			"description": "n-Pentane. M",
+		},
+		{
+			"species": "C6H6(L)",
+			"description": "TRC(10/86) t",
+		},
+		{
+			"species": "C6H5NH2(L)",
+			"description": "Aniline. TRC",
+		},
+		{
+			"species": "C6H14(L),n-hexa",
+			"description": "n-hexane. TR",
+		},
+		{
+			"species": "C7H8(L)",
+			"description": "TRC(10/86) t",
+		},
+		{
+			"species": "C7H16(L),n-hept",
+			"description": "TRC(10/84) p",
+		},
+		{
+			"species": "C8H18(L),n-octa",
+			"description": "TRC(10/76) t",
+		},
+		{
+			"species": "C8H18(L),isooct",
+			"description": "TRC(10/76) t",
+		},
+		{
+			"species": "CLF3(L)",
+			"description": "Chlorine Tri",
+		},
+		{
+			"species": "CLO3F",
+			"description": "Hf:Wagman,19",
+		},
+		{
+			"species": "CLO3F(L)",
+			"description": "Perchloryl F",
+		},
+		{
+			"species": "CL2(L)",
+			"description": "Chlorine. Mc",
+		},
+		{
+			"species": "F2(L)",
+			"description": "Fluorine. Mc",
+		},
+		{
+			"species": "F2O(L)",
+			"description": "Oxygen Diflu",
+		},
+		{
+			"species": "HNO3(L)",
+			"description": "Nitric Acid.",
+		},
+		{
+			"species": "H2(L)",
+			"description": "Hydrogen. Mc",
+		},
+		{
+			"species": "H2O2(L)",
+			"description": "Gurvich, 198",
+		},
+		{
+			"species": "IRFNA",
+			"description": "Inhibited Re",
+		},
+		{
+			"species": "JP-4",
+			"description": "McBride,1996",
+		},
+		{
+			"species": "JP-5",
+			"description": "Or ASTMA1(L)",
+		},
+		{
+			"species": "JP-10(L)",
+			"description": "Exo-tetrahyd",
+		},
+		{
+			"species": "JP-10(g)",
+			"description": "Exo-tetrahyd",
+		},
+		{
+			"species": "Jet-A(L)",
+			"description": "McBride,1996",
+		},
+		{
+			"species": "Jet-A(g)",
+			"description": "McBride,1996",
+		},
+		{
+			"species": "LiCLO4(cr)",
+			"description": "Lithium Perc",
+		},
+		{
+			"species": "NF3(L)",
+			"description": "Nitrogen tri",
+		},
+		{
+			"species": "NH3(L)",
+			"description": "Ammonia. McB",
+		},
+		{
+			"species": "NH4CLO4(I)",
+			"description": "Ammonium Per",
+		},
+		{
+			"species": "NH4CLO4(II)",
+			"description": "Ammonium Per",
+		},
+		{
+			"species": "NH4NO3(IV)",
+			"description": "Rhombic(IV).",
+		},
+		{
+			"species": "NH4NO3(III)",
+			"description": "Rhombic(III)",
+		},
+		{
+			"species": "NH4NO3(II)",
+			"description": "Tetragonal(I",
+		},
+		{
+			"species": "NH4NO3(I)",
+			"description": "Cubic(I). Gu",
+		},
+		{
+			"species": "NH4NO3(L)",
+			"description": "Liquid  Gurv",
+		},
+		{
+			"species": "N2(L)",
+			"description": "Nitrogen. Mc",
+		},
+		{
+			"species": "N2H4(L)",
+			"description": "Hydrazine.Hf",
+		},
+		{
+			"species": "N2O4(L)",
+			"description": "Dinitrogen t",
+		},
+		{
+			"species": "O2(L)",
+			"description": "Oxygen. McBr",
+		},
+		{
+			"species": "O3(L)",
+			"description": "Ozone. McBri",
+		},
+		{
+			"species": "RP-1",
+			"description": "Mehta et.al.",
+		},
+		{
+			"species": "END REACTANTS",
+			"description": "",
+		},
