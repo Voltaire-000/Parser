@@ -85,7 +85,11 @@ namespace ThermoParser
 
             for (int i = 0; i < t_intervalValue; i++)
             {
-                streamWriter.WriteLine("{");
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.Write("{");
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.WriteLine();
+                streamWriter.Write("\t\t\t\t\t");
                 streamWriter.WriteLine("\"" + "temperatureRange" + "\"" + ":" + 200.0 + ",");
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.WriteLine("\"" + "numberOfCoefficients" + "\"" + ":" + 7 + ",");
@@ -99,7 +103,16 @@ namespace ThermoParser
                 streamWriter.WriteLine("\"" + "integrationConstants" + "\"" + ":" + 7.145 );
                 streamWriter.Write("\t\t\t\t\t");
 
-                streamWriter.WriteLine("}" + ",");
+                // if this is last loop dont print comma
+                if (i < t_intervalValue -1)
+                {
+                    streamWriter.WriteLine("}" + ",");
+                }
+                else if (i >= t_intervalValue -1)
+                {
+                    streamWriter.Write("}");
+                }
+
             }
 
         }
@@ -183,18 +196,18 @@ namespace ThermoParser
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("[");
-            streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t");
-            streamWriter.Write("  {");
+            //streamWriter.WriteLine();
+            //streamWriter.Write("\t\t\t\t");
+            //streamWriter.Write("  {");
 
             streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t\t");
+            //streamWriter.Write("\t\t\t\t\t");
             //streamWriter.Write("\"" + "stuff" + "\"" + ":" + "1.0");
             DoRecordSet();
 
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
-            streamWriter.Write("  }");
+            //streamWriter.Write("  }");
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
             streamWriter.Write("]");
