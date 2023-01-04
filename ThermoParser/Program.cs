@@ -187,7 +187,9 @@ namespace ThermoParser
                 string secondIntegrate = integrationConstants.Substring(secondConstant_e + 4, firstConstant_e + 4);
                 string integrateConcant = firstIntegrate + " " + secondIntegrate;
                 integrateConcant = integrateConcant.Trim();
-                string[] integrationLine = integrateConcant.Split(separator);
+                integrateConcant = integrateConcant.Replace(" ", ",");
+                integrateConcant = integrateConcant.Replace(",,", ",");
+                string[] integrationLine = integrateConcant.Split(comma);
 
                 streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
@@ -195,6 +197,11 @@ namespace ThermoParser
                 streamWriter.Write("[" + integrationLine[0] + ", " + integrationLine[1] + "]");
                 streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
+
+                if (integrationLine[1].Length == 0)
+                {
+                    int sun = 99;
+                }
 
                 // if this is last loop dont print comma
                 if (i < t_intervalValue -1)
