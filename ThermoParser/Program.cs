@@ -78,19 +78,29 @@ namespace ThermoParser
 
         private static void DoRecordSet()
         {
+            UnicodeCategory unicodeCategory;
+            m_currentLine = streamReader.ReadLine();
+            char separator = ' ';
+            char comma = ',';
             // pass t intervals into record set
             string tempRange = m_currentLine.Substring(0, 22);
-            tempRange= tempRange.Trim();
-
+            tempRange = tempRange.Trim();
+            int indx = tempRange.IndexOf(separator);
+            //tempRange = tempRange.Replace(' ', ',');
+            tempRange = tempRange.Insert(indx, ",");
+            string[] tempRangeLine = tempRange.Split(comma);
 
             for (int i = 0; i < t_intervalValue; i++)
             {
+                
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.Write("{");
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
-                streamWriter.WriteLine("\"" + "temperatureRange" + "\"" + ":" + 200.0 + ",");
+                streamWriter.Write("\"" + "temperatureRange" + "\"" + ":");
+                streamWriter.Write( "[" + tempRangeLine[0] + ", " + tempRangeLine[1].Trim() + "]" + ",");
+                streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.WriteLine("\"" + "numberOfCoefficients" + "\"" + ":" + 7 + ",");
                 streamWriter.Write("\t\t\t\t\t");
@@ -208,8 +218,8 @@ namespace ThermoParser
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
             //streamWriter.Write("  }");
-            streamWriter.WriteLine();
-            streamWriter.Write("\t\t\t\t");
+            //streamWriter.WriteLine();
+            //streamWriter.Write("\t\t\t\t");
             streamWriter.Write("]");
         }
 
