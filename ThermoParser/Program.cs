@@ -24,6 +24,7 @@ namespace ThermoParser
             {
                 m_currentLine = streamReader.ReadLine();
                 DoSwitch(streamReader, streamWriter, m_currentLine);
+                streamWriter.WriteLine();
 
                 if (streamReader.BaseStream == null)
                 {
@@ -49,8 +50,8 @@ namespace ThermoParser
                     }
                     else
                     {
+                        Print_ReferenceSpecies();
                         break;
-                        //Print_ReferenceSpecies();
                     }
                     if (m_char == 'x')
                     {
@@ -61,12 +62,17 @@ namespace ThermoParser
                     case UnicodeCategory.UppercaseLetter:
                     //  uppercase is new species with the exception of ref species
                     PrintNewSpecies();
+                    break;
                 case UnicodeCategory.SpaceSeparator:
-                    DoRecordSet();
                     break;
 
             }
 
+        }
+
+        private static void Print_ReferenceSpecies()
+        {
+            PrintNewSpecies();
         }
 
         private static void DoRecordSet()
@@ -126,13 +132,48 @@ namespace ThermoParser
             streamWriter.Write("{");
             //------------------------------------------------
             PrintSpeciesAndDescription();
-
+            m_currentLine = streamReader.ReadLine();
+            PrintTintervalsLine();
 
             //---------------Close curly for new species
             streamWriter.WriteLine();
             streamWriter.Write("\t\t");
             streamWriter.Write("}" + ",");
             //-------------------------------------------
+
+        }
+
+        private static void PrintTintervalsLine()
+        {
+            // t intervals
+            string m_tIntervalsLabel = "tIntervals";
+            string m_tIntervals;
+            char separator = ' ';
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            streamWriter.Write("\"" + m_tIntervalsLabel + "\"" + ":");
+            
+            if (m_currentLine != null)
+            {
+                m_tIntervals = m_currentLine.Substring(0, 2);
+                int.TryParse(m_tIntervals, out int value);
+                streamWriter.Write(value + " ,"); 
+            }
+
+            //  id code
+            string m_IdLabel = "idCode";
+            string m_IdCode;
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            if (m_currentLine != null)
+            {
+                m_IdCode = m_currentLine.Substring(3, 7);
+                m_IdCode = m_IdCode.Trim();
+                streamWriter.Write("\"" + m_IdLabel + "\"" + ":");
+                streamWriter.Write("\"" + m_IdCode + "\"" + ","); 
+            }
+            //  chemical formula line
+
 
         }
 
