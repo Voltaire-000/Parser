@@ -82,7 +82,13 @@ namespace ThermoParser
 
         private static void EndOfFile()
         {
-            throw new NotImplementedException();
+            //  end in middle of file
+            string endSubstring = m_currentLine.Substring(0, 3);
+            if (endSubstring != "END")
+            {
+
+            }
+
         }
 
         private static void BeginNewJsonFile(StreamWriter streamWriter, StreamReader streamReader, string m_currentFile)
@@ -241,7 +247,7 @@ namespace ThermoParser
 
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t");
-            streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
+            streamWriter.Write("\"" + m_numElementslabel + "\"" + ": ");
             streamWriter.Write(firstAtoms);
             //  if no more atoms print close curly, else print curly + ,
             if (n_secondAtoms != 0)
@@ -260,6 +266,7 @@ namespace ThermoParser
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
                 streamWriter.Write(secondAtoms);
+
 
                 if (n_thirdAtoms !=0)
                 {
@@ -309,17 +316,30 @@ namespace ThermoParser
                             streamWriter.WriteLine();
                             streamWriter.Write("\t\t\t\t\t");
                             streamWriter.Write("\"" + m_symbolLabel + "\"" + ": ");
-                            streamWriter.Write("\"" + l_fifthElement + "\"" + ",");
+                            streamWriter.Write("\"" + fifthelement + "\"" + ",");
                             streamWriter.WriteLine();
                             streamWriter.Write("\t\t\t\t\t");
                             streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
                             streamWriter.Write(fifthAtoms);
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t");
+                            streamWriter.Write("  }");
                         }
-                    }
-                    streamWriter.WriteLine();
-                    streamWriter.Write("\t\t\t\t");
-                    streamWriter.Write("  }" + ",");
+                        else
+                        {
+                            streamWriter.WriteLine();
+                            streamWriter.Write("\t\t\t\t");
+                            streamWriter.Write("  }");
+                        }
 
+
+                    }
+                    else
+                    {
+                        streamWriter.WriteLine();
+                        streamWriter.Write("\t\t\t\t");
+                        streamWriter.Write("  }");
+                    }
 
                 }
                 else
@@ -341,13 +361,49 @@ namespace ThermoParser
             //  print the closing bracket for formula
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
-            streamWriter.Write("]");
+            streamWriter.Write("]" + ",");
 
+            //  gas species line
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            string speciesType = m_currentLine.Substring(41, 1);
+            streamWriter.Write("\"" + "gaseous" + "\"" + ": ");
+            if (speciesType == "0")
+            {
+                streamWriter.Write(" false" + ",");
+            }
+            else
+            {
+                streamWriter.Write(" true" + ",");
+            }
+
+            // molecular weight line
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            string moleWeightSubstring = m_currentLine.Substring(53, 12);
+            streamWriter.Write("\"" + "molecularWeight" + "\"" + ": ");
+            streamWriter.Write(" " + moleWeightSubstring + ",");
 
         }
 
         private static void PrintSpeciesAndDescription()
         {
+            //  special case for END PRODUCTS line 15347
+            string endProducts = m_currentLine.Substring(0, 3);
+            if (endProducts == "END")
+            {
+                //  skip over line
+                m_currentLine = streamReader.ReadLine();
+            }
+
+            //  special case for air
+            string airSubstring = m_currentLine.Substring(0, 3);
+            if (airSubstring == "Air")
+            {
+
+                //throw new NotImplementedException();
+            }
+
             string m_speciesLabel = "species";
             string m_species;
             string m_descriptionLabel = "description";
