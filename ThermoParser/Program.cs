@@ -131,7 +131,7 @@ namespace ThermoParser
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.Write("\"" + "hJmol" + "\"" + ":");
                 streamWriter.Write(" " + m_hLine+ ",");
-
+                //*****************************************
                 // must read new line here
                 m_currentLine = streamReader.ReadLine();
                 string coefFirstPart = m_currentLine;
@@ -206,7 +206,7 @@ namespace ThermoParser
                     streamWriter.Write("}");
                 }
 
-                m_currentLine = streamReader.ReadLine();
+                //m_currentLine = streamReader.ReadLine();
 
             }
 
