@@ -181,9 +181,22 @@ namespace ThermoParser
                     streamWriter.Write("[" + coeline[0] + ", " + coeline[1] + ", " + coeline[2] + ", " + coeline[3] + ", " + coeline[4] + ", " + coeline[5] + ", " + coeline[6] + ", " + coeline[7] + "]" + ","); 
                 }
 
+
+                //  integration constants
+                string integrationConstants = concantCoef.Substring(128, 32);
+                int firstConstant_e = integrationConstants.IndexOf('e');
+                int secondConstant_e = integrationConstants.IndexOf('e', firstConstant_e);
+                string firstIntegrate = integrationConstants.Substring(0, firstConstant_e + 4);
+                string secondIntegrate = integrationConstants.Substring(secondConstant_e + 4, firstConstant_e + 4);
+                string integrateConcant = firstIntegrate + " " + secondIntegrate;
+                integrateConcant = integrateConcant.Trim();
+                string[] integrationLine = integrateConcant.Split(separator);
+
                 streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "integrationConstants" + "\"" + ":" + 7.145 );
+                streamWriter.Write("\"" + "integrationConstants" + "\"" + ":");
+                streamWriter.Write("[" + integrationLine[0] + ", " + integrationLine[1] + "]");
+                streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
 
                 // if this is last loop dont print comma
