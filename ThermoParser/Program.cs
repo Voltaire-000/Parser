@@ -140,6 +140,7 @@ namespace ThermoParser
             PrintSpeciesAndDescription();
             m_currentLine = streamReader.ReadLine();
             PrintTintervalsLine();
+            PrintDataRecords();
 
             //---------------Close curly for new species
             streamWriter.WriteLine();
@@ -147,6 +148,30 @@ namespace ThermoParser
             streamWriter.Write("}" + ",");
             //-------------------------------------------
 
+        }
+
+        private static void PrintDataRecords()
+        {
+            string m_recordLabel = "dataRecords";
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            streamWriter.Write("\"" + m_recordLabel + "\"" + ":");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("[");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("  {");
+
+            streamWriter.WriteLine();
+            streamWriter.Write("\"" + "stuff" + "\"" + ":" + "1.0");
+
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("  }");
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t");
+            streamWriter.Write("]");
         }
 
         private static void PrintTintervalsLine()
