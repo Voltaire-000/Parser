@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -32,9 +33,46 @@ namespace ThermoParser
 
         private static void DoSwitch(StreamReader streamReader, StreamWriter streamWriter, string m_currentLine)
         {
-            string rootLabel = "thermo";
-            //string rootLabel = "species";
-            
+
+            UnicodeCategory unicodeCategory;
+            char m_char = m_currentLine.First();
+            unicodeCategory = char.GetUnicodeCategory(m_char);
+
+            switch (unicodeCategory)
+            {
+                case UnicodeCategory.LowercaseLetter:
+                    if (m_char == 't')
+                    {
+                        BeginNewJsonFile(streamWriter);
+                    }
+                    else
+                    {
+                        //Print_ReferenceSpecies(streamReader, streamWriter, m_currentLine);
+                    }
+                    break;
+
+            }
+
+        }
+
+        private static void BeginNewJsonFile(StreamWriter streamWriter)
+        {
+            //--------------Print open curly for file--------------
+            streamWriter.Write("{");
+
+            PrintRootName(streamWriter);
+
+
+            //--------------Print close curly for file
+            streamWriter.Write("}");
+
+        }
+
+        private static void PrintRootName(StreamWriter streamWriter)
+        {
+            string rootName = "thermo";
+            //string rootName = "species";
+            throw new NotImplementedException();
         }
     }
 }
