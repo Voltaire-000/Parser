@@ -1,6 +1,58 @@
-thermo                                                                         
+!                                                                               
+!              SIX-CHARACTER REFERENCE-DATE CODES                               
+!                                                                               
+!                                                                               
+!  Letters         Reference                         Numbers                    
+!  __________________________________________________________________           
+!                                                                               
+!    g      Glenn Research Center              Month/year calculated            
+!                                                                               
+!    j      NIST-JANAF Thermochemical          Month/year of table              
+!           Tables. Chase,1998                                                  
+!                                                                               
+!    tpis   Thermodynamic Properties of        Year of volume                   
+!           Individual Substances. Gurvich,                                     
+!           1978,1979,1982,1989,1991,1996                                       
+!                                                                               
+!    n      TRC Thermodynamic Tables, NIST     Month/year of table              
+!                                                                               
+!    bar    Barin:Thermochemical Data of       Year of volume                   
+!           Pure Substances. Barin,1989                                         
+!                                                                               
+!    coda   CODATA Key Values for              Year of volume                   
+!           Thermodynamics. Cox,1989                                            
+!                                                                               
+!    srd    Standard Reference Data            Year of J.Phys.Chem.Ref.         
+!                                              Data journal                     
+!                                                                               
+!                                                                               
+!                                                                               
+!                   ORDER OF SPECIES                                            
+!                                                                               
+!                                                                               
+!         1)  Gaseous products/reactants                                         
+!                                                                               
+!         2)  Condensed products/reactants                                      
+!                                                                               
+!         3)  Gaseous/condensed reactants only (starts with "Air")              
+!                                                                               
+!                                                                               
+!                                                                               
+thermo                                                                          
+    200.00   1000.00   6000.00  20000.     9/09/04                              
+e-                Ref-Species. Chase,1998 3/82.                                 
+ 3 g12/98 E   1.00    0.00    0.00    0.00    0.00 0.000548579903          0.000
+    298.150   1000.0007 -2.0 -1.0  0.0  1.0  2.0  3.0  4.0  0.0         6197.428
+ 0.000000000D+00 0.000000000D+00 2.500000000D+00 0.000000000D+00 0.000000000D+00
+ 0.000000000D+00 0.000000000D+00                -7.453750000D+02-1.172081224D+01
+   1000.000   6000.0007 -2.0 -1.0  0.0  1.0  2.0  3.0  4.0  0.0         6197.428
+ 0.000000000D+00 0.000000000D+00 2.500000000D+00 0.000000000D+00 0.000000000D+00
+ 0.000000000D+00 0.000000000D+00                -7.453750000D+02-1.172081224D+01
+   6000.000  20000.0007 -2.0 -1.0  0.0  1.0  2.0  3.0  4.0  0.0         6197.428
+ 0.000000000D+00 0.000000000D+00 2.500000000D+00 0.000000000D+00 0.000000000D+00
+ 0.000000000D+00 0.000000000D+00                -7.453750000D+02-1.172081224D+01
 Ag                Hf:Cox,1989. Moore,1971. Gordon,1999.                         
- 3 g10/97 AL  1.00BR  3.00    0.00    0.00    0.00 0  107.8682000     284900.000
+ 3 g10/97 AG  1.00    0.00    0.00    0.00    0.00 0  107.8682000     284900.000
     200.000   1000.0007 -2.0 -1.0  0.0  1.0  2.0  3.0  4.0  0.0         6197.428
  0.000000000D+00 0.000000000D+00 2.500000000D+00 0.000000000D+00 0.000000000D+00
  0.000000000D+00 0.000000000D+00                 3.352002370D+04 6.562819350D+00
