@@ -77,6 +77,11 @@ namespace ThermoParser
 
         private static void DoRecordSet()
         {
+            // pass t intervals into record set
+            string tempRange = m_currentLine.Substring(0, 22);
+            tempRange= tempRange.Trim();
+
+
             throw new NotImplementedException();
         }
 
@@ -164,7 +169,9 @@ namespace ThermoParser
             streamWriter.Write("  {");
 
             streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t\t\t");
             streamWriter.Write("\"" + "stuff" + "\"" + ":" + "1.0");
+            //DoRecordSet();
 
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
@@ -391,7 +398,8 @@ namespace ThermoParser
             //  gas species line
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
-            string speciesType = m_currentLine.Substring(41, 1);
+            // todo fix gas line
+            string speciesType = m_currentLine.Substring(51, 1);
             streamWriter.Write("\"" + "gaseous" + "\"" + ": ");
             if (speciesType == "0")
             {
@@ -405,9 +413,10 @@ namespace ThermoParser
             // molecular weight line
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
-            string moleWeightSubstring = m_currentLine.Substring(53, 12);
+            // todo fix 
+            string moleWeightSubstring = m_currentLine.Substring(52, 14);
             moleWeightSubstring = moleWeightSubstring.Trim();
-            streamWriter.Write("\"" + "molecularWeight" + "\"" + ": ");
+            streamWriter.Write(" " +  "\"" + "molecularWeight" + "\"" + ": ");
             streamWriter.Write(moleWeightSubstring + ",");
 
             //  heat of formation line
@@ -415,7 +424,7 @@ namespace ThermoParser
             streamWriter.Write("\t\t\t");
             string heatSubstring = m_currentLine.Substring(65, 15);
             heatSubstring = heatSubstring.Trim();
-            streamWriter.Write("\"" + "heatOfFormation" + "\"" + ":");
+            streamWriter.Write(" " + "\"" + "heatOfFormation" + "\"" + ":");
             streamWriter.Write(" " + heatSubstring + ",");
 
             // end of line read new line
