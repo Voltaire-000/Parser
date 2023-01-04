@@ -272,7 +272,7 @@ namespace ThermoParser
         private static void PrintNewSpecies()
         {
             //----------------Open curly brace for new species
-            streamWriter.WriteLine();
+            //streamWriter.WriteLine();
             streamWriter.Write("\t\t");
             streamWriter.Write("{");
             //------------------------------------------------
@@ -551,7 +551,7 @@ namespace ThermoParser
             // todo fix 
             string moleWeightSubstring = m_currentLine.Substring(52, 14);
             moleWeightSubstring = moleWeightSubstring.Trim();
-            streamWriter.Write(" " +  "\"" + "molecularWeight" + "\"" + ": ");
+            streamWriter.Write("\"" + "molecularWeight" + "\"" + ": ");
             streamWriter.Write(moleWeightSubstring + ",");
 
             //  heat of formation line
@@ -559,7 +559,7 @@ namespace ThermoParser
             streamWriter.Write("\t\t\t");
             string heatSubstring = m_currentLine.Substring(65, 15);
             heatSubstring = heatSubstring.Trim();
-            streamWriter.Write(" " + "\"" + "heatOfFormation" + "\"" + ":");
+            streamWriter.Write("\"" + "heatOfFormation" + "\"" + ":");
             streamWriter.Write(" " + heatSubstring + ",");
 
             // end of line read new line
