@@ -102,6 +102,8 @@ namespace ThermoParser
             // H line
             string m_hLine = m_currentLine.Substring(66, 14);
             m_hLine = m_hLine.Trim();
+            // coefficients
+
 
             
 
@@ -133,8 +135,10 @@ namespace ThermoParser
                 streamWriter.Write("\"" + "hJmol" + "\"" + ":");
                 streamWriter.Write(" " + m_hLine+ ",");
 
+                // must read new line here
+                m_currentLine = streamReader.ReadLine();
                 streamWriter.Write("\t\t\t\t\t");
-                streamWriter.WriteLine("\"" + "coefficients" + "\"" + ":" + 3.1415 + ",");
+                streamWriter.WriteLine("\"" + "coefficients" + "\"" + ":");
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.WriteLine("\"" + "integrationConstants" + "\"" + ":" + 7.145 );
                 streamWriter.Write("\t\t\t\t\t");
