@@ -13,6 +13,7 @@ namespace ThermoParser
         private static string m_currentLine = "";
         private static StreamReader streamReader;
         private static StreamWriter streamWriter;
+        private static int t_intervalValue = 0;
 
         static void Main(string[] args)
         {
@@ -82,7 +83,25 @@ namespace ThermoParser
             tempRange= tempRange.Trim();
 
 
-            throw new NotImplementedException();
+            for (int i = 0; i < t_intervalValue; i++)
+            {
+                streamWriter.WriteLine("{");
+                streamWriter.WriteLine("\"" + "temperatureRange" + "\"" + ":" + 200.0 + ",");
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.WriteLine("\"" + "numberOfCoefficients" + "\"" + ":" + 7 + ",");
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.WriteLine("\"" + "tExponents" + "\"" + ":" + 1.023 + ",");
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.WriteLine("\"" + "hJmol" + "\"" + ":" + 212.0 + ",");
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.WriteLine("\"" + "coefficients" + "\"" + ":" + 3.1415 + ",");
+                streamWriter.Write("\t\t\t\t\t");
+                streamWriter.WriteLine("\"" + "integrationConstants" + "\"" + ":" + 7.145 );
+                streamWriter.Write("\t\t\t\t\t");
+
+                streamWriter.WriteLine("}" + ",");
+            }
+
         }
 
         private static void EndOfFile()
@@ -144,7 +163,7 @@ namespace ThermoParser
             //------------------------------------------------
             PrintSpeciesAndDescription();
             m_currentLine = streamReader.ReadLine();
-            PrintTintervalsLine();
+            t_intervalValue = PrintTintervalsLine();
             PrintDataRecords();
 
             //---------------Close curly for new species
@@ -170,8 +189,8 @@ namespace ThermoParser
 
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t\t");
-            streamWriter.Write("\"" + "stuff" + "\"" + ":" + "1.0");
-            //DoRecordSet();
+            //streamWriter.Write("\"" + "stuff" + "\"" + ":" + "1.0");
+            DoRecordSet();
 
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t\t");
@@ -181,8 +200,9 @@ namespace ThermoParser
             streamWriter.Write("]");
         }
 
-        private static void PrintTintervalsLine()
+        private static int PrintTintervalsLine()
         {
+            t_intervalValue = 0;
             // t intervals
             string m_tIntervalsLabel = "tIntervals";
             string m_tIntervals;
@@ -194,8 +214,8 @@ namespace ThermoParser
             if (m_currentLine != null)
             {
                 m_tIntervals = m_currentLine.Substring(0, 2);
-                int.TryParse(m_tIntervals, out int value);
-                streamWriter.Write(value + " ,"); 
+                int.TryParse(m_tIntervals, out t_intervalValue);
+                streamWriter.Write(t_intervalValue + " ,"); 
             }
 
             //  id code
@@ -428,6 +448,7 @@ namespace ThermoParser
             streamWriter.Write(" " + heatSubstring + ",");
 
             // end of line read new line
+            return t_intervalValue;
 
         }
 
