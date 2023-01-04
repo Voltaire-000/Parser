@@ -370,19 +370,30 @@ namespace ThermoParser
             streamWriter.Write("\"" + "gaseous" + "\"" + ": ");
             if (speciesType == "0")
             {
-                streamWriter.Write(" false" + ",");
+                streamWriter.Write("false" + ",");
             }
             else
             {
-                streamWriter.Write(" true" + ",");
+                streamWriter.Write("true" + ",");
             }
 
             // molecular weight line
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
             string moleWeightSubstring = m_currentLine.Substring(53, 12);
+            moleWeightSubstring = moleWeightSubstring.Trim();
             streamWriter.Write("\"" + "molecularWeight" + "\"" + ": ");
-            streamWriter.Write(" " + moleWeightSubstring + ",");
+            streamWriter.Write(moleWeightSubstring + ",");
+
+            //  heat of formation line
+            streamWriter.WriteLine();
+            streamWriter.Write("\t\t\t");
+            string heatSubstring = m_currentLine.Substring(65, 15);
+            heatSubstring = heatSubstring.Trim();
+            streamWriter.Write("\"" + "heatOfFormation" + "\"" + ":");
+            streamWriter.Write(" " + heatSubstring + ",");
+
+            // end of line read new line
 
         }
 
