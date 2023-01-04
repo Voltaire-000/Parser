@@ -79,6 +79,8 @@ namespace ThermoParser
         private static void DoRecordSet()
         {
             m_currentLine = streamReader.ReadLine();
+
+            // temp range
             char separator = ' ';
             char comma = ',';
             // pass t intervals into record set
@@ -89,23 +91,48 @@ namespace ThermoParser
             tempRange = tempRange.Insert(indx, ",");
             string[] tempRangeLine = tempRange.Split(comma);
 
+            // t exponents array
+            string m_texponents = m_currentLine.Substring(23, 40);
+            m_texponents = m_texponents.Trim();
+            m_texponents = m_texponents.Replace(" ", ",");
+            m_texponents = m_texponents.Replace(",,", ",");
+            string[] tExponentLine = m_texponents.Split(comma);
+            // number of coefficients
+            string m_coeff = m_currentLine.Substring(22, 1);
+            // H line
+            string m_hLine = m_currentLine.Substring(66, 14);
+            m_hLine = m_hLine.Trim();
+
+            
+
+
             for (int i = 0; i < t_intervalValue; i++)
             {
                 
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.Write("{");
                 streamWriter.Write("\t\t\t\t\t");
+
                 streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.Write("\"" + "temperatureRange" + "\"" + ":");
                 streamWriter.Write( "[" + tempRangeLine[0] + ", " + tempRangeLine[1].Trim() + "]" + ",");
+
                 streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
-                streamWriter.WriteLine("\"" + "numberOfCoefficients" + "\"" + ":" + 7 + ",");
+                streamWriter.Write("\"" + "numberOfCoefficients" + "\"" + ":");
+                streamWriter.Write(" " + m_coeff + ",");
+                
+                streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
-                streamWriter.WriteLine("\"" + "tExponents" + "\"" + ":" + 1.023 + ",");
+                streamWriter.Write("\"" + "tExponents" + "\"" + ":");
+                streamWriter.Write("[" + tExponentLine[0] + ", " + tExponentLine[1] + ", " + tExponentLine[2] + ", " + tExponentLine[3] + ", " + tExponentLine[4] + ", " + tExponentLine[5] + ", " + tExponentLine[6] + ", " + tExponentLine[7] + "]" + ",");
+
+                streamWriter.WriteLine();
                 streamWriter.Write("\t\t\t\t\t");
-                streamWriter.WriteLine("\"" + "hJmol" + "\"" + ":" + 212.0 + ",");
+                streamWriter.Write("\"" + "hJmol" + "\"" + ":");
+                streamWriter.Write(" " + m_hLine+ ",");
+
                 streamWriter.Write("\t\t\t\t\t");
                 streamWriter.WriteLine("\"" + "coefficients" + "\"" + ":" + 3.1415 + ",");
                 streamWriter.Write("\t\t\t\t\t");
