@@ -370,10 +370,23 @@ namespace ThermoParser
             string firstElement = chemFormulaSubstring.Substring(0, firstColumn); // return "AG"
             firstElement = firstElement.Trim();
             int l_firstElement = firstElement.Length;
+            if (firstElement.Length > 1)
+            {
+                string fchar = firstElement.Substring(0,1);
+                string schar = firstElement.Substring(1);
+                schar = schar.ToLower();
+                firstElement = fchar + schar;
+            }
             string firstAtoms = chemFormulaSubstring.Substring(firstColumn, secondColumn);
 
             string secondElement = chemFormulaSubstring.Substring(firstColumn + secondColumn, thirdColumn);
             secondElement = secondElement.Trim();
+            if (secondElement.Length > 1)
+            {
+                string fchar = secondElement.Substring(0, 1);
+                string schar = secondElement.Substring(1);
+                secondElement= fchar + schar;
+            }
             int l_secondElement = secondElement.Length;
             string secondAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn, fourthColumn);
             double n_secondAtoms = 0.0;
@@ -381,6 +394,12 @@ namespace ThermoParser
 
             string thirdElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn, fifthColumn);
             thirdElement = thirdElement.Trim();
+            if (thirdElement.Length > 1)
+            {
+                string fchar = thirdElement.Substring(0, 1);
+                string schar = thirdElement.Substring(1);
+                thirdElement= fchar + schar;
+            }
             int l_thirdElement = thirdElement.Length;
             string thirdAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn, sixthColumn);
             double n_thirdAtoms = 0.0;
@@ -388,6 +407,12 @@ namespace ThermoParser
 
             string fourthElement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn, seventhColumn);
             fourthElement = fourthElement.Trim();
+            if (fourthElement.Length > 1)
+            {
+                string fchar = fourthElement.Substring(0, 1);
+                string schar = fourthElement.Substring(1);
+                fourthElement= fchar + schar;
+            }
             int l_fourthElement = fourthElement.Length;
             string fourthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn, eigthColumn);
             double n_fourthAtoms = 0.0;
@@ -395,6 +420,12 @@ namespace ThermoParser
 
             string fifthelement = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn, ninthColumn);
             fifthelement = fifthelement.Trim();
+            if (fifthelement.Length > 1)
+            {
+                string fchar = fifthelement.Substring(0, 1);
+                string schar = fifthelement.Substring(1);
+                fifthelement= fchar + schar;
+            }
             int l_fifthElement = fifthelement.Length;
             string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
             double n_fifthAtoms = 0.0;
