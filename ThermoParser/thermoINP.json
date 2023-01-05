@@ -331,7 +331,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -370,7 +370,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -409,7 +409,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -526,7 +526,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -565,7 +565,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -608,7 +608,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -647,7 +647,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -772,7 +772,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -815,7 +815,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -940,7 +940,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -1104,7 +1104,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -1147,7 +1147,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -1237,7 +1237,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -1362,7 +1362,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -1776,7 +1776,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -1819,7 +1819,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -2042,7 +2042,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -2089,7 +2089,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -2355,7 +2355,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -2597,7 +2597,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -2675,7 +2675,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -3300,7 +3300,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -3339,7 +3339,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -3378,7 +3378,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -3495,7 +3495,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -3534,7 +3534,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -3577,7 +3577,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -3624,7 +3624,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -3671,7 +3671,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -3710,7 +3710,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -3753,7 +3753,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -3800,7 +3800,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -3882,7 +3882,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -3925,7 +3925,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -4187,7 +4187,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -4398,7 +4398,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -4441,7 +4441,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -4531,7 +4531,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -4656,7 +4656,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -5148,7 +5148,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -5191,7 +5191,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -5636,7 +5636,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -6506,7 +6506,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -6553,7 +6553,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -6600,7 +6600,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -6928,7 +6928,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -6967,7 +6967,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -7006,7 +7006,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -7045,7 +7045,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -7088,7 +7088,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -7807,7 +7807,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -7846,7 +7846,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -7885,7 +7885,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -7924,7 +7924,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -8549,7 +8549,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -8963,7 +8963,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -9525,7 +9525,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -9564,7 +9564,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -9603,7 +9603,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -9642,7 +9642,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -9681,7 +9681,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -9720,11 +9720,11 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -9763,7 +9763,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -9802,11 +9802,11 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -9845,7 +9845,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -9884,11 +9884,11 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -9927,7 +9927,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -10052,7 +10052,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -10095,7 +10095,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -10138,11 +10138,11 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -10185,7 +10185,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -10228,11 +10228,11 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -10275,7 +10275,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -10400,7 +10400,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -10443,7 +10443,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -10486,11 +10486,11 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -10533,7 +10533,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -10658,7 +10658,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -10701,7 +10701,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -10881,7 +10881,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -10924,7 +10924,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -10967,11 +10967,11 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -11014,7 +11014,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -11057,11 +11057,11 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -11104,7 +11104,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -11194,7 +11194,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -11241,7 +11241,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -11288,11 +11288,11 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -11339,7 +11339,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -11429,7 +11429,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -11476,7 +11476,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -11644,7 +11644,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -11687,7 +11687,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -11730,11 +11730,11 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -11777,7 +11777,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -11867,7 +11867,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -11914,7 +11914,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -12082,7 +12082,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -12125,7 +12125,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -12946,7 +12946,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -12989,7 +12989,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -13036,7 +13036,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -13126,7 +13126,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -13642,7 +13642,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -13681,7 +13681,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -13720,7 +13720,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -13759,7 +13759,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -13798,7 +13798,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -13880,7 +13880,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -13923,7 +13923,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -14005,7 +14005,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -14087,7 +14087,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -14247,7 +14247,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -14290,7 +14290,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -14380,7 +14380,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -14427,7 +14427,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -14591,7 +14591,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -14638,7 +14638,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -14892,7 +14892,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -14939,7 +14939,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -14982,7 +14982,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -15408,7 +15408,7 @@
 					"numberOfAtoms": 5.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -19166,7 +19166,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -19205,7 +19205,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -19244,7 +19244,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -19283,7 +19283,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -19326,7 +19326,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -21108,7 +21108,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -21147,7 +21147,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -21303,7 +21303,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "LI",
+					"symbol": "Li",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -21428,7 +21428,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "NA",
+					"symbol": "Na",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -21549,7 +21549,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "RB",
+					"symbol": "Rb",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -21623,7 +21623,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -21705,7 +21705,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -22166,7 +22166,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -22400,7 +22400,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -22576,7 +22576,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -22615,7 +22615,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -22705,7 +22705,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -23736,7 +23736,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -23775,7 +23775,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -23814,7 +23814,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -23935,7 +23935,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -23974,7 +23974,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -24103,7 +24103,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -24142,7 +24142,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -24181,7 +24181,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -24220,7 +24220,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -24259,7 +24259,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -24298,7 +24298,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -24692,7 +24692,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -24731,7 +24731,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -24770,7 +24770,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -24809,7 +24809,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -24848,7 +24848,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -24887,7 +24887,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -25336,7 +25336,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -25375,7 +25375,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -25414,7 +25414,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -25453,7 +25453,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -25492,7 +25492,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -25531,7 +25531,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -25570,7 +25570,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -25609,7 +25609,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -26253,7 +26253,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -26535,7 +26535,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -26801,7 +26801,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -27333,7 +27333,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -28744,7 +28744,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -29123,7 +29123,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -29162,7 +29162,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -29201,7 +29201,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -29240,7 +29240,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -29279,7 +29279,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -29318,7 +29318,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -29712,7 +29712,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -29751,7 +29751,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -29790,7 +29790,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -29829,7 +29829,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -29868,7 +29868,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -29907,7 +29907,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -30356,7 +30356,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -30442,7 +30442,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -30524,7 +30524,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -30680,7 +30680,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "LI",
+					"symbol": "Li",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -30805,7 +30805,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "NA",
+					"symbol": "Na",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -31000,7 +31000,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -31125,7 +31125,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -31676,7 +31676,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -31762,7 +31762,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -31801,7 +31801,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -32324,7 +32324,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -32363,7 +32363,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -32726,7 +32726,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -32765,7 +32765,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -32972,7 +32972,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -33011,7 +33011,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -33050,7 +33050,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -33089,7 +33089,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -33140,7 +33140,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -35274,7 +35274,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -35485,7 +35485,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -36516,7 +36516,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -36602,7 +36602,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -36684,7 +36684,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -36840,7 +36840,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "LI",
+					"symbol": "Li",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -37137,7 +37137,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -37176,7 +37176,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -37500,7 +37500,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -37715,7 +37715,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 5.00
 				  }
 				],
@@ -37805,7 +37805,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -38110,7 +38110,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -38149,7 +38149,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -38927,7 +38927,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -38966,7 +38966,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -39005,7 +39005,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -39048,7 +39048,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -39087,7 +39087,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 5.00
 				  }
 				],
@@ -39271,7 +39271,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -39314,7 +39314,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -39361,7 +39361,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -39404,7 +39404,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -39529,7 +39529,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -39572,7 +39572,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -39654,7 +39654,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -39697,7 +39697,7 @@
 					"numberOfAtoms": 4.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -40060,7 +40060,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -40107,7 +40107,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -40154,7 +40154,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -40950,7 +40950,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -40989,7 +40989,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -41028,7 +41028,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -41067,7 +41067,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -41106,7 +41106,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -41145,7 +41145,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -41184,7 +41184,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -41223,7 +41223,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -41910,7 +41910,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -41949,7 +41949,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -42144,7 +42144,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "LI",
+					"symbol": "Li",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -42269,7 +42269,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "NA",
+					"symbol": "Na",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -42390,7 +42390,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -42429,7 +42429,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -42937,7 +42937,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -42976,7 +42976,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -43015,7 +43015,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -44208,7 +44208,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -44255,7 +44255,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -44450,7 +44450,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -45266,7 +45266,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -45305,7 +45305,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -45344,7 +45344,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -45383,7 +45383,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -45500,7 +45500,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -45539,7 +45539,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -45578,7 +45578,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -45617,7 +45617,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -45699,7 +45699,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -45941,7 +45941,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -45984,7 +45984,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -46027,7 +46027,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -46238,7 +46238,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -46281,7 +46281,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -46449,7 +46449,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -46492,7 +46492,7 @@
 					"numberOfAtoms": 3.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -47253,7 +47253,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -47292,7 +47292,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -47331,7 +47331,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -47370,7 +47370,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -47409,7 +47409,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -47448,7 +47448,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -47487,7 +47487,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -47526,7 +47526,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -48158,7 +48158,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -48205,7 +48205,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -48244,7 +48244,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -48291,7 +48291,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -48342,7 +48342,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -49085,7 +49085,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 5.00
 				  }
 				],
@@ -49347,7 +49347,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -49386,7 +49386,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -49425,7 +49425,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -49464,7 +49464,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -49605,7 +49605,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -49648,7 +49648,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -51352,7 +51352,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -51692,7 +51692,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -51782,7 +51782,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -51864,7 +51864,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -52618,7 +52618,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -52649,7 +52649,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -52680,7 +52680,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -52711,7 +52711,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -53197,7 +53197,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -53726,7 +53726,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -53757,7 +53757,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -53936,7 +53936,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -53975,7 +53975,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -54006,7 +54006,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -54787,7 +54787,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -54838,7 +54838,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -54873,7 +54873,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -54904,7 +54904,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -54970,7 +54970,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -55001,7 +55001,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -55032,7 +55032,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -55890,7 +55890,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -55921,7 +55921,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -56030,7 +56030,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -56069,7 +56069,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -57367,7 +57367,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -57406,7 +57406,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -57437,7 +57437,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -57476,7 +57476,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -57507,7 +57507,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -58533,7 +58533,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -58564,7 +58564,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -58595,7 +58595,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -58626,7 +58626,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -58657,7 +58657,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -58688,7 +58688,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -58719,7 +58719,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -58750,7 +58750,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -58781,7 +58781,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -58812,7 +58812,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -59588,7 +59588,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -59619,7 +59619,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -59650,7 +59650,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -59689,7 +59689,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -59786,7 +59786,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -60393,7 +60393,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -60424,7 +60424,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -60455,7 +60455,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -60486,7 +60486,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -61360,7 +61360,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -61391,7 +61391,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -61569,7 +61569,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -61600,7 +61600,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -61631,7 +61631,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -61662,7 +61662,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -61693,7 +61693,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -61724,7 +61724,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -61755,7 +61755,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -61786,7 +61786,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -61817,7 +61817,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -62251,7 +62251,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -62294,7 +62294,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -62329,7 +62329,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -62442,7 +62442,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -62481,7 +62481,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -62590,7 +62590,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -62629,7 +62629,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -63923,7 +63923,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -63966,7 +63966,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -64001,7 +64001,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -64036,7 +64036,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -64071,7 +64071,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -64106,7 +64106,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -64141,7 +64141,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -64176,7 +64176,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -64211,7 +64211,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -64308,7 +64308,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -64351,7 +64351,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -64464,7 +64464,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -64503,7 +64503,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -64534,7 +64534,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -64573,7 +64573,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -65343,7 +65343,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -65386,7 +65386,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -65421,7 +65421,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -65456,7 +65456,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -65491,7 +65491,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -65627,7 +65627,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -65670,7 +65670,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -65705,7 +65705,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -65736,7 +65736,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -65845,7 +65845,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -65884,7 +65884,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -66440,7 +66440,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66475,7 +66475,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66510,7 +66510,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66545,7 +66545,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66580,7 +66580,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "TI",
+					"symbol": "Ti",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66623,7 +66623,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "TI",
+					"symbol": "Ti",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66658,7 +66658,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "TI",
+					"symbol": "Ti",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -66701,7 +66701,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "TI",
+					"symbol": "Ti",
 					"numberOfAtoms": 2.00
 				  },
 				  {
@@ -66736,7 +66736,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66779,7 +66779,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "SI",
+					"symbol": "Si",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66814,7 +66814,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "TI",
+					"symbol": "Ti",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -66857,7 +66857,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "TI",
+					"symbol": "Ti",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -67241,7 +67241,7 @@
 					"numberOfAtoms": 4.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -67276,7 +67276,7 @@
 					"numberOfAtoms": 4.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -67447,7 +67447,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -67482,7 +67482,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -67595,7 +67595,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -67634,7 +67634,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -67826,7 +67826,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -67865,7 +67865,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -69234,7 +69234,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -69277,7 +69277,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -69312,7 +69312,7 @@
 					"numberOfAtoms":  3.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -69347,7 +69347,7 @@
 					"numberOfAtoms":  5.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 3.00
 				  },
 				  {
@@ -69390,7 +69390,7 @@
 					"numberOfAtoms":  5.00
 				  },
 				  {
-					"symbol": "AL",
+					"symbol": "Al",
 					"numberOfAtoms": 3.00
 				  },
 				  {
@@ -69561,7 +69561,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -70317,7 +70317,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -70356,7 +70356,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -70387,7 +70387,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -70418,7 +70418,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -71075,7 +71075,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -71106,7 +71106,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -71137,7 +71137,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -71168,7 +71168,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  }
 				],
@@ -72384,7 +72384,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -72415,7 +72415,7 @@
 					"numberOfAtoms":  2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -73129,7 +73129,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -73168,7 +73168,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -73207,7 +73207,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -73238,7 +73238,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -73277,7 +73277,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -73308,7 +73308,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -73339,7 +73339,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -73949,7 +73949,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -73980,7 +73980,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -74011,7 +74011,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "BR",
+					"symbol": "Br",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -74190,7 +74190,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -74229,7 +74229,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -74260,7 +74260,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -75495,7 +75495,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -75534,7 +75534,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -75565,7 +75565,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -76944,7 +76944,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -76975,7 +76975,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 3.00
 				  }
 				],
@@ -77457,7 +77457,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -77488,7 +77488,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -77519,7 +77519,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -77550,7 +77550,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 6.00
 				  }
 				],
@@ -77585,7 +77585,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -77620,7 +77620,7 @@
 					"numberOfAtoms": 1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 4.00
 				  }
 				],
@@ -77694,7 +77694,7 @@
 					"numberOfAtoms": 2.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 2.00
 				  }
 				],
@@ -78365,7 +78365,7 @@
 					"numberOfAtoms":41959
 				  },
 				  {
-					"symbol": "AR.",
+					"symbol": "Ar.",
 					"numberOfAtoms":00937
 				  },
 				  {
@@ -79671,7 +79671,7 @@
 					"numberOfAtoms":  1.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -79754,7 +79754,7 @@
 					"numberOfAtoms": 4.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
@@ -79793,7 +79793,7 @@
 					"numberOfAtoms": 4.00
 				  },
 				  {
-					"symbol": "CL",
+					"symbol": "Cl",
 					"numberOfAtoms": 1.00
 				  },
 				  {
