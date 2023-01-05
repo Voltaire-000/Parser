@@ -533,16 +533,16 @@ namespace ThermoParser
             //  gas species line
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
-            // todo fix gas line
             string speciesType = m_currentLine.Substring(51, 1);
-            streamWriter.Write("\"" + "gaseous" + "\"" + ": ");
             if (speciesType == "0")
             {
-                streamWriter.Write("false" + ",");
+                streamWriter.Write("\"" + "phase" + "\"" + ": ");
+                streamWriter.Write("[" + "\"" + "gaseous" + "\"" + "," + "true" + "," + speciesType + "]" + ",");
             }
             else
             {
-                streamWriter.Write("true" + ",");
+                streamWriter.Write("\"" + "phase" + "\"" + ": ");
+                streamWriter.Write("[" + "\"" + "condensed" + "\"" + "," + "true" + "," + speciesType + "]" + ",");
             }
 
             // molecular weight line
