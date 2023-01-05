@@ -385,7 +385,8 @@ namespace ThermoParser
             {
                 string fchar = secondElement.Substring(0, 1);
                 string schar = secondElement.Substring(1);
-                secondElement= fchar + schar;
+                schar = schar.ToLower();
+                secondElement = fchar + schar;
             }
             int l_secondElement = secondElement.Length;
             string secondAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn, fourthColumn);
@@ -398,7 +399,8 @@ namespace ThermoParser
             {
                 string fchar = thirdElement.Substring(0, 1);
                 string schar = thirdElement.Substring(1);
-                thirdElement= fchar + schar;
+                schar = schar.ToLower();
+                thirdElement = fchar + schar;
             }
             int l_thirdElement = thirdElement.Length;
             string thirdAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn, sixthColumn);
@@ -411,7 +413,8 @@ namespace ThermoParser
             {
                 string fchar = fourthElement.Substring(0, 1);
                 string schar = fourthElement.Substring(1);
-                fourthElement= fchar + schar;
+                schar = schar.ToLower();
+                fourthElement = fchar + schar;
             }
             int l_fourthElement = fourthElement.Length;
             string fourthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn, eigthColumn);
@@ -424,7 +427,8 @@ namespace ThermoParser
             {
                 string fchar = fifthelement.Substring(0, 1);
                 string schar = fifthelement.Substring(1);
-                fifthelement= fchar + schar;
+                schar = schar.ToLower();
+                fifthelement = fchar + schar;
             }
             int l_fifthElement = fifthelement.Length;
             string fifthAtoms = chemFormulaSubstring.Substring(firstColumn + secondColumn + thirdColumn + fourthColumn + fifthColumn + sixthColumn + seventhColumn + eigthColumn + ninthColumn, tenthColumn);
