@@ -548,7 +548,7 @@ namespace ThermoParser
             // molecular weight line
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
-            // todo fix 
+            // todo fix for e species
             string moleWeightSubstring = m_currentLine.Substring(52, 14);
             moleWeightSubstring = moleWeightSubstring.Trim();
             streamWriter.Write("\"" + "molecularWeight" + "\"" + ": ");
@@ -590,9 +590,10 @@ namespace ThermoParser
             string m_descriptionLabel = "description";
             string m_description;
 
+            //  todo fix air line description
             m_species = m_currentLine.Substring(0, 15);
             m_species = m_species.Trim();
-            m_description = m_currentLine.Substring(15, 55);
+            m_description = m_currentLine.Substring(18, 56);
             m_description = m_description.Trim();
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");

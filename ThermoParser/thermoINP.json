@@ -6789,7 +6789,7 @@
 		},
 		{
 			"species": "B5H9",
-			"description": "Hf:Chase,1998 p303 3/65.McKee,1990.Beaudet,1988.Yu,1",
+			"description": "Hf:Chase,1998 p303 3/65.McKee,1990.Beaudet,1988.Yu,1998.",
 			"tIntervals":2 ,
 			"idCode":"g 6/00",
 			"chemicalformula":
@@ -11673,7 +11673,7 @@
 		},
 		{
 			"species": "CH2CL",
-			"description": "Hf:TRC(12/93) w7270. Gurvich,1991 pt1 p122. Jacox,19",
+			"description": "Hf:TRC(12/93) w7270. Gurvich,1991 pt1 p122. Jacox,1998.",
 			"tIntervals":2 ,
 			"idCode":"g12/99",
 			"chemicalformula":
@@ -13991,7 +13991,7 @@
 		},
 		{
 			"species": "C2F2CL2",
-			"description": "Gurvich,1991 pt1 p143 pt2 p115. Eql mixture of isome",
+			"description": "Gurvich,1991 pt1 p143 pt2 p115. Eql mixture of isomers.",
 			"tIntervals":2 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -14362,7 +14362,7 @@
 		},
 		{
 			"species": "C2HFCL2",
-			"description": "Gurvich,1991 pt1 p155 pt2 p133. Eql mixture of isome",
+			"description": "Gurvich,1991 pt1 p155 pt2 p133. Eql mixture of isomers.",
 			"tIntervals":2 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -14409,7 +14409,7 @@
 		},
 		{
 			"species": "C2HF2CL",
-			"description": "Gurvich,1991 pt1 p153 pt2 p129. 1,1 cis & trans in e",
+			"description": "Gurvich,1991 pt1 p153 pt2 p129. 1,1 cis & trans in equil",
 			"tIntervals":2 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -14577,7 +14577,7 @@
 		},
 		{
 			"species": "C2H2CL2",
-			"description": "Gurvich,1991 pt1 p130 pt2 p101. 1,1 cis & trans in e",
+			"description": "Gurvich,1991 pt1 p130 pt2 p101. 1,1 cis & trans in equil",
 			"tIntervals":2 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -14620,7 +14620,7 @@
 		},
 		{
 			"species": "C2H2FCL",
-			"description": "Gurvich,1991 pt1 p150 pt2 p125. 1,1 cis & trans in e",
+			"description": "Gurvich,1991 pt1 p150 pt2 p125. 1,1 cis & trans in equil",
 			"tIntervals":2 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -14667,7 +14667,7 @@
 		},
 		{
 			"species": "C2H2F2",
-			"description": "Gurvich,1991 pt1 p101 pt2 p75. 1,1 cis & trans in eq",
+			"description": "Gurvich,1991 pt1 p101 pt2 p75. 1,1 cis & trans in equil.",
 			"tIntervals":2 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -15058,7 +15058,7 @@
 		},
 		{
 			"species": "CH3CN",
-			"description": "Acetonitrile. TRC(6/93) w9270. Koga,1984. Pavone,199",
+			"description": "Acetonitrile. TRC(6/93) w9270. Koga,1984. Pavone,1990.",
 			"tIntervals":2 ,
 			"idCode":"g 9/00",
 			"chemicalformula":
@@ -16007,7 +16007,7 @@
 		},
 		{
 			"species": "C3H4,allene",
-			"description": "TRC(4/84) w2750. Shimanouchi,1972 p115. Butcher,1973",
+			"description": "TRC(4/84) w2750. Shimanouchi,1972 p115. Butcher,1973a.",
 			"tIntervals":2 ,
 			"idCode":"g 2/00",
 			"chemicalformula":
@@ -16046,7 +16046,7 @@
 		},
 		{
 			"species": "C3H4,propyne",
-			"description": "Hf:TRC(10/93) w3040. Trambarulo,1950. Shimanouchi,19",
+			"description": "Hf:TRC(10/93) w3040. Trambarulo,1950. Shimanouchi,1972.",
 			"tIntervals":2 ,
 			"idCode":"g 1/00",
 			"chemicalformula":
@@ -16241,7 +16241,7 @@
 		},
 		{
 			"species": "C3H6O,propylox",
-			"description": "TRC(6/84) w6150. Swalen,1957. Oetting,1964. Villarre",
+			"description": "TRC(6/84) w6150. Swalen,1957. Oetting,1964. Villarreal,1",
 			"tIntervals":2 ,
 			"idCode":"g 6/01",
 			"chemicalformula":
@@ -17533,7 +17533,7 @@
 		},
 		{
 			"species": "C5H6,1,3cyclo-",
-			"description": "1,3-Cyclopentadiene. Pedley,1986 p90. Dorofeeva,1986",
+			"description": "1,3-Cyclopentadiene. Pedley,1986 p90. Dorofeeva,1986.",
 			"tIntervals":2 ,
 			"idCode":"g 5/90",
 			"chemicalformula":
@@ -17845,7 +17845,7 @@
 		},
 		{
 			"species": "CH3C(CH3)2CH3",
-			"description": "2,2-Dimethylpropane (neopentane). TRC(10/85) tuvw135",
+			"description": "2,2-Dimethylpropane (neopentane). TRC(10/85) tuvw1350.",
 			"tIntervals":2 ,
 			"idCode":"n10/85",
 			"chemicalformula":
@@ -18001,7 +18001,7 @@
 		},
 		{
 			"species": "C6H5,phenyl",
-			"description": "Radical.Hf:TRC(10/89) w4270. Jacox,1998. NASA ab ini",
+			"description": "Radical.Hf:TRC(10/89) w4270. Jacox,1998. NASA ab initio.",
 			"tIntervals":2 ,
 			"idCode":"g11/00",
 			"chemicalformula":
@@ -18083,7 +18083,7 @@
 		},
 		{
 			"species": "C6H6",
-			"description": "TRC(10/86)w3200. Pliva,1982,1983,1984. Shimanouchi,1",
+			"description": "TRC(10/86)w3200. Pliva,1982,1983,1984. Shimanouchi,1972.",
 			"tIntervals":2 ,
 			"idCode":"g 8/00",
 			"chemicalformula":
@@ -24003,7 +24003,7 @@
 		},
 		{
 			"species": "Ga",
-			"description": "Hf:Gurvich,1996a. Moore,1971. Johansson,1967. Gordon",
+			"description": "Hf:Gurvich,1996a. Moore,1971. Johansson,1967. Gordon,199",
 			"tIntervals":3 ,
 			"idCode":"g12/98",
 			"chemicalformula":
@@ -26650,7 +26650,7 @@
 		},
 		{
 			"species": "HCO+",
-			"description": "Formyl ion. Hf:Chase,1998 p603 12/70. Jacox,1998 p14",
+			"description": "Formyl ion. Hf:Chase,1998 p603 12/70. Jacox,1998 p145.",
 			"tIntervals":3 ,
 			"idCode":"g 1/01",
 			"chemicalformula":
@@ -26748,7 +26748,7 @@
 		},
 		{
 			"species": "HCCO",
-			"description": "Ketenyl rad. Osborn,1997. Szalay,1996. Jacox,1998 p1",
+			"description": "Ketenyl rad. Osborn,1997. Szalay,1996. Jacox,1998 p156.",
 			"tIntervals":2 ,
 			"idCode":"g 6/01",
 			"chemicalformula":
@@ -29023,7 +29023,7 @@
 		},
 		{
 			"species": "In",
-			"description": "Hf:Gurvich,1996a. Johansson,1967. Moore,1971. Gordon",
+			"description": "Hf:Gurvich,1996a. Johansson,1967. Moore,1971. Gordon,199",
 			"tIntervals":3 ,
 			"idCode":"g 1/99",
 			"chemicalformula":
@@ -34654,7 +34654,7 @@
 		},
 		{
 			"species": "NF",
-			"description": "Gurvich,1989 pt1 p372 pt2 p234. Gurvich,1978 pt2 p24",
+			"description": "Gurvich,1989 pt1 p372 pt2 p234. Gurvich,1978 pt2 p243.",
 			"tIntervals":2 ,
 			"idCode":"tpis89",
 			"chemicalformula":
@@ -34955,7 +34955,7 @@
 		},
 		{
 			"species": "NH2",
-			"description": "Hf:Anderson,1989. Gurvich,1989 pt1 p349.Jacox,1998 p",
+			"description": "Hf:Anderson,1989. Gurvich,1989 pt1 p349.Jacox,1998 p133.",
 			"tIntervals":2 ,
 			"idCode":"g 3/01",
 			"chemicalformula":
@@ -35858,7 +35858,7 @@
 		},
 		{
 			"species": "N2D2,cis",
-			"description": "Hf:Use NASA data for N2H2,H,&D. Chase,1998 p1044 6/7",
+			"description": "Hf:Use NASA data for N2H2,H,&D. Chase,1998 p1044 6/77.",
 			"tIntervals":2 ,
 			"idCode":"g 6/01",
 			"chemicalformula":
@@ -35975,7 +35975,7 @@
 		},
 		{
 			"species": "N2H2",
-			"description": "Gurvich,1989 pt1 p356.Trans,cis,& 1,1 in equilibrium",
+			"description": "Gurvich,1989 pt1 p356.Trans,cis,& 1,1 in equilibrium.",
 			"tIntervals":2 ,
 			"idCode":"g 5/99",
 			"chemicalformula":
@@ -37568,7 +37568,7 @@
 		},
 		{
 			"species": "Nb",
-			"description": "Hf:Gurvich,1982. Moore,1971. Moore,1970a. Gordon,199",
+			"description": "Hf:Gurvich,1982. Moore,1971. Moore,1970a. Gordon,1999.",
 			"tIntervals":3 ,
 			"idCode":"g 3/98",
 			"chemicalformula":
@@ -38475,7 +38475,7 @@
 		},
 		{
 			"species": "OH",
-			"description": "D0(H-OH): Ruscic,2002. Gurvich,1978 pt1 p110 pt2 p37",
+			"description": "D0(H-OH): Ruscic,2002. Gurvich,1978 pt1 p110 pt2 p37.",
 			"tIntervals":3 ,
 			"idCode":"g 4/02",
 			"chemicalformula":
@@ -40803,7 +40803,7 @@
 		},
 		{
 			"species": "Pb",
-			"description": "Hf:Gurvich,1991. Moore,1971. Moore,1970a. Gordon,199",
+			"description": "Hf:Gurvich,1991. Moore,1971. Moore,1970a. Gordon,1999.",
 			"tIntervals":3 ,
 			"idCode":"g 8/97",
 			"chemicalformula":
@@ -44857,7 +44857,7 @@
 		},
 		{
 			"species": "Sc-",
-			"description": "Hotop,1985. Used J from isoelectronic Ti. Gordon,199",
+			"description": "Hotop,1985. Used J from isoelectronic Ti. Gordon,1999.",
 			"tIntervals":3 ,
 			"idCode":"g 9/97",
 			"chemicalformula":
@@ -45119,7 +45119,7 @@
 		},
 		{
 			"species": "Si",
-			"description": "Hf:Cox,1989. NIST data version1.1 [Online]1997. Gord",
+			"description": "Hf:Cox,1989. NIST data version1.1 [Online]1997. Gordon,1",
 			"tIntervals":3 ,
 			"idCode":"g 8/97",
 			"chemicalformula":
@@ -45806,7 +45806,7 @@
 		},
 		{
 			"species": "SiF4",
-			"description": "Johnson,1986. McDowell,1982. Chase,1998 p1190 (6/76)",
+			"description": "Johnson,1986. McDowell,1982. Chase,1998 p1190 (6/76).",
 			"tIntervals":2 ,
 			"idCode":"g 6/01",
 			"chemicalformula":
@@ -48058,7 +48058,7 @@
 		},
 		{
 			"species": "Sr",
-			"description": "Hf:Gurvich,1996a. Moore,1971. Moore,1970a. Gordon,19",
+			"description": "Hf:Gurvich,1996a. Moore,1971. Moore,1970a. Gordon,1999.",
 			"tIntervals":3 ,
 			"idCode":"g 1/98",
 			"chemicalformula":
@@ -51545,7 +51545,7 @@
 		},
 		{
 			"species": "W",
-			"description": "Hf:Gurvich,1982 p42. Moore,1971. Moore,1970a. Gordon",
+			"description": "Hf:Gurvich,1982 p42. Moore,1971. Moore,1970a. Gordon,199",
 			"tIntervals":3 ,
 			"idCode":"g 4/98",
 			"chemicalformula":
@@ -52187,7 +52187,7 @@
 		},
 		{
 			"species": "Zr",
-			"description": "Hf:Gurvich,1982. Moore,1971. Hackett,1986. Gordon,19",
+			"description": "Hf:Gurvich,1982. Moore,1971. Hackett,1986. Gordon,1999.",
 			"tIntervals":3 ,
 			"idCode":"g 1/98",
 			"chemicalformula":
@@ -53312,7 +53312,7 @@
 		},
 		{
 			"species": "B(L)",
-			"description": "Liquid. Ref-Elm.  Chase,1998 p177-180. McBride,1993a",
+			"description": "Liquid. Ref-Elm.  Chase,1998 p177-180. McBride,1993a.",
 			"tIntervals":1 ,
 			"idCode":"j 6/83",
 			"chemicalformula":
@@ -55686,7 +55686,7 @@
 		},
 		{
 			"species": "Br2(cr)",
-			"description": "Rhombic. Gurvich,1989 pt2 p314. Chase,1998 p471 (6/8",
+			"description": "Rhombic. Gurvich,1989 pt2 p314. Chase,1998 p471 (6/82).",
 			"tIntervals":1 ,
 			"idCode":"g 8/01",
 			"chemicalformula":
@@ -55713,7 +55713,7 @@
 		},
 		{
 			"species": "Br2(L)",
-			"description": "Liq.Ref-Elm.Gurvich,1989 pt2 p314.Chase,1998 p471(6/",
+			"description": "Liq.Ref-Elm.Gurvich,1989 pt2 p314.Chase,1998 p471(6/82).",
 			"tIntervals":2 ,
 			"idCode":"g 8/01",
 			"chemicalformula":
@@ -56817,7 +56817,7 @@
 		},
 		{
 			"species": "Co(b)",
-			"description": "Beta. Ref-Elm.Above Lambda trans. Chase,1998 pp943-6",
+			"description": "Beta. Ref-Elm.Above Lambda trans. Chase,1998 pp943-6.",
 			"tIntervals":2 ,
 			"idCode":"j 9/67",
 			"chemicalformula":
@@ -59435,7 +59435,7 @@
 		},
 		{
 			"species": "Fe(a)",
-			"description": "Alpha. Ref-Elm.Above Lambda trans. Chase,1998 pp1221",
+			"description": "Alpha. Ref-Elm.Above Lambda trans. Chase,1998 pp1221-5.",
 			"tIntervals":1 ,
 			"idCode":"j 3/78",
 			"chemicalformula":
@@ -60771,7 +60771,7 @@
 		},
 		{
 			"species": "GeO2(I)",
-			"description": "Hexagonal alpha-quartz,Gurvich,1991 pt1 p319 pt2 p27",
+			"description": "Hexagonal alpha-quartz,Gurvich,1991 pt1 p319 pt2 p275.",
 			"tIntervals":1 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -60973,7 +60973,7 @@
 		},
 		{
 			"species": "HBO2(cr)",
-			"description": "Crystal,metaboric acid. Gurvich,1996a pt1 p41 pt2 p2",
+			"description": "Crystal,metaboric acid. Gurvich,1996a pt1 p41 pt2 p25.",
 			"tIntervals":1 ,
 			"idCode":"tpis96",
 			"chemicalformula":
@@ -61008,7 +61008,7 @@
 		},
 		{
 			"species": "HBO2(L)",
-			"description": "Liquid, metaboric acid. Gurvich,1996a pt1 p41 pt2 p2",
+			"description": "Liquid, metaboric acid. Gurvich,1996a pt1 p41 pt2 p25.",
 			"tIntervals":1 ,
 			"idCode":"tpis96",
 			"chemicalformula":
@@ -61074,7 +61074,7 @@
 		},
 		{
 			"species": "H2O(L)",
-			"description": "Liquid. Cox,1989. Haar,1984. Keenan,1984. Stimson,19",
+			"description": "Liquid. Cox,1989. Haar,1984. Keenan,1984. Stimson,1969.",
 			"tIntervals":2 ,
 			"idCode":"g 8/01",
 			"chemicalformula":
@@ -61148,7 +61148,7 @@
 		},
 		{
 			"species": "H3BO3(cr)",
-			"description": "Triclinic,orthoboric acid. Gurvich,1996a pt1 p48 pt2",
+			"description": "Triclinic,orthoboric acid. Gurvich,1996a pt1 p48 pt2 p31",
 			"tIntervals":1 ,
 			"idCode":"tpis96",
 			"chemicalformula":
@@ -61183,7 +61183,7 @@
 		},
 		{
 			"species": "H3BO3(L)",
-			"description": "Liquid,orthoboric acid. Gurvich,1996a pt1 p48 pt2 p3",
+			"description": "Liquid,orthoboric acid. Gurvich,1996a pt1 p48 pt2 p31.",
 			"tIntervals":1 ,
 			"idCode":"tpis96",
 			"chemicalformula":
@@ -67655,7 +67655,7 @@
 		},
 		{
 			"species": "NaCN(II)",
-			"description": "Lambda trans@288.5K. Chase,1998(3/66) pp631-3. Messe",
+			"description": "Lambda trans@288.5K. Chase,1998(3/66) pp631-3. Messer,19",
 			"tIntervals":6 ,
 			"idCode":"g 8/01",
 			"chemicalformula":
@@ -67730,7 +67730,7 @@
 		},
 		{
 			"species": "NaCN(III)",
-			"description": "Lambda trans@288.5K. Chase,1998(3/66) pp631-3. Messe",
+			"description": "Lambda trans@288.5K. Chase,1998(3/66) pp631-3. Messer,19",
 			"tIntervals":3 ,
 			"idCode":"g 8/01",
 			"chemicalformula":
@@ -68478,7 +68478,7 @@
 		},
 		{
 			"species": "NaO2(cr)",
-			"description": "Cubic. Gurvich,1982 pt1 p319 pt2 p359.Chase,1998 p16",
+			"description": "Cubic. Gurvich,1982 pt1 p319 pt2 p359.Chase,1998 p1646 6",
 			"tIntervals":1 ,
 			"idCode":"g10/99",
 			"chemicalformula":
@@ -68509,7 +68509,7 @@
 		},
 		{
 			"species": "NaO2(L)",
-			"description": "Liq. Gurvich,1982 pt1 p319 pt2 p359.Chase,1998 p1646",
+			"description": "Liq. Gurvich,1982 pt1 p319 pt2 p359.Chase,1998 p1646 6/6",
 			"tIntervals":1 ,
 			"idCode":"g10/99",
 			"chemicalformula":
@@ -69753,7 +69753,7 @@
 		},
 		{
 			"species": "Ni(cr)",
-			"description": "Crystal Ref-Elm. <lambda trans 631K. Chase,1998 pp16",
+			"description": "Crystal Ref-Elm. <lambda trans 631K. Chase,1998 pp1697-7",
 			"tIntervals":2 ,
 			"idCode":"j12/76",
 			"chemicalformula":
@@ -69788,7 +69788,7 @@
 		},
 		{
 			"species": "Ni(cr)",
-			"description": "Crystal Ref-Elm. >lambda trans 631K. Chase,1998 pp16",
+			"description": "Crystal Ref-Elm. >lambda trans 631K. Chase,1998 pp1697-7",
 			"tIntervals":2 ,
 			"idCode":"j12/76",
 			"chemicalformula":
@@ -70005,7 +70005,7 @@
 		},
 		{
 			"species": "Ni3S2(a)",
-			"description": "Alpha. Pankratz,1987 p225-6. Chase,1998 pp1711-3 12/",
+			"description": "Alpha. Pankratz,1987 p225-6. Chase,1998 pp1711-3 12/83.",
 			"tIntervals":1 ,
 			"idCode":"g12/00",
 			"chemicalformula":
@@ -70129,7 +70129,7 @@
 		},
 		{
 			"species": "P(cr)",
-			"description": "White.Ref-Elm. Gurvich,1989 pt1 p395 pt2 p326. Chase",
+			"description": "White.Ref-Elm. Gurvich,1989 pt1 p395 pt2 p326. Chase,199",
 			"tIntervals":1 ,
 			"idCode":"tpis89",
 			"chemicalformula":
@@ -70890,7 +70890,7 @@
 		},
 		{
 			"species": "Rb(cr)",
-			"description": "Cubic. Ref-Elm. Cox,1989 p260. Chase,1998a p1849 12/",
+			"description": "Cubic. Ref-Elm. Cox,1989 p260. Chase,1998a p1849 12/83.",
 			"tIntervals":1 ,
 			"idCode":"coda89",
 			"chemicalformula":
@@ -72727,7 +72727,7 @@
 		},
 		{
 			"species": "SiO2(a-qz)",
-			"description": "Alpha-quartz,hexagonal. Gurvich,1991 pt1 p250 pt2 p2",
+			"description": "Alpha-quartz,hexagonal. Gurvich,1991 pt1 p250 pt2 p228.",
 			"tIntervals":1 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -72758,7 +72758,7 @@
 		},
 		{
 			"species": "SiO2(b-qz)",
-			"description": "Beta-quartz,hexagonal. Gurvich,1991 pt1 p250 pt2 p22",
+			"description": "Beta-quartz,hexagonal. Gurvich,1991 pt1 p250 pt2 p228.",
 			"tIntervals":1 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -72789,7 +72789,7 @@
 		},
 		{
 			"species": "SiO2(b-crt)",
-			"description": "Beta-cristobalite,cubic. Gurvich,1991 pt1 p250 pt2 p",
+			"description": "Beta-cristobalite,cubic. Gurvich,1991 pt1 p250 pt2 p228.",
 			"tIntervals":1 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -73065,7 +73065,7 @@
 		},
 		{
 			"species": "Sn(cr)",
-			"description": "CrI,tetragonal. Ref-Elm. Gurvich,1991 pt1 p350 pt2 p",
+			"description": "CrI,tetragonal. Ref-Elm. Gurvich,1991 pt1 p350 pt2 p300.",
 			"tIntervals":1 ,
 			"idCode":"tpis91",
 			"chemicalformula":
@@ -78351,7 +78351,7 @@
 		},
 		{
 			"species": "Air",
-			"description": "Mole%:N2 78.084,O2 20.9476,Ar .9365,CO2 .0319.Gordon",
+			"description": "Mole%:N2 78.084,O2 20.9476,Ar .9365,CO2 .0319.Gordon,198",
 			"tIntervals":2 ,
 			"idCode":"g 9/95",
 			"chemicalformula":
@@ -78741,7 +78741,7 @@
 		},
 		{
 			"species": "C2H8N2(L),UDMH",
-			"description": "Unsymmetrical Dimethyl Hydrazine. McBride,1996 pp85,",
+			"description": "Unsymmetrical Dimethyl Hydrazine. McBride,1996 pp85,93.",
 			"tIntervals":0 ,
 			"idCode":"g 6/96",
 			"chemicalformula":
@@ -79444,7 +79444,7 @@
 		},
 		{
 			"species": "IRFNA",
-			"description": "Inhibited Red Fuming Nitric Acid. McBride,1996 pp84,",
+			"description": "Inhibited Red Fuming Nitric Acid. McBride,1996 pp84,93.",
 			"tIntervals":0 ,
 			"idCode":"g 6/96",
 			"chemicalformula":
@@ -79502,7 +79502,7 @@
 
 		{
 			"species": "JP-5",
-			"description": "Or ASTMA1(L). McBride,1996 pp85,93. Hcomb = 18600.BT",
+			"description": "Or ASTMA1(L). McBride,1996 pp85,93. Hcomb = 18600.BTU/#",
 			"tIntervals":0 ,
 			"idCode":"g 6/96",
 			"chemicalformula":
@@ -80030,7 +80030,7 @@
 
 		{
 			"species": "N2H4(L)",
-			"description": "Hydrazine.Hf:Gurvich,1989 pt1 p360. Chase,1998(12/65",
+			"description": "Hydrazine.Hf:Gurvich,1989 pt1 p360. Chase,1998(12/65).",
 			"tIntervals":1 ,
 			"idCode":"g11/99",
 			"chemicalformula":
@@ -80128,7 +80128,7 @@
 
 		{
 			"species": "RP-1",
-			"description": "Mehta et.al. AIAA 95-2962 1995. Hcomb(high) = 19923.",
+			"description": "Mehta et.al. AIAA 95-2962 1995. Hcomb(high) = 19923.BTU/",
 			"tIntervals":0 ,
 			"idCode":"gll/00",
 			"chemicalformula":
