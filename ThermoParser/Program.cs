@@ -592,7 +592,7 @@ namespace ThermoParser
 
             m_species = m_currentLine.Substring(0, 15);
             m_species = m_species.Trim();
-            m_description = m_currentLine.Substring(15, 15);
+            m_description = m_currentLine.Substring(15, 55);
             m_description = m_description.Trim();
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
