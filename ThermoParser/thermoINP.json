@@ -13722,7 +13722,7 @@
 		},
 		{
 			"species": "C2HF2CL",
-			"description": "Gurvich,1991 pt1 p153 pt2 p129. 1,1 cis & trans in equil",
+			"description": "Gurvich,1991 pt1 p153 pt2 p129. 1,1 cis & trans in equil.",
 			"tIntervals": 2,
 			"idCode": "tpis91",
 			"chemicalformula": [
@@ -13882,7 +13882,7 @@
 		},
 		{
 			"species": "C2H2CL2",
-			"description": "Gurvich,1991 pt1 p130 pt2 p101. 1,1 cis & trans in equil",
+			"description": "Gurvich,1991 pt1 p130 pt2 p101. 1,1 cis & trans in equil.",
 			"tIntervals": 2,
 			"idCode": "tpis91",
 			"chemicalformula": [
@@ -13923,7 +13923,7 @@
 		},
 		{
 			"species": "C2H2FCL",
-			"description": "Gurvich,1991 pt1 p150 pt2 p125. 1,1 cis & trans in equil",
+			"description": "Gurvich,1991 pt1 p150 pt2 p125. 1,1 cis & trans in equil.",
 			"tIntervals": 2,
 			"idCode": "tpis91",
 			"chemicalformula": [
@@ -15466,7 +15466,7 @@
 		},
 		{
 			"species": "C3H6O,propylox",
-			"description": "TRC(6/84) w6150. Swalen,1957. Oetting,1964. Villarreal,1",
+			"description": "TRC(6/84) w6150. Swalen,1957. Oetting,1964. Villarreal,1975.",
 			"tIntervals": 2,
 			"idCode": "g 6/01",
 			"chemicalformula": [
@@ -22848,7 +22848,7 @@
 		},
 		{
 			"species": "Ga",
-			"description": "Hf:Gurvich,1996a. Moore,1971. Johansson,1967. Gordon,199",
+			"description": "Hf:Gurvich,1996a. Moore,1971. Johansson,1967. Gordon,1999.",
 			"tIntervals": 3,
 			"idCode": "g12/98",
 			"chemicalformula": [
@@ -27628,7 +27628,7 @@
 		},
 		{
 			"species": "In",
-			"description": "Hf:Gurvich,1996a. Johansson,1967. Moore,1971. Gordon,199",
+			"description": "Hf:Gurvich,1996a. Johansson,1967. Moore,1971. Gordon,1999.",
 			"tIntervals": 3,
 			"idCode": "g 1/99",
 			"chemicalformula": [
@@ -42948,7 +42948,7 @@
 		},
 		{
 			"species": "Si",
-			"description": "Hf:Cox,1989. NIST data version1.1 [Online]1997. Gordon,1",
+			"description": "Hf:Cox,1989. NIST data version1.1 [Online]1997. Gordon,1999.",
 			"tIntervals": 3,
 			"idCode": "g 8/97",
 			"chemicalformula": [
@@ -49074,7 +49074,7 @@
 		},
 		{
 			"species": "W",
-			"description": "Hf:Gurvich,1982 p42. Moore,1971. Moore,1970a. Gordon,199",
+			"description": "Hf:Gurvich,1982 p42. Moore,1971. Moore,1970a. Gordon,1999.",
 			"tIntervals": 3,
 			"idCode": "g 4/98",
 			"chemicalformula": [
@@ -58123,7 +58123,7 @@
 		},
 		{
 			"species": "H3BO3(cr)",
-			"description": "Triclinic,orthoboric acid. Gurvich,1996a pt1 p48 pt2 p31",
+			"description": "Triclinic,orthoboric acid. Gurvich,1996a pt1 p48 pt2 p31.",
 			"tIntervals": 1,
 			"idCode": "tpis96",
 			"chemicalformula": [
@@ -64252,7 +64252,7 @@
 		},
 		{
 			"species": "NaCN(II)",
-			"description": "Lambda trans@288.5K. Chase,1998(3/66) pp631-3. Messer,19",
+			"description": "Lambda trans@288.5K. Chase,1998(3/66) pp631-3. Messer,1941.",
 			"tIntervals": 6,
 			"idCode": "g 8/01",
 			"chemicalformula": [
@@ -64325,7 +64325,7 @@
 		},
 		{
 			"species": "NaCN(III)",
-			"description": "Lambda trans@288.5K. Chase,1998(3/66) pp631-3. Messer,19",
+			"description": "Lambda trans@288.5K. Chase,1998(3/66) pp631-3. Messer,1941.",
 			"tIntervals": 3,
 			"idCode": "g 8/01",
 			"chemicalformula": [
@@ -65033,7 +65033,7 @@
 		},
 		{
 			"species": "NaO2(cr)",
-			"description": "Cubic. Gurvich,1982 pt1 p319 pt2 p359.Chase,1998 p1646 6",
+			"description": "Cubic. Gurvich,1982 pt1 p319 pt2 p359.Chase,1998 p1646 6/63.",
 			"tIntervals": 1,
 			"idCode": "g10/99",
 			"chemicalformula": [
@@ -65062,7 +65062,7 @@
 		},
 		{
 			"species": "NaO2(L)",
-			"description": "Liq. Gurvich,1982 pt1 p319 pt2 p359.Chase,1998 p1646 6/6",
+			"description": "Liq. Gurvich,1982 pt1 p319 pt2 p359.Chase,1998 p1646 6/63.",
 			"tIntervals": 1,
 			"idCode": "g10/99",
 			"chemicalformula": [
@@ -66234,7 +66234,7 @@
 		},
 		{
 			"species": "Ni(cr)",
-			"description": "Crystal Ref-Elm. <lambda trans 631K. Chase,1998 pp1697-7",
+			"description": "Crystal Ref-Elm. <lambda trans 631K. Chase,1998 pp1697-700.",
 			"tIntervals": 2,
 			"idCode": "j12/76",
 			"chemicalformula": [
@@ -66267,7 +66267,7 @@
 		},
 		{
 			"species": "Ni(cr)",
-			"description": "Crystal Ref-Elm. >lambda trans 631K. Chase,1998 pp1697-7",
+			"description": "Crystal Ref-Elm. >lambda trans 631K. Chase,1998 pp1697-700.",
 			"tIntervals": 2,
 			"idCode": "j12/76",
 			"chemicalformula": [
@@ -66586,7 +66586,7 @@
 		},
 		{
 			"species": "P(cr)",
-			"description": "White.Ref-Elm. Gurvich,1989 pt1 p395 pt2 p326. Chase,199",
+			"description": "White.Ref-Elm. Gurvich,1989 pt1 p395 pt2 p326. Chase,1998.",
 			"tIntervals": 1,
 			"idCode": "tpis89",
 			"chemicalformula": [
@@ -74316,7 +74316,7 @@
 		},
 		{
 			"species": "Air",
-			"description": "Mole%:N2 78.084,O2 20.9476,Ar .9365,CO2 .0319.Gordon,198",
+			"description": "Mole%:N2 78.084,O2 20.9476,Ar .9365,CO2 .0319.Gordon,1982.Reac",
 			"tIntervals": 2,
 			"idCode": "g 9/95",
 			"chemicalformula": [
@@ -74333,7 +74333,7 @@
 					"numberOfAtoms": 0.00937
 				},
 				{
-					"symbol": "C ",
+					"symbol": "C",
 					"numberOfAtoms": 0.00032
 				}
 			],
@@ -74452,7 +74452,7 @@
 		},
 		{
 			"species": "CH3OH(L)",
-			"description": "MeOH. TRC(12/87) p5000 (12/84)tc,uc,vc5031,5033.",
+			"description": "MeOH. TRC(12/87) p5000 (12/84)tc,uc,vc5031,5033.        React.",
 			"tIntervals": 1,
 			"idCode": "n12/84",
 			"chemicalformula": [
@@ -74617,7 +74617,7 @@
 		},
 		{
 			"species": "C2H5OH(L)",
-			"description": "Ethanol. TRC(12/87) p5000 (12/84) tc,uc,vc5031-3.",
+			"description": "Ethanol. TRC(12/87) p5000 (12/84) tc,uc,vc5031-3.       React.",
 			"tIntervals": 1,
 			"idCode": "n12/84",
 			"chemicalformula": [
@@ -74842,7 +74842,7 @@
 		},
 		{
 			"species": "C6H6(L)",
-			"description": "TRC(10/86) tc,uc,vc3201 (4/83) p3200.",
+			"description": "TRC(10/86) tc,uc,vc3201 (4/83) p3200.                   React.",
 			"tIntervals": 1,
 			"idCode": "n10/86",
 			"chemicalformula": [
@@ -74871,7 +74871,7 @@
 		},
 		{
 			"species": "C6H5NH2(L)",
-			"description": "Aniline. TRC(12/88) tc,uc,vc9370. TRC(6/95) p9370.",
+			"description": "Aniline. TRC(12/88) tc,uc,vc9370. TRC(6/95) p9370.      React.",
 			"tIntervals": 1,
 			"idCode": "n12/88",
 			"chemicalformula": [
@@ -74904,7 +74904,7 @@
 		},
 		{
 			"species": "C6H14(L),n-hexa",
-			"description": "n-hexane. TRC(4/85) p,tc,uc,vc1440,1441.",
+			"description": "n-hexane. TRC(4/85) p,tc,uc,vc1440,1441.                React.",
 			"tIntervals": 1,
 			"idCode": "n 4/85",
 			"chemicalformula": [
@@ -74933,7 +74933,7 @@
 		},
 		{
 			"species": "C7H8(L)",
-			"description": "TRC(10/86) tc uc vc3200-1 (4/83) p-3200.",
+			"description": "TRC(10/86) tc uc vc3200-1 (4/83) p-3200.                React.",
 			"tIntervals": 1,
 			"idCode": "n10/86",
 			"chemicalformula": [
@@ -74962,7 +74962,7 @@
 		},
 		{
 			"species": "C7H16(L),n-hept",
-			"description": "TRC(10/84) p-1010 (10/75) tc,uc,vc1460.",
+			"description": "TRC(10/84) p-1010 (10/75) tc,uc,vc1460.                 React.",
 			"tIntervals": 1,
 			"idCode": "n10/75",
 			"chemicalformula": [
@@ -74991,7 +74991,7 @@
 		},
 		{
 			"species": "C8H18(L),n-octa",
-			"description": "TRC(10/76) tc,uc,vc1491,1492. Hf:(10/84) p1010.",
+			"description": "TRC(10/76) tc,uc,vc1491,1492. Hf:(10/84) p1010.         React.",
 			"tIntervals": 1,
 			"idCode": "n10/84",
 			"chemicalformula": [
@@ -75020,7 +75020,7 @@
 		},
 		{
 			"species": "C8H18(L),isooct",
-			"description": "TRC(10/76) tc,uc,vc1491,1492. Hf:(10/82) p1490.",
+			"description": "TRC(10/76) tc,uc,vc1491,1492. Hf:(10/82) p1490.         React.",
 			"tIntervals": 1,
 			"idCode": "n10/82",
 			"chemicalformula": [
@@ -75069,7 +75069,7 @@
 		},
 		{
 			"species": "CLO3F",
-			"description": "Hf:Wagman,1982 p49. Chase,1998 p755.",
+			"description": "Hf:Wagman,1982 p49. Chase,1998 p755.                    React.",
 			"tIntervals": 2,
 			"idCode": "g 5/95",
 			"chemicalformula": [
@@ -75226,7 +75226,7 @@
 		},
 		{
 			"species": "H2O2(L)",
-			"description": "Gurvich, 1989 v1 pt1 p126 pt2 p303.",
+			"description": "Gurvich, 1989 v1 pt1 p126 pt2 p303.                     React.",
 			"tIntervals": 1,
 			"idCode": "tpis89",
 			"chemicalformula": [
@@ -75323,7 +75323,7 @@
 		},
 		{
 			"species": "JP-10(L)",
-			"description": "Exo-tetrahydrodicyclopentadiene. Smith,1979.",
+			"description": "Exo-tetrahydrodicyclopentadiene. Smith,1979.            React.",
 			"tIntervals": 0,
 			"idCode": "g 6/01",
 			"chemicalformula": [
@@ -75343,7 +75343,7 @@
 		},
 		{
 			"species": "JP-10(g)",
-			"description": "Exo-tetrahydrodicyclopentadiene. Zehe,2002.",
+			"description": "Exo-tetrahydrodicyclopentadiene. Zehe,2002.             React.",
 			"tIntervals": 2,
 			"idCode": "g 6/01",
 			"chemicalformula": [
@@ -75380,7 +75380,7 @@
 		},
 		{
 			"species": "Jet-A(L)",
-			"description": "McBride,1996. Faith,1971. Gracia-Salcedo,1988.",
+			"description": "McBride,1996. Faith,1971. Gracia-Salcedo,1988.          React.",
 			"tIntervals": 1,
 			"idCode": "g 2/96",
 			"chemicalformula": [
@@ -75409,7 +75409,7 @@
 		},
 		{
 			"species": "Jet-A(g)",
-			"description": "McBride,1996. Faith,1971. Gracia-Salcedo,1988.",
+			"description": "McBride,1996. Faith,1971. Gracia-Salcedo,1988.          React.",
 			"tIntervals": 2,
 			"idCode": "g 8/01",
 			"chemicalformula": [
@@ -75510,7 +75510,7 @@
 		},
 		{
 			"species": "NH4CLO4(I)",
-			"description": "Ammonium Perchlorate. Chase,1998 p766.",
+			"description": "Ammonium Perchlorate. Chase,1998 p766.                  React.",
 			"tIntervals": 1,
 			"idCode": "j12/62",
 			"chemicalformula": [
@@ -75547,7 +75547,7 @@
 		},
 		{
 			"species": "NH4CLO4(II)",
-			"description": "Ammonium Perchlorate. Chase,1998 p766.",
+			"description": "Ammonium Perchlorate. Chase,1998 p766.                  React.",
 			"tIntervals": 2,
 			"idCode": "j12/62",
 			"chemicalformula": [
@@ -75592,7 +75592,7 @@
 		},
 		{
 			"species": "NH4NO3(IV)",
-			"description": "Rhombic(IV). Gurvich,1989 pt1 p370 pt2 p322.",
+			"description": "Rhombic(IV). Gurvich,1989 pt1 p370 pt2 p322.            React.",
 			"tIntervals": 2,
 			"idCode": "tpis89",
 			"chemicalformula": [
@@ -75633,7 +75633,7 @@
 		},
 		{
 			"species": "NH4NO3(III)",
-			"description": "Rhombic(III). Gurvich,1989 pt1 p370 pt2 p322.",
+			"description": "Rhombic(III). Gurvich,1989 pt1 p370 pt2 p322.           React.",
 			"tIntervals": 1,
 			"idCode": "tpis89",
 			"chemicalformula": [
@@ -75666,7 +75666,7 @@
 		},
 		{
 			"species": "NH4NO3(II)",
-			"description": "Tetragonal(II). Gurvich,1989 pt1 p370 pt2 p322.",
+			"description": "Tetragonal(II). Gurvich,1989 pt1 p370 pt2 p322.         React.",
 			"tIntervals": 1,
 			"idCode": "tpis89",
 			"chemicalformula": [
@@ -75699,7 +75699,7 @@
 		},
 		{
 			"species": "NH4NO3(I)",
-			"description": "Cubic(I). Gurvich,1989 pt1 p370 pt2 p322.",
+			"description": "Cubic(I). Gurvich,1989 pt1 p370 pt2 p322.               React.",
 			"tIntervals": 1,
 			"idCode": "tpis89",
 			"chemicalformula": [
@@ -75732,7 +75732,7 @@
 		},
 		{
 			"species": "NH4NO3(L)",
-			"description": "Liquid  Gurvich,1989 pt1 p370 pt2 p322.",
+			"description": "Liquid  Gurvich,1989 pt1 p370 pt2 p322.                 React.",
 			"tIntervals": 1,
 			"idCode": "tpis89",
 			"chemicalformula": [
@@ -75781,7 +75781,7 @@
 		},
 		{
 			"species": "N2H4(L)",
-			"description": "Hydrazine.Hf:Gurvich,1989 pt1 p360. Chase,1998(12/65).",
+			"description": "Hydrazine.Hf:Gurvich,1989 pt1 p360. Chase,1998(12/65).  React.",
 			"tIntervals": 1,
 			"idCode": "g11/99",
 			"chemicalformula": [
@@ -75862,7 +75862,7 @@
 		},
 		{
 			"species": "RP-1",
-			"description": "Mehta et.al. AIAA 95-2962 1995. Hcomb(high) = 19923.BTU/",
+			"description": "Mehta et.al. AIAA 95-2962 1995. Hcomb(high) = 19923.BTU/#",
 			"tIntervals": 0,
 			"idCode": "gll/00",
 			"chemicalformula": [
@@ -75882,3 +75882,4 @@
 		}
 	]
 }
+

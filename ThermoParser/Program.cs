@@ -654,7 +654,7 @@ namespace ThermoParser
             //  todo fix air line description
             m_species = m_currentLine.Substring(0, 15);
             m_species = m_species.Trim();
-            m_description = m_currentLine.Substring(18, 56);
+            m_description = m_currentLine.Substring(18, 62);
             m_description = m_description.Trim();
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
