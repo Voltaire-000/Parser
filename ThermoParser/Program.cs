@@ -14,6 +14,7 @@ namespace ThermoParser
         private static StreamReader streamReader;
         private static StreamWriter streamWriter;
         private static int t_intervalValue = 0;
+        private static int m_specieValue = 0;
 
         static void Main(string[] args)
         {
@@ -60,7 +61,7 @@ namespace ThermoParser
                         EndOfFile();
                     }
                     break;
-                    case UnicodeCategory.UppercaseLetter:
+                case UnicodeCategory.UppercaseLetter:
                     //  uppercase is new species with the exception of ref species
                     PrintNewSpecies();
                     break;
@@ -84,139 +85,152 @@ namespace ThermoParser
             char separator = ' ';
             char comma = ',';
 
-            for (int i = 0; i < t_intervalValue; i++)
+            if (t_intervalValue == 0 && m_specieValue >= 1)
             {
                 m_currentLine = streamReader.ReadLine();
-                string tempRange = m_currentLine.Substring(0, 22);
-                tempRange = tempRange.Trim();
-                int indx = tempRange.IndexOf(separator);
-                //tempRange = tempRange.Replace(' ', ',');
-                tempRange = tempRange.Insert(indx, ",");
-                string[] tempRangeLine = tempRange.Split(comma);
-                
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("{");
-                streamWriter.Write("\t\t\t\t\t");
-
+                string boilingPointLabel = "boilingPoint";
+                string boilingPointSubstring = m_currentLine.Substring(0, 12);
+                boilingPointSubstring= boilingPointSubstring.Trim();
                 streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "temperatureRange" + "\"" + ":");
-                streamWriter.Write( "[" + tempRangeLine[0] + ", " + tempRangeLine[1].Trim() + "]" + ",");
-
-                // number of coefficients
-                string m_coeff = m_currentLine.Substring(22, 1);
-
-                streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "numberOfCoefficients" + "\"" + ":");
-                streamWriter.Write(" " + m_coeff + ",");
-
-                // t exponents array
-                string m_texponents = m_currentLine.Substring(23, 40);
-                m_texponents = m_texponents.Trim();
-                m_texponents = m_texponents.Replace(" ", ",");
-                m_texponents = m_texponents.Replace(",,", ",");
-                string[] tExponentLine = m_texponents.Split(comma);
-                
-                streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "tExponents" + "\"" + ":");
-                streamWriter.Write("[" + tExponentLine[0] + ", " + tExponentLine[1] + ", " + tExponentLine[2] + ", " + tExponentLine[3] + ", " + tExponentLine[4] + ", " + tExponentLine[5] + ", " + tExponentLine[6] + ", " + tExponentLine[7] + "]" + ",");
-
-                // H line
-                string m_hLine = m_currentLine.Substring(66, 14);
-                m_hLine = m_hLine.Trim();
-
-                streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "hJmol" + "\"" + ":");
-                streamWriter.Write(" " + m_hLine+ ",");
-                //*****************************************
-                // must read new line here
-                m_currentLine = streamReader.ReadLine();
-                string coefFirstPart = m_currentLine;
-                string coefSecondPart = streamReader.ReadLine();
-                string concantCoef = coefFirstPart+ coefSecondPart;
-                concantCoef = concantCoef.Replace('D', 'e');
-                string coefSubstring = concantCoef.Substring(0, 128);
-                //coefSubstring = coefSubstring.Trim();
-                int firstE = coefSubstring.IndexOf('e');
-                int secondE = coefSubstring.IndexOf('e', firstE);
-                int thirdE = coefSubstring.IndexOf('e', secondE);
-                int forthE = coefSubstring.IndexOf('e', thirdE);
-                int fifthE = coefSubstring.IndexOf('e', forthE);
-                int sixthE = coefSubstring.IndexOf('e', fifthE);
-                int seventhE = coefSubstring.IndexOf('e', sixthE);
-                int eighthE = coefSubstring.IndexOf('e', seventhE);
-
-                string firstCoef = coefSubstring.Substring(0, firstE + 4);
-                string secondCoef = coefSubstring.Substring(secondE + 4, firstE + 4);
-                string thirdCoef = coefSubstring.Substring(thirdE + 4 + secondE + 4, firstE + 4);
-                string forthCoef = coefSubstring.Substring(forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
-                string fifthCoef = coefSubstring.Substring(fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
-                string sixthCoef = coefSubstring.Substring(sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
-                string seventhCoef = coefSubstring.Substring(seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
-                string eighthCoef = coefSubstring.Substring(eighthE + 4 + seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
-
-                string CoefConcant = firstCoef + " " + secondCoef + " " + thirdCoef + " " + forthCoef + " " + fifthCoef + " " + sixthCoef + " " + seventhCoef + " " + eighthCoef;
-                CoefConcant = CoefConcant.Trim();
-                CoefConcant = CoefConcant.Replace(" ", ",");
-                CoefConcant = CoefConcant.Replace(",,", ",");
-                string[] coeline = CoefConcant.Split(comma);
-                
-
-                streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "coefficients" + "\"" + ":");
-
-                if (coeline.Count() == 7)
-                {
-                    streamWriter.Write("[" + coeline[0] + ", " + coeline[1] + ", " + coeline[2] + ", " + coeline[3] + ", " + coeline[4] + ", " + coeline[5] + ", " + coeline[6] + "]" + ",");
-                }
-                if (coeline.Count() == 8)
-                {
-                    streamWriter.Write("[" + coeline[0] + ", " + coeline[1] + ", " + coeline[2] + ", " + coeline[3] + ", " + coeline[4] + ", " + coeline[5] + ", " + coeline[6] + ", " + coeline[7] + "]" + ","); 
-                }
-
-
-                //  integration constants
-                string integrationConstants = concantCoef.Substring(128, 32);
-                int firstConstant_e = integrationConstants.IndexOf('e');
-                int secondConstant_e = integrationConstants.IndexOf('e', firstConstant_e);
-                string firstIntegrate = integrationConstants.Substring(0, firstConstant_e + 4);
-                string secondIntegrate = integrationConstants.Substring(secondConstant_e + 4, firstConstant_e + 4);
-                string integrateConcant = firstIntegrate + " " + secondIntegrate;
-                integrateConcant = integrateConcant.Trim();
-                integrateConcant = integrateConcant.Replace(" ", ",");
-                integrateConcant = integrateConcant.Replace(",,", ",");
-                string[] integrationLine = integrateConcant.Split(comma);
-
-                streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-                streamWriter.Write("\"" + "integrationConstants" + "\"" + ":");
-                streamWriter.Write("[" + integrationLine[0] + ", " + integrationLine[1] + "]");
-                streamWriter.WriteLine();
-                streamWriter.Write("\t\t\t\t\t");
-
-                if (integrationLine[1].Length == 0)
-                {
-                    int sun = 99;
-                }
-
-                // if this is last loop dont print comma
-                if (i < t_intervalValue -1)
-                {
-                    streamWriter.WriteLine("}" + ",");
-                }
-                else if (i >= t_intervalValue -1)
-                {
-                    streamWriter.Write("}");
-                }
-
-                //m_currentLine = streamReader.ReadLine();
-
+                streamWriter.Write("\t\t\t");
+                streamWriter.Write("\"" + boilingPointLabel + "\"" + ": ");
+                streamWriter.Write(boilingPointSubstring);
             }
+            else
+            {
+                for (int i = 0; i < t_intervalValue; i++)
+                {
+                    m_currentLine = streamReader.ReadLine();
+                    string tempRange = m_currentLine.Substring(0, 22);
+                    tempRange = tempRange.Trim();
+                    int indx = tempRange.IndexOf(separator);
+                    //tempRange = tempRange.Replace(' ', ',');
+                    tempRange = tempRange.Insert(indx, ",");
+                    string[] tempRangeLine = tempRange.Split(comma);
 
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("{");
+                    streamWriter.Write("\t\t\t\t\t");
+
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "temperatureRange" + "\"" + ":");
+                    streamWriter.Write("[" + tempRangeLine[0] + ", " + tempRangeLine[1].Trim() + "]" + ",");
+
+                    // number of coefficients
+                    string m_coeff = m_currentLine.Substring(22, 1);
+
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "numberOfCoefficients" + "\"" + ":");
+                    streamWriter.Write(" " + m_coeff + ",");
+
+                    // t exponents array
+                    string m_texponents = m_currentLine.Substring(23, 40);
+                    m_texponents = m_texponents.Trim();
+                    m_texponents = m_texponents.Replace(" ", ",");
+                    m_texponents = m_texponents.Replace(",,", ",");
+                    string[] tExponentLine = m_texponents.Split(comma);
+
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "tExponents" + "\"" + ":");
+                    streamWriter.Write("[" + tExponentLine[0] + ", " + tExponentLine[1] + ", " + tExponentLine[2] + ", " + tExponentLine[3] + ", " + tExponentLine[4] + ", " + tExponentLine[5] + ", " + tExponentLine[6] + ", " + tExponentLine[7] + "]" + ",");
+
+                    // H line
+                    string m_hLine = m_currentLine.Substring(66, 14);
+                    m_hLine = m_hLine.Trim();
+
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "hJmol" + "\"" + ":");
+                    streamWriter.Write(" " + m_hLine + ",");
+                    //*****************************************
+                    // must read new line here
+                    m_currentLine = streamReader.ReadLine();
+                    string coefFirstPart = m_currentLine;
+                    string coefSecondPart = streamReader.ReadLine();
+                    string concantCoef = coefFirstPart + coefSecondPart;
+                    concantCoef = concantCoef.Replace('D', 'e');
+                    string coefSubstring = concantCoef.Substring(0, 128);
+                    //coefSubstring = coefSubstring.Trim();
+                    int firstE = coefSubstring.IndexOf('e');
+                    int secondE = coefSubstring.IndexOf('e', firstE);
+                    int thirdE = coefSubstring.IndexOf('e', secondE);
+                    int forthE = coefSubstring.IndexOf('e', thirdE);
+                    int fifthE = coefSubstring.IndexOf('e', forthE);
+                    int sixthE = coefSubstring.IndexOf('e', fifthE);
+                    int seventhE = coefSubstring.IndexOf('e', sixthE);
+                    int eighthE = coefSubstring.IndexOf('e', seventhE);
+
+                    string firstCoef = coefSubstring.Substring(0, firstE + 4);
+                    string secondCoef = coefSubstring.Substring(secondE + 4, firstE + 4);
+                    string thirdCoef = coefSubstring.Substring(thirdE + 4 + secondE + 4, firstE + 4);
+                    string forthCoef = coefSubstring.Substring(forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+                    string fifthCoef = coefSubstring.Substring(fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+                    string sixthCoef = coefSubstring.Substring(sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+                    string seventhCoef = coefSubstring.Substring(seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+                    string eighthCoef = coefSubstring.Substring(eighthE + 4 + seventhE + 4 + sixthE + 4 + fifthE + 4 + forthE + 4 + thirdE + 4 + secondE + 4, firstE + 4);
+
+                    string CoefConcant = firstCoef + " " + secondCoef + " " + thirdCoef + " " + forthCoef + " " + fifthCoef + " " + sixthCoef + " " + seventhCoef + " " + eighthCoef;
+                    CoefConcant = CoefConcant.Trim();
+                    CoefConcant = CoefConcant.Replace(" ", ",");
+                    CoefConcant = CoefConcant.Replace(",,", ",");
+                    string[] coeline = CoefConcant.Split(comma);
+
+
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "coefficients" + "\"" + ":");
+
+                    if (coeline.Count() == 7)
+                    {
+                        streamWriter.Write("[" + coeline[0] + ", " + coeline[1] + ", " + coeline[2] + ", " + coeline[3] + ", " + coeline[4] + ", " + coeline[5] + ", " + coeline[6] + "]" + ",");
+                    }
+                    if (coeline.Count() == 8)
+                    {
+                        streamWriter.Write("[" + coeline[0] + ", " + coeline[1] + ", " + coeline[2] + ", " + coeline[3] + ", " + coeline[4] + ", " + coeline[5] + ", " + coeline[6] + ", " + coeline[7] + "]" + ",");
+                    }
+
+
+                    //  integration constants
+                    string integrationConstants = concantCoef.Substring(128, 32);
+                    int firstConstant_e = integrationConstants.IndexOf('e');
+                    int secondConstant_e = integrationConstants.IndexOf('e', firstConstant_e);
+                    string firstIntegrate = integrationConstants.Substring(0, firstConstant_e + 4);
+                    string secondIntegrate = integrationConstants.Substring(secondConstant_e + 4, firstConstant_e + 4);
+                    string integrateConcant = firstIntegrate + " " + secondIntegrate;
+                    integrateConcant = integrateConcant.Trim();
+                    integrateConcant = integrateConcant.Replace(" ", ",");
+                    integrateConcant = integrateConcant.Replace(",,", ",");
+                    string[] integrationLine = integrateConcant.Split(comma);
+
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+                    streamWriter.Write("\"" + "integrationConstants" + "\"" + ":");
+                    streamWriter.Write("[" + integrationLine[0] + ", " + integrationLine[1] + "]");
+                    streamWriter.WriteLine();
+                    streamWriter.Write("\t\t\t\t\t");
+
+                    if (integrationLine[1].Length == 0)
+                    {
+                        int sun = 99;
+                    }
+
+                    // if this is last loop dont print comma
+                    if (i < t_intervalValue - 1)
+                    {
+                        streamWriter.WriteLine("}" + ",");
+                    }
+                    else if (i >= t_intervalValue - 1)
+                    {
+                        streamWriter.Write("}");
+                    }
+
+                    //m_currentLine = streamReader.ReadLine();
+
+                }
+            }
         }
 
         private static void EndOfFile()
@@ -279,7 +293,17 @@ namespace ThermoParser
             PrintSpeciesAndDescription();
             m_currentLine = streamReader.ReadLine();
             t_intervalValue = PrintTintervalsLine();
-            PrintDataRecords();
+            if (t_intervalValue > 0 )
+            {
+                //int xx = 99;
+                PrintDataRecords();
+            }
+            else if (t_intervalValue == 0 && m_specieValue >=1)
+            {
+                DoRecordSet();
+            }
+
+            
 
             //---------------Close curly for new species
             streamWriter.WriteLine();
@@ -318,6 +342,7 @@ namespace ThermoParser
         private static int PrintTintervalsLine()
         {
             t_intervalValue = 0;
+            //m_specieValue = 0;
             // t intervals
             string m_tIntervalsLabel = "tIntervals";
             string m_tIntervals;
@@ -325,12 +350,12 @@ namespace ThermoParser
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
             streamWriter.Write("\"" + m_tIntervalsLabel + "\"" + ":");
-            
+
             if (m_currentLine != null)
             {
                 m_tIntervals = m_currentLine.Substring(0, 2);
                 int.TryParse(m_tIntervals, out t_intervalValue);
-                streamWriter.Write(t_intervalValue + " ,"); 
+                streamWriter.Write(t_intervalValue + " ,");
             }
 
             //  id code
@@ -343,7 +368,7 @@ namespace ThermoParser
                 m_IdCode = m_currentLine.Substring(3, 7);
                 m_IdCode = m_IdCode.Trim();
                 streamWriter.Write("\"" + m_IdLabel + "\"" + ":");
-                streamWriter.Write("\"" + m_IdCode + "\"" + ","); 
+                streamWriter.Write("\"" + m_IdCode + "\"" + ",");
             }
 
             //  chemical formula line
@@ -352,9 +377,9 @@ namespace ThermoParser
             string m_numElementslabel = "numberOfAtoms";
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
-            streamWriter.Write("\"" + m_formulaLabel+ "\"" + ":");
+            streamWriter.Write("\"" + m_formulaLabel + "\"" + ":");
             string chemFormulaSubstring = m_currentLine.Substring(9, 41);
-            chemFormulaSubstring= chemFormulaSubstring.Trim();
+            chemFormulaSubstring = chemFormulaSubstring.Trim();
             int firstColumn = 3;    // element
             int secondColumn = 5;   // number
             int thirdColumn = 3;    // element
@@ -372,7 +397,7 @@ namespace ThermoParser
             int l_firstElement = firstElement.Length;
             if (firstElement.Length > 1)
             {
-                string fchar = firstElement.Substring(0,1);
+                string fchar = firstElement.Substring(0, 1);
                 string schar = firstElement.Substring(1);
                 schar = schar.ToLower();
                 firstElement = fchar + schar;
@@ -470,7 +495,7 @@ namespace ThermoParser
                 streamWriter.Write(secondAtoms);
 
 
-                if (n_thirdAtoms !=0)
+                if (n_thirdAtoms != 0)
                 {
                     streamWriter.WriteLine();
                     streamWriter.Write("\t\t\t\t");
@@ -488,7 +513,7 @@ namespace ThermoParser
                     streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
                     streamWriter.Write(thirdAtoms);
 
-                    if (n_fourthAtoms !=0)
+                    if (n_fourthAtoms != 0)
                     {
                         streamWriter.WriteLine();
                         streamWriter.Write("\t\t\t\t");
@@ -506,7 +531,7 @@ namespace ThermoParser
                         streamWriter.Write("\"" + m_numElementslabel + "\"" + ":");
                         streamWriter.Write(fourthAtoms);
 
-                        if (n_fifthAtoms !=0)
+                        if (n_fifthAtoms != 0)
                         {
                             streamWriter.WriteLine();
                             streamWriter.Write("\t\t\t\t");
@@ -569,15 +594,16 @@ namespace ThermoParser
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
             string speciesType = m_currentLine.Substring(51, 1);
+            int.TryParse(speciesType, out m_specieValue);
             if (speciesType == "0")
             {
-                streamWriter.Write("\"" + "phase" + "\"" + ": ");
-                streamWriter.Write("[" + "\"" + "gaseous" + "\"" + "," + "true" + "," + speciesType + "]" + ",");
+                streamWriter.Write("\"" + "phase_value" + "\"" + ": ");
+                streamWriter.Write(speciesType + ",");
             }
             else
             {
-                streamWriter.Write("\"" + "phase" + "\"" + ": ");
-                streamWriter.Write("[" + "\"" + "condensed" + "\"" + "," + "true" + "," + speciesType + "]" + ",");
+                streamWriter.Write("\"" + "phase_value" + "\"" + ": ");
+                streamWriter.Write(speciesType + ",");
             }
 
             // molecular weight line
@@ -637,8 +663,8 @@ namespace ThermoParser
 
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
-            streamWriter.Write("\"" + m_descriptionLabel+ "\"" + ": ");
-            streamWriter.Write("\"" + m_description+ "\"" + ",");
+            streamWriter.Write("\"" + m_descriptionLabel + "\"" + ": ");
+            streamWriter.Write("\"" + m_description + "\"" + ",");
         }
     }
 }
