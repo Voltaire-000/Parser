@@ -576,18 +576,18 @@ namespace transParser
                 {
                     string name1 = mx.Substring(0, 15);
                     name1 = name1.Trim();
-                    string name2 = mx.Substring(15);
+                    string name2 = mx.Substring(15, 10);
                     name2 = name2.Trim();
                     if (name2.Length > 0)
                     {
                         streamWriter.Write("\t\t\t\t\t");
-                        streamWriter.Write("\"" + "species names" + "\"" + ": " + "[");
+                        streamWriter.Write("\"" + "name(s)" + "\"" + ": " + "[");
                         streamWriter.Write("\"" + name1 + "\"" + "," + "\"" + name2 + "\"" + "]" + ",");
                     }
                     else
                     {
                         streamWriter.Write("\t\t\t\t\t");
-                        streamWriter.Write("\"" + "species names" + "\"" + ": " + "[");
+                        streamWriter.Write("\"" + "name(s)" + "\"" + ": " + "[");
                         streamWriter.Write("\"" + name1 + "\"" + "]" + ",");
                     }
 
