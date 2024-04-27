@@ -74316,25 +74316,25 @@
 		},
 		{
 			"Name": "Air",
-			"Description": "Mole%:N2 78.084,O2 20.9476,Ar .9365,CO2 .0319.Gordon,1982.Reac",
+			"Description": "Mole%:N2 78.084,O2 20.9476,Ar 0.9365,CO2 0.0319.Gordon,1982.Reac",
 			"TempIntervals": 2,
 			"IdCode": "g 9/95",
 			"ChemicalFormula": [
 				{
-					"Symbol": "N 1",
-					"NumberOfAtoms": .5617
+					"Symbol": "N",
+					"NumberOfAtoms": 1.5617
 				},
 				{
-					"Symbol": "O .",
-					"NumberOfAtoms": 41959
+					"Symbol": "O",
+					"NumberOfAtoms": 0.41959
 				},
 				{
-					"Symbol": "Ar.",
-					"NumberOfAtoms": 00937
+					"Symbol": "Ar",
+					"NumberOfAtoms": 0.00937
 				},
 				{
-					"Symbol": "C .",
-					"NumberOfAtoms": 00032
+					"Symbol": "C",
+					"NumberOfAtoms": 0.00032
 				}
 			],
 			"PhaseValue": 0,
