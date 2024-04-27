@@ -20,6 +20,10 @@ namespace ThermoParser
         {
             streamReader = new StreamReader("..\\..\\thermo.inp");
             streamWriter = new StreamWriter("..\\..\\thermoINP.json");
+
+            //streamReader = new StreamReader("..\\..\\elms.txt");
+            //streamWriter = new StreamWriter("..\\..\\refElements.json");
+
             streamWriter.AutoFlush = true;
 
             while (!streamReader.EndOfStream)
@@ -315,7 +319,7 @@ namespace ThermoParser
 
         private static void PrintDataRecords()
         {
-            string m_recordLabel = "dataRecords";
+            string m_recordLabel = "DataRecords";
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
             streamWriter.Write("\"" + m_recordLabel + "\"" + ":");
@@ -344,7 +348,7 @@ namespace ThermoParser
             t_intervalValue = 0;
             //m_specieValue = 0;
             // t intervals
-            string m_tIntervalsLabel = "tIntervals";
+            string m_tIntervalsLabel = "TempIntervals";
             string m_tIntervals;
             char separator = ' ';
             streamWriter.WriteLine();
@@ -359,7 +363,7 @@ namespace ThermoParser
             }
 
             //  id code
-            string m_IdLabel = "idCode";
+            string m_IdLabel = "IdCode";
             string m_IdCode;
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
@@ -372,9 +376,9 @@ namespace ThermoParser
             }
 
             //  chemical formula line
-            string m_formulaLabel = "chemicalformula";
-            string m_symbolLabel = "symbol";
-            string m_numElementslabel = "numberOfAtoms";
+            string m_formulaLabel = "ChemicalFormula";
+            string m_symbolLabel = "Symbol";
+            string m_numElementslabel = "NumberOfAtoms";
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");
             streamWriter.Write("\"" + m_formulaLabel + "\"" + ":");
@@ -597,12 +601,12 @@ namespace ThermoParser
             int.TryParse(speciesType, out m_specieValue);
             if (speciesType == "0")
             {
-                streamWriter.Write("\"" + "phase_value" + "\"" + ": ");
+                streamWriter.Write("\"" + "PhaseValue" + "\"" + ": ");
                 streamWriter.Write(speciesType + ",");
             }
             else
             {
-                streamWriter.Write("\"" + "phase_value" + "\"" + ": ");
+                streamWriter.Write("\"" + "PhaseValue" + "\"" + ": ");
                 streamWriter.Write(speciesType + ",");
             }
 
@@ -612,7 +616,7 @@ namespace ThermoParser
             // todo fix for e species
             string moleWeightSubstring = m_currentLine.Substring(52, 14);
             moleWeightSubstring = moleWeightSubstring.Trim();
-            streamWriter.Write("\"" + "molecularWeight" + "\"" + ": ");
+            streamWriter.Write("\"" + "MolecularWeight" + "\"" + ": ");
             streamWriter.Write(moleWeightSubstring + ",");
 
             //  heat of formation line
@@ -620,7 +624,7 @@ namespace ThermoParser
             streamWriter.Write("\t\t\t");
             string heatSubstring = m_currentLine.Substring(65, 15);
             heatSubstring = heatSubstring.Trim();
-            streamWriter.Write("\"" + "heatOfFormation" + "\"" + ":");
+            streamWriter.Write("\"" + "HeatOfFormation" + "\"" + ":");
             streamWriter.Write(" " + heatSubstring + ",");
 
             // end of line read new line
@@ -646,15 +650,16 @@ namespace ThermoParser
                 //throw new NotImplementedException();
             }
 
-            string m_speciesLabel = "species";
+            string m_speciesLabel = "Name";
             string m_species;
-            string m_descriptionLabel = "description";
+            string m_descriptionLabel = "Description";
             string m_description;
 
             //  todo fix air line description
             m_species = m_currentLine.Substring(0, 15);
             m_species = m_species.Trim();
-            m_description = m_currentLine.Substring(18, 62);
+            int m_length = m_currentLine.Length;
+            m_description = m_currentLine.Substring(m_species.Length, m_length - m_species.Length);
             m_description = m_description.Trim();
             streamWriter.WriteLine();
             streamWriter.Write("\t\t\t");

@@ -50,5 +50,8 @@
     <None Include="App.config" />
     <None Include="thermo.inp" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="elms.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

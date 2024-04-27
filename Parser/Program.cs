@@ -45,12 +45,15 @@ namespace Parser
             bool m_tIntervalsIsZero = false;
             string m_currentLine = "";
 
-            StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINPjson.json");
+            //StreamWriter streamWriter = new StreamWriter("..\\..\\thermoINPjson.json");
             //StreamWriter streamWriter = new StreamWriter("..\\..\\shortThermo.json");
+            StreamWriter streamWriter = new StreamWriter("..\\..\\refElements.json");
             streamWriter.AutoFlush = true;
 
-            StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
+            //StreamReader streamReader = new StreamReader("..\\..\\thermo.inp");
             //StreamReader streamReader = new StreamReader("..\\..\\shortthermo.inp");
+
+            StreamReader streamReader = new StreamReader("..\\..\\elms.txt");
 
             while (!streamReader.EndOfStream)
             {
@@ -404,7 +407,7 @@ namespace Parser
             char firstCharacter = line.First();
             UnicodeCategory unicodeCategory;
             unicodeCategory = char.GetUnicodeCategory(firstCharacter);
-            if (unicodeCategory != UnicodeCategory.UppercaseLetter && unicodeCategory != UnicodeCategory.OpenPunctuation)
+            if (unicodeCategory != UnicodeCategory.UppercaseLetter && unicodeCategory != UnicodeCategory.OpenPunctuation && unicodeCategory != UnicodeCategory.SpaceSeparator)
             {
                 // we are at end of file
                 reader.Close();
