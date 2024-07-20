@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
+using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -17,23 +16,16 @@ namespace TransNew
         static void Main(string[] args)
         {
             string filePath = "..\\..\\trans.inp";
-            //List<string> record = new List<string>();
-            List<Record> records = new List<Record>();
-            string speciesName = "";
-            string secondSpeciesName = "";
-            string comments = "";
-            List<double[]> v_temperatureRange = new List<double[]>();
-            List<double[]> c_temperatureRange = new List<double[]>();
-            
-            
 
-            int recordLineCount = 0;
-            bool isViscosity = false;
-            bool isConductivity = false;
+            List<Record> records = new List<Record>();
+
+            //List<double[]> v_temperatureRange = new List<double[]>();
+            //List<double[]> c_temperatureRange = new List<double[]>();
+
+            //bool isViscosity = false;
+            //bool isConductivity = false;
             bool hasViscosityCoefficient = false;
             bool hasConductivityCoefficients = false;
-            int viscosityTempIntervals = 0;
-            int conductivityTemperatureIntervals = 0;
             string[] lines = File.ReadAllLines(filePath);
             var readlines = File.ReadLines(filePath);
             var filestream = File.OpenRead(filePath);
@@ -41,32 +33,38 @@ namespace TransNew
             string currentLine = "";
             while (!streamReader.EndOfStream)
             {
-                currentLine = streamReader.ReadLine();
-                if (currentLine.Length < 80)
+                //currentLine = streamReader.ReadLine();
+                if (currentLine.Length == 0)
                 {
-                    viscosityTempIntervals = int.Parse(currentLine[35].ToString());
-                    conductivityTemperatureIntervals = int.Parse(currentLine[37].ToString());
-                    recordLineCount = viscosityTempIntervals + conductivityTemperatureIntervals;
-                    speciesName = currentLine.Substring(0, 15).Trim();
-                    secondSpeciesName = currentLine.Substring(16, 15).Trim();
-                    comments = currentLine.Substring(40).Trim();
+                    currentLine = streamReader.ReadLine();
                 }
-                if (currentLine.Length >= 80)
+                if (currentLine.Length < 81)
                 {
+                    //currentLine = streamReader.ReadLine();
+                    // we have a new record
+                    // reinitialize the variables
+                    var viscosityTempIntervals = int.Parse(currentLine[35].ToString());
+                    var conductivityTemperatureIntervals = int.Parse(currentLine[37].ToString());
+                    var recordLineCount = viscosityTempIntervals + conductivityTemperatureIntervals;
+
+                    // add to new record
+                    var speciesName = currentLine.Substring(0, 15).Trim();
+                    var secondSpeciesName = currentLine.Substring(16, 15).Trim();
+                    var comments = currentLine.Substring(40).Trim();
+                    // reached end of line, read new line
+                    currentLine = streamReader.ReadLine();
                     List<double[]> viscosityCoeff = new List<double[]>();
                     List<double[]> conductivityCoeff = new List<double[]>();
-                    for (int i = 0; i < recordLineCount; i++)
+                    var isViscosity = currentLine[1] == 'V';
+                    List<double[]> v_temperatureRange = new List<double[]>();
+                    if (isViscosity)
                     {
-                        double[] v_Coefflist = new double[4];
-                        double[] c_Coefflist = new double[4];
 
-                        string coefficientLine = currentLine.Substring(0, 2);
-                        isViscosity = coefficientLine[1] == 'V';
-                        isConductivity = coefficientLine[1] == 'C';
-                        if (isViscosity)
+                        for (int i = 0; i < viscosityTempIntervals; i++)
                         {
                             double[] v_templist = new double[2];
-                            
+                            double[] v_Coefflist = new double[4];
+
                             double firstTemperature = double.Parse(currentLine.Substring(2, 9));
                             double secondTemperature = double.Parse(currentLine.Substring(9, 11));
 
@@ -74,70 +72,110 @@ namespace TransNew
                             v_templist[1] = secondTemperature;
                             v_temperatureRange.Add(v_templist);
                             var firstCoeff = currentLine.Substring(20, 15);
-                            string cleanCoeffline = Regex.Replace(firstCoeff, @"([Ee])\s+", "$1");
-                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "$1+$2");
+                            string cleanCoeffline = Regex.Replace(firstCoeff, @"([Ee])\s+", "1");
+                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
                             double v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             v_Coefflist[0] = v_Coeff;
                             var secondCoeff = currentLine.Substring(35, 15);
-                            cleanCoeffline = Regex.Replace(secondCoeff, @"([Ee])\s+", "$1");
-                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "$1+$2");
+                            cleanCoeffline = Regex.Replace(secondCoeff, @"([Ee])\s+", "1");
+                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
                             v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             v_Coefflist[1] = v_Coeff;
                             var thirdCoeff = currentLine.Substring(50, 15);
-                            cleanCoeffline = Regex.Replace(thirdCoeff, @"([Ee])\s+", "$1");
-                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "$1+$2");
+                            cleanCoeffline = Regex.Replace(thirdCoeff, @"([Ee])\s+", "1");
+                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
                             v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             v_Coefflist[2] = v_Coeff;
                             var fourthCoeff = currentLine.Substring(65, 15);
-                            cleanCoeffline = Regex.Replace(fourthCoeff, @"([Ee])\s+", "$1");
-                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "$1+$2");
+                            cleanCoeffline = Regex.Replace(fourthCoeff, @"([Ee])\s+", "1");
+                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
                             v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             v_Coefflist[3] = v_Coeff;
                             viscosityCoeff.Add(v_Coefflist);
-                            
+                            // reached the end of line, read new line
+                            currentLine = streamReader.ReadLine();
                         }
-                        if (isConductivity)
+                    }
+                    var isConductivity = currentLine[1] == 'C';
+                    List<double[]> c_temperatureRange = new List<double[]>();
+                    if (isConductivity)
+                    {
+
+                        for (int i = 0; i < conductivityTemperatureIntervals; i++)
                         {
                             double[] c_templist = new double[2];
-                            //double[] c_Coefflist = new double[4];
+                            double[] c_Coefflist = new double[4];
+
                             double firstTemperature = double.Parse(currentLine.Substring(2, 9));
                             double secondTemperature = double.Parse(currentLine.Substring(9, 11));
                             c_templist[0] = firstTemperature;
                             c_templist[1] = secondTemperature;
                             c_temperatureRange.Add(c_templist);
                             var firstCoeff = currentLine.Substring(20, 15);
-                            string cleanCoeffline = Regex.Replace(firstCoeff, @"([Ee])\s+", "$1");
-                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "$1+$2");
+                            string cleanCoeffline = Regex.Replace(firstCoeff, @"([Ee])\s+", "1");
+                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
                             double v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             c_Coefflist[0] = v_Coeff;
                             var secondCoeff = currentLine.Substring(35, 15);
-                            cleanCoeffline = Regex.Replace(secondCoeff, @"([Ee])\s+", "$1");
-                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "$1+$2");
+                            cleanCoeffline = Regex.Replace(secondCoeff, @"([Ee])\s+", "1");
+                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
                             v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             c_Coefflist[1] = v_Coeff;
                             var thirdCoeff = currentLine.Substring(50, 15);
-                            cleanCoeffline = Regex.Replace(thirdCoeff, @"([Ee])\s+", "$1");
-                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "$1+$2");
+                            cleanCoeffline = Regex.Replace(thirdCoeff, @"([Ee])\s+", "1");
+                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
                             v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             c_Coefflist[2] = v_Coeff;
                             var fourthCoeff = currentLine.Substring(65, 15);
-                            cleanCoeffline = Regex.Replace(fourthCoeff, @"([Ee])\s+", "$1");
-                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "$1+$2");
+                            cleanCoeffline = Regex.Replace(fourthCoeff, @"([Ee])\s+", "1");
+                            cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
                             v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             c_Coefflist[3] = v_Coeff;
                             conductivityCoeff.Add(c_Coefflist);
+                            // reached the end of line, read new line
+                            currentLine = streamReader.ReadLine();
                         }
-                        // make new record here
-                        
-                        //currentLine = streamReader.ReadLine();
                     }
-                    var record = BeginNewRecord(speciesName, secondSpeciesName, comments, v_temperatureRange, viscosityCoeff, c_temperatureRange, conductivityCoeff);
+                    var record = new Record
+                    {
+                        SpeciesName = speciesName,
+                        SecondSpeciesName = secondSpeciesName,
+                        Comments = comments,
+                        ViscosityTemperatureRange = v_temperatureRange,
+                        ViscosityCoefficients = viscosityCoeff,
+                        ConductivityTemperatureRange = c_temperatureRange,
+                        ConductivityCoefficients = conductivityCoeff,
+                    };
                     records.Add(record);
-                    //currentLine = streamReader.ReadLine();
-                }
-                currentLine = streamReader.ReadLine();
-            }
+                    //if (currentLine.Length >83)
+                    //{
+                    //    break;
+                    //}
+                    if (currentLine.StartsWith("XXX"))
+                    {
+                        //currentLine = streamReader.ReadLine();
+                        //currentLine = streamReader.ReadLine();
+                        //currentLine = streamReader.ReadLine();
+                        //currentLine = streamReader.ReadLine();
+                        //currentLine = streamReader.ReadLine();
+                        //var m_length = currentLine.Length;
+                        //streamReader.Close();
+                        //break;
+                    }
 
+                }
+            }
+            streamReader.Close();
+            //foreach (var item in records)
+            //{
+            //    var mname = item.SpeciesName;
+            //    Console.WriteLine(mname);
+            //}
+            //var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = JsonConvert.SerializeObject(records, Formatting.Indented);
+            File.WriteAllText("Transportproperties.json", jsonString);
+            Console.WriteLine("hello");
+            Console.ReadLine();
         }
 
         private static void MakeNewRecord(string line, int recordLineCount)
@@ -145,7 +183,7 @@ namespace TransNew
             var speciesName = line.Substring(0, 15).Trim();
             var secondSpeciesName = line.Substring(16, 15).Trim();
             var comments = line.Substring(40).Trim();
-            
+
         }
 
         private static Record BeginNewRecord(string speciesName, string secondSpeciesName, string comments,
