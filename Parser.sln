@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "transParser", "transParser\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThermoParser", "ThermoParser\ThermoParser.csproj", "{AA6B0AD1-FCA7-436D-AE2D-B82DC6D1AD05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransNew", "TransNew\TransNew.csproj", "{9EF86396-97BF-43BA-8B01-36582D76CD12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{AA6B0AD1-FCA7-436D-AE2D-B82DC6D1AD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA6B0AD1-FCA7-436D-AE2D-B82DC6D1AD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA6B0AD1-FCA7-436D-AE2D-B82DC6D1AD05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF86396-97BF-43BA-8B01-36582D76CD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF86396-97BF-43BA-8B01-36582D76CD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF86396-97BF-43BA-8B01-36582D76CD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF86396-97BF-43BA-8B01-36582D76CD12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
