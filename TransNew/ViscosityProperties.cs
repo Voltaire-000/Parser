@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace TransNew
 {
-    public class ViscosityProperties
+    public class MeasurementData
     {
-        public List<double[]> TemperatureRange { get; set; }
-        public List<double[]> Coefficients { get; set; }
+        [JsonProperty("Temperature")]
+        public List<double> TemperatureRange { get; set; }
+
+        [JsonProperty("Coeff")]
+        public List<double> Coefficients { get; set; }
     }
 }

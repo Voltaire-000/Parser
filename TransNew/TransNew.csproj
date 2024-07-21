@@ -78,7 +78,9 @@
     <Compile Include="DataRecord.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Root.cs" />
     <Compile Include="TextFileParser.cs" />
+    <Compile Include="TextToJsonConverter.cs" />
     <Compile Include="ViscosityProperties.cs" />
   </ItemGroup>
   <ItemGroup>
