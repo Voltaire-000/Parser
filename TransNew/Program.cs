@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using static TransNew.TextFileParser;
+using System.Linq;
 
 namespace TransNew
 {
@@ -50,7 +51,15 @@ namespace TransNew
                     // add to new record
                     var speciesName = currentLine.Substring(0, 15).Trim();
                     var secondSpeciesName = currentLine.Substring(16, 15).Trim();
+                    string[] nameString = new string[2];
+                    nameString[0] = speciesName;
+                    nameString[1] = secondSpeciesName;
+                    List<string[]> Names = new List<string[]>();
+                    Names.Add(nameString);
+                    var mDataRecords = new List<DataRecord>();
+                    var mRecord = new DataRecord();
                     var comments = currentLine.Substring(40).Trim();
+
                     // reached end of line, read new line
                     currentLine = streamReader.ReadLine();
                     List<double[]> viscosityCoeff = new List<double[]>();
@@ -71,6 +80,7 @@ namespace TransNew
                             v_templist[0] = firstTemperature;
                             v_templist[1] = secondTemperature;
                             v_temperatureRange.Add(v_templist);
+
                             var firstCoeff = currentLine.Substring(20, 15);
                             string cleanCoeffline = Regex.Replace(firstCoeff, @"([Ee])\s+", "1");
                             cleanCoeffline = Regex.Replace(cleanCoeffline, @"([Ee])(?!\+|-)(\d)", "1+2");
@@ -92,6 +102,7 @@ namespace TransNew
                             v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             v_Coefflist[3] = v_Coeff;
                             viscosityCoeff.Add(v_Coefflist);
+
                             // reached the end of line, read new line
                             currentLine = streamReader.ReadLine();
                         }
@@ -132,15 +143,33 @@ namespace TransNew
                             v_Coeff = double.Parse(cleanCoeffline, NumberStyles.Float, CultureInfo.InvariantCulture);
                             c_Coefflist[3] = v_Coeff;
                             conductivityCoeff.Add(c_Coefflist);
+
                             // reached the end of line, read new line
                             currentLine = streamReader.ReadLine();
                         }
                     }
+                    var viscosityprop = new ViscosityProperties
+                    {
+                        TemperatureRange = v_temperatureRange,
+                        Coefficients = viscosityCoeff,
+                    };
+                    mRecord.Viscosity = new List<ViscosityProperties> { viscosityprop };
+                    mDataRecords.Add(mRecord);
+                    var conductivityprop = new ConductivityProperties
+                    {
+                        TemperatureRange = c_temperatureRange,
+                        Coefficients = conductivityCoeff,
+                    };
+                    mRecord.Conductivity = new List<ConductivityProperties> { conductivityprop };
+                    mDataRecords.Add(mRecord);
+
                     var record = new Record
                     {
-                        SpeciesName = speciesName,
-                        SecondSpeciesName = secondSpeciesName,
+                        SpeciesName = Names,
                         Comments = comments,
+                        ViscosityRecordCount = viscosityTempIntervals,
+                        ConductivityRecordCount = conductivityTemperatureIntervals,
+                        DataRecords = mDataRecords,
                         ViscosityTemperatureRange = v_temperatureRange,
                         ViscosityCoefficients = viscosityCoeff,
                         ConductivityTemperatureRange = c_temperatureRange,
@@ -173,7 +202,7 @@ namespace TransNew
             //}
             //var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonConvert.SerializeObject(records, Formatting.Indented);
-            File.WriteAllText("Transportproperties.json", jsonString);
+            File.WriteAllText("TransportMod.json", jsonString);
             Console.WriteLine("hello");
             Console.ReadLine();
         }
@@ -186,23 +215,23 @@ namespace TransNew
 
         }
 
-        private static Record BeginNewRecord(string speciesName, string secondSpeciesName, string comments,
-            List<double[]> vTemperatureRange, List<double[]> viscosityCoeff, List<double[]> cTemperatureRange, List<double[]> cCoefficients)
-        {
-            var record = new Record
-            {
-                SpeciesName = speciesName,
-                SecondSpeciesName = secondSpeciesName,
-                Comments = comments,
+        //private static Record BeginNewRecord(string speciesName, string secondSpeciesName, string comments,
+        //    List<double[]> vTemperatureRange, List<double[]> viscosityCoeff, List<double[]> cTemperatureRange, List<double[]> cCoefficients)
+        //{
+        //    var record = new Record
+        //    {
+        //        SpeciesName = speciesName,
+        //        SecondSpeciesName = secondSpeciesName,
+        //        Comments = comments,
 
-                ViscosityTemperatureRange = vTemperatureRange,
-                ViscosityCoefficients = viscosityCoeff,
+        //        ViscosityTemperatureRange = vTemperatureRange,
+        //        ViscosityCoefficients = viscosityCoeff,
 
-                ConductivityTemperatureRange = cTemperatureRange,
-                ConductivityCoefficients = cCoefficients,
+        //        ConductivityTemperatureRange = cTemperatureRange,
+        //        ConductivityCoefficients = cCoefficients,
 
-            };
-            return record;
-        }
+        //    };
+        //    return record;
+        //}
     }
 }
